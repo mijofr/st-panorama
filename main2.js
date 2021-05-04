@@ -45,7 +45,6 @@ var cclick = ($element) => {
 
     styleTag.innerHTML = `
         #${id} {
-            stroke-width:0.01rem;
             stroke: #c96046;
         }
     `;

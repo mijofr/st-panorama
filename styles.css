@@ -154,12 +154,12 @@ html, #photosphere {
 	}
 	.subContainer {
 		width: 71.25vw;
-		height: 53.4375vw;
+		height: 52.5vw;
 		border-radius: 2vw;
 	}
 	.subSubContainer {
 		width: 69.75vw;
-		height: 52.3125vw;
+		height: 51vw;
 		border-radius: 2vw;
 	}
 	.bar {
@@ -203,13 +203,13 @@ html, #photosphere {
 		border-radius: 4.8vh		;
 	}
 	.subContainer {
-		height: 85.5vh;
-		width: 114vh;
+		width: 114vh;		
+		height: 84vh;
 		border-radius: 3.2vh;
 	}
 	.subSubContainer {
 		width: 111.6vh;
-		height: 83.7vh;
+		height: 81.6vh;
 		border-radius: 3.2vh;
 	}
 	.blockage {
@@ -278,19 +278,19 @@ html, #photosphere {
 		right: 0;
 	}
 	.container {
-		width: 90vw;
 		height: 67.5vw;
+		width: 90vw;
 		border-radius: 3.6vw;
 	}
 
 	.subContainer {
 		height: 64.125vw;
-		width: 85.5vw;	
+		width: 86.625vw;	
 		border-radius: 2.4vw;
 	}
 	.subSubContainer {
-		width: 83.7vw;
 		height: 62.775vw;
+		width: 85.275vw;
 		border-radius: 2.4vw;
 	}
 	.blockage {
@@ -305,6 +305,8 @@ html, #photosphere {
 
 .mapBox .cameraPoint {
 	fill: #70a8c1;
+	stroke: rgba(0,0,0,0.1);
+	stroke-width: 0.015rem;
 }
 .mapBox.cameraPoint:hover {
 	cursor: pointer;
