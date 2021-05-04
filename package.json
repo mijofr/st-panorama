@@ -1,0 +1,28 @@
+{
+  "name": "st-panorama",
+  "version": "1.0.0",
+  "description": "st-panorama",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mijofr/st-panorama.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mijofr/st-panorama/issues"
+  },
+  "homepage": "https://github.com/mijofr/st-panorama#readme",
+  "dependencies": {
+    "photo-sphere-viewer": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.0.1"
+  }
+}
