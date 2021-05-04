@@ -88,8 +88,8 @@ function getFullHtml(insert: string): string {
 <head>
   <meta charset="utf-8">
 
-  <title>Pano</title>
-  <meta name="description" content="Pano">
+  <title>Trekorama</title>
+  <meta name="description" content="Trekorama">
   <meta name="author" content="MiJoFr">
   <link rel="icon" href="./favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="styles.css">
