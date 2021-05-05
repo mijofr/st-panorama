@@ -1,0 +1,32 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 14
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14
+    - name: Build
+      run: |
+        cd DeckRenderer
+        npm ci
+        npm run clean-dist
+        npm run build-compile
+        node ./dist/processing/compile-all-plans.js ./data/plans
+        node ./dist/processing/compile-entries.js ./data/entries
+        npm run makebase
+        npm run build-view -- --prod        
+        npm run build-lcars -- --prod
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BASE_BRANCH: master
+        BRANCH: gh-pages
+        FOLDER: DeckRenderer/dist

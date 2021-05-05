@@ -1,0 +1,280 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+#photosphere {
+  position: absolute;
+}
+
+.bar {
+  position: fixed;
+  background-color: #000;
+
+
+  scrollbar-width: thin;
+  scrollbar-color: #333 #222;
+
+  &.bar::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 0.5rem;
+  }
+
+
+  .innerBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: ltr;
+  }
+
+}
+
+
+
+.main {
+  position: fixed;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    position: relative;
+    display: block;
+
+    background-image: url("./../images/frame.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+}
+
+
+.topTitle,
+.sTitle {
+  font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: capitalize;
+  margin-bottom: 0.2em;
+
+  position: relative;
+  width: 18.5vw;
+
+  &>div {
+    position: absolute;
+    width: 18.5vw;
+    transform-origin: 100% 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+}
+
+.topTitle {
+  height: 2rem;
+  font-size: 1.25rem;
+
+  &>div {
+    height: 2rem;
+    color: #000;
+    background-color: #70a8c1;
+
+    &>div {
+      margin-left: 0.5rem;
+
+    }
+
+  }
+
+}
+
+.sTitle {
+  height: 1rem;
+
+  &>div {
+    height: 1rem;
+    color: #000;
+    background-color: #2e7fa5;
+    font-size: 1rem;
+    line-height: 1rem;
+
+    &>div {
+      margin-left: 0.5rem;
+      height: 1rem;
+      background-color: #000;
+      color: #2e7fa5;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+
+  }
+}
+
+
+@mixin psc($width) {
+  .container {
+    width: $width;
+    height: 3 * $width / 4;
+
+    #photosphere {
+      left: $width * 0.05;
+      right: $width * 0.05;
+      top: $width * 0.05;
+      bottom: $width * 0.05;
+      border-radius: $width / 75;
+      overflow: hidden;
+    }
+  }
+}
+
+@media (orientation: landscape) {
+
+  @include psc(75vw);
+
+  .bar {
+    top: 5vh;
+    bottom: 5vh;
+    left: 1.5vw;
+    width: 19vw;
+    overflow-y: scroll;
+    direction: rtl;
+    
+    .innerBar {
+      left: 0.5vw;
+      width: 18.5vw;
+      flex-direction: column;
+    }
+  }
+
+
+  .topTitle,
+  .sTitle {
+    width: 18.5vw;
+  }
+
+  .main {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 79vw;
+  }
+
+  .mapBox {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    height: auto;
+  }
+
+}
+
+
+@media (min-aspect-ratio: 8/5) {
+  @include psc(120vh);
+}
+
+@media (orientation: portrait) {
+
+  @include psc(90vw);
+
+  .topTitle,
+  .sTitle {
+    height: 21vh;
+    width: 2rem;
+    margin-bottom: unset;
+    margin-right: 0.2em;
+
+    & > div {
+      width: 21vh;
+      height: 2rem;
+      transform: rotate(-90deg) translateY(-21vh);
+      -webkit-transform: rotate(-90deg) translateY(-21vh);
+      -moz-transform: rotate(-90deg) translateY(-21vh);
+      -ms-transform: rotate(-90deg) translateY(-21vh);
+      -o-transform: rotate(-90deg) translateY(-21vh);  
+    }
+
+  }
+
+  .topTitle {
+    width: 2rem;
+    & > div {
+      height: 2rem;
+    }
+  }
+
+  .sTitle {
+    width: 1rem;
+    & > div {
+      height: 1rem;
+    }
+  }
+
+  .bar {
+    bottom: 2.5vh;
+    left: 5vw;
+    right: 5vw;
+    height: 22.5vh;
+    overflow-x: scroll;
+
+    .innerBar {
+      height: 21vh;
+      flex-direction: row;
+    }  
+
+  }
+
+  .mapBox {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    width: auto;
+  }
+
+  .main {
+    top: 0;
+    height: 75vh;
+    left: 0;
+    right: 0;
+  }
+
+}
+
+.mapBox .cameraPoint {
+  fill: #70a8c1;
+  stroke: rgba(0, 0, 0, 0.1);
+  stroke-width: 0.015rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
