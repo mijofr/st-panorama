@@ -14,8 +14,8 @@ jobs:
         node-version: 14
     - name: Build
       run: |
-        cd DeckRenderer
         npm ci 
+        npm run clean-dist
         npm run production
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
@@ -23,5 +23,4 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BASE_BRANCH: master
         BRANCH: gh-pages
-        FOLDER: DeckRenderer/dist
-                                                                                                                                                                                                                                       
+        FOLDER: dist
