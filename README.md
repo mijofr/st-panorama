@@ -1,2 +1,0 @@
-# st-panorama
-st-panorama
