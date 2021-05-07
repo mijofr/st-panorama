@@ -4,9 +4,9 @@
         "plans": [
             {
                 "name": "Main Bridge",
-                "img": "tos",
-                "height": 13.731772,
-                "width": 12.426944,
+                "img": "TOS.svg",
+                "height": 14,
+                "width": 13,
                 "points": [
                     {
                         "x": 6.093873,
@@ -92,14 +92,15 @@
         "plans": [
             {
                 "name": "Deck One",
-                "img": "defiant",
+                "img": "defiant.png",
                 "height": 20.821003,
                 "width": 9.5429602,
                 "points": [
                     {
                         "x": 4.7241373,
                         "y": 14.459366,
-                        "id": "DEF_00"
+                        "id": "DEF_00",
+                        "hasAlt": "DEF_14"
                     },
                     {
                         "x": 4.7428064,
@@ -167,8 +168,8 @@
                         "id": "DEF_13"
                     },
                     {
-                        "x": 0.99237901,
-                        "y": 19.784672,
+                        "x": null,
+                        "y": null,
                         "id": "DEF_14"
                     },
                     {
@@ -185,7 +186,7 @@
         "plans": [
             {
                 "name": "Deck One",
-                "img": "entd",
+                "img": "entd.png",
                 "height": 24.164154,
                 "width": 18.58906,
                 "points": [
@@ -318,7 +319,7 @@
             },
             {
                 "name": "Engineering",
-                "img": "eng",
+                "img": "eng.png",
                 "height": 20.981213,
                 "width": 11.970091,
                 "points": [
@@ -381,7 +382,7 @@
             },            
             {
                 "name": "Sickbay",
-                "img": "sickbay",
+                "img": "sickbay.png",
                 "height": 16.004055,
                 "width": 14.823214,
                 "points": [
@@ -444,7 +445,7 @@
             },
             {
                 "name": "Ten-Forward Lounge",
-                "img": "tenforward",
+                "img": "tenforward.png",
                 "height": 21.890032,
                 "width": 17.937931,
                 "points": [
@@ -517,7 +518,7 @@
             },
             {
                 "name": "Transporter Room 3",
-                "img": "transp",
+                "img": "transp.png",
                 "height": 10.456047,
                 "width": 8.1097012,
                 "points": [
@@ -550,7 +551,7 @@
             },
             {
                 "name": "Cpt Picard's Quarters",
-                "img": "picard",
+                "img": "picard.png",
                 "height": 17.195326,
                 "width": 6.2053618,
                 "points": [
@@ -598,7 +599,7 @@
             },            
             {
                 "name": "Cns Troi's Quarters",
-                "img": "troi",
+                "img": "troi.png",
                 "height": 11.961047,
                 "width": 6.2183652,
                 "points": [
@@ -641,7 +642,7 @@
             },
             {
                 "name": "Lt Data's Quarters",
-                "img": "data",
+                "img": "data.png",
                 "height": 8.5038052,
                 "width": 6.4388275,
                 "points": [
@@ -674,7 +675,7 @@
             },
             {
                 "name": "Lt Worf's Quarters",
-                "img": "worf",
+                "img": "worf.png",
                 "height": 13.909777,
                 "width": 8.56738,
                 "points": [
@@ -712,9 +713,9 @@
             },
             {
                 "name": "Type 6 Shuttlecraft",
-                "img": "shuttle",
-                "height": 2.0208328,
-                "width": 4.7693372,
+                "img": "type6.svg",
+                "height": 2,
+                "width": 5,
                 "points": [
                     {
                         "x": 1.8383905,
@@ -725,7 +726,7 @@
             },
             {
                 "name": "Behind the Scenes",
-                "img": "bts",
+                "img": "bts.png",
                 "height": 2.0905855,
                 "width": 2.3332429,
                 "points": [
@@ -743,7 +744,7 @@
         "plans": [
             {
                 "name": "Bridge",
-                "img": "ente",
+                "img": "ente.png",
                 "height": 14.84,
                 "width": 15.798,
                 "points": [
@@ -816,7 +817,7 @@
         "plans": [
             {
                 "name": "Deck One",
-                "img": "voy",
+                "img": "voy.png",
                 "height": 13.388122,
                 "width": 26.228914,
                 "points": [
@@ -939,7 +940,7 @@
         "plans": [
             {
                 "name": "Bridge",
-                "img": "bop",
+                "img": "bop.png",
                 "height": 9.9752665,
                 "width": 9.1010456,
                 "points": [
@@ -997,6 +998,103 @@
                         "x": 2.3283007,
                         "y": 4.4032903,
                         "id": "KLING_10"
+                    }
+                ]
+            }
+    ]},
+    {
+        "name": "USS Enterprise (Kelvin)",
+        "plans": [
+            {
+                "name": "Bridge",
+                "img": "JJ.svg",
+                "height": 14,
+                "width": 18,
+                "setup": {
+                    "fullWidth": 4000,
+                    "fullHeight": 2000,
+                    "croppedWidth": 4000,
+                    "croppedHeight": 2000,
+                    "croppedX": 0,
+                    "croppedY": 0,
+                    "poseHeading": 0,
+                    "posePitch": 0,
+                    "poseRoll": 0
+                },                
+                "points": [
+                    {
+                        "x": 8,
+                        "y": 4.2,
+                        "id": "KENT_BRIDGE_00",
+                        "hasAlt": "KENT_BRIDGE_01"
+                    },
+                    {
+                        "x": null,
+                        "y": null,
+                        "id": "KENT_BRIDGE_01"
+                    }
+                ]
+            }
+    ]},    
+    {
+        "name": "ISS",
+        "plans": [
+            {
+                "name": "Station (1/3 SCALE)",
+                "img": "ISS.svg",
+                "height": 19,
+                "width": 25,
+                "setup": {
+                    "fullWidth": 3072,
+                    "fullHeight": 1536,
+                    "croppedWidth": 3072,
+                    "croppedHeight": 1536,
+                    "croppedX": 0,
+                    "croppedY": 0,
+                    "poseHeading": 0,
+                    "posePitch": 0,
+                    "poseRoll": 0
+                },
+                "points": [
+                    {
+                        "x": 12.5,
+                        "y": 13.48,
+                        "id": "ISS_ZARYA"
+                    },
+                    {
+                        "x": 12.5,
+                        "y": 8.68,
+                        "id": "ISS_DESTINY"
+                    },
+                    {
+                        "x": 12.5,
+                        "y": 10.52,
+                        "id": "ISS_UNITY"
+                    },
+                    {
+                        "x": 14.16,
+                        "y": 6.57,
+                        "id": "ISS_KIBO"
+                    },
+                    {
+                        "x": 11.22,
+                        "y": 6.57,
+                        "id": "ISS_COLUMBUS"
+                    },
+                    {
+                        "x": 14.03,
+                        "y": 10.52,
+                        "id": "ISS_TRANQUILITY"
+                    },
+                    {
+                        "x": 12.5,
+                        "y": 6.57,
+                        "id": "ISS_HARMONY"
+                    },
+                    {
+                        "x": 12.5,
+                        "y": 17.52,
+                        "id": "ISS_ZVEZDA"
                     }
                 ]
             }

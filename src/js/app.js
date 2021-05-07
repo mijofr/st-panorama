@@ -3,6 +3,10 @@ import '../scss/index.scss';
 import * as PhotoSphereViewer from 'photo-sphere-viewer';
 import * as VisibleRangePlugin from 'photo-sphere-viewer/dist/plugins/visible-range';
 import { EVENTS } from 'photo-sphere-viewer/src/data/constants';
+
+
+import * as SetupData from "./panoSetup.json";
+
 var viewer;
 window.addEventListener("load", function(){
 
@@ -16,6 +20,7 @@ window.addEventListener("load", function(){
             bottom: './panorama-assets/panoramas/orbit/bottom.jpg'
           },
     */
+
 
     
     viewer = new PhotoSphereViewer.Viewer({
@@ -48,38 +53,63 @@ window.addEventListener("load", function(){
       var visibleRangePlugin = viewer.getPlugin(VisibleRangePlugin);
       visibleRangePlugin.setRangesFromPanoData();
 
+      let hash = window.location.hash;
+      if (hash != undefined && hash.length > 0) {
+          let id = hash.substring(1);
+          console.log(id);
+          window.activateId(id);
+      }
+
 
 });
 
 
-
-window.cclick = ($element) => {
-    let target = $element.target;
-    let id = target.id;
-    console.log(id);
+window.activateId = (id) => {
 
     let styleTag = document.getElementById("hTag");
-    console.log(styleTag);
 
     styleTag.innerHTML = `
         #${id} {
             stroke: #c96046;
         }
     `;
+
+
+    let panoSetup = {
+        fullWidth: 2496,
+        fullHeight: 1536,
+        croppedWidth: 2496,
+        croppedHeight: 768,
+        croppedX: 0,
+        croppedY: 384,
+        poseHeading: 0, // 0 to 360
+        posePitch: 0, // -90 to 90
+        poseRoll: 0, // -180 to 180
+    };
+
+    for (let n of SetupData.default.panoDatas) {
+        if (n[0] == id) {
+            console.log
+            panoSetup = n[1];
+        }
+    }
+
+    let hasAlt = false;
+    for (let n of SetupData.default.alts) {
+        let alertButton = document.getElementById("alertButton");
+        if (n[0] == id) {
+            alertButton.className = "visible";
+            alertButton.setAttribute("ALT_LINK", n[1]);
+            hasAlt = true;
+        }
+    }
+    if (hasAlt == false) {
+        alertButton.className = null;
+    }
     
     let url = `./panorama-assets/panoramas/${id}.jpg`;
     let opts = {
-        panoData: {
-            fullWidth: 2496,
-            fullHeight: 1536,
-            croppedWidth: 2496,
-            croppedHeight: 768,
-            croppedX: 0,
-            croppedY: 384,
-            poseHeading: 0, // 0 to 360
-            posePitch: 0, // -90 to 90
-            poseRoll: 0, // -180 to 180
-        }
+        panoData: panoSetup
     };
     viewer.setPanorama(url, opts);
 
@@ -89,6 +119,21 @@ window.cclick = ($element) => {
     
     var visibleRangePlugin = viewer.getPlugin(VisibleRangePlugin);
     visibleRangePlugin.setRangesFromPanoData();
+
+}
+
+window.alrtClicked = ($element) => {
+    let altlink = $element.getAttribute("alt_link");
+    if (altlink) {
+        window.activateId(altlink);
+    }
+}
+
+window.cclick = ($element) => {
+    let target = $element.target;
+    let id = target.id;
+
+    window.activateId(id);
 
 
 }

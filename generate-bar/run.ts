@@ -3,6 +3,8 @@ const fs = require('fs');
 var htmlOut: string[] = [];
 var landCssOut: string[] = [];
 var portCssOut: string[] = [];
+var setups: [string, PanoData][] = [];
+var alts: [string, string][] = [];
 
 
 function main() {
@@ -13,6 +15,8 @@ function main() {
 	fs.writeFileSync("./../src/scss/port.scss", portCssOut.join("\n"));
 	fs.writeFileSync("./../src/scss/land.scss", landCssOut.join("\n"));
 
+
+	fs.writeFileSync("./../src/js/panoSetup.json", JSON.stringify({ panoDatas: setups, alts: alts }));
 
 }
 
@@ -38,22 +42,56 @@ export function create(groups: PlanGroup[]) {
 
 		group.plans.forEach(plan => {
 
+			let id = (group.name + "_" + plan.name)
+				.split("'")
+				.join("")
+				.split("(")
+				.join("")
+				.split(")")
+				.join("")
+				.split("/")
+				.join("")
+				.split(" ")
+				.join("_")
+				.toUpperCase();
+
+			plan.points.forEach(p => {
+				let setup: PanoData = null;
+				if (p.setup != undefined) {
+					setup = p.setup;
+				} else if (plan.setup != undefined) {
+					setup = plan.setup;
+				} else if (group.setup != undefined) {
+					setup = group.setup;
+				}
+				if (setup != undefined) {
+					setups.push([p.id, setup]);
+				}
+
+				if (p.hasAlt != undefined) {
+					alts.push([p.id, p.hasAlt]);
+				}
+			})
+
 
 			let heightPerc: number = 95 * plan.height / maxHeight;
 			let widthPerc: number = 95 * plan.width / maxWidth;
 
-			portCssOut.push(` #SVGMAP_${plan.img.toUpperCase()} { height: ${heightPerc}%; }`)
-			landCssOut.push(` #SVGMAP_${plan.img.toUpperCase()} { width: ${widthPerc}%; }`)
+			portCssOut.push(` #SVGMAP_${id} { height: ${heightPerc}%; }`)
+			landCssOut.push(` #SVGMAP_${id} { width: ${widthPerc}%; }`)
 
 			htmlOut.push(`<div class="sTitle"><div><div>${plan.name}</div></div></div>`);
+	
 
-			let circles: string = plan.points.map(p => {
-				return `<circle class="cameraPoint" cx="${p.x.toFixed(4)}" cy="${p.y.toFixed(4)}" r="0.02em" id="${p.id}" onclick="cclick(evt)" />`;
-			}).join("\n");
+			htmlOut.push(`<svg class="mapBox" id="SVGMAP_${id}" viewBox="0 0 ${plan.width.toFixed(4)} ${plan.height.toFixed(4)}" version="1.1" xmlns="http://www.w3.org/2000/svg">`);
+			htmlOut.push(`<image xlink:href="./panorama-assets/rooms/${plan.img}" y="0" x="0" height="100%" width="100%" />`);
 
-			htmlOut.push(`<svg class="mapBox" id="SVGMAP_${plan.img.toUpperCase()}" viewBox="0 0 ${plan.width.toFixed(4)} ${plan.height.toFixed(4)}" version="1.1" xmlns="http://www.w3.org/2000/svg">`);
-			htmlOut.push(`<image xlink:href="./panorama-assets/rooms/${plan.img}.png" y="0" x="0" height="100%" width="100%" />`);
-			htmlOut.push(circles);
+			plan.points.forEach(p => {
+				if (p.x != null && p.y != null) {
+					htmlOut.push(`<circle class="cameraPoint" cx="${p.x.toFixed(4)}" cy="${p.y.toFixed(4)}" r="0.02em" id="${p.id}" onclick="cclick(evt)" />`);
+				}
+			});	
+
 			htmlOut.push(`</svg>`)
 
 		});
@@ -66,16 +104,10 @@ export function create(groups: PlanGroup[]) {
 
 main();
 
-export interface MapPoint {
-	id: string;
-	x: number;
-	y: number;
-}
-
-
 export interface PlanGroup {
 	name: string;
 	plans: Plan[];
+	setup?: PanoData;
 }
 
 export interface Plan {
@@ -84,4 +116,27 @@ export interface Plan {
     height: number;
     width: number;
 	points: MapPoint[];
+	setup?: PanoData;
 }
+
+export interface PanoData {
+	fullWidth: number;
+	fullHeight: number;
+	croppedWidth: number;
+	croppedHeight: number;
+	croppedX: number;
+	croppedY: number;
+	poseHeading: number;
+	posePitch: number;
+	poseRoll: number;
+}
+
+
+export interface MapPoint {
+	id: string;
+	x: number;
+	y: number;
+	setup?: PanoData;
+	hasAlt?: string;
+}
+
