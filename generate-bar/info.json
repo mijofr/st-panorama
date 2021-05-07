@@ -4,7 +4,7 @@
         "plans": [
             {
                 "name": "Main Bridge",
-                "img": "TOS.svg",
+                "img": "tos.svg",
                 "height": 14,
                 "width": 13,
                 "points": [
@@ -1041,7 +1041,7 @@
         "plans": [
             {
                 "name": "Station (1/3 SCALE)",
-                "img": "ISS.svg",
+                "img": "iss.svg",
                 "height": 19,
                 "width": 25,
                 "setup": {
