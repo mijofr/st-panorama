@@ -50,7 +50,7 @@ html {
 }
 
 .bar {
-  position: fixed;
+  position: absolute;
   background-color: #000;
 
 
@@ -88,7 +88,7 @@ html {
 
 
 .main {
-  position: fixed;
+  position: absolute;
   background-color: black;
   display: flex;
   align-items: center;
