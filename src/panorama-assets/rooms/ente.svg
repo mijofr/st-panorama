@@ -1,0 +1,21 @@
+<svg  viewBox="0 0 15.7980 14.8400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .cameraPoint:hover {
+      cursor: pointer;
+    }
+  </style>
+  <rect fill="#000" stroke="none" width="100%" height="100%" />
+  <image xlink:href="./ente.png" y="0" x="0" height="100%" width="100%" />
+  <circle class="cameraPoint" cx="4.5936" cy="3.2800" r="0.02em" id="ENTE_00" />
+  <circle class="cameraPoint" cx="7.7628" cy="2.4805" r="0.02em" id="ENTE_01" />
+  <circle class="cameraPoint" cx="11.0658" cy="3.2432" r="0.02em" id="ENTE_02" />
+  <circle class="cameraPoint" cx="11.4899" cy="4.9433" r="0.02em" id="ENTE_03" />
+  <circle class="cameraPoint" cx="13.7663" cy="6.7326" r="0.02em" id="ENTE_04" />
+  <circle class="cameraPoint" cx="12.9182" cy="10.8654" r="0.02em" id="ENTE_05" />
+  <circle class="cameraPoint" cx="7.9413" cy="11.2933" r="0.02em" id="ENTE_06" />
+  <circle class="cameraPoint" cx="5.5310" cy="9.2886" r="0.02em" id="ENTE_07" />
+  <circle class="cameraPoint" cx="3.9174" cy="7.7638" r="0.02em" id="ENTE_08" />
+  <circle class="cameraPoint" cx="3.2230" cy="5.1934" r="0.02em" id="ENTE_09" />
+  <circle class="cameraPoint" cx="7.9574" cy="6.8838" r="0.02em" id="ENTE_10" />
+  <circle class="cameraPoint" cx="7.8311" cy="4.9130" r="0.02em" id="ENTE_11" />
+</svg>

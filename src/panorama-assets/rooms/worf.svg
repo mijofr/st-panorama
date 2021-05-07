@@ -1,0 +1,15 @@
+<svg  viewBox="0 0 8.5674 13.9098" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .cameraPoint:hover {
+      cursor: pointer;
+    }
+  </style>
+  <rect fill="#000" stroke="none" width="100%" height="100%" />
+  <image xlink:href="./worf.png" y="0" x="0" height="100%" width="100%" />
+  <circle class="cameraPoint" cx="7.9718" cy="8.1444" r="0.02em" id="ENTD_WORFQUARTERS_00" />
+  <circle class="cameraPoint" cx="4.3446" cy="8.1126" r="0.02em" id="ENTD_WORFQUARTERS_01" />
+  <circle class="cameraPoint" cx="2.9844" cy="8.0982" r="0.02em" id="ENTD_WORFQUARTERS_02" />
+  <circle class="cameraPoint" cx="4.2225" cy="10.1590" r="0.02em" id="ENTD_WORFQUARTERS_03" />
+  <circle class="cameraPoint" cx="4.1855" cy="11.8665" r="0.02em" id="ENTD_WORFQUARTERS_04" />
+  <circle class="cameraPoint" cx="1.2643" cy="11.7943" r="0.02em" id="ENTD_WORFQUARTERS_05" />
+</svg>

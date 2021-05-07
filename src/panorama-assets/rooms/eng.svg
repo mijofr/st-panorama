@@ -1,0 +1,20 @@
+<svg  viewBox="0 0 11.9701 20.9812" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .cameraPoint:hover {
+      cursor: pointer;
+    }
+  </style>
+  <rect fill="#000" stroke="none" width="100%" height="100%" />
+  <image xlink:href="./eng.png" y="0" x="0" height="100%" width="100%" />
+  <circle class="cameraPoint" cx="7.2472" cy="19.6648" r="0.02em" id="ENTD_ENGINEERING_00" />
+  <circle class="cameraPoint" cx="5.5695" cy="17.1778" r="0.02em" id="ENTD_ENGINEERING_01" />
+  <circle class="cameraPoint" cx="8.5836" cy="17.0807" r="0.02em" id="ENTD_ENGINEERING_02" />
+  <circle class="cameraPoint" cx="7.2728" cy="12.0154" r="0.02em" id="ENTD_ENGINEERING_03" />
+  <circle class="cameraPoint" cx="7.3138" cy="10.1092" r="0.02em" id="ENTD_ENGINEERING_04" />
+  <circle class="cameraPoint" cx="3.6942" cy="9.6323" r="0.02em" id="ENTD_ENGINEERING_05" />
+  <circle class="cameraPoint" cx="2.0781" cy="8.5674" r="0.02em" id="ENTD_ENGINEERING_06" />
+  <circle class="cameraPoint" cx="7.2456" cy="8.2370" r="0.02em" id="ENTD_ENGINEERING_07" />
+  <circle class="cameraPoint" cx="4.7617" cy="7.5611" r="0.02em" id="ENTD_ENGINEERING_08" />
+  <circle class="cameraPoint" cx="4.0851" cy="4.6747" r="0.02em" id="ENTD_ENGINEERING_09" />
+  <circle class="cameraPoint" cx="11.4921" cy="5.3067" r="0.02em" id="ENTD_ENGINEERING_10" />
+</svg>

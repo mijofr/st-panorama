@@ -1,0 +1,26 @@
+<svg  viewBox="0 0 26.2289 13.3881" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <image xlink:href="./voy.png" y="0" x="0" height="100%" width="100%" />
+  <rect fill="#000" stroke="none" width="100%" height="100%" />
+  <circle class="cameraPoint" cx="12.6694" cy="4.2234" r="0.02em" id="VOY_BRIDGE_00" />
+  <circle class="cameraPoint" cx="14.6519" cy="3.2158" r="0.02em" id="VOY_BRIDGE_01" />
+  <circle class="cameraPoint" cx="9.5964" cy="4.8846" r="0.02em" id="VOY_BRIDGE_02" />
+  <circle class="cameraPoint" cx="7.8517" cy="4.7295" r="0.02em" id="VOY_BRIDGE_03" />
+  <circle class="cameraPoint" cx="7.4156" cy="9.5110" r="0.02em" id="VOY_BRIDGE_04" />
+  <circle class="cameraPoint" cx="11.7772" cy="5.5295" r="0.02em" id="VOY_BRIDGE_05" />
+  <circle class="cameraPoint" cx="12.7090" cy="10.3506" r="0.02em" id="VOY_BRIDGE_06" />
+  <circle class="cameraPoint" cx="17.8835" cy="9.5412" r="0.02em" id="VOY_BRIDGE_07" />
+  <circle class="cameraPoint" cx="17.7844" cy="6.8088" r="0.02em" id="VOY_BRIDGE_08" />
+  <circle class="cameraPoint" cx="7.6535" cy="6.7131" r="0.02em" id="VOY_BRIDGE_09" />
+  <circle class="cameraPoint" cx="12.6297" cy="12.2480" r="0.02em" id="VOY_BRIDGE_10" />
+  <circle class="cameraPoint" cx="12.5703" cy="7.4536" r="0.02em" id="VOY_BRIDGE_11" />
+  <circle class="cameraPoint" cx="17.5266" cy="4.7807" r="0.02em" id="VOY_BRIDGE_12" />
+  <circle class="cameraPoint" cx="25.0802" cy="5.5177" r="0.02em" id="VOY_CONFERENCE_14" />
+  <circle class="cameraPoint" cx="23.2166" cy="3.1024" r="0.02em" id="VOY_CONFERENCE_15" />
+  <circle class="cameraPoint" cx="19.9057" cy="5.6832" r="0.02em" id="VOY_CONFERENCE_16" />
+  <circle class="cameraPoint" cx="22.5029" cy="8.3434" r="0.02em" id="VOY_CONFERENCE_17" />
+  <circle class="cameraPoint" cx="1.9579" cy="4.3715" r="0.02em" id="VOY_READYROOM_18" />
+  <circle class="cameraPoint" cx="0.7882" cy="6.3377" r="0.02em" id="VOY_READYROOM_19" />
+  <circle class="cameraPoint" cx="3.6828" cy="8.3237" r="0.02em" id="VOY_READYROOM_20" />
+  <circle class="cameraPoint" cx="5.3680" cy="5.1947" r="0.02em" id="VOY_READYROOM_21" />
+  <circle class="cameraPoint" cx="7.7605" cy="1.0847" r="0.02em" id="VOY_TURBOLIFT_13" />
+</svg>

@@ -1,0 +1,26 @@
+
+<svg viewBox="0 0 12.4269 13.7318" version="1.1"
+   xmlns="http://www.w3.org/2000/svg">
+   <style>
+      .cameraPoint:hover {
+      cursor: pointer;
+      }
+   </style>
+   <rect fill="#000" stroke="none" width="100%" height="100%" />
+   <image xlink:href="./tos.png" y="0" x="0" height="100%" width="100%" />
+   <circle class="cameraPoint" cx="6.0939" cy="6.0357" r="0.02em" id="TOS_00" />
+   <circle class="cameraPoint" cx="6.8944" cy="7.5637" r="0.02em" id="TOS_01" />
+   <circle class="cameraPoint" cx="5.5258" cy="7.5941" r="0.02em" id="TOS_02" />
+   <circle class="cameraPoint" cx="6.1455" cy="11.2912" r="0.02em" id="TOS_03" />
+   <circle class="cameraPoint" cx="2.0732" cy="9.0804" r="0.02em" id="TOS_04" />
+   <circle class="cameraPoint" cx="2.0550" cy="6.5263" r="0.02em" id="TOS_05" />
+   <circle class="cameraPoint" cx="3.6070" cy="4.3008" r="0.02em" id="TOS_06" />
+   <circle class="cameraPoint" cx="6.2546" cy="3.3535" r="0.02em" id="TOS_07" />
+   <circle class="cameraPoint" cx="9.2857" cy="3.5382" r="0.02em" id="TOS_08" />
+   <circle class="cameraPoint" cx="10.3812" cy="6.4436" r="0.02em" id="TOS_09" />
+   <circle class="cameraPoint" cx="10.4177" cy="9.2212" r="0.02em" id="TOS_10" />
+   <circle class="cameraPoint" cx="9.3404" cy="10.9032" r="0.02em" id="TOS_11" />
+   <circle class="cameraPoint" cx="2.7886" cy="11.3320" r="0.02em" id="TOS_12" />
+   <circle class="cameraPoint" cx="6.1713" cy="8.9092" r="0.02em" id="TOS_13" />
+   <circle class="cameraPoint" cx="3.0210" cy="11.0054" r="0.02em" id="TOS_14" />
+</svg>
