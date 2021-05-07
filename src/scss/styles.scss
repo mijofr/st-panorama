@@ -10,8 +10,31 @@ html {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
 }
+
+/*
+html {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 774px) {
+  html {
+    font-size: 20px;
+  }
+}
+*/
+
+html {
+  font-size: 18px;
+}
+
+
+
+
 
 #photosphere {
   position: absolute;
@@ -101,17 +124,22 @@ html {
   }
 }
 
+$ttS: 1.2rem;
+$ttF: 0.85rem;
+$mar: 0.4rem;
+$sS: 0.75rem;
+
 .topTitle {
-  height: 2rem;
-  font-size: 1.25rem;
+  height: $ttS;
+  font-size: $ttF;
 
   &>div {
-    height: 2rem;
+    height: $ttS;
     color: #000;
     background-color: #70a8c1;
 
     &>div {
-      margin-left: 0.5rem;
+      margin-left: $mar;
 
     }
 
@@ -120,22 +148,22 @@ html {
 }
 
 .sTitle {
-  height: 1rem;
+  height: $sS;
 
   &>div {
-    height: 1rem;
+    height: $sS;
     color: #000;
     background-color: #2e7fa5;
-    font-size: 1rem;
-    line-height: 1rem;
+    font-size: $sS;
+    line-height: $sS;
 
     &>div {
-      margin-left: 0.5rem;
-      height: 1rem;
+      margin-left:$mar;
+      height: $sS;
       background-color: #000;
       color: #2e7fa5;
-      padding-left: 0.5em;
-      padding-right: 0.5em;
+      padding-left: $mar;
+      padding-right: $mar;
     }
 
   }
@@ -221,13 +249,13 @@ html {
   .topTitle,
   .sTitle {
     height: $innerBarHeight;
-    width: 2rem;
+    width: $ttS;
     margin-bottom: unset;
-    margin-right: 0.2em;
+    margin-right: 0.2rem;
 
     & > div {
       width: $innerBarHeight;
-      height: 2rem;
+      height: $ttS;
       transform: rotate(-90deg) translateY(-1 * $innerBarHeight);
       -webkit-transform: rotate(-90deg) translateY(-1 * $innerBarHeight);
       -moz-transform: rotate(-90deg) translateY(-1 * $innerBarHeight);
@@ -238,16 +266,16 @@ html {
   }
 
   .topTitle {
-    width: 2rem;
+    width: $ttS;
     & > div {
-      height: 2rem;
+      height: $ttS;
     }
   }
 
   .sTitle {
-    width: 1rem;
+    width: $sS;
     & > div {
-      height: 1rem;
+      height: $sS;
     }
   }
 
@@ -266,8 +294,8 @@ html {
   }
 
   .mapBox {
-    margin-left: 1vw;
-    margin-right: 1vw;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
     width: auto;
     font-size: 1rem;
   }
