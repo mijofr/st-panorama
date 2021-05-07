@@ -9,7 +9,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { extendDefaultPlugins } = require('svgo');
-
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const environment = require('./configuration/environment');
 
 module.exports = {
@@ -97,6 +97,16 @@ module.exports = {
       filename: "index.html",
       template: "./src/index.hbs",
       favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
+    }),
+    new FaviconsWebpackPlugin({ logo: './src/favicon.svg',
+      favicons: {
+        appName: 'Trekorama',
+        appDescription: 'Trek Panoramas',
+        developerName: 'MiJoFr',
+        developerURL: "https://github.com/mijofr/st-panorama", // prevent retrieving from the nearest package.json
+        background: '#000000',
+        theme_color: '#000000'
+      }
     })
   ],
   target: 'web',
