@@ -1,0 +1,17 @@
+<svg  viewBox="0 0 6.2054 17.1953" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .cameraPoint:hover {
+      cursor: pointer;
+    }
+  </style>
+  <rect fill="#000" stroke="none" width="100%" height="100%" />
+  <image xlink:href="./picard.png" y="0" x="0" height="100%" width="100%" />
+  <circle class="cameraPoint" cx="4.2573" cy="8.9500" r="0.02em" id="ENTD_PICARDQUARTERS_00" />
+  <circle class="cameraPoint" cx="1.8354" cy="8.3629" r="0.02em" id="ENTD_PICARDQUARTERS_01" />
+  <circle class="cameraPoint" cx="3.5848" cy="6.8641" r="0.02em" id="ENTD_PICARDQUARTERS_02" />
+  <circle class="cameraPoint" cx="4.0895" cy="5.3172" r="0.02em" id="ENTD_PICARDQUARTERS_03" />
+  <circle class="cameraPoint" cx="4.2259" cy="12.2364" r="0.02em" id="ENTD_PICARDQUARTERS_04" />
+  <circle class="cameraPoint" cx="3.3039" cy="10.5240" r="0.02em" id="ENTD_PICARDQUARTERS_05" />
+  <circle class="cameraPoint" cx="1.8364" cy="10.4499" r="0.02em" id="ENTD_PICARDQUARTERS_06" />
+  <circle class="cameraPoint" cx="4.7499" cy="10.4523" r="0.02em" id="ENTD_PICARDQUARTERS_07" />
+</svg>

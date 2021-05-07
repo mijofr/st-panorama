@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="tenforward.svg"
+   id="svg557"
+   version="1.1"
+   viewBox="0 0 17.9379 21.8900"
+   >
+  <metadata
+     id="metadata561">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:current-layer="svg557"
+     inkscape:window-maximized="1"
+     inkscape:window-y="1286"
+     inkscape:window-x="1493"
+     inkscape:cy="8.2196389"
+     inkscape:cx="10.022019"
+     inkscape:zoom="45.254834"
+     showgrid="false"
+     id="namedview559"
+     inkscape:window-height="1057"
+     inkscape:window-width="1804"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <defs
+     id="defs536">
+    <marker
+       refY="1"
+       refX="1"
+       markerHeight="2"
+       markerWidth="2"
+       id="markerCircle">
+      <circle
+         id="circle530"
+         style="stroke: none; fill:#ffffff;"
+         r="1"
+         cy="1"
+         cx="1" />
+    </marker>
+    <marker
+       orient="1.5708"
+       refY="1"
+       refX="4"
+       markerHeight="2"
+       markerWidth="4"
+       id="markerArrow">
+      <path
+         id="path533"
+         style="fill: #ffffff;"
+         d="M 0,0 4,1 0,2 Z" />
+    </marker>
+  </defs>
+  <style
+     id="style538"> 
+      svg { background-color: #000; } 
+      circle {
+         fill: red;
+         marker-end:url(#markerArrow);
+         stroke-width:0.004em;
+         stroke-opacity: 0;
+         font-size: 8px;
+      }
+   </style>
+  <rect
+     id="rect540"
+     height="100%"
+     width="100%"
+     stroke="none"
+     fill="#000" />
+  <image
+     sodipodi:absref="C:\src\experiments\st-panorama\src\panorama-assets\rooms\tenforward.png"
+     xlink:href="tenforward.png"
+     y="0"
+     x="0"
+     height="100%"
+     width="100%"
+     id="image542" />
+  <circle
+     id="ENTD_TENFORWARD_00"
+     r="0.02em"
+     cy="10.9541"
+     cx="10.5754"
+     class="cameraPoint" />
+  <circle
+     id="ENTD_TENFORWARD_01"
+     r="0.02em"
+     cy="16.7454"
+     cx="13.9485"
+     class="cameraPoint" />
+  <circle
+     id="ENTD_TENFORWARD_02"
+     r="0.02em"
+     cy="13.5414"
+     cx="12.8241"
+     class="cameraPoint" />
+  <circle
+     transform="rotate(-90)"
+     id="ENTD_TENFORWARD_03"
+     r="0.02em"
+     cy="14.080799"
+     cx="-5.1124001"
+     class="cameraPoint" />
+  <circle
+     id="ENTD_TENFORWARD_04"
+     r="0.02em"
+     cy="14.6075"
+     cx="8.5911"
+     class="cameraPoint" />
+  <circle
+     id="ENTD_TENFORWARD_05"
+     r="0.02em"
+     cy="7.6632"
+     cx="8.5059"
+     class="cameraPoint" />
+  <circle
+     id="ENTD_TENFORWARD_06"
+     r="0.02em"
+     cy="4.4958"
+     cx="8.3927"
+     class="cameraPoint" />
+  <circle
+     id="ENTD_TENFORWARD_07"
+     r="0.02em"
+     cy="9.2949"
+     cx="5.1849"
+     class="cameraPoint" />
+  <circle
+     id="ENTD_TENFORWARD_08"
+     r="0.02em"
+     cy="13.2673"
+     cx="5.3172"
+     class="cameraPoint" />
+  <circle
+     id="ENTD_TENFORWARD_09"
+     r="0.02em"
+     cy="11.1216"
+     cx="15.5359"
+     class="cameraPoint" />
+  <circle
+     id="ENTD_TENFORWARD_10"
+     r="0.02em"
+     cy="1.9650"
+     cx="5.6148"
+     class="cameraPoint" />
+  <circle
+     id="ENTD_TENFORWARD_11"
+     r="0.02em"
+     cy="18.1072"
+     cx="5.8794"
+     class="cameraPoint" />
+  <circle
+     id="ENTD_TENFORWARD_12"
+     r="0.02em"
+     cy="8.3885"
+     cx="13.6178"
+     class="cameraPoint" />
+</svg>

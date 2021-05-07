@@ -1,0 +1,26 @@
+      <svg  viewBox="0 0 9.5430 20.8210" version="1.1"
+        xmlns="http://www.w3.org/2000/svg">
+        <style>
+          .cameraPoint:hover {
+            cursor: pointer;
+          }
+        </style>
+        <rect fill="#000" stroke="none" width="100%" height="100%" />
+        <image xlink:href="./defiant.png" y="0" x="0" height="100%" width="100%" />
+        <circle class="cameraPoint" cx="4.7241" cy="14.4594" r="0.02em" id="DEF_00" />
+        <circle class="cameraPoint" cx="4.7428" cy="17.1619" r="0.02em" id="DEF_01" />
+        <circle class="cameraPoint" cx="4.8020" cy="19.0739" r="0.02em" id="DEF_02" />
+        <circle class="cameraPoint" cx="7.2465" cy="17.7176" r="0.02em" id="DEF_03" />
+        <circle class="cameraPoint" cx="7.3655" cy="15.5684" r="0.02em" id="DEF_04" />
+        <circle class="cameraPoint" cx="2.2649" cy="17.6872" r="0.02em" id="DEF_05" />
+        <circle class="cameraPoint" cx="2.1827" cy="15.6125" r="0.02em" id="DEF_06" />
+        <circle class="cameraPoint" cx="3.2011" cy="13.1013" r="0.02em" id="DEF_07" />
+        <circle class="cameraPoint" cx="6.1724" cy="13.0755" r="0.02em" id="DEF_08" />
+        <circle class="cameraPoint" cx="5.6305" cy="12.0686" r="0.02em" id="DEF_09" />
+        <circle class="cameraPoint" cx="5.6398" cy="10.8935" r="0.02em" id="DEF_10" />
+        <circle class="cameraPoint" cx="3.6403" cy="12.0824" r="0.02em" id="DEF_11" />
+        <circle class="cameraPoint" cx="4.7802" cy="5.3292" r="0.02em" id="DEF_12" />
+        <circle class="cameraPoint" cx="7.4711" cy="0.7157" r="0.02em" id="DEF_13" />
+        <circle class="cameraPoint" cx="0.9924" cy="19.7847" r="0.02em" id="DEF_14" />
+        <circle class="cameraPoint" cx="7.9431" cy="15.0511" r="0.02em" id="DEF_15" />
+      </svg>
