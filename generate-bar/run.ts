@@ -1,24 +1,29 @@
 const fs = require('fs');
 
+var htmlOut: string[] = [];
+var landCssOut: string[] = [];
+var portCssOut: string[] = [];
+
 
 function main() {
-	let groups = JSON.parse(fs.readFileSync("info.json").toString()) as PlanGroup[];
+	let groups: PlanGroup[] = JSON.parse(fs.readFileSync("info.json").toString()) as PlanGroup[];
+    create(groups);
+	
+    fs.writeFileSync("./../src/svgbar.hbs", htmlOut.join("\n"));
+	fs.writeFileSync("./../src/scss/port.scss", portCssOut.join("\n"));
+	fs.writeFileSync("./../src/scss/land.scss", landCssOut.join("\n"));
 
-    let plans = create(groups);
 
-	let htmlOut= getFullHtml(plans.join("\n"));
-    fs.writeFileSync("./../index.html", htmlOut);
 }
 
 
 
-export function create(groups: PlanGroup[]): string[] {
-
-    let results = [];
+export function create(groups: PlanGroup[]) {
 
 
-	let maxHeight = 0;
-	let maxWidth = 0;
+
+	let maxHeight: number = 0;
+	let maxWidth: number = 0;
 	groups.forEach(group => {
 		group.plans.forEach(plan => {
 			maxHeight = Math.max(maxHeight, plan.height);
@@ -28,29 +33,32 @@ export function create(groups: PlanGroup[]): string[] {
 
 	groups.forEach(group => {
 
-		results.push(`<div class="topTitle"><div><div>${group.name}</div></div></div>`);
+
+		htmlOut.push(`<div class="topTitle"><div><div>${group.name}</div></div></div>`);
 
 		group.plans.forEach(plan => {
 
-			let heightPerc = 95 * plan.height / maxHeight;
-			let widthPerc = 95 * plan.width / maxWidth;
 
-			results.push(`<div class="sTitle"><div><div>${plan.name}</div></div></div>`);
+			let heightPerc: number = 95 * plan.height / maxHeight;
+			let widthPerc: number = 95 * plan.width / maxWidth;
+
+			portCssOut.push(` #SVGMAP_${plan.img.toUpperCase()} { height: ${heightPerc}%; }`)
+			landCssOut.push(` #SVGMAP_${plan.img.toUpperCase()} { width: ${widthPerc}%; }`)
+
+			htmlOut.push(`<div class="sTitle"><div><div>${plan.name}</div></div></div>`);
 
 			let circles: string = plan.points.map(p => {
-				return `<circle class="cameraPoint" cx="${p.x.toFixed(4)}" cy="${p.y.toFixed(4)}" r="0.02rem" id="${p.id}" onclick="cclick(evt)" />`;
+				return `<circle class="cameraPoint" cx="${p.x.toFixed(4)}" cy="${p.y.toFixed(4)}" r="0.02em" id="${p.id}" onclick="cclick(evt)" />`;
 			}).join("\n");
 
-			let out: string = `
-<svg class="mapBox" height="${heightPerc.toFixed(4)}%" width="${widthPerc.toFixed(4)}%" viewBox="0 0 ${plan.width.toFixed(4)} ${plan.height.toFixed(4)}" version="1.1" xmlns="http://www.w3.org/2000/svg">
-<image xlink:href="./panorama-assets/rooms/${plan.img}.png" y="0" x="0" height="100%" width="100%" />
-${circles}
-</svg>`;
-            results.push(out);
-		});
-	})
+			htmlOut.push(`<svg class="mapBox" id="SVGMAP_${plan.img.toUpperCase()}" viewBox="0 0 ${plan.width.toFixed(4)} ${plan.height.toFixed(4)}" version="1.1" xmlns="http://www.w3.org/2000/svg">`);
+			htmlOut.push(`<image xlink:href="./panorama-assets/rooms/${plan.img}.png" y="0" x="0" height="100%" width="100%" />`);
+			htmlOut.push(circles);
+			htmlOut.push(`</svg>`)
 
-	return results;
+		});
+	});
+
 }
 
 
@@ -77,57 +85,3 @@ export interface Plan {
     width: number;
 	points: MapPoint[];
 }
-
-
-function getFullHtml(insert: string): string {
-	return `
-	<!doctype html>
-
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-
-  <title>Trekorama</title>
-  <meta name="description" content="Trekorama">
-  <meta name="author" content="MiJoFr">
-  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="styles.css">
-
-  <script type="text/javascript" src="./lib/polyfill.min.js"></script>
-  <script type="text/javascript" src="./lib/browser.js"></script>
-
-  <script type="text/javascript" src="./lib/three.min.js"></script>
-  <script type="text/javascript" src="./lib/photo-sphere-viewer.js"></script>
-  <link rel="stylesheet" type="text/css" href="./pano-styles.css">
-  <script type="text/javascript" src="./lib/visible-range.js"></script>
-
-  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/bebasneueregular" type="text/css"/>
-
-  <style id="hTag"></style>
-
-</head>
-
-<body>
-  
-   <div class="bar">
-   <div class="innerBar">
-	${insert}
-	</div>
-	</div>
-	<div class="main">
-    <div class="container">
-      <div class="blockage"></div>
-      <div class="subContainer">
-        <div class="subSubContainer">
-            <div id="photosphere"></div>
-        </div>
-      </div>
-    </div>
-   </div>
-   
-   <script type="text/javascript" src="./main2.js"></script>
-
-</body>
-</html>
-	`
-}  

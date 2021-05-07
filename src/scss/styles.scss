@@ -160,6 +160,11 @@ html {
 
 @media (orientation: landscape) {
 
+  @import "./land";
+
+  
+  
+
   @include psc(75vw);
 
   .bar {
@@ -194,6 +199,7 @@ html {
     margin-top: 1vw;
     margin-bottom: 1vw;
     height: auto;
+    font-size: 1rem;
   }
 
 }
@@ -205,23 +211,28 @@ html {
 
 @media (orientation: portrait) {
 
+  @import "./port";
+
   @include psc(90vw);
+
+
+  $innerBarHeight: 23vh;
 
   .topTitle,
   .sTitle {
-    height: 21vh;
+    height: $innerBarHeight;
     width: 2rem;
     margin-bottom: unset;
     margin-right: 0.2em;
 
     & > div {
-      width: 21vh;
+      width: $innerBarHeight;
       height: 2rem;
-      transform: rotate(-90deg) translateY(-21vh);
-      -webkit-transform: rotate(-90deg) translateY(-21vh);
-      -moz-transform: rotate(-90deg) translateY(-21vh);
-      -ms-transform: rotate(-90deg) translateY(-21vh);
-      -o-transform: rotate(-90deg) translateY(-21vh);  
+      transform: rotate(-90deg) translateY(-1 * $innerBarHeight);
+      -webkit-transform: rotate(-90deg) translateY(-1 * $innerBarHeight);
+      -moz-transform: rotate(-90deg) translateY(-1 * $innerBarHeight);
+      -ms-transform: rotate(-90deg) translateY(-1 * $innerBarHeight);
+      -o-transform: rotate(-90deg) translateY(-1 * $innerBarHeight);  
     }
 
   }
@@ -244,11 +255,11 @@ html {
     bottom: 2.5vh;
     left: 5vw;
     right: 5vw;
-    height: 22.5vh;
+    height: 24.5vh;
     overflow-x: scroll;
 
     .innerBar {
-      height: 21vh;
+      height: $innerBarHeight;
       flex-direction: row;
     }  
 
@@ -258,11 +269,12 @@ html {
     margin-left: 1vw;
     margin-right: 1vw;
     width: auto;
+    font-size: 1rem;
   }
 
   .main {
     top: 0;
-    height: 75vh;
+    height: 73vh;
     left: 0;
     right: 0;
   }
