@@ -1,0 +1,34 @@
+<svg  viewBox="0 0 17.9379 21.8900" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <defs>
+      <marker id="markerCircle" markerWidth="1" markerHeight="1" refX="0.5" refY="0.5">
+         <circle cx="0.5" cy="0.5" r="0.5" style="stroke: none; fill:#ffffff;" />
+      </marker>
+   </defs>
+   <style>
+      svg {
+         background-color: #000;
+      }
+
+      circle {
+         fill: red;
+         marker-end: url(#markerCircle);
+         stroke-width: 0.01;
+         stroke: #999;
+      }
+   </style>
+   <rect fill="#000" stroke="none" width="100%" height="100%" />
+   <image href="./tenforward.png" y="0" x="0" height="100%" width="100%" />
+   <circle class="cameraPoint" cx="10.5754" cy="10.9541" r="0.02em" id="ENTD_TENFORWARD_00" />
+   <circle class="cameraPoint" cx="13.9485" cy="16.7454" r="0.02em" id="ENTD_TENFORWARD_01" />
+   <circle class="cameraPoint" cx="12.8241" cy="13.5414" r="0.02em" id="ENTD_TENFORWARD_02" />
+   <circle class="cameraPoint" cx="14.0808" cy="5.1124" r="0.02em" id="ENTD_TENFORWARD_03" />
+   <circle class="cameraPoint" cx="8.5911" cy="14.6075" r="0.02em" id="ENTD_TENFORWARD_04" />
+   <circle class="cameraPoint" cx="8.5059" cy="7.6632" r="0.02em" id="ENTD_TENFORWARD_05" />
+   <circle class="cameraPoint" cx="8.3927" cy="4.4958" r="0.02em" id="ENTD_TENFORWARD_06" />
+   <circle class="cameraPoint" cx="5.1849" cy="9.2949" r="0.02em" id="ENTD_TENFORWARD_07" />
+   <circle class="cameraPoint" cx="5.3172" cy="13.2673" r="0.02em" id="ENTD_TENFORWARD_08" />
+   <circle class="cameraPoint" cx="15.5359" cy="11.1216" r="0.02em" id="ENTD_TENFORWARD_09" />
+   <circle class="cameraPoint" cx="5.6148" cy="1.9650" r="0.02em" id="ENTD_TENFORWARD_10" />
+   <circle class="cameraPoint" cx="5.8794" cy="18.1072" r="0.02em" id="ENTD_TENFORWARD_11" />
+   <circle class="cameraPoint" cx="13.6178" cy="8.3885" r="0.02em" id="ENTD_TENFORWARD_12" />
+</svg>

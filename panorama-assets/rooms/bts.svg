@@ -1,0 +1,11 @@
+<svg  viewBox="0 0 2.3332 2.0906" version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .cameraPoint:hover {
+      cursor: pointer;
+    }
+  </style>
+  <rect fill="#000" stroke="none" width="100%" height="100%" />
+  <image xlink:href="./bts.png" y="0" x="0" height="100%" width="100%" />
+  <circle class="cameraPoint" cx="0.9209" cy="1.6227" r="0.02em" id="ENTD_BTS" />
+</svg>
