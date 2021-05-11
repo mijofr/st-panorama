@@ -1,3 +1,21 @@
+
+html {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 774px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+
+
+
 body,
 html {
   margin: 0;
@@ -12,52 +30,72 @@ html {
   user-select: none;
 }
 
-
 #fullWrap {
-  position:fixed;
+  position: fixed;
   top: 0;
-  left:0;
-  width:100vw;
-  height:100vh;
-}
+  left: 0;
+  bottom: 0;
+  right: 0;
 
-/*
-html {
-  font-size: 16px;
-}
-@media screen and (min-width: 320px) {
-  html {
-    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  display: flex;
+
+  @media (orientation: portrait) {
+    flex-direction: column-reverse;
+
   }
-}
-@media screen and (min-width: 774px) {
-  html {
-    font-size: 20px;
+
+  @media (orientation: landscape) {
+    flex-direction: row;
   }
-}
-*/
 
-html {
-  font-size: 18px;
+
+
 }
 
 
-
-
-
-#photosphere {
-  position: absolute;
-}
-
-.bar {
-  position: absolute;
+#main {
+  flex: 1 1 auto;
   background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #container {
+    position: relative;
+    display: block;
+
+    background-image: url("./../images/frame.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+
+    #photosphere {
+      position: absolute;
+    }
+
+  }
+
+}
+
+
+
+#bar {
+  flex: 0 0 auto;
+  background-color: #000;
+  position: relative;
+
 
 
   scrollbar-width: thin;
   scrollbar-color: #333 #222;
 
-  &.bar::-webkit-scrollbar {
+  &::-webkit-scrollbar {
     width: 0.5rem;
     height: 0.5rem;
   }
@@ -73,7 +111,8 @@ html {
   }
 
 
-  .innerBar {
+  #innerBar {
+    background-color: #000;
     position: absolute;
     top: 0;
     left: 0;
@@ -82,33 +121,6 @@ html {
     justify-content: center;
     direction: ltr;
   }
-
-}
-
-
-
-.main {
-  position: absolute;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .container {
-    position: relative;
-    display: block;
-
-    background-image: url("./../images/frame.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-  }
-
 }
 
 
@@ -118,14 +130,13 @@ html {
   font-weight: bold;
   font-style: normal;
   text-transform: capitalize;
-  margin-bottom: 0.2em;
 
   position: relative;
-  width: 18.5vw;
+  width: 100%;
 
   &>div {
     position: absolute;
-    width: 18.5vw;
+    width: 100%;
     transform-origin: 100% 0;
     display: flex;
     align-items: center;
@@ -167,7 +178,7 @@ $sS: 0.85rem;
     line-height: $sS;
 
     &>div {
-      margin-left:$mar;
+      margin-left: $mar;
       height: 105%;
       background-color: #000;
       color: #2e7fa5;
@@ -180,7 +191,7 @@ $sS: 0.85rem;
 
 
 @mixin psc($width) {
-  .container {
+  #container {
     width: $width;
     height: 3 * $width / 4;
 
@@ -192,55 +203,50 @@ $sS: 0.85rem;
       border-radius: $width / 75;
       overflow: hidden;
     }
+    #alertButton {
+      font-size:  $width / 50;
+    }
   }
 }
 
-@media (orientation: landscape) {
 
+
+
+
+@media (orientation: landscape) {
+  @include psc(75vw);
   @import "./land";
 
-  
-  
 
-  @include psc(75vw);
 
-  .bar {
-    top: 5vh;
-    bottom: 5vh;
-    left: 1.5vw;
+  #bar {
+    margin: 5vh 0 5vh 1.5vh;
     width: 19vw;
     overflow-y: scroll;
     direction: rtl;
-    
-    .innerBar {
+
+    #innerBar {
       left: 0.5vw;
-      width: 18.5vw;
+      right: 0;
+      top: 0;
       flex-direction: column;
     }
   }
 
-
   .topTitle,
   .sTitle {
-    width: 18.5vw;
+    margin-bottom: 0.2em;
   }
 
-  .main {
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 79vw;
-  }
 
   .mapBox {
     margin-top: 1vw;
     margin-bottom: 1vw;
     height: auto;
-    font-size: 1.2rem;
   }
 
-}
 
+}
 
 @media (min-aspect-ratio: 8/5) {
   @include psc(120vh);
@@ -251,71 +257,66 @@ $sS: 0.85rem;
   @import "./port";
 
   @include psc(90vw);
+  $innerBarHeight: 22.5vh;
+
+  #bar {
+    margin: 0 5vw 2.5vh 5vw;
+    height: 24.5vh;
+    overflow-x: scroll;
+
+    #innerBar {
+      top: 0;
+      height: $innerBarHeight;
+      flex-direction: row;
+    }
+  }
 
 
-  $innerBarHeight: 23vh;
 
   .topTitle,
   .sTitle {
     height: $innerBarHeight;
-    width: $ttS;
-    margin-bottom: unset;
     margin-right: 0.2rem;
 
-    & > div {
+    &>div {
       width: $innerBarHeight;
-      height: 105%;
       transform: rotate(-90deg) translateY(-1 * $innerBarHeight);
       -webkit-transform: rotate(-90deg) translateY(-1 * $innerBarHeight);
       -moz-transform: rotate(-90deg) translateY(-1 * $innerBarHeight);
       -ms-transform: rotate(-90deg) translateY(-1 * $innerBarHeight);
-      -o-transform: rotate(-90deg) translateY(-1 * $innerBarHeight);  
+      -o-transform: rotate(-90deg) translateY(-1 * $innerBarHeight);
     }
 
   }
 
   .topTitle {
     width: $ttS;
-    & > div {
+
+    &>div {
       height: $ttS;
     }
   }
 
   .sTitle {
     width: $sS;
-    & > div {
+
+    &>div {
       height: $sS;
     }
   }
 
-  .bar {
-    bottom: 2.5vh;
-    left: 5vw;
-    right: 5vw;
-    height: 24.5vh;
-    overflow-x: scroll;
-
-    .innerBar {
-      height: $innerBarHeight;
-      flex-direction: row;
-    }  
-
-  }
 
   .mapBox {
     margin-left: 1.5vw;
     margin-right: 1.5vw;
     width: auto;
-    font-size: 1.2rem;
   }
 
-  .main {
-    top: 0;
-    height: 73vh;
-    left: 0;
-    right: 0;
-  }
 
+}
+
+.mapBox {
+  font-size: 0.5rem;
 }
 
 .mapBox .cameraPoint {
@@ -328,7 +329,10 @@ $sS: 0.85rem;
   }
 }
 
+
+
 #alertButton {
+  font-size: 1rem;
   position: absolute;
   background-color: #ffd2a6;
   color: #000;
@@ -342,11 +346,14 @@ $sS: 0.85rem;
   align-items: flex-end;
   justify-content: flex-end;
   padding-right: 0.3em;
+
   &:hover {
     cursor: pointer;
     background-color: #ffd66d;
   }
+
   display: none;
+
   &.visible {
     display: flex;
   }

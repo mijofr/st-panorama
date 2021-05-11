@@ -88,7 +88,7 @@ export function create(groups: PlanGroup[]) {
 
 			plan.points.forEach(p => {
 				if (p.x != null && p.y != null) {
-					htmlOut.push(`<circle class="cameraPoint" cx="${p.x.toFixed(4)}" cy="${p.y.toFixed(4)}" r="0.02em" id="${p.id}" onclick="cclick(evt)" />`);
+					htmlOut.push(`<circle class="cameraPoint" cx="${p.x.toFixed(4)}" cy="${p.y.toFixed(4)}" r="0.04em" id="${p.id}" onclick="cclick(evt)" />`);
 				}
 			});	
 

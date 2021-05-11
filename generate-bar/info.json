@@ -726,13 +726,13 @@
             },
             {
                 "name": "Behind the Scenes",
-                "img": "bts.png",
-                "height": 2.0905855,
-                "width": 2.3332429,
+                "img": "clapper.svg",
+                "height": 2,
+                "width": 2,
                 "points": [
                     {
-                        "x": 0.92091185,
-                        "y": 1.6227168,
+                        "x": 1,
+                        "y": 1.33,
                         "id": "ENTD_BTS"
                     }
                 ]
