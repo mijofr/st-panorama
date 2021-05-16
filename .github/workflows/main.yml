@@ -4,7 +4,6 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
@@ -24,3 +23,9 @@ jobs:
         BASE_BRANCH: main
         BRANCH: gh-pages
         FOLDER: dist
+    - name: Deploy to FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ftp.mijofr.com
+        username: st-panorama#mijofr.com
+        password: ${{ secrets.ftp_password }}
