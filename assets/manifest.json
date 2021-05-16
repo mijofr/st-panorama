@@ -1,7 +1,7 @@
 {
-  "name": "Trekorama",
-  "short_name": "Trekorama",
-  "description": "Trek Panoramas",
+  "name": "Trekorama!",
+  "short_name": "Trekorama!",
+  "description": "360° of Star Trek",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
