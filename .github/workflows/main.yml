@@ -26,6 +26,7 @@ jobs:
     - name: Deploy to FTP
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
+	local-dir: ./dist/
         server: ftp.mijofr.com
         username: st-panorama#mijofr.com
         password: ${{ secrets.ftp_password }}
