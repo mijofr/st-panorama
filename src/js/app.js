@@ -50,8 +50,8 @@ window.addEventListener("load", function(){
         plugins: [[VisibleRangePlugin, {usePanoData: true}]]  
       });
 
-      var visibleRangePlugin = viewer.getPlugin(VisibleRangePlugin);
-      visibleRangePlugin.setRangesFromPanoData();
+      // var visibleRangePlugin = viewer.getPlugin(VisibleRangePlugin);
+      // visibleRangePlugin.setRangesFromPanoData();
 
       let hash = window.location.hash;
       if (hash != undefined && hash.length > 0) {
@@ -117,8 +117,8 @@ window.activateId = (id) => {
         viewer.stopAutorotate();
     }  
     
-    var visibleRangePlugin = viewer.getPlugin(VisibleRangePlugin);
-    visibleRangePlugin.setRangesFromPanoData();
+    // var visibleRangePlugin = viewer.getPlugin(VisibleRangePlugin);
+    //visibleRangePlugin.setRangesFromPanoData();
 
 }
 

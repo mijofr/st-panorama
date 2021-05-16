@@ -130,6 +130,7 @@ html {
   font-weight: 400;
   font-style: normal;
   text-transform: capitalize;
+  white-space: nowrap;
 
   position: relative;
   width: 100%;
@@ -343,8 +344,7 @@ $sS: 0.85rem;
   height: 3.35%;
   bottom: 0;
   right: 7.5%;
-  font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-family: 'Bebas Neue', 'Arial Narrow', Arial, Helvetica, sans-serif;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
@@ -362,4 +362,18 @@ $sS: 0.85rem;
   }
 
 
+}
+
+#ghlink {
+  position: absolute;
+  right:1vmin;
+  top:1vmin;
+  height:2vmin;
+  width:2vmin;
+  background-image: url("./../images/GitHub-Mark-64px.png");
+  background-size: contain;
+  display: block;
+  &:hover {
+    background-image: url("./../images/GitHub-Mark-Light-64px.png");
+  }
 }
