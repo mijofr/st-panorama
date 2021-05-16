@@ -100,8 +100,8 @@ module.exports = {
     }),
     new FaviconsWebpackPlugin({ logo: './src/favicon.svg',
       favicons: {
-        appName: 'Trekorama',
-        appDescription: 'Trek Panoramas',
+        appName: 'Trekorama!',
+        appDescription: '360° of Star Trek',
         developerName: 'MiJoFr',
         developerURL: "https://github.com/mijofr/st-panorama", // prevent retrieving from the nearest package.json
         background: '#000000',
