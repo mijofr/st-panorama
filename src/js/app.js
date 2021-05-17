@@ -3,6 +3,7 @@ import '../scss/index.scss';
 import * as PhotoSphereViewer from 'photo-sphere-viewer';
 import * as VisibleRangePlugin from 'photo-sphere-viewer/dist/plugins/visible-range';
 import { EVENTS } from 'photo-sphere-viewer/src/data/constants';
+import supportsWebP from 'supports-webp';
 
 
 import * as SetupData from "./panoSetup.json";
@@ -10,61 +11,69 @@ import * as SetupData from "./panoSetup.json";
 var viewer;
 window.addEventListener("load", function(){
 
-    /*
-            panorama: {
-            left:   './panorama-assets/panoramas/orbit/left.jpg',
-            front:  './panorama-assets/panoramas/orbit/front.jpg',
-            right:  './panorama-assets/panoramas/orbit/right.jpg',
-            back:   './panorama-assets/panoramas/orbit/back.jpg',
-            top:    './panorama-assets/panoramas/orbit/top.jpg',
-            bottom: './panorama-assets/panoramas/orbit/bottom.jpg'
-          },
-    */
+    supportsWebP.then(supported => {
+
+        let imgExt = ".jpg";
+
+        if (supported) {
+            window.useWebP = true;
+            imgExt = ".webp";
+        } else {
+            window.useWebP = false;
+        }
 
 
     
-    viewer = new PhotoSphereViewer.Viewer({
-        panorama: "./panorama-assets/panoramas/starmap.webp",
-        container: 'photosphere',
-        // caption: 'Parc national du Mercantour <b>&copy; Damien Sorel</b>',
-        loadingImg: './images/loading.png',
-        defaultLat: 0.3,
-        touchmoveTwoFingers: false,
-        mousewheelCtrlKey: false,
-        autorotateDelay: 1,
-        autorotateSpeed: "0.5rpm",
-           panoData: {
-            fullWidth: 6144,
-            fullHeight: 3072,
-            croppedWidth: 6144,
-            croppedHeight: 3072,
-            croppedX: 0,
-            croppedY: 0,
-            poseHeading: 270, // 0 to 360
-            posePitch: 0, // -90 to 90
-            poseRoll: 0, // -180 to 180
-        },
-        canvasBackground: "#000000",
-        fisheye: -0.1,
-        navbar: false,
-        plugins: [[VisibleRangePlugin, {usePanoData: true}]]  
-      });
+        viewer = new PhotoSphereViewer.Viewer({
+            panorama: "./panorama-assets/panoramas/starmap" + imgExt,
+            container: 'photosphere',
+            // caption: 'Parc national du Mercantour <b>&copy; Damien Sorel</b>',
+            loadingImg: './images/loading.png',
+            defaultLat: 0.3,
+            touchmoveTwoFingers: false,
+            mousewheelCtrlKey: false,
+            autorotateDelay: 1,
+            autorotateSpeed: "0.5rpm",
+               panoData: {
+                fullWidth: 6144,
+                fullHeight: 3072,
+                croppedWidth: 6144,
+                croppedHeight: 3072,
+                croppedX: 0,
+                croppedY: 0,
+                poseHeading: 270, // 0 to 360
+                posePitch: 0, // -90 to 90
+                poseRoll: 0, // -180 to 180
+            },
+            canvasBackground: "#000000",
+            fisheye: -0.1,
+            navbar: false,
+            plugins: [[VisibleRangePlugin, {usePanoData: true}]]  
+          });
+    
+    
+          let hash = window.location.hash;
+          if (hash != undefined && hash.length > 0) {
+              let id = hash.substring(1);
+              console.log(id);
+              window.activateId(id);
+          }    
 
-      // var visibleRangePlugin = viewer.getPlugin(VisibleRangePlugin);
-      // visibleRangePlugin.setRangesFromPanoData();
+    });
+    
 
-      let hash = window.location.hash;
-      if (hash != undefined && hash.length > 0) {
-          let id = hash.substring(1);
-          console.log(id);
-          window.activateId(id);
-      }
+
 
 
 });
 
 
 window.activateId = (id) => {
+
+    let imgExt = ".jpg";
+    if (window.useWebP) {
+        imgExt = ".webp";
+    }
 
     let styleTag = document.getElementById("hTag");
 
@@ -107,7 +116,7 @@ window.activateId = (id) => {
         alertButton.className = null;
     }
     
-    let url = `./panorama-assets/panoramas/${id}.jpg`;
+    let url = `./panorama-assets/panoramas/${id}${imgExt}`;
     let opts = {
         panoData: panoSetup
     };
