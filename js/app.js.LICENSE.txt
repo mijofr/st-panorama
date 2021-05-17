@@ -10,3 +10,5 @@
 * @copyright 2015-2021 Damien "Mistic" Sorel
 * @licence MIT (https://opensource.org/licenses/MIT)
 */
+
+/*! npm.im/supports-webp 2.0.1 */
