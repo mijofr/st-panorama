@@ -526,7 +526,7 @@
             {
                 "name": "Cpt Picard's Quarters",
                 "img": "picard.png",
-                "height": 17.195326,
+                "height": 14.715970,
                 "width": 6.2053618,
                 "points": [
                     {
@@ -688,12 +688,12 @@
             {
                 "name": "Type 6 Shuttlecraft",
                 "img": "type6.png",
-                "height": 2,
-                "width": 5,
+                "height": 2.8,
+                "width": 7,
                 "points": [
                     {
-                        "x": 1.8383905,
-                        "y": 1.1510791,
+                        "x": 3.5,
+                        "y": 1.4,
                         "id": "ENTD_SHUTTLE"
                     }
                 ]
