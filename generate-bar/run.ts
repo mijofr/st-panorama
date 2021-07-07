@@ -84,7 +84,7 @@ export function create(groups: PlanGroup[]) {
 	
 
 			htmlOut.push(`<svg class="mapBox" id="SVGMAP_${id}" viewBox="0 0 ${plan.width.toFixed(4)} ${plan.height.toFixed(4)}" version="1.1" xmlns="http://www.w3.org/2000/svg">`);
-			htmlOut.push(`<image xlink:href="./panorama-assets/rooms/${plan.img}" y="0" x="0" height="100%" width="100%" />`);
+			htmlOut.push(`<image class="mapPlanImg" xlink:href="./panorama-assets/rooms/${plan.img}" y="0" x="0" height="100%" width="100%" />`);
 
 			plan.points.forEach(p => {
 				if (p.x != null && p.y != null) {

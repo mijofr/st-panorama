@@ -60,9 +60,15 @@ window.addEventListener("load", function(){
           }    
 
     });
+
+    this.setTimeout(() => {
+        let el = document.getElementById("innerBar");
+        if (el) {
+            el.className = "ready";
+        }
+    }, 1500);
     
-
-
+    
 
 
 });

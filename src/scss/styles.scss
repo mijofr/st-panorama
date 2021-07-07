@@ -377,3 +377,21 @@ $sS: 0.85rem;
     background-image: url("./../images/GitHub-Mark-Light-64px.png");
   }
 }
+
+
+#innerBar.ready svg.mapBox .cameraPoint {
+  animation-name: flashy;
+  animation-duration: 0.2s;
+  animation-delay: 0s;
+  animation-iteration-count: 7;
+  animation-fill-mode: none;
+  
+}
+
+@keyframes flashy {
+  0%   {opacity: 1;}
+  25%  {opacity: 0.5;}
+  50%  {opacity: 0.5;}
+  75%  {opacity: 1;}
+  100% {opacity: 1;}
+}
