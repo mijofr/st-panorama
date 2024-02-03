@@ -1033,6 +1033,16 @@
                         "x": null,
                         "y": null,
                         "id": "KENT_BRIDGE_01"
+                    },
+                    {
+                        "x": 1,
+                        "y": 1,
+                        "id": "KENT_HALL_00"
+                    },
+                    {
+                        "x": 12,
+                        "y": 12,
+                        "id": "KENT_HALL_01"
                     }
                 ]
             }

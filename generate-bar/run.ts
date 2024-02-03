@@ -56,7 +56,7 @@ export function create(groups: PlanGroup[]) {
 				.toUpperCase();
 
 			plan.points.forEach(p => {
-				let setup: PanoData = null;
+				let setup!: PanoData;
 				if (p.setup != undefined) {
 					setup = p.setup;
 				} else if (plan.setup != undefined) {

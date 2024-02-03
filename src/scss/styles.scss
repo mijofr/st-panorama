@@ -1,3 +1,4 @@
+@use "sass:math";
 
 html {
   font-size: 16px;
@@ -206,18 +207,18 @@ $sS: 0.85rem;
 @mixin psc($width) {
   #container {
     width: $width;
-    height: 3 * $width / 4;
+    height: 3 * $width * 0.25;
 
     #photosphere {
       left: $width * 0.05;
       right: $width * 0.05;
       top: $width * 0.05;
       bottom: $width * 0.05;
-      border-radius: $width / 75;
+      border-radius: math.div($width,75);
       overflow: hidden;
     }
     #alertButton {
-      font-size:  $width / 50;
+      font-size:  math.div($width,50);
     }
   }
 }
