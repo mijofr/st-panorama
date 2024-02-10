@@ -69,8 +69,8 @@
                         "id": "TOS_11"
                     },
                     {
-                        "x": 2.9885828,
-                        "y": 11.332018,
+                        "x": 2.7,
+                        "y": 11.6,
                         "id": "TOS_12"
                     },
                     {
@@ -927,6 +927,146 @@
                         "id": "VOY_TURBOLIFT_13"
                     }
                 ]
+            },
+            {
+                "name": "Sickbay / Deck 5",
+                "img": "VOY_SICKBAY.png",
+                "height": 16,
+                "width": 24,
+                "points": [
+                    {
+                        "x": 7.5,
+                        "y": 5.4,
+                        "id": "VOY_TREATMENT",
+                        "setup": {
+                            "fullWidth": 3036,
+                            "fullHeight": 1518,
+                            "croppedWidth": 3036,
+                            "croppedHeight": 300,
+                            "croppedY": 609
+                        }
+                    },
+                    {
+                        "x": 7,
+                        "y": 9.5,
+                        "id": "VOY_DOC_OFFICE",
+                        "setup": {
+                            "fullWidth": 2988,
+                            "fullHeight": 1494,
+                            "croppedWidth": 2988,
+                            "croppedHeight": 300,
+                            "croppedY": 597
+                        }
+                    },
+                    {
+                        "x": 11.5,
+                        "y": 5.8,
+                        "id": "VOY_HALL",
+                        "setup": {
+                            "fullWidth": 3032,
+                            "fullHeight": 1516,
+                            "croppedWidth": 3032,
+                            "croppedHeight": 300,
+                            "croppedY": 608
+                        }
+                    },
+                    {
+                        "x": 21.5,
+                        "y": 2.7,
+                        "id": "VOY_HOLODECK_DOOR",
+                        "setup": {
+                            "fullWidth": 3092,
+                            "fullHeight": 1546,
+                            "croppedWidth": 3092,
+                            "croppedHeight": 300,
+                            "croppedY": 623
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "Transporter Room",
+                "img": "VOY_TRANSP.png",
+                "height": 11,
+                "width": 8,
+                "points": [
+                    {
+                        "x": 4.6,
+                        "y": 2,
+                        "id": "VOY_TRANSPORTER_00",
+                        "setup": {
+                            "fullWidth": 3008,
+                            "fullHeight": 1504,
+                            "croppedWidth": 3008,
+                            "croppedHeight": 300,
+                            "croppedY": 602
+                        }
+                    },
+                    {
+                        "x": 4.6,
+                        "y": 8.25,
+                        "id": "VOY_TRANSPORTER_01",
+                        "setup": {
+                            "fullWidth": 2968,
+                            "fullHeight": 1484,
+                            "croppedWidth": 2968,
+                            "croppedHeight": 300,
+                            "croppedY": 592
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "Engineering",
+                "img": "VOY_ENG.png",
+                "height": 19,
+                "width": 25,
+                "points": [
+                    {
+                        "x": 8.2,
+                        "y": 8.9,
+                        "id": "VOY_ENGINEERING_00",
+                        "setup": {
+                            "fullWidth": 2980,
+                            "fullHeight": 1490,
+                            "croppedWidth": 2980,
+                            "croppedHeight": 300,
+                            "croppedY": 595
+                        }
+                    },
+                    {
+                        "x": 22.1,
+                        "y": 15,
+                        "id": "VOY_ENGINEERING_01",
+                        "setup": {
+                            "fullWidth": 2952,
+                            "fullHeight": 1476,
+                            "croppedWidth": 2952,
+                            "croppedHeight": 300,
+                            "croppedY": 588
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "Mess Hall",
+                "img": "VOY_MESS.png",
+                "height": 11,
+                "width": 13,
+                "points": [
+                    {
+                        "x": 6.6,
+                        "y": 6.75,
+                        "id": "VOY_MESS",
+                        "setup": {
+                            "fullWidth": 3012,
+                            "fullHeight": 1506,
+                            "croppedWidth": 3012,
+                            "croppedHeight": 300,
+                            "croppedY": 603
+                        }
+                    }
+                ]
             }
         ]
     },    
@@ -1033,19 +1173,38 @@
                         "x": null,
                         "y": null,
                         "id": "KENT_BRIDGE_01"
-                    },
-                    {
-                        "x": 1,
-                        "y": 1,
-                        "id": "KENT_HALL_00"
-                    },
-                    {
-                        "x": 12,
-                        "y": 12,
-                        "id": "KENT_HALL_01"
                     }
                 ]
-            }
+            },
+            {
+                "name": "Corridor",
+                "img": "JJhall.png",
+                "height": 11,
+                "width": 22,
+                "setup": {
+                    "fullWidth": 4000,
+                    "fullHeight": 2000,
+                    "croppedWidth": 4000,
+                    "croppedHeight": 2000,
+                    "croppedX": 0,
+                    "croppedY": 0,
+                    "poseHeading": 0,
+                    "posePitch": 0,
+                    "poseRoll": 0
+                },
+                "points": [
+                    {
+                        "x": 5.76,
+                        "y": 5.59,
+                        "id": "KENT_HALL_01"
+                    },
+                    {
+                        "x": 14.9,
+                        "y": 4.26,
+                        "id": "KENT_HALL_00"
+                    }
+                ]
+            }            
         ]
     },
     {

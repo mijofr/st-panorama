@@ -168,6 +168,7 @@ $sS: 0.85rem;
   font-size: $ttF;
 
   &>div {
+    line-height: 1.1;
     height: 105%;
     color: #000;
     background-color: #70a8c1;
@@ -195,7 +196,7 @@ $sS: 0.85rem;
       margin-left: $mar;
       height: 105%;
       background-color: #000;
-      color: #2e7fa5;
+      color: #70a8c1;
       padding-left: $mar;
       padding-right: $mar;
     }
@@ -335,8 +336,9 @@ $sS: 0.85rem;
 
 .mapBox .cameraPoint {
   fill: #70a8c1;
-  stroke: rgba(0, 0, 0, 0.1);
+  stroke: rgba(0, 0, 0, 0.6);
   stroke-width: 0.015rem;
+  paint-order: stroke fill markers;
 
   &:hover {
     cursor: pointer;
@@ -348,21 +350,24 @@ $sS: 0.85rem;
 #alertButton {
   font-size: 1rem;
   position: absolute;
-  background-color: #ffd2a6;
+  background-color: #C96046;
   color: #000;
-  width: 7%;
+  //width: 7%;
   height: 3.35%;
+  line-height: 1;
+  padding: 0.2em 1.5em 0 1.5em;
   bottom: 0;
   right: 7.5%;
   font-family: 'Bebas Neue', 'Arial Narrow', Arial, Helvetica, sans-serif;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding-right: 0.3em;
+  align-items: center;
+  justify-content: center;
+  //padding-right: 0.3em;
+  box-sizing: border-box;
 
   &:hover {
     cursor: pointer;
-    background-color: #ffd66d;
+    background-color: #EF7053;
   }
 
   display: none;

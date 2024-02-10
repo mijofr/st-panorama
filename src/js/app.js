@@ -85,7 +85,7 @@ window.activateId = (id) => {
 
     styleTag.innerHTML = `
         #${id} {
-            stroke: #c96046;
+            stroke: #c96046; paint-order: fill stroke markers;
         }
     `;
 

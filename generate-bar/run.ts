@@ -21,6 +21,25 @@ function main() {
 }
 
 
+const DEFAULT_SETUP: PanoData = {
+		fullWidth: 2496,
+		fullHeight: 768,
+		croppedWidth: 2496,
+		croppedHeight: 768,
+		croppedX: 0,
+		croppedY: 0,
+		poseHeading: 0,
+		posePitch: 0,
+		poseRoll: 0
+}
+
+
+function completePanoData(p: PanoData): PanoData {
+		let newObj: PanoData = Object.assign({}, DEFAULT_SETUP);
+		Object.assign(newObj, p);
+		return newObj;
+}
+
 
 export function create(groups: PlanGroup[]) {
 
@@ -65,7 +84,8 @@ export function create(groups: PlanGroup[]) {
 					setup = group.setup;
 				}
 				if (setup != undefined) {
-					setups.push([p.id, setup]);
+					let compSetup = completePanoData(setup);
+					setups.push([p.id, compSetup]);
 				}
 
 				if (p.hasAlt != undefined) {
