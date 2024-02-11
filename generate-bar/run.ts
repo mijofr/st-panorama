@@ -1,4 +1,6 @@
 const fs = require('fs');
+var beautify_html = require('js-beautify').html;
+
 
 var htmlOut: string[] = [];
 var landCssOut: string[] = [];
@@ -7,11 +9,15 @@ var setups: [string, PanoData][] = [];
 var alts: [string, string][] = [];
 
 
-function main() {
+async function main() {
 	let groups: PlanGroup[] = JSON.parse(fs.readFileSync("info.json").toString()) as PlanGroup[];
     create(groups);
+
+	const rawHtml: string = htmlOut.join("\n");
+	const htmlEr: string = beautify_html(rawHtml, {});
+		
 	
-    fs.writeFileSync("./../src/svgbar.hbs", htmlOut.join("\n"));
+    fs.writeFileSync("./../src/svgbar.hbs", htmlEr);
 	fs.writeFileSync("./../src/scss/port.scss", portCssOut.join("\n"));
 	fs.writeFileSync("./../src/scss/land.scss", landCssOut.join("\n"));
 

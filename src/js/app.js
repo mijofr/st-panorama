@@ -1,17 +1,16 @@
-import '../scss/index.scss';
+import "../scss/index.scss";
 
-import * as PhotoSphereViewer from 'photo-sphere-viewer';
-import * as VisibleRangePlugin from 'photo-sphere-viewer/dist/plugins/visible-range';
-import { EVENTS } from 'photo-sphere-viewer/src/data/constants';
-import supportsWebP from 'supports-webp';
-
+import * as PhotoSphereViewer from "photo-sphere-viewer";
+import * as VisibleRangePlugin from "photo-sphere-viewer/dist/plugins/visible-range";
+// import { EVENTS } from "photo-sphere-viewer/src/data/constants";
+import supportsWebP from "supports-webp";
 
 import * as SetupData from "./panoSetup.json";
 
 var viewer;
 window.addEventListener("load", function () {
 
-	supportsWebP.then(supported => {
+	supportsWebP.then((supported) => {
 
 		let imgExt = ".jpg";
 
@@ -22,21 +21,24 @@ window.addEventListener("load", function () {
 			window.useWebP = false;
 		}
 
+		const STARWIDTH = 6144;
+		const STARHEIGHT = 3072;
+
 		viewer = new PhotoSphereViewer.Viewer({
 			panorama: "./panorama-assets/panoramas/starmap" + imgExt,
-			container: 'photosphere',
+			container: "photosphere",
 			// caption: 'Parc national du Mercantour <b>&copy; Damien Sorel</b>',
-			loadingImg: './images/loading.png',
+			loadingImg: "./images/loading.png",
 			defaultLat: 0.3,
 			touchmoveTwoFingers: false,
 			mousewheelCtrlKey: false,
 			autorotateDelay: 1,
 			autorotateSpeed: "0.5rpm",
 			panoData: {
-				fullWidth: 6144,
-				fullHeight: 3072,
-				croppedWidth: 6144,
-				croppedHeight: 3072,
+				fullWidth: STARWIDTH,
+				fullHeight: STARHEIGHT,
+				croppedWidth: STARWIDTH,
+				croppedHeight: STARHEIGHT,
 				croppedX: 0,
 				croppedY: 0,
 				poseHeading: 270, // 0 to 360
@@ -46,13 +48,12 @@ window.addEventListener("load", function () {
 			canvasBackground: "#000000",
 			fisheye: -0.1,
 			navbar: false,
-			plugins: [[VisibleRangePlugin, { usePanoData: true }]]
+			plugins: [[VisibleRangePlugin, { usePanoData: true }]],
 		});
 
-
-		let hash = window.location.hash;
-		if (hash != undefined && hash.length > 0) {
-			let id = hash.substring(1);
+		const { hash } = window.location;
+		if (hash !== undefined && hash.length > 0) {
+			const id = hash.substring(1);
 			console.log(id);
 			window.activateId(id);
 		}
@@ -60,17 +61,13 @@ window.addEventListener("load", function () {
 	});
 
 	this.setTimeout(() => {
-		let el = document.getElementById("innerBar");
+		const el = document.getElementById("innerBar");
 		if (el) {
 			el.className = "ready";
 		}
 	}, 1500);
 
-
-
-
 });
-
 
 window.activateId = (id) => {
 
@@ -79,14 +76,13 @@ window.activateId = (id) => {
 		imgExt = ".webp";
 	}
 
-	let styleTag = document.getElementById("hTag");
+	const styleTag = document.getElementById("hTag");
 
 	styleTag.innerHTML = `
 		#${id} {
 			stroke: #c96046; paint-order: fill stroke markers;
 		}
 	`;
-
 
 	let panoSetup = {
 		fullWidth: 2496,
@@ -100,28 +96,28 @@ window.activateId = (id) => {
 		poseRoll: 0, // -180 to 180
 	};
 
-	for (let n of SetupData.default.panoDatas) {
-		if (n[0] == id) {
+	for (const n of SetupData.default.panoDatas) {
+		if (n[0] === id) {
 			panoSetup = n[1];
 		}
 	}
 
 	let hasAlt = false;
-	for (let n of SetupData.default.alts) {
-		let alertButton = document.getElementById("alertButton");
-		if (n[0] == id) {
+	const alertButton = document.getElementById("alertButton");
+	for (const n of SetupData.default.alts) {
+		if (n[0] === id) {
 			alertButton.className = "visible";
 			alertButton.setAttribute("ALT_LINK", n[1]);
 			hasAlt = true;
 		}
 	}
-	if (hasAlt == false) {
+	if (hasAlt === false) {
 		alertButton.className = null;
 	}
 
-	let url = `./panorama-assets/panoramas/${id}${imgExt}`;
-	let opts = {
-		panoData: panoSetup
+	const url = `./panorama-assets/panoramas/${id}${imgExt}`;
+	const opts = {
+		panoData: panoSetup,
 	};
 	viewer.setPanorama(url, opts);
 
@@ -135,15 +131,15 @@ window.activateId = (id) => {
 };
 
 window.alrtClicked = ($element) => {
-	let altlink = $element.getAttribute("alt_link");
+	const altlink = $element.getAttribute("alt_link");
 	if (altlink) {
 		window.activateId(altlink);
 	}
 };
 
 window.cclick = ($element) => {
-	let target = $element.target;
-	let id = target.id;
+	const { target } = $element;
+	const { id } = target;
 
 	window.activateId(id);
 

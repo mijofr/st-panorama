@@ -136,10 +136,10 @@ html {
 
 .topTitle,
 .sTitle {
-  font-family: 'Bebas Neue', 'Arial Narrow', Arial, Helvetica, sans-serif;
-  font-weight: 400;
+  font-family: Antonio, 'Arial Narrow', Arial, Helvetica, sans-serif;
+  font-weight: 600;
   font-style: normal;
-  text-transform: capitalize;
+  text-transform: uppercase;
   white-space: nowrap;
 
   position: relative;
@@ -152,9 +152,9 @@ html {
     display: flex;
     align-items: center;
     justify-content: left;
-    & > div {
+    /*& > div {
       padding-top: 0.2em;
-    }
+    }*/
   }
 }
 
@@ -168,7 +168,6 @@ $sS: 0.85rem;
   font-size: $ttF;
 
   &>div {
-    line-height: 1.1;
     height: 105%;
     color: #000;
     background-color: #70a8c1;
@@ -354,14 +353,14 @@ $sS: 0.85rem;
   color: #000;
   //width: 7%;
   height: 3.35%;
-  line-height: 1;
-  padding: 0.2em 1.5em 0 1.5em;
+  padding: 0 1.5em;
   bottom: 0;
   right: 7.5%;
-  font-family: 'Bebas Neue', 'Arial Narrow', Arial, Helvetica, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: Antonio, 'Arial Narrow', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   //padding-right: 0.3em;
   box-sizing: border-box;
 
@@ -370,10 +369,15 @@ $sS: 0.85rem;
     background-color: #EF7053;
   }
 
-  display: none;
+  display: block;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
 
   &.visible {
-    display: flex;
+    pointer-events: all;
+    opacity: 1;
+    display: block;
   }
 
 
