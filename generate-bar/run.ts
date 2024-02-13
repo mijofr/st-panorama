@@ -62,8 +62,11 @@ export function create(groups: PlanGroup[]) {
 
 	groups.forEach(group => {
 
+		htmlOut.push(`<div class="groupContainer">`);
 
-		htmlOut.push(`<div class="topTitle"><div><div>${group.name}</div></div></div>`);
+		htmlOut.push(`<div class="topTitle"><div>${group.name}</div></div>`);
+
+		htmlOut.push(`<div class="groupInnerContainer">`);
 
 		group.plans.forEach(plan => {
 
@@ -121,6 +124,8 @@ export function create(groups: PlanGroup[]) {
 			htmlOut.push(`</svg>`)
 
 		});
+		
+		htmlOut.push('</div></div>');
 	});
 
 }
