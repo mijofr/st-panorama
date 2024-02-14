@@ -259,36 +259,26 @@
                 ]
             }
         ]
-    },    
+    },
     {
-        "name": "ISS",
+        "name": "MISC",
         "plans": [
             {
-                "name": "Station (1/3 SCALE)",
-                "img": "iss.png",
-                "height": 19,
-                "width": 25,
-                "setup": {
-                    "fullWidth": 3584,
-                    "fullHeight": 1792,
-                    "croppedWidth": 3584,
-                    "croppedHeight": 1792,
-                    "croppedX": 0,
-                    "croppedY": 0,
-                    "poseHeading": 0,
-                    "posePitch": 0,
-                    "poseRoll": 0
-                },
+                "name": "MISC",
+                "img": "clapper.png",
+                "height": 8,
+                "width": 8,
                 "points": [
                     {
-                        "x": 12.5,
-                        "y": 13.48,
-                        "id": "ISS_ZARYA"
-                    },
-                    {
-                        "x": 12.5,
-                        "y": 8.68,
-                        "id": "ISS_DESTINY"
+                        "x": 4,
+                        "y": 4,
+                        "id": "SNW-SB1",
+                        "setup": {
+                            "fullWidth": 1884,
+                            "fullHeight": 942,
+                            "croppedWidth": 1884,
+                            "croppedHeight": 942
+                        }
                     }
                 ]
             }
