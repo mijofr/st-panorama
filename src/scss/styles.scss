@@ -14,6 +14,7 @@ html {
   }
 }
 
+
 #ana {
   position:fixed;
   top: -2px;
@@ -176,6 +177,10 @@ $sS: 0.85rem;
   &>div {
     line-height: 0.8;
     color: #000;
+    & > span {
+      font-size: 0.8em;
+      font-weight: 400;
+    }
   }
 
 }
@@ -276,6 +281,11 @@ $sS: 0.85rem;
     align-items: center;
     justify-content: flex-start;
     padding-left: $BARGAP * 0.5;
+    & > div {
+      & > span {
+        margin-left: 0.3em;
+      }
+    }
   }
   
   .sTitle {
@@ -360,6 +370,10 @@ $sS: 0.85rem;
       -moz-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
       -o-transform: rotate(180deg);
+
+      & > span {
+        margin-top: 0.3em;
+      }
     }
   }
 

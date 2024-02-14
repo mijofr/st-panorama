@@ -9,6 +9,9 @@
   "devDependencies": {
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
+    "@photo-sphere-viewer/autorotate-plugin": "^5.7.0",
+    "@photo-sphere-viewer/core": "^5.7.0",
+    "@photo-sphere-viewer/visible-range-plugin": "^5.7.0",
     "@types/node": "^15.14.9",
     "@types/three": "^0.128.0",
     "autoprefixer": "^10.4.17",
@@ -33,7 +36,6 @@
     "js-beautify": "^1.14.11",
     "mini-css-extract-plugin": "^1.6.2",
     "normalize.css": "^8.0.1",
-    "photo-sphere-viewer": "^4.8.1",
     "postcss": "^8.4.33",
     "postcss-loader": "^5.3.0",
     "rehype-format": "^5.0.0",

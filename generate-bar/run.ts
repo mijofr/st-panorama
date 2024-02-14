@@ -64,7 +64,8 @@ export function create(groups: PlanGroup[]) {
 
 		htmlOut.push(`<div class="groupContainer">`);
 
-		htmlOut.push(`<div class="topTitle"><div>${group.name}</div></div>`);
+		let subtitleStr: string = group.subtitle != null ? `<span>${group.subtitle}</span>` : ``;
+		htmlOut.push(`<div class="topTitle"><div>${group.name}${subtitleStr}</div></div>`);
 
 		htmlOut.push(`<div class="groupInnerContainer">`);
 
@@ -137,6 +138,7 @@ main();
 
 export interface PlanGroup {
 	name: string;
+	subtitle?: string;
 	plans: Plan[];
 	setup?: PanoData;
 }
