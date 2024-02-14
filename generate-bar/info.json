@@ -191,6 +191,76 @@
         ]
     },
     {
+        "name": "USS Discovery (2256)",
+        "setup": {
+            "fullWidth": 4096,
+            "fullHeight": 2048,
+            "croppedWidth": 4096,
+            "croppedHeight": 2048,
+            "croppedX": 0,
+            "croppedY": 0,
+            "poseHeading": 0,
+            "posePitch": 0,
+            "poseRoll": 0
+        },
+        "plans": [
+            {
+                "name": "Bridge",
+                "img": "disco_bridge.png",
+                "height": 12,
+                "width": 12,
+                "points": [
+                    {
+                        "x": 4,
+                        "y": 4,
+                        "id": "DISCO_BRIDGE_00"
+                    },
+                    {
+                        "x": 8,
+                        "y": 8,
+                        "id": "DISCO_BRIDGE_01"
+                    }
+                ]
+            },
+            {
+                "name": "Transporter Room",
+                "img": "disco_transp.png",
+                "height": 14,
+                "width": 14,
+                "points": [
+                    {
+                        "x": 4,
+                        "y": 4,
+                        "id": "DISCO_TRANSP_00"
+                    },
+                    {
+                        "x": 8,
+                        "y": 8,
+                        "id": "DISCO_TRANSP_01"
+                    }
+                ]
+            },
+            {
+                "name": "Mess Hall",
+                "img": "disco_mess.png",
+                "height": 14,
+                "width": 14,
+                "points": [
+                    {
+                        "x": 4,
+                        "y": 4,
+                        "id": "DISCO_MESS"
+                    },
+                    {
+                        "x": 8,
+                        "y": 8,
+                        "id": "DISCO_HALL"
+                    }
+                ]
+            }
+        ]
+    },    
+    {
         "name": "ISS",
         "plans": [
             {
