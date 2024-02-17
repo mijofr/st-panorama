@@ -61,6 +61,33 @@ export function create(groups: PlanGroup[]) {
 	})
 
 	groups.forEach(group => {
+		group.plans.forEach(plan => {
+
+			plan.points.forEach(p => {
+				let setup!: PanoData;
+				if (p.setup != undefined) {
+					setup = p.setup;
+				} else if (plan.setup != undefined) {
+					setup = plan.setup;
+				} else if (group.setup != undefined) {
+					setup = group.setup;
+				}
+				if (setup != undefined) {
+					let compSetup = completePanoData(setup);
+					setups.push([p.id, compSetup]);
+				}
+
+				if (p.hasAlt != undefined) {
+					alts.push([p.id, p.hasAlt]);
+				}
+			})
+
+		});
+	});
+
+
+	groups.filter(n => n.name != "HIDDEN").forEach(group => {
+
 
 		htmlOut.push(`<div class="groupContainer">`);
 
@@ -84,24 +111,6 @@ export function create(groups: PlanGroup[]) {
 				.join("_")
 				.toUpperCase();
 
-			plan.points.forEach(p => {
-				let setup!: PanoData;
-				if (p.setup != undefined) {
-					setup = p.setup;
-				} else if (plan.setup != undefined) {
-					setup = plan.setup;
-				} else if (group.setup != undefined) {
-					setup = group.setup;
-				}
-				if (setup != undefined) {
-					let compSetup = completePanoData(setup);
-					setups.push([p.id, compSetup]);
-				}
-
-				if (p.hasAlt != undefined) {
-					alts.push([p.id, p.hasAlt]);
-				}
-			})
 
 
 			let heightPerc: number = 95 * plan.height / maxHeight;

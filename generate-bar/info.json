@@ -259,17 +259,17 @@
             {
                 "name": "Bridge",
                 "img": "disco_bridge.png",
-                "height": 12,
-                "width": 12,
+                "height": 19.405,
+                "width": 20.750,
                 "points": [
                     {
-                        "x": 4,
-                        "y": 4,
+                        "x": 3.564,
+                        "y": 11,
                         "id": "DISCO_BRIDGE_00"
                     },
                     {
-                        "x": 8,
-                        "y": 8,
+                        "x": 14.158,
+                        "y": 11,
                         "id": "DISCO_BRIDGE_01"
                     }
                 ]
@@ -277,35 +277,43 @@
             {
                 "name": "Transporter Room",
                 "img": "disco_transp.png",
-                "height": 14,
-                "width": 14,
+                "height": 13.000,
+                "width": 16.400,
                 "points": [
                     {
-                        "x": 4,
-                        "y": 4,
+                        "x": 11.800,
+                        "y": 6.500,
                         "id": "DISCO_TRANSP_00"
                     },
                     {
-                        "x": 8,
-                        "y": 8,
+                        "x": 6.000,
+                        "y": 8.455,
                         "id": "DISCO_TRANSP_01"
                     }
                 ]
             },
             {
                 "name": "Mess Hall",
-                "img": "disco_mess.png",
-                "height": 14,
-                "width": 14,
+                "img": "disco_messhall.png",
+                "height": 15.5,
+                "width": 24,
                 "points": [
                     {
-                        "x": 4,
-                        "y": 4,
+                        "x": 15.027,
+                        "y": 7.624,
                         "id": "DISCO_MESS"
-                    },
+                    }
+                ]
+            },
+            {
+                "name": "Corridor",
+                "img": "disco_corridor.png",
+                "height": 13.5,
+                "width": 33.75,
+                "points": [
                     {
-                        "x": 8,
-                        "y": 8,
+                        "x": 22.2,
+                        "y": 7.355,
                         "id": "DISCO_HALL"
                     }
                 ]
@@ -313,13 +321,13 @@
         ]
     },
     {
-        "name": "MISC",
+        "name": "HIDDEN",
         "plans": [
             {
-                "name": "MISC",
-                "img": "clapper.png",
-                "height": 8,
-                "width": 8,
+                "name": "HIDDEN",
+                "img": "HIDDEN",
+                "height": 0,
+                "width": 0,
                 "points": [
                     {
                         "x": 4,
