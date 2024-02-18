@@ -1,5 +1,7 @@
 @use "sass:math";
 
+@import 'colors.scss';
+
 html {
   font-size: 16px;
 }
@@ -29,7 +31,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background-color: #000;
+  background-color: $bg-color;
 
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -62,7 +64,7 @@ html {
 
 #main {
   flex: 1 1 auto;
-  background-color: #000;
+  background-color: $bg-color;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,32 +97,14 @@ $BARGAP: 0.4rem;
 
 #bar {
   flex: 0 0 auto;
-  background-color: #000;
+  background-color: $bg-color;
   position: relative;
-
-  scrollbar-width: thin;
-  scrollbar-color: #333 #222;
-
-  &::-webkit-scrollbar {
-    width: 0.5rem;
-    height: 0.5rem;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: #222;
-    border-radius: 0.5rem;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: #333;
-    border-radius: 0.5rem;
-  }
 
   box-sizing: border-box;
 
   #innerBar {
     box-sizing: border-box;
-    background-color: #000;
+    background-color: $bg-color;
     position: absolute;
     top: 0;
     left: 0;
@@ -137,17 +121,63 @@ $BARGAP: 0.4rem;
 
 .groupContainer {
 
-  background-color: #6095ad;
+  background-color: $light-blue;
   display: flex;
 
   .groupInnerContainer {
 
-    background-color: #000;
+    background-color: $bg-color;
     display: flex;
     gap: $BARGAP;
     align-items: center;
 
   }
+}
+
+
+/* ======== SCROLLBAR =========*/
+
+#bar {
+
+  @supports selector(::-webkit-scrollbar) {
+    
+    &::-webkit-scrollbar {
+      width: auto;
+      height: auto;
+    }
+
+    &::-webkit-scrollbar:vertical {
+      width: 0.4rem;
+      height: auto;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+      height: 0.4rem;
+      width: auto;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $sb-track-color;
+      border-radius: 0.2rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $sb-thumb-color;
+      border-radius: 0.2rem;
+      &:hover {
+        background-color: $sb-thumb-hover-color;
+      }
+      &:active {
+        background-color: $sb-thumb-focus-color;
+      }
+    }
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    scrollbar-width: thin;
+    scrollbar-color: $sb-thumb-color $sb-track-color;
+  }
+
 }
 
 
@@ -176,7 +206,7 @@ $sS: 0.85rem;
 
   &>div {
     line-height: 0.8;
-    color: #000;
+    color: $bg-color;
     & > span {
       font-size: 0.8em;
       font-weight: 400;
@@ -189,7 +219,7 @@ $sS: 0.85rem;
 
 
   position: relative;
-  background-color: #2e7fa5;
+  background-color: $dark-blue;
 
   font-size: $sS;
   display: flex;
@@ -202,8 +232,8 @@ $sS: 0.85rem;
     align-items: center;
     justify-content: center;
 
-    color: #999;
-    background-color: #000;
+    color: $title-grey;
+    background-color: $bg-color;
     line-height: 0.8;
 
 
@@ -426,7 +456,7 @@ $sS: 0.85rem;
 }
 
 .mapBox .cameraPoint {
-  fill: #70a8c1;
+  fill: $camera-point;
   stroke: rgba(0, 0, 0, 0.6);
   stroke-width: 0.015rem;
   paint-order: stroke fill markers;
@@ -441,8 +471,8 @@ $sS: 0.85rem;
 #alertButton {
   font-size: 1rem;
   position: absolute;
-  background-color: #C96046;
-  color: #000;
+  background-color: $alert-red;
+  color: $bg-color;
   //width: 7%;
   height: 3.35%;
   padding: 0 1.5em;
@@ -458,7 +488,7 @@ $sS: 0.85rem;
 
   &:hover {
     cursor: pointer;
-    background-color: #EF7053;
+    background-color: $alert-red-hover;
   }
 
   display: block;

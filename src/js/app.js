@@ -67,7 +67,7 @@ window.addEventListener("load", function () {
 		let defaultPitch = 0.3;
 		let rotateSpeed = "0.5rpm";
 
-		if (randVal < 0.9) {
+		if (randVal < 0.1) {
 			initPanoSrc = "./panorama-assets/panoramas/HOLOGRID_01.png";
 			initPanoData = {
 				fullWidth: 2880,
