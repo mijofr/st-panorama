@@ -27,7 +27,130 @@
                         "x": 6.3455088,
                         "y": 11.291246,
                         "id": "TOS_03"
+                    },
+                    {
+                        "x": 2.2732279,
+                        "y": 9.0804157,
+                        "id": "TOS_04"
+                    },
+                    {
+                        "x": 2.2549707,
+                        "y": 6.5262628,
+                        "id": "TOS_05"
+                    },
+                    {
+                        "x": 3.8070108,
+                        "y": 4.3007836,
+                        "id": "TOS_06"
+                    },
+                    {
+                        "x": 6.4546091,
+                        "y": 3.353472,
+                        "id": "TOS_07"
+                    },
+                    {
+                        "x": 9.4856531,
+                        "y": 3.5382102,
+                        "id": "TOS_08"
+                    },
+                    {
+                        "x": 10.581204,
+                        "y": 6.4436059,
+                        "id": "TOS_09"
+                    },
+                    {
+                        "x": 10.617733,
+                        "y": 9.2211781,
+                        "id": "TOS_10"
+                    },
+                    {
+                        "x": 9.5404169,
+                        "y": 10.903185,
+                        "id": "TOS_11"
+                    },
+                    {
+                        "x": 2.7,
+                        "y": 11.6,
+                        "id": "TOS_12"
+                    },
+                    {
+                        "x": 6.3713266,
+                        "y": 8.9092426,
+                        "id": "TOS_13"
+                    },
+                    {
+                        "x": 3.2209818,
+                        "y": 11.005388,
+                        "id": "TOS_14"
                     }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Bird of Prey (D12)",
+        "plans": [
+            {
+                "name": "Bridge",
+                "img": "kbop.png",
+                "height": 12,
+                "width": 10,
+                "points": [
+                    {
+                        "x": 5.0374746,
+                        "y": 1.2218678,
+                        "id": "KLING_00"
+                        },
+                        {
+                        "x": 5.0282946,
+                        "y": 3.8261254,
+                        "id": "KLING_01"
+                        },
+                        {
+                        "x": 5.0253477,
+                        "y": 6.2434797,
+                        "id": "KLING_02"
+                        },
+                        {
+                        "x": 3.1237915,
+                        "y": 6.8780456,
+                        "id": "KLING_03"
+                        },
+                        {
+                        "x": 7.1479015,
+                        "y": 7.798286,
+                        "id": "KLING_04"
+                        },
+                        {
+                        "x": 7.481225,
+                        "y": 4.6182852,
+                        "id": "KLING_05"
+                        },
+                        {
+                        "x": 4.9579577,
+                        "y": 9.3260384,
+                        "id": "KLING_06"
+                        },
+                        {
+                        "x": 6.1417918,
+                        "y": 9.8034649,
+                        "id": "KLING_07"
+                        },
+                        {
+                        "x": 5.0649648,
+                        "y": 10.880404,
+                        "id": "KLING_08"
+                        },
+                        {
+                        "x": 3.9118714,
+                        "y": 9.7789392,
+                        "id": "KLING_09"
+                        },
+                        {
+                        "x": 2.6696243,
+                        "y": 5.8083749,
+                        "id": "KLING_10"
+                        }
                 ]
             }
         ]
@@ -60,6 +183,111 @@
                         "x": 10.454407,
                         "y": 12.232658,
                         "id": "ENTD_BRIDGE_03"
+                    },
+                    {
+                        "x": 8.892704,
+                        "y": 12.136292,
+                        "id": "ENTD_BRIDGE_04"
+                    },
+                    {
+                        "x": 5.1729884,
+                        "y": 12.06551,
+                        "id": "ENTD_BRIDGE_05"
+                    },
+                    {
+                        "x": 6.5979571,
+                        "y": 13.47522,
+                        "id": "ENTD_BRIDGE_06"
+                    },
+                    {
+                        "x": 6.46841,
+                        "y": 16.550468,
+                        "id": "ENTD_BRIDGE_07"
+                    },
+                    {
+                        "x": 6.7645106,
+                        "y": 19.033524,
+                        "id": "ENTD_BRIDGE_08"
+                    },
+                    {
+                        "x": 8.8741989,
+                        "y": 20.054604,
+                        "id": "ENTD_BRIDGE_09"
+                    },
+                    {
+                        "x": 12.242298,
+                        "y": 19.040016,
+                        "id": "ENTD_BRIDGE_10"
+                    },
+                    {
+                        "x": 8.892704,
+                        "y": 16.82254,
+                        "id": "ENTD_BRIDGE_11"
+                    },
+                    {
+                        "x": 8.85569,
+                        "y": 13.994362,
+                        "id": "ENTD_BRIDGE_12"
+                    },
+                    {
+                        "x": 11.24297,
+                        "y": 11.480789,
+                        "id": "ENTD_BRIDGE_13"
+                    },
+                    {
+                        "x": 12.416355,
+                        "y": 5.5927739,
+                        "id": "ENTD_CONFERENCE_00"
+                    },
+                    {
+                        "x": 9.0781441,
+                        "y": 5.0023541,
+                        "id": "ENTD_CONFERENCE_01"
+                    },
+                    {
+                        "x": 5.6898417,
+                        "y": 5.6321759,
+                        "id": "ENTD_CONFERENCE_02"
+                    },
+                    {
+                        "x": 5.0093837,
+                        "y": 2.7727246,
+                        "id": "ENTD_CONFERENCE_03"
+                    },
+                    {
+                        "x": 12.879391,
+                        "y": 2.8197217,
+                        "id": "ENTD_CONFERENCE_04"
+                    },
+                    {
+                        "x": 8.9811249,
+                        "y": 1.1861615,
+                        "id": "ENTD_CONFERENCE_05"
+                    },
+                    {
+                        "x": 14.204697,
+                        "y": 17.489716,
+                        "id": "ENTD_READYROOM_00"
+                    },
+                    {
+                        "x": 16.018738,
+                        "y": 17.98481,
+                        "id": "ENTD_READYROOM_01"
+                    },
+                    {
+                        "x": 15.199482,
+                        "y": 16.046211,
+                        "id": "ENTD_READYROOM_02"
+                    },
+                    {
+                        "x": 15.669479,
+                        "y": 14.688538,
+                        "id": "ENTD_READYROOM_03"
+                    },
+                    {
+                        "x": 17.071785,
+                        "y": 15.679298,
+                        "id": "ENTD_READYROOM_04"
                     }
                 ]
             },
@@ -83,11 +311,408 @@
                         "x": 8.8836334,
                         "y": 17.1,
                         "id": "ENTD_ENGINEERING_02"
+                    },
+                    {
+                        "x": 7.2727509,
+                        "y": 12.015393,
+                        "id": "ENTD_ENGINEERING_03"
+                    },
+                    {
+                        "x": 7.3138275,
+                        "y": 10.109181,
+                        "id": "ENTD_ENGINEERING_04"
+                    },
+                    {
+                        "x": 3.6942139,
+                        "y": 9.632266,
+                        "id": "ENTD_ENGINEERING_05"
+                    },
+                    {
+                        "x": 2.0780945,
+                        "y": 8.5673552,
+                        "id": "ENTD_ENGINEERING_06"
+                    },
+                    {
+                        "x": 7.2455673,
+                        "y": 8.2369919,
+                        "id": "ENTD_ENGINEERING_07"
+                    },
+                    {
+                        "x": 4.7617111,
+                        "y": 7.5611019,
+                        "id": "ENTD_ENGINEERING_08"
+                    },
+                    {
+                        "x": 4.0850983,
+                        "y": 4.6746912,
+                        "id": "ENTD_ENGINEERING_09"
+                    },
+                    {
+                        "x": 11.492088,
+                        "y": 5.3066778,
+                        "id": "ENTD_ENGINEERING_10"
+                    }
+                ]
+            },
+            {
+                "name": "Sickbay",
+                "img": "sickbay.png",
+                "height": 16.004055,
+                "width": 14.823214,
+                "points": [
+                    {
+                        "x": 3.6366572,
+                        "y": 12.964747,
+                        "id": "ENTD_SICKBAY_00"
+                    },
+                    {
+                        "x": 6.4973445,
+                        "y": 13.066508,
+                        "id": "ENTD_SICKBAY_01"
+                    },
+                    {
+                        "x": 8.892333,
+                        "y": 13.900065,
+                        "id": "ENTD_SICKBAY_02"
+                    },
+                    {
+                        "x": 9.0586538,
+                        "y": 11.939464,
+                        "id": "ENTD_SICKBAY_03"
+                    },
+                    {
+                        "x": 9.3746634,
+                        "y": 7.983058,
+                        "id": "ENTD_SICKBAY_04"
+                    },
+                    {
+                        "x": 7.1293635,
+                        "y": 8.1846113,
+                        "id": "ENTD_SICKBAY_05"
+                    },
+                    {
+                        "x": 3.6532893,
+                        "y": 5.1595716,
+                        "id": "ENTD_SICKBAY_06"
+                    },
+                    {
+                        "x": 5.3164973,
+                        "y": 3.4817307,
+                        "id": "ENTD_SICKBAY_07"
+                    },
+                    {
+                        "x": 9.1251822,
+                        "y": 3.1011612,
+                        "id": "ENTD_SICKBAY_08"
+                    },
+                    {
+                        "x": 10.721831,
+                        "y": 4.1675673,
+                        "id": "ENTD_SICKBAY_09"
+                    },
+                    {
+                        "x": 11.35385,
+                        "y": 2.7558243,
+                        "id": "ENTD_SICKBAY_10"
+                    }
+                ]
+            },
+            {
+                "name": "Ten-Forward Lounge",
+                "img": "tenforward.png",
+                "height": 21.890032,
+                "width": 17.937931,
+                "points": [
+                    {
+                        "x": 10.575352,
+                        "y": 10.954133,
+                        "id": "ENTD_TENFORWARD_00"
+                    },
+                    {
+                        "x": 13.948536,
+                        "y": 16.745361,
+                        "id": "ENTD_TENFORWARD_01"
+                    },
+                    {
+                        "x": 12.824131,
+                        "y": 13.541444,
+                        "id": "ENTD_TENFORWARD_02"
+                    },
+                    {
+                        "x": 14.080814,
+                        "y": 5.1123967,
+                        "id": "ENTD_TENFORWARD_03"
+                    },
+                    {
+                        "x": 8.5911293,
+                        "y": 14.607514,
+                        "id": "ENTD_TENFORWARD_04"
+                    },
+                    {
+                        "x": 8.5059013,
+                        "y": 7.6631775,
+                        "id": "ENTD_TENFORWARD_05"
+                    },
+                    {
+                        "x": 8.392704,
+                        "y": 4.4957891,
+                        "id": "ENTD_TENFORWARD_06"
+                    },
+                    {
+                        "x": 5.1848793,
+                        "y": 9.2949228,
+                        "id": "ENTD_TENFORWARD_07"
+                    },
+                    {
+                        "x": 5.317173,
+                        "y": 13.267274,
+                        "id": "ENTD_TENFORWARD_08"
+                    },
+                    {
+                        "x": 15.535908,
+                        "y": 11.121614,
+                        "id": "ENTD_TENFORWARD_09"
+                    },
+                    {
+                        "x": 5.6147957,
+                        "y": 1.9650275,
+                        "id": "ENTD_TENFORWARD_10"
+                    },
+                    {
+                        "x": 5.8793678,
+                        "y": 18.107239,
+                        "id": "ENTD_TENFORWARD_11"
+                    },
+                    {
+                        "x": 13.617832,
+                        "y": 8.3884897,
+                        "id": "ENTD_TENFORWARD_12"
+                    }
+                ]
+            },
+            {
+                "name": "Transporter Room 3",
+                "img": "transp.png",
+                "height": 10.456047,
+                "width": 8.1097012,
+                "points": [
+                    {
+                        "x": 2.9967942,
+                        "y": 9.4296579,
+                        "id": "ENTD_TRANSPORTER_00"
+                    },
+                    {
+                        "x": 6.4561143,
+                        "y": 6.2229929,
+                        "id": "ENTD_TRANSPORTER_01"
+                    },
+                    {
+                        "x": 2.9063401,
+                        "y": 5.7295237,
+                        "id": "ENTD_TRANSPORTER_02"
+                    },
+                    {
+                        "x": 2.4428391,
+                        "y": 2.455018,
+                        "id": "ENTD_TRANSPORTER_03"
+                    },
+                    {
+                        "x": 1.6401659,
+                        "y": 7.5914927,
+                        "id": "ENTD_TRANSPORTER_04"
+                    }
+                ]
+            },
+            {
+                "name": "Cpt Picard's Quarters",
+                "img": "picard.png",
+                "height": 14.715970,
+                "width": 6.2053618,
+                "points": [
+                    {
+                        "x": 4.2572961,
+                        "y": 8.9499779,
+                        "id": "ENTD_PICARDQUARTERS_00"
+                    },
+                    {
+                        "x": 1.8353904,
+                        "y": 8.3629417,
+                        "id": "ENTD_PICARDQUARTERS_01"
+                    },
+                    {
+                        "x": 3.58478,
+                        "y": 6.8640714,
+                        "id": "ENTD_PICARDQUARTERS_02"
+                    },
+                    {
+                        "x": 4.0894799,
+                        "y": 5.3171964,
+                        "id": "ENTD_PICARDQUARTERS_03"
+                    },
+                    {
+                        "x": 4.2258935,
+                        "y": 12.236355,
+                        "id": "ENTD_PICARDQUARTERS_04"
+                    },
+                    {
+                        "x": 3.3039267,
+                        "y": 10.523952,
+                        "id": "ENTD_PICARDQUARTERS_05"
+                    },
+                    {
+                        "x": 1.836428,
+                        "y": 10.449917,
+                        "id": "ENTD_PICARDQUARTERS_06"
+                    },
+                    {
+                        "x": 4.7499108,
+                        "y": 10.452267,
+                        "id": "ENTD_PICARDQUARTERS_07"
+                    }
+                ]
+            },
+            {
+                "name": "Cns Troi's Quarters",
+                "img": "troi.png",
+                "height": 11.961047,
+                "width": 6.2183652,
+                "points": [
+                    {
+                        "x": 3.7032738,
+                        "y": 1.7467395,
+                        "id": "ENTD_TROIQUARTERS_00"
+                    },
+                    {
+                        "x": 3.3184471,
+                        "y": 3.6317952,
+                        "id": "ENTD_TROIQUARTERS_01"
+                    },
+                    {
+                        "x": 2.1426353,
+                        "y": 2.865926,
+                        "id": "ENTD_TROIQUARTERS_02"
+                    },
+                    {
+                        "x": 3.1046715,
+                        "y": 5.1571856,
+                        "id": "ENTD_TROIQUARTERS_03"
+                    },
+                    {
+                        "x": 3.1687889,
+                        "y": 6.7002001,
+                        "id": "ENTD_TROIQUARTERS_04"
+                    },
+                    {
+                        "x": 0.90267569,
+                        "y": 4.2240343,
+                        "id": "ENTD_TROIQUARTERS_05"
+                    },
+                    {
+                        "x": 4.5584068,
+                        "y": 3.5009053,
+                        "id": "ENTD_TROIQUARTERS_06"
+                    }
+                ]
+            },
+            {
+                "name": "Lt Data's Quarters",
+                "img": "data.png",
+                "height": 8.5038052,
+                "width": 6.4388275,
+                "points": [
+                    {
+                        "x": 5.8241005,
+                        "y": 2.6861167,
+                        "id": "ENTD_DATAQUARTERS_00"
+                    },
+                    {
+                        "x": 4.2915211,
+                        "y": 2.6785254,
+                        "id": "ENTD_DATAQUARTERS_01"
+                    },
+                    {
+                        "x": 2.5867367,
+                        "y": 2.7053742,
+                        "id": "ENTD_DATAQUARTERS_02"
+                    },
+                    {
+                        "x": 2.328434,
+                        "y": 4.5575442,
+                        "id": "ENTD_DATAQUARTERS_03"
+                    },
+                    {
+                        "x": 2.4145355,
+                        "y": 7.098515,
+                        "id": "ENTD_DATAQUARTERS_04"
+                    }
+                ]
+            },
+            {
+                "name": "Lt Worf's Quarters",
+                "img": "worf.png",
+                "height": 13.909777,
+                "width": 8.56738,
+                "points": [
+                    {
+                        "x": 7.9718189,
+                        "y": 8.1444187,
+                        "id": "ENTD_WORFQUARTERS_00"
+                    },
+                    {
+                        "x": 4.3445692,
+                        "y": 8.1125994,
+                        "id": "ENTD_WORFQUARTERS_01"
+                    },
+                    {
+                        "x": 2.9843504,
+                        "y": 8.0982189,
+                        "id": "ENTD_WORFQUARTERS_02"
+                    },
+                    {
+                        "x": 4.2224965,
+                        "y": 10.159047,
+                        "id": "ENTD_WORFQUARTERS_03"
+                    },
+                    {
+                        "x": 4.185504,
+                        "y": 11.866506,
+                        "id": "ENTD_WORFQUARTERS_04"
+                    },
+                    {
+                        "x": 1.2642641,
+                        "y": 11.79434,
+                        "id": "ENTD_WORFQUARTERS_05"
+                    }
+                ]
+            },
+            {
+                "name": "Type 6 Shuttlecraft",
+                "img": "type6.png",
+                "height": 2.8,
+                "width": 7,
+                "points": [
+                    {
+                        "x": 3.5,
+                        "y": 1.4,
+                        "id": "ENTD_SHUTTLE"
+                    }
+                ]
+            },
+            {
+                "name": "Behind the Scenes",
+                "img": "clapper.png",
+                "height": 2,
+                "width": 2,
+                "points": [
+                    {
+                        "x": 1,
+                        "y": 1.33,
+                        "id": "ENTD_BTS"
                     }
                 ]
             }
         ]
-    },   
+    },
     {
         "name": "USS Enterprise-E",
         "plans": [
@@ -121,6 +746,135 @@
                         "x": 12.901332,
                         "y": 6.7826047,
                         "id": "ENTE_04"
+                    },
+                    {
+                        "x": 12.041024,
+                        "y": 10.927612,
+                        "id": "ENTE_05"
+                    },
+                    {
+                        "x": 7.5340953,
+                        "y": 11.074751,
+                        "id": "ENTE_06"
+                    },
+                    {
+                        "x": 5.4777994,
+                        "y": 8.9296694,
+                        "id": "ENTE_07"
+                    },
+                    {
+                        "x": 3.8519921,
+                        "y": 7.77108,
+                        "id": "ENTE_08"
+                    },
+                    {
+                        "x": 3.1881099,
+                        "y": 5.487545,
+                        "id": "ENTE_09"
+                    },
+                    {
+                        "x": 7.5074706,
+                        "y": 6.8849764,
+                        "id": "ENTE_10"
+                    },
+                    {
+                        "x": 7.5032411,
+                        "y": 5.0484538,
+                        "id": "ENTE_11"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "USS Defiant",
+        "plans": [
+            {
+                "name": "Deck One",
+                "img": "def.png",
+                "height": 21,
+                "width": 10,
+                "points": [
+                    {
+                        "x": 4.7241373,
+                        "y": 14.459366,
+                        "id": "DEF_00",
+                        "hasAlt": "DEF_14"
+                    },
+                    {
+                        "x": 4.7428064,
+                        "y": 17.161858,
+                        "id": "DEF_01"
+                    },
+                    {
+                        "x": 4.80198,
+                        "y": 19.07394,
+                        "id": "DEF_02"
+                    },
+                    {
+                        "x": 7.2465296,
+                        "y": 17.71756,
+                        "id": "DEF_03"
+                    },
+                    {
+                        "x": 7.3654566,
+                        "y": 15.568352,
+                        "id": "DEF_04"
+                    },
+                    {
+                        "x": 2.2649391,
+                        "y": 17.687191,
+                        "id": "DEF_05"
+                    },
+                    {
+                        "x": 2.1826866,
+                        "y": 15.612534,
+                        "id": "DEF_06"
+                    },
+                    {
+                        "x": 3.2011268,
+                        "y": 13.101322,
+                        "id": "DEF_07"
+                    },
+                    {
+                        "x": 6.1723871,
+                        "y": 13.075504,
+                        "id": "DEF_08"
+                    },
+                    {
+                        "x": 5.6304636,
+                        "y": 12.068607,
+                        "id": "DEF_09"
+                    },
+                    {
+                        "x": 5.6397867,
+                        "y": 10.893528,
+                        "id": "DEF_10"
+                    },
+                    {
+                        "x": 3.64029,
+                        "y": 12.082367,
+                        "id": "DEF_11"
+                    },
+                    {
+                        "x": 4.7801981,
+                        "y": 5.3291893,
+                        "id": "DEF_12"
+                    },
+                    {
+                        "x": 4.9,
+                        "y": 0.7156831,
+                        "id": "DEF_13"
+                    },
+                    {
+                        "x": null,
+                        "y": null,
+                        "id": "DEF_14"
+                    },
+                    {
+                        "x": 7.9431086,
+                        "y": 15.0511,
+                        "id": "DEF_15"
                     }
                 ]
             }
@@ -139,6 +893,111 @@
                         "x": 12.669374,
                         "y": 4.2234421,
                         "id": "VOY_BRIDGE_00"
+                    },
+                    {
+                        "x": 14.651918,
+                        "y": 3.2158124,
+                        "id": "VOY_BRIDGE_01"
+                    },
+                    {
+                        "x": 9.5964069,
+                        "y": 4.8846436,
+                        "id": "VOY_BRIDGE_02"
+                    },
+                    {
+                        "x": 7.851747,
+                        "y": 4.7295151,
+                        "id": "VOY_BRIDGE_03"
+                    },
+                    {
+                        "x": 7.4155898,
+                        "y": 9.5109787,
+                        "id": "VOY_BRIDGE_04"
+                    },
+                    {
+                        "x": 11.777224,
+                        "y": 5.5295029,
+                        "id": "VOY_BRIDGE_05"
+                    },
+                    {
+                        "x": 12.709017,
+                        "y": 10.350609,
+                        "id": "VOY_BRIDGE_06"
+                    },
+                    {
+                        "x": 17.883516,
+                        "y": 9.5412292,
+                        "id": "VOY_BRIDGE_07"
+                    },
+                    {
+                        "x": 17.784365,
+                        "y": 6.8087769,
+                        "id": "VOY_BRIDGE_08"
+                    },
+                    {
+                        "x": 7.6534743,
+                        "y": 6.7131271,
+                        "id": "VOY_BRIDGE_09"
+                    },
+                    {
+                        "x": 12.629732,
+                        "y": 12.247955,
+                        "id": "VOY_BRIDGE_10"
+                    },
+                    {
+                        "x": 12.570253,
+                        "y": 7.4536285,
+                        "id": "VOY_BRIDGE_11"
+                    },
+                    {
+                        "x": 17.526644,
+                        "y": 4.7806549,
+                        "id": "VOY_BRIDGE_12"
+                    },
+                    {
+                        "x": 25.080202,
+                        "y": 5.5176849,
+                        "id": "VOY_CONFERENCE_14"
+                    },
+                    {
+                        "x": 23.216585,
+                        "y": 3.102432,
+                        "id": "VOY_CONFERENCE_15"
+                    },
+                    {
+                        "x": 19.905703,
+                        "y": 5.6832428,
+                        "id": "VOY_CONFERENCE_16"
+                    },
+                    {
+                        "x": 22.502871,
+                        "y": 8.3433533,
+                        "id": "VOY_CONFERENCE_17"
+                    },
+                    {
+                        "x": 1.9579484,
+                        "y": 4.37146,
+                        "id": "VOY_READYROOM_18"
+                    },
+                    {
+                        "x": 0.78820968,
+                        "y": 6.337677,
+                        "id": "VOY_READYROOM_19"
+                    },
+                    {
+                        "x": 3.6827714,
+                        "y": 8.3237152,
+                        "id": "VOY_READYROOM_20"
+                    },
+                    {
+                        "x": 5.3679519,
+                        "y": 5.1947479,
+                        "id": "VOY_READYROOM_21"
+                    },
+                    {
+                        "x": 7.7604995,
+                        "y": 1.0847472,
+                        "id": "VOY_TURBOLIFT_13"
                     }
                 ]
             },
@@ -170,6 +1029,114 @@
                             "croppedWidth": 2988,
                             "croppedHeight": 300,
                             "croppedY": 597
+                        }
+                    },
+                    {
+                        "x": 11.5,
+                        "y": 5.8,
+                        "id": "VOY_HALL",
+                        "setup": {
+                            "fullWidth": 3032,
+                            "fullHeight": 1516,
+                            "croppedWidth": 3032,
+                            "croppedHeight": 300,
+                            "croppedY": 608
+                        }
+                    },
+                    {
+                        "x": 21.5,
+                        "y": 2.7,
+                        "id": "VOY_HOLODECK_DOOR",
+                        "setup": {
+                            "fullWidth": 3092,
+                            "fullHeight": 1546,
+                            "croppedWidth": 3092,
+                            "croppedHeight": 300,
+                            "croppedY": 623
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "Transporter Room",
+                "img": "VOY_TRANSP.png",
+                "height": 11,
+                "width": 8,
+                "points": [
+                    {
+                        "x": 4.6,
+                        "y": 2,
+                        "id": "VOY_TRANSPORTER_00",
+                        "setup": {
+                            "fullWidth": 3008,
+                            "fullHeight": 1504,
+                            "croppedWidth": 3008,
+                            "croppedHeight": 300,
+                            "croppedY": 602
+                        }
+                    },
+                    {
+                        "x": 4.6,
+                        "y": 8.25,
+                        "id": "VOY_TRANSPORTER_01",
+                        "setup": {
+                            "fullWidth": 2968,
+                            "fullHeight": 1484,
+                            "croppedWidth": 2968,
+                            "croppedHeight": 300,
+                            "croppedY": 592
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "Engineering",
+                "img": "VOY_ENG.png",
+                "height": 19,
+                "width": 25,
+                "points": [
+                    {
+                        "x": 8.2,
+                        "y": 8.9,
+                        "id": "VOY_ENGINEERING_00",
+                        "setup": {
+                            "fullWidth": 2980,
+                            "fullHeight": 1490,
+                            "croppedWidth": 2980,
+                            "croppedHeight": 300,
+                            "croppedY": 595
+                        }
+                    },
+                    {
+                        "x": 22.1,
+                        "y": 15,
+                        "id": "VOY_ENGINEERING_01",
+                        "setup": {
+                            "fullWidth": 2952,
+                            "fullHeight": 1476,
+                            "croppedWidth": 2952,
+                            "croppedHeight": 300,
+                            "croppedY": 588
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "Mess Hall",
+                "img": "VOY_MESS.png",
+                "height": 11,
+                "width": 13,
+                "points": [
+                    {
+                        "x": 6.6,
+                        "y": 6.75,
+                        "id": "VOY_MESS",
+                        "setup": {
+                            "fullWidth": 3012,
+                            "fullHeight": 1506,
+                            "croppedWidth": 3012,
+                            "croppedHeight": 300,
+                            "croppedY": 603
                         }
                     }
                 ]
@@ -294,27 +1261,91 @@
             },
             {
                 "name": "Mess Hall",
-                "img": "disco_messhall.png",
-                "height": 15.5,
-                "width": 24,
+                "img": "disco_mess.png",
+                "height": 12.6,
+                "width":22.35,
                 "points": [
                     {
-                        "x": 15.027,
-                        "y": 7.624,
+                        "x": 13.28,
+                        "y": 6.28,
                         "id": "DISCO_MESS"
                     }
                 ]
             },
             {
                 "name": "Corridor",
-                "img": "disco_corridor.png",
-                "height": 13.5,
-                "width": 33.75,
+                "img": "disco_hall.png",
+                "height": 8.0,
+                "width": 16.7,
                 "points": [
                     {
-                        "x": 22.2,
-                        "y": 7.355,
+                        "x": 6.43,
+                        "y": 4.72,
                         "id": "DISCO_HALL"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "ISS",
+        "plans": [
+            {
+                "name": "Station (1/3 SCALE)",
+                "img": "iss.png",
+                "height": 19,
+                "width": 25,
+                "setup": {
+                    "fullWidth": 3584,
+                    "fullHeight": 1792,
+                    "croppedWidth": 3584,
+                    "croppedHeight": 1792,
+                    "croppedX": 0,
+                    "croppedY": 0,
+                    "poseHeading": 0,
+                    "posePitch": 0,
+                    "poseRoll": 0
+                },
+                "points": [
+                    {
+                        "x": 12.5,
+                        "y": 13.48,
+                        "id": "ISS_ZARYA"
+                    },
+                    {
+                        "x": 12.5,
+                        "y": 8.68,
+                        "id": "ISS_DESTINY"
+                    },
+                    {
+                        "x": 12.5,
+                        "y": 10.52,
+                        "id": "ISS_UNITY"
+                    },
+                    {
+                        "x": 14.16,
+                        "y": 6.57,
+                        "id": "ISS_KIBO"
+                    },
+                    {
+                        "x": 11.22,
+                        "y": 6.57,
+                        "id": "ISS_COLUMBUS"
+                    },
+                    {
+                        "x": 14.03,
+                        "y": 10.52,
+                        "id": "ISS_TRANQUILITY"
+                    },
+                    {
+                        "x": 12.5,
+                        "y": 6.57,
+                        "id": "ISS_HARMONY"
+                    },
+                    {
+                        "x": 12.5,
+                        "y": 17.52,
+                        "id": "ISS_ZVEZDA"
                     }
                 ]
             }
