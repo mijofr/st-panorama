@@ -18,3 +18,18 @@ enterprise-e bridge
 voyager transporter room
 disco mess
 disco corridor
+
+when generating bar, it should check the image ratio (resolution) and check it matches.
+
+magick convert .\sickbay.png -background black -flatten -alpha off sickbay.pgm
+Or maybe I can create multiple sizes. Srcset?
+
+
+initially, just scale all images to maximum 500
+
+
+
+<img src="small.jpg" srcset="medium.jpg 1000w, large.jpg 2000w" alt="yah">
+<img src="./panorama-assets/rooms/voy.png" />
+
+<img src="./panorama-assets/rooms/voy.png" srcset="./panorama-assets/rooms/voy_s3.png 196w, ./panorama-assets/rooms/voy_s2.png 294w, ./panorama-assets/rooms/voy_s.png 392w, ./panorama-assets/rooms/voy.png 1500w" />
