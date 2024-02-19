@@ -1,5 +1,6 @@
 const fs = require('fs');
 var beautify_html = require('js-beautify').html;
+var sizeOf = require('buffer-image-size');
 
 
 var htmlOut: string[] = [];
@@ -24,6 +25,8 @@ async function main() {
 
 	fs.writeFileSync("./../src/js/panoSetup.json", JSON.stringify({ panoDatas: setups, alts: alts }));
 
+	await checkImages(groups);
+
 }
 
 
@@ -37,6 +40,33 @@ const DEFAULT_SETUP: PanoData = {
 		poseHeading: 0,
 		posePitch: 0,
 		poseRoll: 0
+}
+
+async function checkImages(groups: PlanGroup[]) {
+	for (let g of groups) {
+		for (let p of g.plans) {
+			let fl: string = "./../src/panorama-assets/rooms/" + p.img;
+			if (!fs.existsSync(fl)) {
+				console.log(`image does not exist: ${p.img}`);
+				continue;
+			}
+			let imgBuffer: Buffer = fs.readFileSync(fl);
+			let imgData = sizeOf(imgBuffer);
+			let ratio = imgData.width / imgData.height;
+			let ratio2 = p.width / p.height;
+
+			let ratDiff = 100 * Math.abs(ratio - ratio2);
+			if (ratDiff > 1) {
+				console.log("-------------")
+				console.log("Warning: ratio difference in " + p.img);
+				console.log(`File Resolution: ${imgData.width}x${imgData.height} (${ratio.toFixed(4)})`);
+				console.log(`Data Resolution: ${p.width}x${p.height} (${ratio2.toFixed(4)})`);
+				console.log(`Ratio diffence: ${ratDiff.toFixed(4)}%`);
+				console.log("-------------")
+			}
+
+		}
+ 	}
 }
 
 
@@ -123,7 +153,13 @@ export function create(groups: PlanGroup[]) {
 	
 
 			htmlOut.push(`<svg class="mapBox" id="SVGMAP_${id}" viewBox="0 0 ${plan.width.toFixed(4)} ${plan.height.toFixed(4)}" version="1.1" xmlns="http://www.w3.org/2000/svg">`);
-			htmlOut.push(`<image class="mapPlanImg" xlink:href="./panorama-assets/rooms/${plan.img}" y="0" x="0" height="100%" width="100%" />`);
+
+			let imgSrc = plan.img;
+			if (imgSrc.endsWith(".png")) {
+				imgSrc = "600/" + plan.img;
+			}
+
+			htmlOut.push(`<image class="mapPlanImg" xlink:href="./panorama-assets/rooms/${imgSrc}" y="0" x="0" height="100%" width="100%" />`);
 
 			plan.points.forEach(p => {
 				if (p.x != null && p.y != null) {

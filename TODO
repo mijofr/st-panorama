@@ -16,8 +16,6 @@ imrpove scrollbar with new scrollbar css options
 crop: 
 enterprise-e bridge 
 voyager transporter room
-disco mess
-disco corridor
 
 when generating bar, it should check the image ratio (resolution) and check it matches.
 
@@ -25,8 +23,8 @@ magick convert .\sickbay.png -background black -flatten -alpha off sickbay.pgm
 Or maybe I can create multiple sizes. Srcset?
 
 
-initially, just scale all images to maximum 500
-
+initially, just scale all images to maximum 600
+magick mogrify -resize 600x600> -format png -path "./600/" *.png
 
 
 <img src="small.jpg" srcset="medium.jpg 1000w, large.jpg 2000w" alt="yah">
