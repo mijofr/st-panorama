@@ -72,7 +72,7 @@
     "lint:js": "eslint --ext .js src/js/",
     "stats": "webpack --config configuration/webpack.prod.config.js --mode=production --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json",
     "layout-test-sass": "sass .\\layout-test\\styles.scss:layout-test\\styles.css -w",
-    "layout-test-host": "http-server -p 8001 layout-test -o"
+    "layout-test-host": "http-server -p 8001 layout-test"
   },
   "target": "web"
 }
