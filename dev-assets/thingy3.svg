@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100"
+   height="100"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.3.1 (91b66b0783, 2023-11-16)"
+   sodipodi:docname="thingy3.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:showpageshadow="false"
+     inkscape:deskcolor="#ffffff"
+     inkscape:zoom="26.70035201"
+     inkscape:cx="4.719038909"
+     inkscape:cy="13.03353603"
+     inkscape:window-width="1781"
+     inkscape:window-height="1057"
+     inkscape:window-x="131"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <defs
+     id="defs2" />
+  <inkscape:templateinfo>
+    <inkscape:name>Basic100x100px</inkscape:name>
+    <inkscape:date>2023-07-14</inkscape:date>
+  </inkscape:templateinfo>
+  <path
+     id="rect6"
+     style="color:#000000;fill:#de8787;stroke-linejoin:round;-inkscape-stroke:none;paint-order:fill markers stroke"
+     d="m -2.75,-2.5 c -0.276130938,2.7609e-5 -0.499972391,0.223869062 -0.5,0.5 v 4.5 c 2.7609e-5,0.276130938 0.223869062,0.499972391 0.5,0.5 h 1.5 V 2 h -1 v -3.5 h 1 v -1 z m 4,0 v 1 h 1 V 2 h -1 v 1 h 1.5 C 3.026130938,2.999972391 3.249972391,2.776130938 3.25,2.5 V -2 c -2.7609e-5,-0.276130938 -0.223869062,-0.499972391 -0.5,-0.5 z"
+     sodipodi:nodetypes="cccccccccccccccccccccc" />
+</svg>

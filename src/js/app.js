@@ -195,9 +195,7 @@ window.activateId = (id) => {
 	const styleTag = document.getElementById("hTag");
 
 	styleTag.innerHTML = `
-		#${id} {
-			stroke: #c96046; paint-order: fill stroke markers;
-		}
+		#${id} { stroke: #c96046;paint-order:fill stroke;stroke-opacity:1; }
 	`;
 
 	let panoSetup = DEFAULTPANOSETUP;
