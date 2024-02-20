@@ -43,16 +43,35 @@ $frameWidth: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
-    padding: ($frameWidth * 2) ($frameWidth * 2) ($frameWidth * 4.5) ($frameWidth * 2);
+    padding: ($frameWidth * 2) ($frameWidth * 2) ($frameWidth * 2) ($frameWidth * 2);
 
-    #psvContainer {
-        aspect-ratio: 3/2 auto;
+    #psvContainer1 {
+        aspect-ratio: 4/3;
         background-color: blueviolet;
         margin:auto;
         flex: 1 1 auto;
+        
+        display: flex;
+        flex-direction: row;
         position: relative;
+        max-height: 100%;
+        max-width: 100%;
+        align-items: center;
+        justify-content: center;
 
+        #psvContainer2 {
+            aspect-ratio: 4/3;
+            background-color: violet;
+            margin:auto;
+            flex: 1 1 auto;
+            position: relative;
+    
+        }
+
+
+        
         #psvCosmeticFrame {
             border-color: #adff2f55;
             border-width: $frameWidth;
@@ -75,6 +94,9 @@ $frameWidth: 20px;
                 background-color: #00000033;
             }
         }
+        
+
+        /*
 
         #psvButtons {
             position:absolute;
@@ -84,6 +106,7 @@ $frameWidth: 20px;
             bottom: -4.5 * $frameWidth;
             background-color: #44229988;
         }
+        */
     }
 }
 #bar {
@@ -126,7 +149,7 @@ $frameWidth: 20px;
 
     #main {
         height:100%;
-        width: auto;
+        width: auto;        
     }
 
     #bar {
@@ -156,9 +179,11 @@ $frameWidth: 20px;
         }
     }
 
+    /*
     #buffer {
         display: none;
     }
+    */
 }
 @media (orientation: portrait) {
     body {
@@ -204,8 +229,10 @@ $frameWidth: 20px;
         }
     }
 
+    /*
     #buffer {
         width: 100%;
         flex: 0 1 $frameWidth * 2.5;
     }
+    */
 }

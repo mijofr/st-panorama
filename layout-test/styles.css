@@ -46,16 +46,41 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 40px 90px 40px;
+  flex-direction: column;
+  padding: 40px 40px 40px 40px;
 }
-#main #psvContainer {
-  aspect-ratio: 3/2 auto;
+#main #psvContainer1 {
+  aspect-ratio: 4/3;
   background-color: blueviolet;
+  margin: auto;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  /*
+
+  #psvButtons {
+      position:absolute;
+      height: 1.5 * $frameWidth;
+      left: -2 * $frameWidth;
+      right: -2 * $frameWidth;
+      bottom: -4.5 * $frameWidth;
+      background-color: #44229988;
+  }
+  */
+}
+#main #psvContainer1 #psvContainer2 {
+  aspect-ratio: 4/3;
+  background-color: violet;
   margin: auto;
   flex: 1 1 auto;
   position: relative;
 }
-#main #psvContainer #psvCosmeticFrame {
+#main #psvContainer1 #psvCosmeticFrame {
   border-color: rgba(173, 255, 47, 0.3333333333);
   border-width: 20px;
   border-style: solid;
@@ -67,7 +92,7 @@ body {
   left: -40px;
   right: -40px;
 }
-#main #psvContainer #psvCosmeticFrame:after {
+#main #psvContainer1 #psvCosmeticFrame:after {
   content: "";
   position: absolute;
   top: -21px;
@@ -75,14 +100,6 @@ body {
   left: 30px;
   right: 30px;
   background-color: rgba(0, 0, 0, 0.2);
-}
-#main #psvContainer #psvButtons {
-  position: absolute;
-  height: 30px;
-  left: -40px;
-  right: -40px;
-  bottom: -90px;
-  background-color: rgba(68, 34, 153, 0.5333333333);
 }
 
 #bar {
@@ -142,9 +159,11 @@ body {
     height: 100px;
     width: 60%;
   }
+  /*
   #buffer {
-    display: none;
+      display: none;
   }
+  */
 }
 @media (orientation: portrait) {
   body {
@@ -181,10 +200,12 @@ body {
     width: 100px;
     height: 60%;
   }
+  /*
   #buffer {
-    width: 100%;
-    flex: 0 1 50px;
+      width: 100%;
+      flex: 0 1 $frameWidth * 2.5;
   }
+  */
 }
 
 /*# sourceMappingURL=styles.css.map */
