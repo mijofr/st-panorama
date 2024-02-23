@@ -1,0 +1,53 @@
+
+$majorGap: 1vmin;
+$frameWidth: 24px;
+
+$btnColor: #ffcc99;
+$btnHover: #ffeecc;
+$btnActive: #ffdfb3;
+
+$redBtnColor: #dd4444;
+$redBtnHoverColor: #ed5a5a;
+$redBtnActiveColor: #ed5a5a;
+
+$pageOuterBorder: $majorGap;
+
+$sidebarScrollBarPadding: 20px;
+$sidebarFrameGap: 20px;
+
+$scrollbarWidth: 11px;
+
+
+$bg-color: #000;
+$sb-track-color: #222;
+$sb-thumb-color: #444;
+$sb-thumb-hover-color: #555;
+$sb-thumb-focus-color: #999;
+
+$light-blue: #6095ad;
+$dark-blue: #2e7fa5;
+
+$title-grey: #999;
+
+$alert-red: #C96046;
+$alert-red-hover: #EF7053;
+
+$camera-point: #70a8c1;
+
+
+@function transpBg($col) {
+
+    //$result: $col;
+    //$result: color.scale($col, $alpha: -70%);
+    $result: transparent;
+    @return $result;
+}
+
+@function blackBg($col) {
+    //$result: color.scale($col, $lightness: -90%, $alpha: -30%);
+
+    // $result: rgba(0,0,0,0.8);
+    $result: #000;
+    @return $result;
+
+}

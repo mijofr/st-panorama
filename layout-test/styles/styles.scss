@@ -1,0 +1,376 @@
+@use 'sass:color';
+@use 'sass:math';
+
+@import "normalize";
+@import "variables";
+@import "scrollbar";
+@import "inner-bar";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+html {
+    background-color: black;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: transpBg(grey);
+    font-family: Antonio;
+    padding: $pageOuterBorder;
+}
+
+#page-wrap {
+    width:100%;
+    height:100%;
+    background-color: transpBg(green);
+
+    display: flex;
+    // gap: $majorGap;
+    gap: 0;
+}
+
+.spacer {
+    height: 100%;
+    flex: 1 0 auto;
+    background-color: transpBg(#41370e);
+}
+
+#main {
+    background-color: transpBg(brown);
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding-top: $frameWidth * 2;
+    padding-bottom: $frameWidth * 3;
+    padding-left: $frameWidth * 2;
+    padding-right: $frameWidth * 2;
+
+    #psvContainer1 {
+        aspect-ratio: 4/3;
+        background-color: transpBg(blueviolet);
+        margin:auto;
+        flex: 1 1 auto;
+        
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        max-height: 100%;
+        max-width: 100%;
+        align-items: center;
+        justify-content: center;
+
+        #psvContainer2 {
+            aspect-ratio: 4/3;
+            background-color: transpBg(violet);
+            margin:auto;
+            flex: 1 1 auto;
+            position: relative;
+    
+        }
+
+
+        
+        #psvCosmeticFrame {
+            border-radius: 2 * $frameWidth;
+            background-color: $btnColor;
+            position: absolute;
+            top: -2 * $frameWidth;
+            bottom: -3 * $frameWidth;
+            left: -2 * $frameWidth;
+            right: -2 * $frameWidth;
+
+            /*
+            &:after {
+                content: '';
+                position: absolute;
+                top: -1.05 * $frameWidth;
+                bottom: -1.05 * $frameWidth;
+                left: 1.5 * $frameWidth;
+                right: 1.5 * $frameWidth;
+                background-color: #000000dd;
+            }
+            */
+            #psvCosmeticInner1 {
+                position: absolute;
+                top: 1 * $frameWidth;
+                bottom: 2 * $frameWidth;
+                left: 1 * $frameWidth;
+                right: 1 * $frameWidth;   
+                background-color: blackBg(rgb(59, 44, 153));
+                border-radius: $frameWidth; 
+            }
+
+            #psvCosmeticInner2 {
+                position: absolute;
+                top: -1px;
+                bottom: -1px;
+                left: 2.5 * $frameWidth;
+                right: 2.5 * $frameWidth;   
+                background-color: blackBg(rgb(204, 215, 140));
+            }
+            
+            #psvButtons {
+                position:absolute;
+                right: 3 * $frameWidth;
+                left: 3 * $frameWidth;
+                height: 2 * $frameWidth;
+                bottom: 0;
+                background-color: transpBg(#102929);
+                display: flex;
+                gap: $frameWidth * 0.5;
+                
+                button {
+                    padding: 0 ($frameWidth * 0.25) ($frameWidth * 0.25) 0;
+                    height: 100%;
+                    flex: 0 1 $frameWidth * 4.5;
+                    border: none;
+                    text-transform: uppercase;
+                    font-size: $frameWidth * 0.75;
+
+                    display: flex;
+                    align-items: end;
+                    justify-content: flex-end;
+                    font-weight: 900;
+                    text-align: right;
+
+                    &:last-child {
+                        padding-right: $frameWidth * 0.5;
+                        border-top-right-radius: $frameWidth * 2;
+                        border-bottom-right-radius: $frameWidth * 2;
+                        flex-basis: $frameWidth * 4.75;
+                    }
+
+                    img {
+                        height:1.6em;
+                    }
+
+                    &:hover {
+                        img {
+                            opacity: 0.7;
+                        }
+                        color: #333;
+                    }
+
+                    &.redAlert {
+                        padding-right: $frameWidth * 0.75;
+                        font-size: 0.75 * $frameWidth;
+                        line-height: 1;
+                        align-items: center;
+                        padding-bottom: 0;
+                    }
+                    
+                }
+
+
+
+                
+            }
+            #psvTitle {
+                position:absolute;
+                right: 3 * $frameWidth;
+                left: 3 * $frameWidth;
+                height: $frameWidth;
+                top: 0;
+                background-color: transpBg(rgb(32, 139, 139));
+                display: flex;
+
+                color: white;
+                font-weight: 700;
+                span {
+                    line-height: 0.8;
+                    font-size: $frameWidth;
+                }
+            }
+        }
+
+        $innerBorderRadius: 3px;
+        #psvMain {
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            background-color: rgb(18, 36, 141);
+            overflow: hidden;
+            border-radius: $innerBorderRadius;
+            background-image: url('./assets/pano3.png');
+            background-size: cover;
+        }
+
+        #bodyText {
+            position: absolute;
+            top:-1px;
+            bottom:-1px;
+            left:-1px;
+            right:-1px;
+            padding: 1px;
+            background-color: black;
+            overflow: hidden;
+            border-radius: $innerBorderRadius;
+            background-size: cover;
+            color: $btnColor;
+            font-size: 2vmin;
+            font-weight: 400;
+            p {
+                margin-bottom: 1em;
+            }
+        }
+
+        
+
+    }
+}
+
+button {
+    background-color: $btnColor;
+
+    &:hover {
+        background-color: $btnHover;
+        cursor: pointer;
+    }
+    &:active {
+        background-color: $btnActive;
+    }    
+}
+button.red {
+    background-color: $redBtnColor;
+
+    &:hover {
+        background-color: $redBtnHoverColor;
+        cursor: pointer;
+    }
+    &:active {
+        background-color: $redBtnActiveColor;
+    }    
+}
+
+#bar {
+    background-color: transpBg(aquamarine);
+    #innerBar {
+            background-image: url("./assets/bg.png");
+            width:100%;
+            height: 100%;
+
+            gap: 10px;
+            display: flex;
+
+            align-items: center;
+
+            #testItem1 {
+                border: 1px solid #444444;
+            }
+            #testItem2 {
+                border: 1px solid #444444;
+            }
+    }
+}
+
+@import "scrollbar";
+
+@media (orientation: landscape) {
+
+    body {
+        //padding: 1.5vw;
+    }
+
+    #page-wrap {
+        flex-direction: row;
+    }
+
+    #main {
+        height:100%;
+        width: auto;        
+    }
+
+    #bar {
+        margin-right: $sidebarFrameGap;
+        height: 100%;
+        width: 19vw;
+        overflow-y: scroll;
+        direction: rtl;
+        padding-left:$sidebarScrollBarPadding;
+
+        #innerBar {
+            direction: ltr;
+            width: 100%;
+            height: 4000px;
+            flex-direction: column;
+
+            #testItem1 {
+                height: 100px;
+                width: 30%;
+            }
+            #testItem2 {
+                height: 100px;
+                width: 60%;
+            }
+
+
+        }
+    }
+
+    /*
+    #buffer {
+        display: none;
+    }
+    */
+}
+@media (orientation: portrait) {
+    body {
+        // padding: 1vh;
+    }
+
+    #page-wrap {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+
+    #main {
+        width: 100%;
+        height :auto;
+        flex: 2 1 auto;
+    }
+
+    #bar {
+        margin-top: $sidebarFrameGap;
+        // height: 19vw;
+        flex: 3 1 auto;
+        max-height: 40vh;
+        min-height: 25vh;
+        width:100%;
+        overflow-x: scroll;
+        padding-bottom:$sidebarScrollBarPadding;
+
+        #innerBar {
+            height: 100%;
+            width:4000px;
+            flex-direction: row;
+
+            #testItem1 {
+                width: 100px;
+                height: 30%;
+            }
+            #testItem2 {
+                width: 100px;
+                height: 60%;
+            }
+
+
+        }
+    }
+
+    /*
+    #buffer {
+        width: 100%;
+        flex: 0 1 $frameWidth * 2.5;
+    }
+    */
+}

@@ -1,0 +1,262 @@
+@import "variables";
+
+
+//maybe make the toptitle 24px
+//stitle 0.75, so 16px;
+
+
+$ttS: 1.4rem;
+$ttF: 1rem;
+$mar: 0.4rem;
+$sS: 0.85rem;
+
+
+$BARGAP: 0.4rem;
+
+
+
+.groupContainer {
+
+    background-color: $light-blue;
+    display: flex;
+  
+    .groupInnerContainer {
+  
+      background-color: blackBg(#f82);
+      display: flex;
+      gap: $BARGAP;
+      align-items: center;
+  
+    }
+  }
+  
+  
+
+.topTitle,
+.sTitle {
+
+    font-family: Antonio, 'Arial Narrow', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+}
+
+.topTitle {
+
+    font-weight: 700;
+
+    position: relative;
+    font-size: $ttF;
+
+    display: flex;
+
+    &>div {
+        line-height: 0.8;
+        color: $bg-color;
+
+        &>span {
+            font-size: 0.8em;
+            font-weight: 400;
+        }
+    }
+
+}
+
+.sTitle {
+
+    font-weight: 700;
+
+    position: relative;
+    background-color: $dark-blue;
+
+    font-size: $sS;
+    display: flex;
+
+
+    &>div {
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: $title-grey;
+        background-color: $bg-color;
+        line-height: 0.8;
+
+
+    }
+}
+
+
+
+.mapBox {
+    font-size: 0.5rem;
+}
+
+$camera-point-orig: #b49ac4;
+$camera-point: #EBCEFF;
+$camera-point-hover: #FEEFFF;
+
+.mapBox .cameraPoint {
+    fill: $camera-point;
+    stroke: #000;
+    stroke-width: 0.04em;
+    stroke-opacity: 0.6;
+    paint-order: stroke fill;
+    fill-opacity: 0.75;
+    // mix-blend-mode: hard-light;
+
+    &:hover {
+        cursor: pointer;
+        fill: $camera-point-hover;
+        stroke-opacity: 1;
+    }
+}
+
+
+
+
+
+@media (orientation: landscape) {
+
+
+    .groupContainer {
+
+        padding-left: $BARGAP;
+        border-top-left-radius: $BARGAP;
+        flex-direction: column;
+        width: 100%;
+
+        .groupInnerContainer {
+
+            padding-left: $BARGAP;
+            padding-top: $BARGAP;
+            border-top-left-radius: $BARGAP;
+            flex-direction: column;
+            width: 100%;
+
+        }
+    }
+
+    .topTitle {
+
+        width: 100%;
+        height: $ttS;
+
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: $BARGAP * 0.5;
+
+        &>div {
+            &>span {
+                margin-left: 0.3em;
+            }
+        }
+    }
+
+    .sTitle {
+
+        width: 100%;
+        height: $sS;
+
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: $BARGAP;
+
+        &>div {
+            height: 120%;
+
+            &>div {
+                padding: 0 ($BARGAP * 0.5);
+            }
+        }
+    }
+
+    .mapBox {
+        margin: $BARGAP 0;
+    }
+
+    @import "land";
+}
+
+@media (orientation: portrait) {
+
+
+    .groupContainer {
+
+        padding-bottom: $BARGAP;
+        border-bottom-left-radius: $BARGAP;
+        flex-direction: row;
+        height: 100%;
+
+        .groupInnerContainer {
+
+            padding-left: $BARGAP;
+            padding-bottom: $BARGAP;
+            border-bottom-left-radius: $BARGAP;
+            flex-direction: row;
+            height: 100%;
+
+        }
+    }
+
+
+    .topTitle {
+        height: 100%;
+        width: $ttS;
+
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: $BARGAP * 0.5;
+
+
+        &>div {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+
+            &>span {
+                margin-top: 0.3em;
+            }
+        }
+    }
+
+    .sTitle {
+        height: 100%;
+        width: $sS;
+
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: $BARGAP;
+
+        &>div {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+
+            width: 120%;
+            margin: 0 -1px;
+
+            &>div {
+                padding: ($BARGAP * 0.5) 0;
+            }
+
+        }
+    }
+
+
+    .mapBox {
+        margin: 0 $BARGAP;
+    }
+
+
+    @import "port";
+}

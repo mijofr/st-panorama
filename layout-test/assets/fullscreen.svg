@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="105"
+   height="100"
+   viewBox="0 0 105 100"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="fullscreen.svg"
+   inkscape:version="1.3.1 (91b66b0783, 2023-11-16)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.806250009"
+     inkscape:cx="49.12972074"
+     inkscape:cy="54.90968788"
+     inkscape:window-width="2421"
+     inkscape:window-height="1417"
+     inkscape:window-x="1811"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1" />
+  <title
+     id="title1">
+    fullscreen
+  </title>
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>
+    fullscreen
+  </dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     id="rect18-7"
+     style="color:#000000;fill:#000000;stroke-linejoin:round;-inkscape-stroke:none;paint-order:fill markers stroke"
+     d="M 17.5,0 C 7.934749,0 0,7.9347484 0,17.5 v 19 h 15 v -19 C 15,15.9852738 15.9852738,15 17.5,15 H 39 V 0 Z M 66,0 v 15 h 21.5 c 1.5147262,0 2.5,0.9852738 2.5,2.5 v 19 h 15 v -19 C 105,7.9347484 97.0652516,0 87.5,0 Z M 0,63.5 v 19 C 0,92.0652516 7.934749,100 17.5,100 H 39 V 85 H 17.5 C 15.9852738,85 15,84.0147262 15,82.5 v -19 z m 90,0 v 19 C 90,84.0147262 89.0147262,85 87.5,85 H 66 v 15 h 21.5 c 9.5652516,0 17.5,-7.9347484 17.5,-17.5 v -19 z" />
+</svg>

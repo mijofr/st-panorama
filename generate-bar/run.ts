@@ -157,6 +157,8 @@ export function create(groups: PlanGroup[]) {
 			let imgSrc = plan.img;
 			if (imgSrc.endsWith(".png")) {
 				imgSrc = "600/" + plan.img;
+			} else if (imgSrc.endsWith(".svg")) {
+				imgSrc = "svg/" + plan.img;
 			}
 
 			htmlOut.push(`<image class="mapPlanImg" xlink:href="./panorama-assets/rooms/${imgSrc}" y="0" x="0" height="100%" width="100%" />`);

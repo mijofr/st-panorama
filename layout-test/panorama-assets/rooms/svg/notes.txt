@@ -1,0 +1,31 @@
+The ones I just auto'd with potrace
+
+-a----        23/02/2024  10:17 PM        6229409 bop.PGM
+-a----        23/02/2024  10:17 PM          56015 bts.PGM
+-a----        23/02/2024  10:17 PM         828448 data.PGM
+-a----        23/02/2024  10:17 PM        1293616 defiant.PGM
+-a----        23/02/2024  10:17 PM        1006876 disco_bridge.PGM
+-a----        23/02/2024  10:17 PM         335215 disco_hall.PGM
+-a----        23/02/2024  10:17 PM         703726 disco_mess.PGM
+-a----        23/02/2024  10:17 PM         533015 disco_transp.PGM
+-a----        23/02/2024  10:17 PM        6747335 eng.PGM
+-a----        23/02/2024  10:17 PM        2493017 entd.PGM
+-a----        23/02/2024  10:17 PM        3682817 ente.PGM
+-a----        23/02/2024  10:17 PM         605016 JJhall.PGM
+-a----        23/02/2024  10:17 PM        2627231 kbop.PGM
+-a----        23/02/2024  10:17 PM        1882699 picard.PGM
+-a----        23/02/2024  10:17 PM         162447 shuttle.PGM
+-a----        23/02/2024  10:17 PM        1054082 sickbay.PGM
+-a----        23/02/2024  10:17 PM        2655017 tenforward.PGM
+-a----        23/02/2024  10:17 PM         653631 transp.PGM
+-a----        23/02/2024  10:17 PM        1564986 troi.PGM
+-a----        23/02/2024  10:17 PM        1149016 voy.PGM
+-a----        23/02/2024  10:17 PM        1187516 VOY_ENG.PGM
+-a----        23/02/2024  10:17 PM         357515 VOY_MESS.PGM
+-a----        23/02/2024  10:17 PM         960016 VOY_SICKBAY.PGM
+-a----        23/02/2024  10:17 PM         185655 VOY_TRANSP.PGM
+-a----        23/02/2024  10:17 PM        1796833 worf.PGM
+
+magick mogrify -background black -alpha remove -alpha off -negate -format pgm *.png
+
+Get-ChildItem -Filter *.PGM -File | Foreach { potrace --color `#ffffff  -s -t 1 -u 1 --flat -o ($_.basename + ".svg") ($_.basename + ".PGM") }

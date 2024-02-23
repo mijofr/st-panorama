@@ -1,4 +1,235 @@
-@import "./modern-normalize.css";
+/*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.15; /* 1. Correct the line height in all browsers. */
+  -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+  -moz-tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+  tab-size: 4; /* 3 */
+}
+
+/*
+Sections
+========
+*/
+body {
+  margin: 0; /* Remove the margin in all browsers. */
+}
+
+/*
+Grouping content
+================
+*/
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+button,
+select {
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
 :root {
   line-height: 1.5;
 }
@@ -12,10 +243,369 @@ img {
   max-inline-size: 100%;
 }
 
-.a {
-  background-color: green;
+@supports selector(::-webkit-scrollbar) {
+  #bar::-webkit-scrollbar {
+    width: auto;
+    height: auto;
+  }
+  #bar::-webkit-scrollbar:vertical {
+    width: 11px;
+    height: auto;
+  }
+  #bar::-webkit-scrollbar:horizontal {
+    height: 11px;
+    width: auto;
+  }
+  #bar::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 11px;
+  }
+  #bar::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 11px;
+  }
+  #bar::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  #bar::-webkit-scrollbar-thumb:active {
+    background-color: #999;
+  }
+}
+@supports not selector(::-webkit-scrollbar) {
+  #bar {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #222;
+  }
 }
 
+.groupContainer {
+  background-color: #6095ad;
+  display: flex;
+}
+.groupContainer .groupInnerContainer {
+  background-color: #000;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.topTitle,
+.sTitle {
+  font-family: Antonio, "Arial Narrow", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.topTitle {
+  font-weight: 700;
+  position: relative;
+  font-size: 1rem;
+  display: flex;
+}
+.topTitle > div {
+  line-height: 0.8;
+  color: #000;
+}
+.topTitle > div > span {
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.sTitle {
+  font-weight: 700;
+  position: relative;
+  background-color: #2e7fa5;
+  font-size: 0.85rem;
+  display: flex;
+}
+.sTitle > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  background-color: #000;
+  line-height: 0.8;
+}
+
+.mapBox {
+  font-size: 0.5rem;
+}
+
+.mapBox .cameraPoint {
+  fill: #EBCEFF;
+  stroke: #000;
+  stroke-width: 0.04em;
+  stroke-opacity: 0.6;
+  paint-order: stroke fill;
+  fill-opacity: 0.75;
+}
+.mapBox .cameraPoint:hover {
+  cursor: pointer;
+  fill: #FEEFFF;
+  stroke-opacity: 1;
+}
+
+@media (orientation: landscape) {
+  .groupContainer {
+    padding-left: 0.4rem;
+    border-top-left-radius: 0.4rem;
+    flex-direction: column;
+    width: 100%;
+  }
+  .groupContainer .groupInnerContainer {
+    padding-left: 0.4rem;
+    padding-top: 0.4rem;
+    border-top-left-radius: 0.4rem;
+    flex-direction: column;
+    width: 100%;
+  }
+  .topTitle {
+    width: 100%;
+    height: 1.4rem;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0.2rem;
+  }
+  .topTitle > div > span {
+    margin-left: 0.3em;
+  }
+  .sTitle {
+    width: 100%;
+    height: 0.85rem;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0.4rem;
+  }
+  .sTitle > div {
+    height: 120%;
+  }
+  .sTitle > div > div {
+    padding: 0 0.2rem;
+  }
+  .mapBox {
+    margin: 0.4rem 0;
+  }
+  #SVGMAP_USS_ENTERPRISE_MAIN_BRIDGE {
+    width: 45.890195835%;
+  }
+  #SVGMAP_BIRD_OF_PREY_D12_BRIDGE {
+    width: 35.4951790989%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_DECK_ONE {
+    width: 67.3287769368%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_ENGINEERING {
+    width: 43.3551554975%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_SICKBAY {
+    width: 46.8500144535%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_TEN-FORWARD_LOUNGE {
+    width: 64.9704156642%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_TRANSPORTER_ROOM_3 {
+    width: 29.3729894421%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_CPT_PICARDS_QUARTERS {
+    width: 22.475553925%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_CNS_TROIS_QUARTERS {
+    width: 22.5226516813%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_LT_DATAS_QUARTERS {
+    width: 23.3211566632%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_LT_WORFS_QUARTERS {
+    width: 31.0306823988%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_TYPE_6_SHUTTLECRAFT {
+    width: 25.3536993564%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_BEHIND_THE_SCENES {
+    width: 7.2439141018%;
+  }
+  #SVGMAP_USS_ENTERPRISE-E_BRIDGE {
+    width: 54.3293557636%;
+  }
+  #SVGMAP_USS_DEFIANT_DECK_ONE {
+    width: 36.2195705091%;
+  }
+  #SVGMAP_USS_VOYAGER_DECK_ONE {
+    width: 95%;
+  }
+  #SVGMAP_USS_VOYAGER_SICKBAY__DECK_5 {
+    width: 86.9269692218%;
+  }
+  #SVGMAP_USS_VOYAGER_TRANSPORTER_ROOM {
+    width: 25.896992914%;
+  }
+  #SVGMAP_USS_VOYAGER_ENGINEERING {
+    width: 90.5489262727%;
+  }
+  #SVGMAP_USS_VOYAGER_MESS_HALL {
+    width: 47.0854416618%;
+  }
+  #SVGMAP_USS_ENTERPRISE_BRIDGE {
+    width: 65.1952269164%;
+  }
+  #SVGMAP_USS_ENTERPRISE_CORRIDOR {
+    width: 79.68305512%;
+  }
+  #SVGMAP_USS_DISCOVERY_BRIDGE {
+    width: 75.1556088064%;
+  }
+  #SVGMAP_USS_DISCOVERY_TRANSPORTER_ROOM {
+    width: 59.4000956349%;
+  }
+  #SVGMAP_USS_DISCOVERY_MESS_HALL {
+    width: 80.9507400878%;
+  }
+  #SVGMAP_USS_DISCOVERY_CORRIDOR {
+    width: 60.4866827502%;
+  }
+  #SVGMAP_ISS_STATION_13_SCALE {
+    width: 90.5489262727%;
+  }
+}
+@media (orientation: portrait) {
+  .groupContainer {
+    padding-bottom: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+    flex-direction: row;
+    height: 100%;
+  }
+  .groupContainer .groupInnerContainer {
+    padding-left: 0.4rem;
+    padding-bottom: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+    flex-direction: row;
+    height: 100%;
+  }
+  .topTitle {
+    height: 100%;
+    width: 1.4rem;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 0.2rem;
+  }
+  .topTitle > div {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+  .topTitle > div > span {
+    margin-top: 0.3em;
+  }
+  .sTitle {
+    height: 100%;
+    width: 0.85rem;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 0.4rem;
+  }
+  .sTitle > div {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    width: 120%;
+    margin: 0 -1px;
+  }
+  .sTitle > div > div {
+    padding: 0.2rem 0;
+  }
+  .mapBox {
+    margin: 0 0.4rem;
+  }
+  #SVGMAP_USS_ENTERPRISE_MAIN_BRIDGE {
+    height: 55.0402054216%;
+  }
+  #SVGMAP_BIRD_OF_PREY_D12_BRIDGE {
+    height: 47.1773189328%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_DECK_ONE {
+    height: 95%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_ENGINEERING {
+    height: 82.4864481082%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_SICKBAY {
+    height: 62.9190339128%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_TEN-FORWARD_LOUNGE {
+    height: 86.0594184262%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_TRANSPORTER_ROOM_3 {
+    height: 41.1073553413%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_CPT_PICARDS_QUARTERS {
+    height: 57.8550008413%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_CNS_TROIS_QUARTERS {
+    height: 47.0241774241%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_LT_DATAS_QUARTERS {
+    height: 33.4322275053%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_LT_WORFS_QUARTERS {
+    height: 54.6854988178%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_TYPE_6_SHUTTLECRAFT {
+    height: 11.0080410843%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_BEHIND_THE_SCENES {
+    height: 7.8628864888%;
+  }
+  #SVGMAP_USS_ENTERPRISE-E_BRIDGE {
+    height: 58.971648666%;
+  }
+  #SVGMAP_USS_DEFIANT_DECK_ONE {
+    height: 82.5603081325%;
+  }
+  #SVGMAP_USS_VOYAGER_DECK_ONE {
+    height: 52.6346417921%;
+  }
+  #SVGMAP_USS_VOYAGER_SICKBAY__DECK_5 {
+    height: 62.9030919104%;
+  }
+  #SVGMAP_USS_VOYAGER_TRANSPORTER_ROOM {
+    height: 40.8870097418%;
+  }
+  #SVGMAP_USS_VOYAGER_ENGINEERING {
+    height: 74.6974216436%;
+  }
+  #SVGMAP_USS_VOYAGER_MESS_HALL {
+    height: 43.2458756884%;
+  }
+  #SVGMAP_USS_ENTERPRISE_BRIDGE {
+    height: 55.0402054216%;
+  }
+  #SVGMAP_USS_ENTERPRISE_CORRIDOR {
+    height: 43.2458756884%;
+  }
+  #SVGMAP_USS_DISCOVERY_BRIDGE {
+    height: 76.2896561576%;
+  }
+  #SVGMAP_USS_DISCOVERY_TRANSPORTER_ROOM {
+    height: 51.1087621772%;
+  }
+  #SVGMAP_USS_DISCOVERY_MESS_HALL {
+    height: 49.5361848795%;
+  }
+  #SVGMAP_USS_DISCOVERY_CORRIDOR {
+    height: 31.4515459552%;
+  }
+  #SVGMAP_ISS_STATION_13_SCALE {
+    height: 72.0633546699%;
+  }
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -29,29 +619,40 @@ html {
 body {
   width: 100vw;
   height: 100vh;
-  background-color: grey;
+  background-color: transparent;
+  font-family: Antonio;
+  padding: 1vmin;
 }
 
 #page-wrap {
   width: 100%;
   height: 100%;
-  background-color: green;
+  background-color: transparent;
   display: flex;
   gap: 0;
 }
 
+.spacer {
+  height: 100%;
+  flex: 1 0 auto;
+  background-color: transparent;
+}
+
 #main {
-  background-color: brown;
+  background-color: transparent;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 40px 40px 40px 40px;
+  padding-top: 48px;
+  padding-bottom: 72px;
+  padding-left: 48px;
+  padding-right: 48px;
 }
 #main #psvContainer1 {
   aspect-ratio: 4/3;
-  background-color: blueviolet;
+  background-color: transparent;
   margin: auto;
   flex: 1 1 auto;
   display: flex;
@@ -61,54 +662,169 @@ body {
   max-width: 100%;
   align-items: center;
   justify-content: center;
-  /*
-
-  #psvButtons {
-      position:absolute;
-      height: 1.5 * $frameWidth;
-      left: -2 * $frameWidth;
-      right: -2 * $frameWidth;
-      bottom: -4.5 * $frameWidth;
-      background-color: #44229988;
-  }
-  */
 }
 #main #psvContainer1 #psvContainer2 {
   aspect-ratio: 4/3;
-  background-color: violet;
+  background-color: transparent;
   margin: auto;
   flex: 1 1 auto;
   position: relative;
 }
 #main #psvContainer1 #psvCosmeticFrame {
-  border-color: rgba(173, 255, 47, 0.3333333333);
-  border-width: 20px;
-  border-style: solid;
-  border-radius: 40px;
-  background-color: rgba(255, 85, 170, 0.2);
+  border-radius: 48px;
+  background-color: #ffcc99;
   position: absolute;
-  top: -40px;
-  bottom: -40px;
-  left: -40px;
-  right: -40px;
+  top: -48px;
+  bottom: -72px;
+  left: -48px;
+  right: -48px;
+  /*
+  &:after {
+      content: '';
+      position: absolute;
+      top: -1.05 * $frameWidth;
+      bottom: -1.05 * $frameWidth;
+      left: 1.5 * $frameWidth;
+      right: 1.5 * $frameWidth;
+      background-color: #000000dd;
+  }
+  */
 }
-#main #psvContainer1 #psvCosmeticFrame:after {
-  content: "";
+#main #psvContainer1 #psvCosmeticFrame #psvCosmeticInner1 {
   position: absolute;
-  top: -21px;
-  bottom: -21px;
-  left: 30px;
-  right: 30px;
-  background-color: rgba(0, 0, 0, 0.2);
+  top: 24px;
+  bottom: 48px;
+  left: 24px;
+  right: 24px;
+  background-color: #000;
+  border-radius: 24px;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvCosmeticInner2 {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: 60px;
+  right: 60px;
+  background-color: #000;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons {
+  position: absolute;
+  right: 72px;
+  left: 72px;
+  height: 48px;
+  bottom: 0;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button {
+  padding: 0 6px 6px 0;
+  height: 100%;
+  flex: 0 1 108px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  font-weight: 900;
+  text-align: right;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button:last-child {
+  padding-right: 12px;
+  border-top-right-radius: 48px;
+  border-bottom-right-radius: 48px;
+  flex-basis: 114px;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button img {
+  height: 1.6em;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button:hover {
+  color: #333;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button:hover img {
+  opacity: 0.7;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button.redAlert {
+  padding-right: 18px;
+  font-size: 18px;
+  line-height: 1;
+  align-items: center;
+  padding-bottom: 0;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvTitle {
+  position: absolute;
+  right: 72px;
+  left: 72px;
+  height: 24px;
+  top: 0;
+  background-color: transparent;
+  display: flex;
+  color: white;
+  font-weight: 700;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvTitle span {
+  line-height: 0.8;
+  font-size: 24px;
+}
+#main #psvContainer1 #psvMain {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(18, 36, 141);
+  overflow: hidden;
+  border-radius: 3px;
+  background-image: url("./assets/pano3.png");
+  background-size: cover;
+}
+#main #psvContainer1 #bodyText {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  padding: 1px;
+  background-color: black;
+  overflow: hidden;
+  border-radius: 3px;
+  background-size: cover;
+  color: #ffcc99;
+  font-size: 2vmin;
+  font-weight: 400;
+}
+#main #psvContainer1 #bodyText p {
+  margin-bottom: 1em;
+}
+
+button {
+  background-color: #ffcc99;
+}
+button:hover {
+  background-color: #ffeecc;
+  cursor: pointer;
+}
+button:active {
+  background-color: #ffdfb3;
+}
+
+button.red {
+  background-color: #dd4444;
+}
+button.red:hover {
+  background-color: #ed5a5a;
+  cursor: pointer;
+}
+button.red:active {
+  background-color: #ed5a5a;
 }
 
 #bar {
-  background-color: aquamarine;
-  scrollbar-width: thin;
+  background-color: transparent;
 }
 #bar #innerBar {
-  background-color: green;
-  background-image: url("bg.png");
+  background-image: url("./assets/bg.png");
   width: 100%;
   height: 100%;
   gap: 10px;
@@ -116,20 +832,48 @@ body {
   align-items: center;
 }
 #bar #innerBar #testItem1 {
-  background-color: aquamarine;
+  border: 1px solid #444444;
 }
 #bar #innerBar #testItem2 {
-  background-color: darkolivegreen;
+  border: 1px solid #444444;
 }
 
-#buffer {
-  background-color: yellow;
+@supports selector(::-webkit-scrollbar) {
+  #bar::-webkit-scrollbar {
+    width: auto;
+    height: auto;
+  }
+  #bar::-webkit-scrollbar:vertical {
+    width: 11px;
+    height: auto;
+  }
+  #bar::-webkit-scrollbar:horizontal {
+    height: 11px;
+    width: auto;
+  }
+  #bar::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 11px;
+  }
+  #bar::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 11px;
+  }
+  #bar::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  #bar::-webkit-scrollbar-thumb:active {
+    background-color: #999;
+  }
+}
+@supports not selector(::-webkit-scrollbar) {
+  #bar {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #222;
+  }
 }
 
 @media (orientation: landscape) {
-  body {
-    padding: 1.5vw;
-  }
   #page-wrap {
     flex-direction: row;
   }
@@ -138,12 +882,12 @@ body {
     width: auto;
   }
   #bar {
-    margin-right: 1vmin;
+    margin-right: 20px;
     height: 100%;
     width: 19vw;
     overflow-y: scroll;
     direction: rtl;
-    padding-left: 2vw;
+    padding-left: 20px;
   }
   #bar #innerBar {
     direction: ltr;
@@ -166,9 +910,6 @@ body {
   */
 }
 @media (orientation: portrait) {
-  body {
-    padding: 1vh;
-  }
   #page-wrap {
     flex-direction: column-reverse;
     justify-content: space-between;
@@ -179,13 +920,13 @@ body {
     flex: 2 1 auto;
   }
   #bar {
-    margin-top: 1vmin;
+    margin-top: 20px;
     flex: 3 1 auto;
     max-height: 40vh;
     min-height: 25vh;
     width: 100%;
     overflow-x: scroll;
-    padding-bottom: 2vh;
+    padding-bottom: 20px;
   }
   #bar #innerBar {
     height: 100%;
