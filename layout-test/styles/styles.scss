@@ -14,6 +14,7 @@ html, body {
 
 html {
     background-color: black;
+    font-size: $baseEm;
 }
 
 body {
@@ -259,7 +260,7 @@ button.red {
             width:100%;
             height: 100%;
 
-            gap: 10px;
+            gap: $barInnerGap;
             display: flex;
 
             align-items: center;

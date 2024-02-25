@@ -5,15 +5,6 @@
 //stitle 0.75, so 16px;
 
 
-$ttS: 1.4rem;
-$ttF: 1rem;
-$mar: 0.4rem;
-$sS: 0.85rem;
-
-
-$BARGAP: 0.4rem;
-
-
 
 .groupContainer {
 
@@ -24,7 +15,7 @@ $BARGAP: 0.4rem;
   
       background-color: blackBg(#f82);
       display: flex;
-      gap: $BARGAP;
+      gap: $barInnerGap;
       align-items: center;
   
     }
@@ -47,7 +38,7 @@ $BARGAP: 0.4rem;
     font-weight: 700;
 
     position: relative;
-    font-size: $ttF;
+    font-size: $ttFont;
 
     display: flex;
 
@@ -70,7 +61,7 @@ $BARGAP: 0.4rem;
     position: relative;
     background-color: $dark-blue;
 
-    font-size: $sS;
+    font-size: $stThickness;
     display: flex;
 
 
@@ -124,16 +115,16 @@ $camera-point-hover: #FEEFFF;
 
     .groupContainer {
 
-        padding-left: $BARGAP;
-        border-top-left-radius: $BARGAP;
+        padding-left: $barInnerGap;
+        border-top-left-radius: $barInnerGap;
         flex-direction: column;
         width: 100%;
 
         .groupInnerContainer {
 
-            padding-left: $BARGAP;
-            padding-top: $BARGAP;
-            border-top-left-radius: $BARGAP;
+            padding-left: $barInnerGap;
+            padding-top: $barInnerGap;
+            border-top-left-radius: $barInnerGap;
             flex-direction: column;
             width: 100%;
 
@@ -143,13 +134,16 @@ $camera-point-hover: #FEEFFF;
     .topTitle {
 
         width: 100%;
-        height: $ttS;
+        height: $ttThickness;
 
         align-items: center;
         justify-content: flex-start;
-        padding-left: $BARGAP * 0.5;
+        padding-left: $barInnerGap * 0.5;
 
+        
         &>div {
+            position:relative;
+            top: -1 * $titleOffset;
             &>span {
                 margin-left: 0.3em;
             }
@@ -159,23 +153,25 @@ $camera-point-hover: #FEEFFF;
     .sTitle {
 
         width: 100%;
-        height: $sS;
+        height: $stThickness;
 
         align-items: center;
         justify-content: flex-start;
-        padding-left: $BARGAP;
+        padding-left: $barInnerGap;
 
         &>div {
             height: 120%;
 
             &>div {
-                padding: 0 ($BARGAP * 0.5);
+                position: relative;
+                top: -1 * $titleOffset;
+                padding: 0 ($barInnerGap * 0.5);
             }
         }
     }
 
     .mapBox {
-        margin: $BARGAP 0;
+        margin: $barInnerGap 0;
     }
 
     @import "land";
@@ -186,16 +182,16 @@ $camera-point-hover: #FEEFFF;
 
     .groupContainer {
 
-        padding-bottom: $BARGAP;
-        border-bottom-left-radius: $BARGAP;
+        padding-bottom: $barInnerGap;
+        border-bottom-left-radius: $barInnerGap;
         flex-direction: row;
         height: 100%;
 
         .groupInnerContainer {
 
-            padding-left: $BARGAP;
-            padding-bottom: $BARGAP;
-            border-bottom-left-radius: $BARGAP;
+            padding-left: $barInnerGap;
+            padding-bottom: $barInnerGap;
+            border-bottom-left-radius: $barInnerGap;
             flex-direction: row;
             height: 100%;
 
@@ -205,14 +201,15 @@ $camera-point-hover: #FEEFFF;
 
     .topTitle {
         height: 100%;
-        width: $ttS;
+        width: $ttThickness;
 
         align-items: flex-end;
         justify-content: center;
-        padding-bottom: $BARGAP * 0.5;
+        padding-bottom: $barInnerGap * 0.5;
 
 
         &>div {
+            
             writing-mode: vertical-lr;
             transform: rotate(180deg);
             -webkit-transform: rotate(180deg);
@@ -220,6 +217,8 @@ $camera-point-hover: #FEEFFF;
             -ms-transform: rotate(180deg);
             -o-transform: rotate(180deg);
 
+            position: relative;
+            left: -1 * $titleOffset;
             &>span {
                 margin-top: 0.3em;
             }
@@ -228,11 +227,11 @@ $camera-point-hover: #FEEFFF;
 
     .sTitle {
         height: 100%;
-        width: $sS;
+        width: $stThickness;
 
         align-items: flex-end;
         justify-content: center;
-        padding-bottom: $BARGAP;
+        padding-bottom: $barInnerGap;
 
         &>div {
             writing-mode: vertical-lr;
@@ -246,7 +245,9 @@ $camera-point-hover: #FEEFFF;
             margin: 0 -1px;
 
             &>div {
-                padding: ($BARGAP * 0.5) 0;
+                position: relative;
+                right: -1 * $titleOffset;
+                padding: ($barInnerGap * 0.5) 0;
             }
 
         }
@@ -254,7 +255,7 @@ $camera-point-hover: #FEEFFF;
 
 
     .mapBox {
-        margin: 0 $BARGAP;
+        margin: 0 $barInnerGap;
     }
 
 

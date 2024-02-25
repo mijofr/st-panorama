@@ -243,6 +243,28 @@ img {
   max-inline-size: 100%;
 }
 
+/*
+
+0.5rem: 8px;
+0.75rem: 12px;
+1rem: 16px;
+1.125rem: 18px;
+1.25rem: 20px;
+1.375rem: 22px;
+1.5rem: 24px;
+
+*/
+/*
+
+0.5rem: 8px;
+0.75rem: 12px;
+1rem: 16px;
+1.125rem: 18px;
+1.25rem: 20px;
+1.375rem: 22px;
+1.5rem: 24px;
+
+*/
 @supports selector(::-webkit-scrollbar) {
   #bar::-webkit-scrollbar {
     width: auto;
@@ -278,6 +300,17 @@ img {
   }
 }
 
+/*
+
+0.5rem: 8px;
+0.75rem: 12px;
+1rem: 16px;
+1.125rem: 18px;
+1.25rem: 20px;
+1.375rem: 22px;
+1.5rem: 24px;
+
+*/
 .groupContainer {
   background-color: #6095ad;
   display: flex;
@@ -285,7 +318,7 @@ img {
 .groupContainer .groupInnerContainer {
   background-color: #000;
   display: flex;
-  gap: 0.4rem;
+  gap: 0.5rem;
   align-items: center;
 }
 
@@ -300,7 +333,7 @@ img {
 .topTitle {
   font-weight: 700;
   position: relative;
-  font-size: 1rem;
+  font-size: 1.25rem;
   display: flex;
 }
 .topTitle > div {
@@ -316,7 +349,7 @@ img {
   font-weight: 700;
   position: relative;
   background-color: #2e7fa5;
-  font-size: 0.85rem;
+  font-size: 1.25rem;
   display: flex;
 }
 .sTitle > div {
@@ -349,43 +382,49 @@ img {
 
 @media (orientation: landscape) {
   .groupContainer {
-    padding-left: 0.4rem;
-    border-top-left-radius: 0.4rem;
+    padding-left: 0.5rem;
+    border-top-left-radius: 0.5rem;
     flex-direction: column;
     width: 100%;
   }
   .groupContainer .groupInnerContainer {
-    padding-left: 0.4rem;
-    padding-top: 0.4rem;
-    border-top-left-radius: 0.4rem;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    border-top-left-radius: 0.5rem;
     flex-direction: column;
     width: 100%;
   }
   .topTitle {
     width: 100%;
-    height: 1.4rem;
+    height: 1.5rem;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 0.2rem;
+    padding-left: 0.25rem;
+  }
+  .topTitle > div {
+    position: relative;
+    top: -1px;
   }
   .topTitle > div > span {
     margin-left: 0.3em;
   }
   .sTitle {
     width: 100%;
-    height: 0.85rem;
+    height: 1.25rem;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 0.4rem;
+    padding-left: 0.5rem;
   }
   .sTitle > div {
     height: 120%;
   }
   .sTitle > div > div {
-    padding: 0 0.2rem;
+    position: relative;
+    top: -1px;
+    padding: 0 0.25rem;
   }
   .mapBox {
-    margin: 0.4rem 0;
+    margin: 0.5rem 0;
   }
   #SVGMAP_USS_ENTERPRISE_MAIN_BRIDGE {
     width: 45.890195835%;
@@ -471,24 +510,24 @@ img {
 }
 @media (orientation: portrait) {
   .groupContainer {
-    padding-bottom: 0.4rem;
-    border-bottom-left-radius: 0.4rem;
+    padding-bottom: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
     flex-direction: row;
     height: 100%;
   }
   .groupContainer .groupInnerContainer {
-    padding-left: 0.4rem;
-    padding-bottom: 0.4rem;
-    border-bottom-left-radius: 0.4rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
     flex-direction: row;
     height: 100%;
   }
   .topTitle {
     height: 100%;
-    width: 1.4rem;
+    width: 1.5rem;
     align-items: flex-end;
     justify-content: center;
-    padding-bottom: 0.2rem;
+    padding-bottom: 0.25rem;
   }
   .topTitle > div {
     writing-mode: vertical-lr;
@@ -497,16 +536,18 @@ img {
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
+    position: relative;
+    left: -1px;
   }
   .topTitle > div > span {
     margin-top: 0.3em;
   }
   .sTitle {
     height: 100%;
-    width: 0.85rem;
+    width: 1.25rem;
     align-items: flex-end;
     justify-content: center;
-    padding-bottom: 0.4rem;
+    padding-bottom: 0.5rem;
   }
   .sTitle > div {
     writing-mode: vertical-lr;
@@ -519,10 +560,12 @@ img {
     margin: 0 -1px;
   }
   .sTitle > div > div {
-    padding: 0.2rem 0;
+    position: relative;
+    right: -1px;
+    padding: 0.25rem 0;
   }
   .mapBox {
-    margin: 0 0.4rem;
+    margin: 0 0.5rem;
   }
   #SVGMAP_USS_ENTERPRISE_MAIN_BRIDGE {
     height: 55.0402054216%;
@@ -614,6 +657,7 @@ html, body {
 
 html {
   background-color: black;
+  font-size: 16px;
 }
 
 body {
@@ -621,7 +665,7 @@ body {
   height: 100vh;
   background-color: transparent;
   font-family: Antonio;
-  padding: 1vmin;
+  padding: 1.5rem;
 }
 
 #page-wrap {
@@ -645,10 +689,10 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 48px;
-  padding-bottom: 72px;
-  padding-left: 48px;
-  padding-right: 48px;
+  padding-top: 3rem;
+  padding-bottom: 4.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 #main #psvContainer1 {
   aspect-ratio: 4/3;
@@ -671,13 +715,13 @@ body {
   position: relative;
 }
 #main #psvContainer1 #psvCosmeticFrame {
-  border-radius: 48px;
+  border-radius: 3rem;
   background-color: #ffcc99;
   position: absolute;
-  top: -48px;
-  bottom: -72px;
-  left: -48px;
-  right: -48px;
+  top: -3rem;
+  bottom: -4.5rem;
+  left: -3rem;
+  right: -3rem;
   /*
   &:after {
       content: '';
@@ -692,38 +736,38 @@ body {
 }
 #main #psvContainer1 #psvCosmeticFrame #psvCosmeticInner1 {
   position: absolute;
-  top: 24px;
-  bottom: 48px;
-  left: 24px;
-  right: 24px;
+  top: 1.5rem;
+  bottom: 3rem;
+  left: 1.5rem;
+  right: 1.5rem;
   background-color: #000;
-  border-radius: 24px;
+  border-radius: 1.5rem;
 }
 #main #psvContainer1 #psvCosmeticFrame #psvCosmeticInner2 {
   position: absolute;
   top: -1px;
   bottom: -1px;
-  left: 60px;
-  right: 60px;
+  left: 3.75rem;
+  right: 3.75rem;
   background-color: #000;
 }
 #main #psvContainer1 #psvCosmeticFrame #psvButtons {
   position: absolute;
-  right: 72px;
-  left: 72px;
-  height: 48px;
+  right: 4.5rem;
+  left: 4.5rem;
+  height: 3rem;
   bottom: 0;
   background-color: transparent;
   display: flex;
-  gap: 12px;
+  gap: 0.75rem;
 }
 #main #psvContainer1 #psvCosmeticFrame #psvButtons button {
-  padding: 0 6px 6px 0;
+  padding: 0 0.375rem 0.375rem 0;
   height: 100%;
-  flex: 0 1 108px;
+  flex: 0 1 6.75rem;
   border: none;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 1.125rem;
   display: flex;
   align-items: end;
   justify-content: flex-end;
@@ -731,10 +775,10 @@ body {
   text-align: right;
 }
 #main #psvContainer1 #psvCosmeticFrame #psvButtons button:last-child {
-  padding-right: 12px;
-  border-top-right-radius: 48px;
-  border-bottom-right-radius: 48px;
-  flex-basis: 114px;
+  padding-right: 0.75rem;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  flex-basis: 7.125rem;
 }
 #main #psvContainer1 #psvCosmeticFrame #psvButtons button img {
   height: 1.6em;
@@ -746,17 +790,17 @@ body {
   opacity: 0.7;
 }
 #main #psvContainer1 #psvCosmeticFrame #psvButtons button.redAlert {
-  padding-right: 18px;
-  font-size: 18px;
+  padding-right: 1.125rem;
+  font-size: 1.125rem;
   line-height: 1;
   align-items: center;
   padding-bottom: 0;
 }
 #main #psvContainer1 #psvCosmeticFrame #psvTitle {
   position: absolute;
-  right: 72px;
-  left: 72px;
-  height: 24px;
+  right: 4.5rem;
+  left: 4.5rem;
+  height: 1.5rem;
   top: 0;
   background-color: transparent;
   display: flex;
@@ -765,7 +809,7 @@ body {
 }
 #main #psvContainer1 #psvCosmeticFrame #psvTitle span {
   line-height: 0.8;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 #main #psvContainer1 #psvMain {
   position: absolute;
@@ -827,7 +871,7 @@ button.red:active {
   background-image: url("./assets/bg.png");
   width: 100%;
   height: 100%;
-  gap: 10px;
+  gap: 0.5rem;
   display: flex;
   align-items: center;
 }
@@ -838,6 +882,17 @@ button.red:active {
   border: 1px solid #444444;
 }
 
+/*
+
+0.5rem: 8px;
+0.75rem: 12px;
+1rem: 16px;
+1.125rem: 18px;
+1.25rem: 20px;
+1.375rem: 22px;
+1.5rem: 24px;
+
+*/
 @supports selector(::-webkit-scrollbar) {
   #bar::-webkit-scrollbar {
     width: auto;
@@ -882,12 +937,12 @@ button.red:active {
     width: auto;
   }
   #bar {
-    margin-right: 20px;
+    margin-right: 1.5rem;
     height: 100%;
     width: 19vw;
     overflow-y: scroll;
     direction: rtl;
-    padding-left: 20px;
+    padding-left: 11px;
   }
   #bar #innerBar {
     direction: ltr;
@@ -920,13 +975,13 @@ button.red:active {
     flex: 2 1 auto;
   }
   #bar {
-    margin-top: 20px;
+    margin-top: 1.5rem;
     flex: 3 1 auto;
     max-height: 40vh;
     min-height: 25vh;
     width: 100%;
     overflow-x: scroll;
-    padding-bottom: 20px;
+    padding-bottom: 11px;
   }
   #bar #innerBar {
     height: 100%;
