@@ -143,8 +143,8 @@ export function create(groups: PlanGroup[]) {
 
 
 
-			let heightPerc: number = 95 * plan.height / maxHeight;
-			let widthPerc: number = 95 * plan.width / maxWidth;
+			let heightPerc: number = 96 * plan.height / maxHeight;
+			let widthPerc: number = 96 * plan.width / maxWidth;
 
 			portCssOut.push(` #SVGMAP_${id} { height: ${heightPerc}%; }`)
 			landCssOut.push(` #SVGMAP_${id} { width: ${widthPerc}%; }`)
@@ -161,8 +161,11 @@ export function create(groups: PlanGroup[]) {
 				imgSrc = "svg/" + plan.img;
 			}
 
+			htmlOut.push(`<defs><mask id="MAPMASK_${id}">`)
 			htmlOut.push(`<image class="mapPlanImg" xlink:href="./panorama-assets/rooms/${imgSrc}" y="0" x="0" height="100%" width="100%" />`);
-
+			htmlOut.push(`</mask></defs>`)
+			htmlOut.push(`<rect class="mapColorRect" x="0" y="0" width="100%" height="100%" mask="url(#MAPMASK_${id})" />`)
+			
 			plan.points.forEach(p => {
 				if (p.x != null && p.y != null) {
 					htmlOut.push(`<circle class="cameraPoint" cx="${p.x.toFixed(4)}" cy="${p.y.toFixed(4)}" r="0.04em" id="${p.id}" onclick="cclick(evt)" />`);

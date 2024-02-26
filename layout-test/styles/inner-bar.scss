@@ -84,26 +84,29 @@
 
 .mapBox {
     font-size: 0.5rem;
-}
 
-$camera-point-orig: #b49ac4;
-$camera-point: #EBCEFF;
-$camera-point-hover: #FEEFFF;
 
-.mapBox .cameraPoint {
-    fill: $camera-point;
-    stroke: #000;
-    stroke-width: 0.04em;
-    stroke-opacity: 0.6;
-    paint-order: stroke fill;
-    fill-opacity: 0.75;
-    // mix-blend-mode: hard-light;
-
-    &:hover {
-        cursor: pointer;
-        fill: $camera-point-hover;
-        stroke-opacity: 1;
+    .cameraPoint {
+        fill: $camera-point;
+        stroke: #000;
+        stroke-width: 0.04em;   
+        stroke-opacity: 0.6;
+        paint-order: stroke fill;
+        fill-opacity: 0.75;
+        // mix-blend-mode: hard-light;
+    
+        &:hover {
+            cursor: pointer;
+            fill: $camera-point-hover;
+            stroke-opacity: 1;
+        }
+    
     }
+   
+    .mapColorRect {
+        fill: $mapBgColor;
+    }
+
 }
 
 
