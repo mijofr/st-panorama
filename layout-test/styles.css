@@ -363,23 +363,33 @@ img {
 }
 
 .mapBox {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
 }
 .mapBox .cameraPoint {
-  fill: #EBCEFF;
+  fill: #ffa980;
   stroke: #000;
   stroke-width: 0.04em;
-  stroke-opacity: 0.6;
+  stroke-opacity: 0.7;
   paint-order: stroke fill;
   fill-opacity: 0.75;
+  vector-effect: non-scaling-size;
+  /*
+  fill: none;
+  stroke: #ffa980;
+  stroke-width: 0.035em;
+  stroke-opacity: 0.85;
+  paint-order: stroke fill;
+  fill-opacity: 0.75;
+  */
 }
 .mapBox .cameraPoint:hover {
   cursor: pointer;
-  fill: #FEEFFF;
+  fill: #ffa980;
   stroke-opacity: 1;
+  fill-opacity: 1;
 }
 .mapBox .mapColorRect {
-  fill: #c1dae6;
+  fill: rgba(204, 229, 240, 0.9490196078);
 }
 
 @media (orientation: landscape) {
@@ -694,7 +704,6 @@ body {
 
 #main {
   background-color: transparent;
-  flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -949,7 +958,6 @@ button.red:active {
   #bar {
     margin-right: 1.5rem;
     height: 100%;
-    width: 19vw;
     overflow-y: scroll;
     direction: rtl;
     padding-left: 11px;
@@ -982,13 +990,9 @@ button.red:active {
   #main {
     width: 100%;
     height: auto;
-    flex: 2 1 auto;
   }
   #bar {
     margin-top: 1.5rem;
-    flex: 3 1 auto;
-    max-height: 40vh;
-    min-height: 25vh;
     width: 100%;
     overflow-x: scroll;
     padding-bottom: 11px;
@@ -1018,6 +1022,26 @@ button.red:active {
   stroke: #000000;
   stroke-opacity: 0.9;
   stroke-width: 2;
+}
+
+@media (orientation: landscape) {
+  #page-wrap #bar {
+    flex: 0 2 35vw;
+    max-width: 35vh;
+  }
+  #page-wrap #main {
+    flex: 3 4 auto;
+  }
+}
+@media (orientation: portrait) {
+  #page-wrap #bar {
+    flex: 3 1 auto;
+    max-height: 40vh;
+    min-height: 25vh;
+  }
+  #page-wrap #main {
+    flex: 2 1 auto;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -49,9 +49,11 @@ body {
     background-color: transpBg(#41370e);
 }
 
+
+
+
 #main {
     background-color: transpBg(brown);
-    flex: 1 1 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -302,7 +304,6 @@ button.red {
     #bar {
         margin-right: $sidebarFrameGap;
         height: 100%;
-        width: 19vw;
         overflow-y: scroll;
         direction: rtl;
         padding-left:$sidebarScrollBarPadding;
@@ -345,15 +346,10 @@ button.red {
     #main {
         width: 100%;
         height :auto;
-        flex: 2 1 auto;
     }
 
     #bar {
         margin-top: $sidebarFrameGap;
-        // height: 19vw;
-        flex: 3 1 auto;
-        max-height: 40vh;
-        min-height: 25vh;
         width:100%;
         overflow-x: scroll;
         padding-bottom:$sidebarScrollBarPadding;
@@ -393,3 +389,5 @@ button.red {
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/vector-effect
+
+@import "frame-size"

@@ -1,0 +1,36 @@
+#page-wrap {
+    #bar {
+
+    }
+    #main {
+    }
+}
+
+@media (orientation: landscape) {
+    #page-wrap {
+        #bar {
+            flex: 0 2 35vw;
+            max-width: 35vh;
+        }
+        #main {
+            flex: 3 4 auto;
+        }
+    }
+}
+
+
+@media (orientation: portrait) {
+    #page-wrap {
+        #bar {
+            flex: 3 1 auto;
+            max-height: 40vh;
+            min-height: 25vh;
+        }
+        #main {
+            flex: 2 1 auto;  
+        }
+    }
+}
+
+
+

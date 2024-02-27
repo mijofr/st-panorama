@@ -83,22 +83,34 @@
 
 
 .mapBox {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
 
 
     .cameraPoint {
         fill: $camera-point;
         stroke: #000;
         stroke-width: 0.04em;   
-        stroke-opacity: 0.6;
+        stroke-opacity: 0.7;
         paint-order: stroke fill;
         fill-opacity: 0.75;
         // mix-blend-mode: hard-light;
+
+        vector-effect: non-scaling-size;
+
+        /*
+        fill: none;
+        stroke: #ffa980;
+        stroke-width: 0.035em;
+        stroke-opacity: 0.85;
+        paint-order: stroke fill;
+        fill-opacity: 0.75;
+        */
     
         &:hover {
             cursor: pointer;
             fill: $camera-point-hover;
             stroke-opacity: 1;
+            fill-opacity: 1;
         }
     
     }
