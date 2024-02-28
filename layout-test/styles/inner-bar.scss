@@ -87,12 +87,13 @@
 
 
     .cameraPoint {
-        fill: $camera-point;
-        stroke: #000;
-        stroke-width: 0.04em;   
-        stroke-opacity: 0.7;
+        color: $btnColor;
+        fill: $camera-point2;
+        
+        stroke-opacity: 0.5;
+        fill-opacity: 0.7;
+        
         paint-order: stroke fill;
-        fill-opacity: 0.75;
         // mix-blend-mode: hard-light;
 
         vector-effect: non-scaling-size;
@@ -107,8 +108,11 @@
         */
     
         &:hover {
+
+            color: orange;
+            fill:aqua;
+
             cursor: pointer;
-            fill: $camera-point-hover;
             stroke-opacity: 1;
             fill-opacity: 1;
         }
@@ -120,35 +124,21 @@
     }
 
 
-    .cameraPoint1 {
-        color: #ff9;
-        fill: green;
-        stroke: red;
-    }
 
 }
 
-.cameraPoint2 {
-    fill: yellow;
-    color: orange;
-    &:hover {
-        color:aquamarine;
-        cursor:pointer;
-    }
-}
-
-.circleMark2 {
-    .circleMark2Outer {
+.circleMark {
+    .circleMarkOuter {
         fill: currentColor;
-        stroke: black;
     }
-    .circleMark2Inner {
-        fill: $btnColor;
-        stroke: black;
+    .circleMarkInner {
+        //fill: $btnColor;
     }
-    .circleMark2Part {
+    .circleMarkPart {
+        stroke:black;
         paint-order: stroke fill;
-        stroke-width: 0.05em;
+        stroke-width: 0.02em;
+        stroke-opacity: 0.7;
     }
 }
 

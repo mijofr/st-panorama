@@ -366,12 +366,11 @@ img {
   font-size: 0.6rem;
 }
 .mapBox .cameraPoint {
-  fill: #ffa980;
-  stroke: #000;
-  stroke-width: 0.04em;
-  stroke-opacity: 0.7;
+  color: #ffcc99;
+  fill: #70a8c1;
+  stroke-opacity: 0.5;
+  fill-opacity: 0.7;
   paint-order: stroke fill;
-  fill-opacity: 0.75;
   vector-effect: non-scaling-size;
   /*
   fill: none;
@@ -383,40 +382,24 @@ img {
   */
 }
 .mapBox .cameraPoint:hover {
+  color: orange;
+  fill: aqua;
   cursor: pointer;
-  fill: #ffa980;
   stroke-opacity: 1;
   fill-opacity: 1;
 }
 .mapBox .mapColorRect {
   fill: rgba(204, 229, 240, 0.9490196078);
 }
-.mapBox .cameraPoint1 {
-  color: #ff9;
-  fill: green;
-  stroke: red;
-}
 
-.cameraPoint2 {
-  fill: yellow;
-  color: orange;
-}
-.cameraPoint2:hover {
-  color: aquamarine;
-  cursor: pointer;
-}
-
-.circleMark2 .circleMark2Outer {
+.circleMark .circleMarkOuter {
   fill: currentColor;
-  stroke: black;
 }
-.circleMark2 .circleMark2Inner {
-  fill: #ffcc99;
+.circleMark .circleMarkPart {
   stroke: black;
-}
-.circleMark2 .circleMark2Part {
   paint-order: stroke fill;
-  stroke-width: 0.05em;
+  stroke-width: 0.02em;
+  stroke-opacity: 0.7;
 }
 
 @media (orientation: landscape) {
