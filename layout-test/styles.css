@@ -391,6 +391,33 @@ img {
 .mapBox .mapColorRect {
   fill: rgba(204, 229, 240, 0.9490196078);
 }
+.mapBox .cameraPoint1 {
+  color: #ff9;
+  fill: green;
+  stroke: red;
+}
+
+.cameraPoint2 {
+  fill: yellow;
+  color: orange;
+}
+.cameraPoint2:hover {
+  color: aquamarine;
+  cursor: pointer;
+}
+
+.circleMark2 .circleMark2Outer {
+  fill: currentColor;
+  stroke: black;
+}
+.circleMark2 .circleMark2Inner {
+  fill: #ffcc99;
+  stroke: black;
+}
+.circleMark2 .circleMark2Part {
+  paint-order: stroke fill;
+  stroke-width: 0.05em;
+}
 
 @media (orientation: landscape) {
   .groupContainer {

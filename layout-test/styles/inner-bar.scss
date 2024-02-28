@@ -119,8 +119,38 @@
         fill: $mapBgColor;
     }
 
+
+    .cameraPoint1 {
+        color: #ff9;
+        fill: green;
+        stroke: red;
+    }
+
 }
 
+.cameraPoint2 {
+    fill: yellow;
+    color: orange;
+    &:hover {
+        color:aquamarine;
+        cursor:pointer;
+    }
+}
+
+.circleMark2 {
+    .circleMark2Outer {
+        fill: currentColor;
+        stroke: black;
+    }
+    .circleMark2Inner {
+        fill: $btnColor;
+        stroke: black;
+    }
+    .circleMark2Part {
+        paint-order: stroke fill;
+        stroke-width: 0.05em;
+    }
+}
 
 
 

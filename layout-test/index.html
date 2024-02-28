@@ -41,7 +41,16 @@
                 vector-effect="non-scaling-stroke" id="hlBoxPath"
                 d="M -2.5,-2.5 A 0.5,0.5 0 0 0 -3,-2 v 4 a 0.5,0.5 0 0 0 0.5,0.5 H -1 v -1 h -1 v -3 h 1 v -1 z m 3.5,0 v 1 h 1 v 3 H 1 v 1 H 2.5 A 0.5,0.5 0 0 0 3,2 V -2 A 0.5,0.5 0 0 0 2.5,-2.5 Z"
                 fill="green" stroke="black" stroke-opacity="0.9" stroke-width="2" paint-order="stroke fill"></path>
-            </symbol>    
+            </symbol>
+            <symbol id="CIRCLEMARK1" class="circleMark2" viewBox="0 0 6 6" overflow="visible">
+                <circle class="circleMark1Outer circleMark1Part" r="1.75" stroke-width="0" />
+                <path class="circleMark1Inner circleMark1Part" d="m0.8306 2.556c0.8183-0.2659 1.46-0.9075 1.726-1.726m-3.387-3.387c-0.8183 0.2659-1.46 0.9075-1.726 1.726m1.726 3.387c-0.8183-0.2659-1.46-0.9075-1.726-1.726m3.387-3.387c0.8183 0.2659 1.46 0.9075 1.726 1.726" fill="none" stroke-width=".625" />
+            </symbol>
+            <symbol id="CIRCLEMARK2" class="circleMark2" viewBox="0 0 2.65 2.65" overflow="visible">
+                <circle r="2.65" fill="transparent" />
+                <circle class="circleMark2Inner circleMark2Part" r="1.484" />
+                <path class="circleMark2Outer circleMark2Part" d="m-0.8398-2.59c-0.8282 0.2691-1.478 0.9197-1.748 1.748a0.3125 0.3125 0 0 0 0.2012 0.3945 0.3125 0.3125 0 0 0 0.3926-0.2012c0.2082-0.6392 0.7092-1.138 1.348-1.346a0.3125 0.3125 0 0 0 0.1992-0.3945 0.3125 0.3125 0 0 0-0.3926-0.2012zm1.682 0a0.3125 0.3125 0 0 0-0.3945 0.2012 0.3125 0.3125 0 0 0 0.2012 0.3945c0.6384 0.2075 1.138 0.7065 1.346 1.346a0.3125 0.3125 0 0 0 0.3945 0.2012 0.3125 0.3125 0 0 0 0.1992-0.3945c-0.2698-0.8284-0.9179-1.479-1.746-1.748zm-3.229 3.035a0.3125 0.3125 0 0 0-0.2012 0.3945c0.2698 0.8284 0.9199 1.479 1.748 1.748a0.3125 0.3125 0 0 0 0.3926-0.2012 0.3125 0.3125 0 0 0-0.1992-0.3945c-0.6384-0.2075-1.139-0.7065-1.348-1.346a0.3125 0.3125 0 0 0-0.3926-0.2012zm4.775 0a0.3125 0.3125 0 0 0-0.3945 0.2012c-0.2082 0.6392-0.7073 1.138-1.346 1.346a0.3125 0.3125 0 0 0-0.2012 0.3945 0.3125 0.3125 0 0 0 0.3945 0.2012c0.8282-0.2691 1.476-0.9197 1.746-1.748a0.3125 0.3125 0 0 0-0.1992-0.3945z" />
+            </symbol>
         </defs>
     </svg>
 
@@ -75,11 +84,18 @@
                             <circle class="cameraPoint" cx="6.4546" cy="3.3535" r="0.04em" id="TOS_07" onclick="cclick(evt)" />
                             <circle class="cameraPoint" cx="9.4857" cy="3.5382" r="0.04em" id="TOS_08" onclick="cclick(evt)" />
                             <circle class="cameraPoint" cx="10.5812" cy="6.4436" r="0.04em" id="TOS_09" onclick="cclick(evt)" />
+
+
                             <circle class="cameraPoint" cx="10.6177" cy="9.2212" r="0.04em" id="TOS_10" onclick="cclick(evt)" />
                             <circle class="cameraPoint" cx="9.5404" cy="10.9032" r="0.04em" id="TOS_11" onclick="cclick(evt)" />
                             <circle class="cameraPoint" cx="2.7000" cy="11.6000" r="0.04em" id="TOS_12" onclick="cclick(evt)" />
                             <circle class="cameraPoint" cx="6.3713" cy="8.9092" r="0.04em" id="TOS_13" onclick="cclick(evt)" />
                             <circle class="cameraPoint" cx="3.2210" cy="11.0054" r="0.04em" id="TOS_14" onclick="cclick(evt)" />
+
+                            <use class="cameraPoint2" href="#CIRCLEMARK2" x="5" y="6" height="0.06em" width="0.06em"></use>
+                            <use class="cameraPoint2" href="#CIRCLEMARK2" x="8" y="10" height="0.06em" width="0.06em"></use>
+
+
 
                             <use id="highlightBox" href="#HLBOX" x="2.2732" y="9.0804" height="0.2em" width="0.2em"></use>
                         
