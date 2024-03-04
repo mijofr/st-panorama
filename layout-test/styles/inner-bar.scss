@@ -83,38 +83,21 @@
 
 
 .mapBox {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
 
 
     .cameraPoint {
-        color: $btnColor;
-        fill: $camera-point2;
-        
-        stroke-opacity: 0.5;
-        fill-opacity: 0.7;
-        
-        paint-order: stroke fill;
-        // mix-blend-mode: hard-light;
-
-        vector-effect: non-scaling-size;
-
-        /*
-        fill: none;
-        stroke: #ffa980;
-        stroke-width: 0.035em;
-        stroke-opacity: 0.85;
-        paint-order: stroke fill;
-        fill-opacity: 0.75;
-        */
-    
+        color: $cameraPointOuter;
+        fill: $cameraPointInner;
+        transition: color 0.3s ease, fill 0.3s ease, opacity 0.3s ease;
+            
         &:hover {
 
-            color: orange;
-            fill:aqua;
+            color: $cameraPointOuterHover;
+            fill: $cameraPointInnerHover;
+            
 
             cursor: pointer;
-            stroke-opacity: 1;
-            fill-opacity: 1;
         }
     
     }
@@ -132,13 +115,19 @@
         fill: currentColor;
     }
     .circleMarkInner {
+        mix-blend-mode: screen;
         //fill: $btnColor;
     }
     .circleMarkPart {
-        stroke:black;
-        paint-order: stroke fill;
-        stroke-width: 0.02em;
-        stroke-opacity: 0.7;
+        mix-blend-mode: screen;
+        //stroke: $black;
+        //paint-order: stroke fill;
+        //stroke-width: 0.02em;
+        //stroke-opacity: 0.7;
+    }
+    .circleMarkBg {
+        fill: $black;
+        fill-opacity: 0.5;
     }
 }
 

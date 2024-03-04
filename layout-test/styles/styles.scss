@@ -13,7 +13,7 @@ html, body {
 }
 
 html {
-    background-color: black;
+    background-color: $black;
     font-size: $baseEm;
 }
 
@@ -106,7 +106,7 @@ body {
                 bottom: -1.05 * $frameWidth;
                 left: 1.5 * $frameWidth;
                 right: 1.5 * $frameWidth;
-                background-color: #000000dd;
+                background-color: $black;
             }
             */
             #psvCosmeticInner1 {
@@ -152,6 +152,8 @@ body {
                     font-weight: 900;
                     text-align: right;
 
+                    color: $black;
+
                     &:last-child {
                         padding-right: $frameWidth * 0.5;
                         border-top-right-radius: $frameWidth * 2;
@@ -167,7 +169,10 @@ body {
                         img {
                             opacity: 0.7;
                         }
-                        color: #333;
+                        color: $grey-3;
+                    }
+                    &:active {
+                        color: $grey-2;
                     }
 
                     &.redAlert {
@@ -193,7 +198,7 @@ body {
                 background-color: transpBg(rgb(32, 139, 139));
                 display: flex;
 
-                color: white;
+                color: $white;
                 font-weight: 700;
                 span {
                     line-height: 0.8;
@@ -223,7 +228,7 @@ body {
             left:-1px;
             right:-1px;
             padding: 1px;
-            background-color: black;
+            background-color: $black;
             overflow: hidden;
             border-radius: $innerBorderRadius;
             background-size: cover;
@@ -266,7 +271,7 @@ button.red {
 #bar {
     background-color: transpBg(aquamarine);
     #innerBar {
-            background-image: url("./assets/bg.png");
+            // background-image: url("./assets/bg.png");
             width:100%;
             height: 100%;
 
@@ -382,7 +387,7 @@ button.red {
 
 #hlBoxPath {
     fill:$highlightSquareColor;
-    stroke: #000000;
+    stroke: $black;
     stroke-opacity: 0.9;
     stroke-width: 2;
     

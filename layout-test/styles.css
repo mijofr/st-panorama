@@ -254,6 +254,11 @@ img {
 1.5rem: 24px;
 
 */
+#ENTD_BRIDGE_03 {
+  fill: #CC3E28;
+  color: #E06147;
+}
+
 /*
 
 0.5rem: 8px;
@@ -265,6 +270,11 @@ img {
 1.5rem: 24px;
 
 */
+#ENTD_BRIDGE_03 {
+  fill: #CC3E28;
+  color: #E06147;
+}
+
 @supports selector(::-webkit-scrollbar) {
   #bar::-webkit-scrollbar {
     width: auto;
@@ -279,24 +289,24 @@ img {
     width: auto;
   }
   #bar::-webkit-scrollbar-track {
-    background: #222;
+    background: #1E1E1E;
     border-radius: 11px;
   }
   #bar::-webkit-scrollbar-thumb {
-    background-color: #444;
+    background-color: #3D3D3D;
     border-radius: 11px;
   }
   #bar::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
+    background-color: #5E5E5E;
   }
   #bar::-webkit-scrollbar-thumb:active {
-    background-color: #999;
+    background-color: #7A7A7A;
   }
 }
 @supports not selector(::-webkit-scrollbar) {
   #bar {
     scrollbar-width: thin;
-    scrollbar-color: #444 #222;
+    scrollbar-color: #3D3D3D #1E1E1E;
   }
 }
 
@@ -311,12 +321,17 @@ img {
 1.5rem: 24px;
 
 */
+#ENTD_BRIDGE_03 {
+  fill: #CC3E28;
+  color: #E06147;
+}
+
 .groupContainer {
-  background-color: #6095ad;
+  background-color: #6795AD;
   display: flex;
 }
 .groupContainer .groupInnerContainer {
-  background-color: #000;
+  background-color: #060606;
   display: flex;
   gap: 0.5rem;
   align-items: center;
@@ -338,7 +353,7 @@ img {
 }
 .topTitle > div {
   line-height: 0.8;
-  color: #000;
+  color: #060606;
 }
 .topTitle > div > span {
   font-size: 0.8em;
@@ -348,7 +363,7 @@ img {
 .sTitle {
   font-weight: 700;
   position: relative;
-  background-color: #2e7fa5;
+  background-color: #2C6887;
   font-size: 1.25rem;
   display: flex;
 }
@@ -357,49 +372,40 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #999;
-  background-color: #000;
+  color: #999999;
+  background-color: #060606;
   line-height: 0.8;
 }
 
 .mapBox {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
 }
 .mapBox .cameraPoint {
-  color: #ffcc99;
-  fill: #70a8c1;
-  stroke-opacity: 0.5;
-  fill-opacity: 0.7;
-  paint-order: stroke fill;
-  vector-effect: non-scaling-size;
-  /*
-  fill: none;
-  stroke: #ffa980;
-  stroke-width: 0.035em;
-  stroke-opacity: 0.85;
-  paint-order: stroke fill;
-  fill-opacity: 0.75;
-  */
+  color: rgba(239, 197, 167, 0.6);
+  fill: #EFC5A7;
+  transition: color 0.3s ease, fill 0.3s ease, opacity 0.3s ease;
 }
 .mapBox .cameraPoint:hover {
-  color: orange;
-  fill: aqua;
+  color: #F2D5C1;
+  fill: #F2D5C1;
   cursor: pointer;
-  stroke-opacity: 1;
-  fill-opacity: 1;
 }
 .mapBox .mapColorRect {
-  fill: rgba(204, 229, 240, 0.9490196078);
+  fill: #C4D9E4;
 }
 
 .circleMark .circleMarkOuter {
   fill: currentColor;
 }
+.circleMark .circleMarkInner {
+  mix-blend-mode: screen;
+}
 .circleMark .circleMarkPart {
-  stroke: black;
-  paint-order: stroke fill;
-  stroke-width: 0.02em;
-  stroke-opacity: 0.7;
+  mix-blend-mode: screen;
+}
+.circleMark .circleMarkBg {
+  fill: #060606;
+  fill-opacity: 0.5;
 }
 
 @media (orientation: landscape) {
@@ -678,7 +684,7 @@ html, body {
 }
 
 html {
-  background-color: black;
+  background-color: #060606;
   font-size: 16px;
 }
 
@@ -745,7 +751,7 @@ body {
 }
 #main #psvContainer1 #psvCosmeticFrame {
   border-radius: 3rem;
-  background-color: #ffcc99;
+  background-color: #EFC5A7;
   position: absolute;
   top: -3rem;
   bottom: -4.5rem;
@@ -759,7 +765,7 @@ body {
       bottom: -1.05 * $frameWidth;
       left: 1.5 * $frameWidth;
       right: 1.5 * $frameWidth;
-      background-color: #000000dd;
+      background-color: $black;
   }
   */
 }
@@ -769,7 +775,7 @@ body {
   bottom: 3rem;
   left: 1.5rem;
   right: 1.5rem;
-  background-color: #000;
+  background-color: #060606;
   border-radius: 1.5rem;
 }
 #main #psvContainer1 #psvCosmeticFrame #psvCosmeticInner2 {
@@ -778,7 +784,7 @@ body {
   bottom: -1px;
   left: 3.75rem;
   right: 3.75rem;
-  background-color: #000;
+  background-color: #060606;
 }
 #main #psvContainer1 #psvCosmeticFrame #psvButtons {
   position: absolute;
@@ -802,6 +808,7 @@ body {
   justify-content: flex-end;
   font-weight: 900;
   text-align: right;
+  color: #060606;
 }
 #main #psvContainer1 #psvCosmeticFrame #psvButtons button:last-child {
   padding-right: 0.75rem;
@@ -813,10 +820,13 @@ body {
   height: 1.6em;
 }
 #main #psvContainer1 #psvCosmeticFrame #psvButtons button:hover {
-  color: #333;
+  color: #3D3D3D;
 }
 #main #psvContainer1 #psvCosmeticFrame #psvButtons button:hover img {
   opacity: 0.7;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button:active {
+  color: #1E1E1E;
 }
 #main #psvContainer1 #psvCosmeticFrame #psvButtons button.redAlert {
   padding-right: 1.125rem;
@@ -833,7 +843,7 @@ body {
   top: 0;
   background-color: transparent;
   display: flex;
-  color: white;
+  color: #F4F4F4;
   font-weight: 700;
 }
 #main #psvContainer1 #psvCosmeticFrame #psvTitle span {
@@ -859,11 +869,11 @@ body {
   left: -1px;
   right: -1px;
   padding: 1px;
-  background-color: black;
+  background-color: #060606;
   overflow: hidden;
   border-radius: 3px;
   background-size: cover;
-  color: #ffcc99;
+  color: #EFC5A7;
   font-size: 2vmin;
   font-weight: 400;
 }
@@ -872,32 +882,31 @@ body {
 }
 
 button {
-  background-color: #ffcc99;
+  background-color: #EFC5A7;
 }
 button:hover {
-  background-color: #ffeecc;
+  background-color: #F2E1D5;
   cursor: pointer;
 }
 button:active {
-  background-color: #ffdfb3;
+  background-color: #F2D5C1;
 }
 
 button.red {
-  background-color: #dd4444;
+  background-color: #E06147;
 }
 button.red:hover {
-  background-color: #ed5a5a;
+  background-color: #E59C8E;
   cursor: pointer;
 }
 button.red:active {
-  background-color: #ed5a5a;
+  background-color: #EF8773;
 }
 
 #bar {
   background-color: transparent;
 }
 #bar #innerBar {
-  background-image: url("./assets/bg.png");
   width: 100%;
   height: 100%;
   gap: 0.5rem;
@@ -922,6 +931,11 @@ button.red:active {
 1.5rem: 24px;
 
 */
+#ENTD_BRIDGE_03 {
+  fill: #CC3E28;
+  color: #E06147;
+}
+
 @supports selector(::-webkit-scrollbar) {
   #bar::-webkit-scrollbar {
     width: auto;
@@ -936,24 +950,24 @@ button.red:active {
     width: auto;
   }
   #bar::-webkit-scrollbar-track {
-    background: #222;
+    background: #1E1E1E;
     border-radius: 11px;
   }
   #bar::-webkit-scrollbar-thumb {
-    background-color: #444;
+    background-color: #3D3D3D;
     border-radius: 11px;
   }
   #bar::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
+    background-color: #5E5E5E;
   }
   #bar::-webkit-scrollbar-thumb:active {
-    background-color: #999;
+    background-color: #7A7A7A;
   }
 }
 @supports not selector(::-webkit-scrollbar) {
   #bar {
     scrollbar-width: thin;
-    scrollbar-color: #444 #222;
+    scrollbar-color: #3D3D3D #1E1E1E;
   }
 }
 
@@ -1028,8 +1042,8 @@ button.red:active {
   */
 }
 #hlBoxPath {
-  fill: #ffcc99;
-  stroke: #000000;
+  fill: #EFC5A7;
+  stroke: #060606;
   stroke-opacity: 0.9;
   stroke-width: 2;
 }
