@@ -154,7 +154,7 @@ export function create(groups: PlanGroup[]) {
 			htmlOut.push(`<div class="sTitle"><div><div>${plan.name}</div></div></div>`);
 	
 
-			htmlOut.push(`<svg class="mapBox" id="SVGMAP_${id}" viewBox="0 0 ${plan.width.toFixed(4)} ${plan.height.toFixed(4)}" version="1.1" xmlns="http://www.w3.org/2000/svg">`);
+			htmlOut.push(`<svg class="mapBox faded" id="SVGMAP_${id}" viewBox="0 0 ${plan.width.toFixed(4)} ${plan.height.toFixed(4)}" version="1.1" xmlns="http://www.w3.org/2000/svg">`);
 
 			let imgSrc = plan.img;
 			if (imgSrc.endsWith(".png")) {
@@ -164,7 +164,7 @@ export function create(groups: PlanGroup[]) {
 			}
 
 			htmlOut.push(`<defs><mask id="MAPMASK_${id}">`)
-			htmlOut.push(`<image class="mapPlanImg" xlink:href="./panorama-assets/rooms/${imgSrc}" y="0" x="0" height="100%" width="100%" />`);
+			htmlOut.push(`<image onload="onMapImgLoad(event)" class="mapPlanImg" xlink:href="./panorama-assets/rooms/${imgSrc}" y="0" x="0" height="100%" width="100%" />`);
 			htmlOut.push(`</mask></defs>`)
 			htmlOut.push(`<rect class="mapColorRect" x="0" y="0" width="100%" height="100%" mask="url(#MAPMASK_${id})" />`)
 			

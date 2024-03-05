@@ -7,7 +7,10 @@ Add extra buttons on frame:
 downloadUrl
 downloadName
 
+
 sort out markers on maps: make them more noticable and understandable, affordance, better highlight for when you pick one. 
+
+javascript image onload of svg to set opacity of plan to 1 
 
 crop: 
 enterprise-e bridge 

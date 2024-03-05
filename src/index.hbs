@@ -28,6 +28,20 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Trekorama!" />
 
+  <style>
+    html {
+      background-color: #060606;
+    }
+    body {
+      opacity: 0;
+    }
+  </style>
+  <script>
+    function onMapImgLoad($event) {
+      $event.target.parentNode.parentNode.parentNode.classList.remove('faded');
+    }
+  </script>
+
 </head>
 
 <style id="hTag"></style>

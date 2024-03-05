@@ -192,11 +192,13 @@ window.activateId = (id) => {
 		imgExt = ".webp";
 	}
 
+	/*
 	const styleTag = document.getElementById("hTag");
 
 	styleTag.innerHTML = `
 		#${id} { fill: #CC3E28; color: #E06147; }
 	`;
+	*/
 
 	let panoSetup = DEFAULTPANOSETUP;
 
@@ -204,6 +206,21 @@ window.activateId = (id) => {
 		if (n[0] === id) {
 			panoSetup = n[1];
 		}
+	}
+
+	const highlit = Array.from(document.getElementsByClassName("highlit"));
+	for (const n of highlit) {
+		n.classList.remove("highlit");
+	}
+
+	const idItem = document.getElementById(id);
+	if (idItem) {
+		idItem.classList.add("highlit");
+		const groupCont = idItem.parentElement.parentElement.parentElement.parentElement;
+		groupCont.classList.add("highlit");
+
+		const titleItem = idItem.parentElement.parentElement.previousElementSibling;
+		titleItem.classList.add("highlit");
 	}
 
 	let hasAlt = false;

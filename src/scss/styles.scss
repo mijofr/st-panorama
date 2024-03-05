@@ -17,6 +17,10 @@ html {
     font-size: $baseEm;
 }
 
+html body {
+    opacity: 1;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -141,7 +145,7 @@ body {
                 button {
                     padding: 0 ($frameWidth * 0.25) ($frameWidth * 0.25) 0;
                     height: 100%;
-                    flex: 0 1 $frameWidth * 4.5;
+                    flex: 0 1 $frameWidth * 4;
                     border: none;
                     text-transform: uppercase;
                     font-size: $frameWidth * 0.75;
@@ -229,6 +233,7 @@ body {
                 bottom: 0;
                 left: 0;
                 right:0;
+                
             }
         }
 

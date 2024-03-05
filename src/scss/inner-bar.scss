@@ -10,6 +10,12 @@
 
     background-color: $light-blue;
     display: flex;
+
+    transition: background-color 0.3s ease;
+
+    &.highlit {
+        background-color: $blue-6;
+    }
   
     .groupInnerContainer {
   
@@ -24,7 +30,7 @@
   
 
 .topTitle,
-.sTitle {
+.groupInnerContainer .sTitle {
 
     font-family: Antonio, 'Arial Narrow', Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -54,6 +60,10 @@
 
 }
 
+.groupContainer.highlit > .topTitle > div {
+    color: $grey-1;
+}
+
 .sTitle {
 
     font-weight: 700;
@@ -64,6 +74,7 @@
     font-size: $stThickness;
     display: flex;
 
+    transition: background-color 0.3s ease;
 
     &>div {
 
@@ -75,15 +86,30 @@
         color: $title-grey;
         background-color: $bg-color;
         line-height: 0.8;
+        transition: color 0.3s ease;
 
 
     }
+
+    &.highlit {
+        background-color: $blue-4;
+        & > div {
+            color: $grey-7;
+        }    
+    }
+
 }
 
 
 
 .mapBox {
     font-size: 0.7rem;
+
+    transition: opacity 0.15s ease;
+    opacity: 1;
+    &.faded {
+        opacity: 0;
+    }
 
 
     .cameraPoint {
@@ -98,6 +124,11 @@
             
 
             cursor: pointer;
+        }
+
+        &.highlit {
+            color: $red-6;
+            fill: $red-5;
         }
     
     }
@@ -285,3 +316,41 @@
 
     @import "port";
 }
+
+
+#innerBar.ready svg.mapBox .cameraPoint {
+    animation-delay: 0;
+    animation-duration: .2s;
+    animation-fill-mode: none;
+    animation-iteration-count: 7;
+    animation-name: flashy;
+}
+
+
+@keyframes flashy {
+    0%   {color: rgba($amber-5,0.6);}
+    25%  {color: rgba($amber-5,0.1);}
+    50%  {color: rgba($amber-5,0.1);}
+    75%  {color: rgba($amber-5,0.6);}
+    100% {color: rgba($amber-5,0.6);}
+}
+
+
+/*
+#innerBar.ready svg.mapBox .cameraPoint {
+  animation-name: flashy;
+  animation-duration: 0.2s;
+  animation-delay: 0s;
+  animation-iteration-count: 7;
+  animation-fill-mode: none;
+  
+}
+
+@keyframes flashy {
+  0%   {opacity: 1;}
+  25%  {opacity: 0.5;}
+  50%  {opacity: 0.5;}
+  75%  {opacity: 1;}
+  100% {opacity: 1;}
+}
+*/
