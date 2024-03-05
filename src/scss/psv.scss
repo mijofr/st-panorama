@@ -1,4 +1,7 @@
-$psv-main-background: #000;
-$psv-loader-color: #fff;
+@import "./colors";
+@import "./variables.scss";
+
+$psv-main-background: $panoBgColor;
+$psv-loader-color: $white;
 
 @import "./../../node_modules/@photo-sphere-viewer/core/index.scss";
