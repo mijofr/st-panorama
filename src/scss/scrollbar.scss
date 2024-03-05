@@ -1,0 +1,45 @@
+@import "variables";
+
+#bar {
+
+  @supports selector(::-webkit-scrollbar) {
+    
+    &::-webkit-scrollbar {
+      width: auto;
+      height: auto;
+    }
+
+    &::-webkit-scrollbar:vertical {
+      width: $scrollbarWidth;
+      height: auto;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+      height: $scrollbarWidth;
+      width: auto;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $sb-track-color;
+      border-radius: $scrollbarWidth;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $sb-thumb-color;
+      border-radius: $scrollbarWidth;
+      &:hover {
+        background-color: $sb-thumb-hover-color;
+      }
+      &:active {
+        background-color: $sb-thumb-focus-color;
+      }
+    }
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    scrollbar-width: thin;
+    scrollbar-color: $sb-thumb-color $sb-track-color;
+  }
+
+}
+

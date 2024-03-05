@@ -195,7 +195,7 @@ window.activateId = (id) => {
 	const styleTag = document.getElementById("hTag");
 
 	styleTag.innerHTML = `
-		#${id} { stroke: #c96046;paint-order:fill stroke;stroke-opacity:1; }
+		#${id} { fill: #CC3E28; color: #E06147; }
 	`;
 
 	let panoSetup = DEFAULTPANOSETUP;
@@ -210,13 +210,15 @@ window.activateId = (id) => {
 	const alertButton = document.getElementById("alertButton");
 	for (const n of SetupData.default.alts) {
 		if (n[0] === id) {
-			alertButton.className = "visible";
+			alertButton.classList.add("visible");
+			alertButton.classList.remove("invisible");
 			alertButton.setAttribute("ALT_LINK", n[1]);
 			hasAlt = true;
 		}
 	}
 	if (hasAlt === false) {
-		alertButton.className = null;
+		alertButton.classList.remove("visible");
+		alertButton.classList.add("invisible");
 	}
 
 	const url = `./panorama-assets/panoramas/${id}${imgExt}`;

@@ -1,0 +1,287 @@
+@import "variables";
+
+
+//maybe make the toptitle 24px
+//stitle 0.75, so 16px;
+
+
+
+.groupContainer {
+
+    background-color: $light-blue;
+    display: flex;
+  
+    .groupInnerContainer {
+  
+      background-color: blackBg(#f82);
+      display: flex;
+      gap: $barInnerGap;
+      align-items: center;
+  
+    }
+  }
+  
+  
+
+.topTitle,
+.sTitle {
+
+    font-family: Antonio, 'Arial Narrow', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+}
+
+.topTitle {
+
+    font-weight: 700;
+
+    position: relative;
+    font-size: $ttFont;
+
+    display: flex;
+
+    &>div {
+        line-height: 0.8;
+        color: $bg-color;
+
+        &>span {
+            font-size: 0.8em;
+            font-weight: 400;
+        }
+    }
+
+}
+
+.sTitle {
+
+    font-weight: 700;
+
+    position: relative;
+    background-color: $dark-blue;
+
+    font-size: $stThickness;
+    display: flex;
+
+
+    &>div {
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: $title-grey;
+        background-color: $bg-color;
+        line-height: 0.8;
+
+
+    }
+}
+
+
+
+.mapBox {
+    font-size: 0.7rem;
+
+
+    .cameraPoint {
+        color: $cameraPointOuter;
+        fill: $cameraPointInner;
+        transition: color 0.3s ease, fill 0.3s ease, opacity 0.3s ease;
+            
+        &:hover {
+
+            color: $cameraPointOuterHover;
+            fill: $cameraPointInnerHover;
+            
+
+            cursor: pointer;
+        }
+    
+    }
+   
+    .mapColorRect {
+        fill: $mapBgColor;
+    }
+
+
+
+}
+
+.circleMark {
+    .circleMarkOuter {
+        fill: currentColor;
+    }
+    .circleMarkInner {
+        mix-blend-mode: screen;
+        //fill: $btnColor;
+    }
+    .circleMarkPart {
+        mix-blend-mode: screen;
+        //stroke: $black;
+        //paint-order: stroke fill;
+        //stroke-width: 0.02em;
+        //stroke-opacity: 0.7;
+    }
+    .circleMarkBg {
+        fill: $black;
+        fill-opacity: 0.5;
+    }
+}
+
+
+
+
+@media (orientation: landscape) {
+
+
+    .groupContainer {
+
+        padding-left: $barInnerGap;
+        border-top-left-radius: $barInnerGap;
+        flex-direction: column;
+        width: 100%;
+
+        .groupInnerContainer {
+
+            padding-left: $barInnerGap;
+            padding-top: $barInnerGap;
+            border-top-left-radius: $barInnerGap;
+            flex-direction: column;
+            width: 100%;
+
+        }
+    }
+
+    .topTitle {
+
+        width: 100%;
+        height: $ttThickness;
+
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: $barInnerGap * 0.5;
+
+        
+        &>div {
+            position:relative;
+            top: -1 * $titleOffset;
+            &>span {
+                margin-left: 0.3em;
+            }
+        }
+    }
+
+    .sTitle {
+
+        width: 100%;
+        height: $stThickness;
+
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: $barInnerGap;
+
+        &>div {
+            height: 120%;
+
+            &>div {
+                position: relative;
+                top: -1 * $titleOffset;
+                padding: 0 ($barInnerGap * 0.5);
+            }
+        }
+    }
+
+    .mapBox {
+        margin: $barInnerGap 0;
+    }
+
+    @import "land";
+}
+
+@media (orientation: portrait) {
+
+
+    .groupContainer {
+
+        padding-bottom: $barInnerGap;
+        border-bottom-left-radius: $barInnerGap;
+        flex-direction: row;
+        height: 100%;
+
+        .groupInnerContainer {
+
+            padding-left: $barInnerGap;
+            padding-bottom: $barInnerGap;
+            border-bottom-left-radius: $barInnerGap;
+            flex-direction: row;
+            height: 100%;
+
+        }
+    }
+
+
+    .topTitle {
+        height: 100%;
+        width: $ttThickness;
+
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: $barInnerGap * 0.5;
+
+
+        &>div {
+            
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+
+            position: relative;
+            left: -1 * $titleOffset;
+            &>span {
+                margin-top: 0.3em;
+            }
+        }
+    }
+
+    .sTitle {
+        height: 100%;
+        width: $stThickness;
+
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: $barInnerGap;
+
+        &>div {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+
+            width: 120%;
+            margin: 0 -1px;
+
+            &>div {
+                position: relative;
+                right: -1 * $titleOffset;
+                padding: ($barInnerGap * 0.5) 0;
+            }
+
+        }
+    }
+
+
+    .mapBox {
+        margin: 0 $barInnerGap;
+    }
+
+
+    @import "port";
+}

@@ -116,6 +116,8 @@ export function create(groups: PlanGroup[]) {
 	});
 
 
+	let groupIdx = 0;
+
 	groups.filter(n => n.name != "HIDDEN").forEach(group => {
 
 
@@ -166,13 +168,18 @@ export function create(groups: PlanGroup[]) {
 			htmlOut.push(`</mask></defs>`)
 			htmlOut.push(`<rect class="mapColorRect" x="0" y="0" width="100%" height="100%" mask="url(#MAPMASK_${id})" />`)
 			
+			htmlOut.push(`<g class="cameraPointPlanGroup cameraPointPlanGroup_${groupIdx.toString().padStart(2,'0')}">`);
+
 			plan.points.forEach(p => {
 				if (p.x != null && p.y != null) {
-					htmlOut.push(`<circle class="cameraPoint" cx="${p.x.toFixed(4)}" cy="${p.y.toFixed(4)}" r="0.04em" id="${p.id}" onclick="cclick(evt)" />`);
+					htmlOut.push(`<use class="cameraPoint" href="#CIRCLEMARK" x="${p.x.toFixed(4)}" y="${p.y.toFixed(4)}" width="0.11em" height="0.11em" id="${p.id}" onclick="cclick(evt)" />`);
 				}
 			});	
 
-			htmlOut.push(`</svg>`)
+			htmlOut.push(`</g>`);
+
+			htmlOut.push(`</svg>`);
+			groupIdx++;
 
 		});
 		
