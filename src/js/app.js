@@ -34,6 +34,10 @@ var visibleRangePlugin;
 var currentHorizRange = null;
 var currentVertRange = null;
 
+var initImg = true;
+
+var currentId = null;
+
 window.addEventListener("load", function () {
 
 	supportsWebP.then((supported) => {
@@ -187,9 +191,25 @@ const DEFAULTPANOSETUP = {
 
 window.activateId = (id) => {
 
+	// maybe change the main buttons visible/invisible on initImage to the container element;
+
+	currentId = id;
+
 	let imgExt = ".jpg";
 	if (window.useWebP) {
 		imgExt = ".webp";
+	}
+
+	if (initImg) {
+		initImg = false;
+		document.getElementById("lnkButton").classList.remove("invisible");
+		document.getElementById("lnkButton").classList.add("visible");
+
+		document.getElementById("fsButton").classList.remove("invisible");
+		document.getElementById("fsButton").classList.add("visible");
+
+		document.getElementById("dlButton").classList.remove("invisible");
+		document.getElementById("dlButton").classList.add("visible");
 	}
 
 	/*
@@ -208,32 +228,69 @@ window.activateId = (id) => {
 		}
 	}
 
+	let hasAlt = false;
+	let altId = null;
+	let isAlt = false;
+	let origId = null;
+	for (const n of SetupData.default.alts) {
+		if (n[0] === id) {
+			hasAlt = true;
+			altId = n[1];
+		} else if (n[1] === id) {
+			isAlt = true;
+			origId = n[0];
+		}
+	}
+
+	console.log(id);
+	console.log("hasAlt", hasAlt, altId);
+	console.log("isAlt", isAlt, origId);
+
 	const highlit = Array.from(document.getElementsByClassName("highlit"));
 	for (const n of highlit) {
 		n.classList.remove("highlit");
+		n.classList.remove("alt-highlit");
 	}
 
-	const idItem = document.getElementById(id);
+	let idItem = document.getElementById(id);
+	if (idItem == null && isAlt) {
+		idItem = document.getElementById(origId);
+	}
+
 	if (idItem) {
 		idItem.classList.add("highlit");
-		const groupCont = idItem.parentElement.parentElement.parentElement.parentElement;
+		if (isAlt) {
+			idItem.classList.add("alt-highlit");
+		}
+
+		const groupCont = idItem.parentElement.parentElement.parentElement.parentElement.parentElement;
 		groupCont.classList.add("highlit");
 
 		const titleItem = idItem.parentElement.parentElement.previousElementSibling;
 		titleItem.classList.add("highlit");
 	}
 
-	let hasAlt = false;
-	const alertButton = document.getElementById("alertButton");
-	for (const n of SetupData.default.alts) {
-		if (n[0] === id) {
-			alertButton.classList.add("visible");
-			alertButton.classList.remove("invisible");
-			alertButton.setAttribute("ALT_LINK", n[1]);
-			hasAlt = true;
+	const hlItem = document.getElementById("hlPoint");
+	if (idItem && hlItem) {
+		hlItem.attributes.getNamedItem("x").value = idItem.attributes.getNamedItem("x").value;
+		hlItem.attributes.getNamedItem("y").value = idItem.attributes.getNamedItem("y").value;
+		hlItem.classList.remove("hide");
+		idItem.parentNode.appendChild(hlItem);
+		if (isAlt) {
+			hlItem.classList.add("alt-highlit");
+		} else {
+			hlItem.classList.remove("alt-highlit");
 		}
+	} else if (hlItem != null) {
+		hlItem.classList.add("hide");
 	}
-	if (hasAlt === false) {
+
+	const alertButton = document.getElementById("alertButton");
+	if (hasAlt) {
+		alertButton.classList.add("visible");
+		alertButton.classList.remove("invisible");
+		alertButton.setAttribute("ALT_LINK", altId);
+	} else {
 		alertButton.classList.remove("visible");
 		alertButton.classList.add("invisible");
 	}
@@ -282,4 +339,37 @@ window.cclick = ($element) => {
 
 	window.activateId(id);
 
+};
+
+window.downloadClicked = ($element) => {
+	console.log("downloadClicked");
+	if (viewer && viewer.config != null && viewer.config.panorama != null) {
+		window.open(viewer.config.panorama, "_blank");
+	}
+};
+
+window.fullscreenClicked = ($element) => {
+	console.log("fullscreenClicked");
+	viewer.toggleFullscreen();
+};
+
+window.directLinkClicked = ($element) => {
+	console.log("directLinkClicked");
+	// window.activateId("SNW-SB1");
+	const newLoc = new URL(window.location);
+	if (currentId) {
+		newLoc.hash = currentId;
+		window.history.pushState({}, "", newLoc);
+		// eslint-disable-next-line no-undef
+		navigator.clipboard.writeText(newLoc.href);
+	}
+};
+
+window.indexClicked = ($element) => {
+	console.log("indexClicked");
+	window.animationTest();
+};
+
+window.animationTest = () => {
+	console.log("animationTest");
 };

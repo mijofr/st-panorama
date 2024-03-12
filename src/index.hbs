@@ -57,15 +57,17 @@
       <symbol id="HLBOX" viewBox="0 0 6 6" overflow="visible">
         <path vector-effect="non-scaling-stroke" id="hlBoxPath"
           d="M -2.5,-2.5 A 0.5,0.5 0 0 0 -3,-2 v 4 a 0.5,0.5 0 0 0 0.5,0.5 H -1 v -1 h -1 v -3 h 1 v -1 z m 3.5,0 v 1 h 1 v 3 H 1 v 1 H 2.5 A 0.5,0.5 0 0 0 3,2 V -2 A 0.5,0.5 0 0 0 2.5,-2.5 Z"
-          fill="green" stroke="black" stroke-opacity="0.9" stroke-width="2" paint-order="stroke fill"></path>
+          paint-order="stroke fill"></path>
       </symbol>
       <symbol id="CIRCLEMARK" class="circleMark" viewBox="0 0 1 1" overflow="visible">
         <circle class="circleMarkBg" r="0.6" />
         <circle class="circleMarkInner circleMarkPart" r="0.25" />
         <path class="circleMarkOuter circleMarkPart"
-          d="m-0.161-0.497c-0.159 0.0517-0.284 0.177-0.336 0.336a0.06 0.06 0 0 0 0.0386 0.0757 0.06 0.06 0 0 0 0.0754-0.0386c0.04-0.123 0.136-0.218 0.259-0.258a0.06 0.06 0 0 0 0.0382-0.0757 0.06 0.06 0 0 0-0.0754-0.0386zm0.323 0a0.06 0.06 0 0 0-0.0757 0.0386 0.06 0.06 0 0 0 0.0386 0.0757c0.123 0.0398 0.218 0.136 0.258 0.258a0.06 0.06 0 0 0 0.0757 0.0386 0.06 0.06 0 0 0 0.0382-0.0757c-0.0518-0.159-0.176-0.284-0.335-0.336zm-0.62 0.583a0.06 0.06 0 0 0-0.0386 0.0757c0.0518 0.159 0.177 0.284 0.336 0.336a0.06 0.06 0 0 0 0.0754-0.0386 0.06 0.06 0 0 0-0.0382-0.0757c-0.123-0.0398-0.219-0.136-0.259-0.258a0.06 0.06 0 0 0-0.0754-0.0386zm0.917 0a0.06 0.06 0 0 0-0.0757 0.0386c-0.04 0.123-0.136 0.218-0.258 0.258a0.06 0.06 0 0 0-0.0386 0.0757 0.06 0.06 0 0 0 0.0757 0.0386c0.159-0.0517 0.283-0.177 0.335-0.336a0.06 0.06 0 0 0-0.0382-0.0757z" />
+          fill="none" fill-opacity="0" stroke-width=".12"
+          d="m-0.444-0.144a0.467 0.467 0 0 1 0.3-0.3m0.588 0.588a0.467 0.467 0 0 1-0.3 0.3m-0.289 1e-10a0.467 0.467 0 0 1-0.3-0.3m0.588-0.588a0.467 0.467 0 0 1 0.3 0.3" />
       </symbol>
     </defs>
+    <use class="hlPoint" href="#HLBOX" id="hlPoint" x="3.2210" y="11.0054" width="0.12em" height="0.12em" />
   </svg>
 
   <a id="ghlink" href="https://github.com/mijofr/st-panorama"></a>
@@ -83,10 +85,10 @@
                         <div id="psvCosmeticInner1"></div>
                         <div id="psvCosmeticInner2"></div>
                         <div id="psvButtons">
-                            <button type="button" class="visible" title="Index">INDEX</button>
-                            <button type="button" class="visible" title="Direct Link">DIRECT LINK</button>
-                            <button type="button" class="visible" title="Fullscreen">FULLSCREEN</button>
-                            <button type="button" class="visible" title="Download">DOWNLOAD</button>
+                            <!--<button onclick="indexClicked(this)" id="idxButton" type="button" class="visible" title="Index">INDEX</button> -->
+                            <button onclick="downloadClicked(this)" id="dlButton" type="button" class="invisible" title="Download">DOWNLOAD</button>
+                            <button onclick="directLinkClicked(this)" id="lnkButton" type="button" class="invisible" title="Direct Link">DIRECT LINK</button>
+                            <button onclick="fullscreenClicked(this)" id="fsButton" type="button" class="invisible" title="Fullscreen">FULLSCREEN</button>
                             <button onclick="alrtClicked(this)" type="button" id="alertButton" class="red redAlert invisible" title="Red Alert">RED<br />ALERT</button>
                         </div>
                         <div id="psvTitle">

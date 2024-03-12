@@ -1,0 +1,367 @@
+@import "variables";
+
+#innerBar {
+    font-family: Antonio, "Arial Narrow", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    .groupContainer {
+        background-color: $light-blue;
+        display: flex;
+        transition: background-color 0.3s ease;
+
+        &>.topTitle {
+            font-weight: 700;
+
+            position: relative;
+            font-size: $ttFont;
+
+            display: flex;
+
+            &>div {
+                line-height: 0.8;
+                color: $bg-color;
+
+                &>span {
+                    font-size: 0.8em;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        &>.groupInnerContainer {
+            background-color: blackBg(#f82);
+            display: flex;
+            gap: $barInnerGap;
+            align-items: center;
+        }
+
+        &.highlit {
+            background-color: $blue-8;
+
+            .topTitle>div {
+                color: $grey-2;
+            }
+        }
+    }
+}
+
+
+
+.mapGroup {
+    display: flex;
+    align-items: center;
+    gap: $barInnerGap;
+
+    .sTitle {
+        font-weight: 700;
+
+        position: relative;
+        background-color: $dark-blue;
+
+        font-size: $stThickness;
+        display: flex;
+
+        transition: background-color 0.3s ease;
+
+        &>div {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: $title-grey;
+            background-color: $bg-color;
+            line-height: 0.8;
+            transition: color 0.3s ease;
+        }
+
+        &.highlit {
+            background-color: $blue-5;
+
+            &>div {
+                color: $grey-9;
+            }
+        }
+    }
+
+    svg.mapBox {
+        font-size: 0.7rem;
+
+        transition: opacity 0.15s ease;
+        opacity: 1;
+
+        &.faded {
+            opacity: 0;
+        }
+
+        .cameraPoint {
+            color: $amber-6;
+            fill: $amber-6;
+            stroke-opacity: $baseStrokeOpacity;
+
+            /*
+            transition: 
+                color 0.3s ease, 
+                fill 0.3s ease, 
+                opacity 0.3s ease,
+                stroke-opacity 0.3 ease,
+                fill-opacity 0.3 ease;
+            */
+
+            &:hover {
+                color: $amber-7;
+                fill: $amber-7;
+                stroke-opacity: 0.8;
+                cursor: pointer;
+            }
+
+            &.highlit {
+                // color: $red-7;
+                // fill: $red-6;
+            }
+        }
+
+        .mapColorRect {
+            fill: $mapBgColor;
+        }
+    }
+
+    &:hover {
+        svg.mapBox {
+            .cameraPoint {
+                // animation-delay: 0;
+                animation-duration: 0.5s;
+                // animation-fill-mode: none;
+                animation-iteration-count: 1;
+                animation-name: flashy;
+            
+            }
+        }
+
+    }
+}
+
+/*
+#innerBar.ready svg.mapBox .cameraPoint {
+    animation-delay: 0;
+    animation-duration: 0.2s;
+    animation-fill-mode: none;
+    animation-iteration-count: 2;
+    animation-name: flashy;
+}*/
+
+$floorOpacity: 0.1;
+$diffOpacity: $baseStrokeOpacity - $floorOpacity;
+$l1Opacity: $floorOpacity + ($diffOpacity * 0.33);
+$l2Opacity: $floorOpacity + ($diffOpacity * 0.66);
+
+@keyframes flashy {
+    0% { stroke-opacity: $baseStrokeOpacity; }
+    10% { stroke-opacity: $l2Opacity; }
+    20% { stroke-opacity: $l1Opacity; }
+    30% { stroke-opacity: $floorOpacity; }
+    40% { stroke-opacity: $floorOpacity; }
+    50% { stroke-opacity: $l1Opacity; }
+    60% { stroke-opacity: $l2Opacity; }
+    70% { stroke-opacity: $baseStrokeOpacity; }
+    100% { stroke-opacity: $baseStrokeOpacity; }
+}
+
+
+@keyframes flashy2 {
+    0% { stroke-opacity: 0; }
+    10% { stroke-opacity: 0; }
+    20% { stroke-opacity: 0; }
+    30% { stroke-opacity: 0; }
+    40% { stroke-opacity: 0; }
+    50% { stroke-opacity: 0; }
+    60% { stroke-opacity: 0; }
+    70% { stroke-opacity: 0; }
+    80% { stroke-opacity: 0; }
+    90% { stroke-opacity: 0; }
+    100% { stroke-opacity: 0; }
+}
+
+#hlPoint {
+    pointer-events: none;
+    color: $red-7;
+
+    &.hide {
+        display: none;
+    }
+    &.alt-highlit {
+        color: $red-6;
+    }
+}
+
+
+.circleMark {
+    .circleMarkOuter {
+        fill: none;
+        stroke: currentColor;
+    }
+
+    .circleMarkInner {
+        mix-blend-mode: screen;
+    }
+
+    .circleMarkPart {
+        mix-blend-mode: screen;
+    }
+
+    .circleMarkBg {
+        fill: $black;
+        fill-opacity: 0.5;
+    }
+}
+
+@media (orientation: landscape) {
+    #innerBar {
+        .groupContainer {
+            padding-left: $barInnerGap;
+            border-top-left-radius: $barInnerGap;
+            flex-direction: column;
+            width: 100%;
+
+            &>.topTitle {
+                width: 100%;
+                height: $ttThickness;
+
+                align-items: center;
+                justify-content: flex-start;
+                padding-left: $barInnerGap * 0.5;
+
+                &>div {
+                    position: relative;
+                    top: -1 * $titleOffset;
+
+                    &>span {
+                        margin-left: 0.3em;
+                    }
+                }
+            }
+
+            &>.groupInnerContainer {
+                padding-left: $barInnerGap;
+                padding-top: $barInnerGap;
+                border-top-left-radius: $barInnerGap;
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    }
+
+    .mapGroup {
+        width: 100%;
+        flex-direction: column;
+
+        .sTitle {
+            width: 100%;
+            height: $stThickness;
+
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: $barInnerGap;
+
+            &>div {
+                height: 120%;
+
+                &>div {
+                    position: relative;
+                    top: -1 * $titleOffset;
+                    padding: 0 ($barInnerGap * 0.5);
+                }
+            }
+        }
+
+        svg.mapBox {
+            margin: $barInnerGap 0;
+        }
+    }
+
+    @import "land";
+}
+
+@media (orientation: portrait) {
+    #innerBar {
+        .groupContainer {
+            padding-bottom: $barInnerGap;
+            border-bottom-left-radius: $barInnerGap;
+            flex-direction: row;
+            height: 100%;
+
+            &>.topTitle {
+                height: 100%;
+                width: $ttThickness;
+
+                align-items: flex-end;
+                justify-content: center;
+                padding-bottom: $barInnerGap * 0.5;
+
+                &>div {
+                    writing-mode: vertical-lr;
+                    transform: rotate(180deg);
+                    -webkit-transform: rotate(180deg);
+                    -moz-transform: rotate(180deg);
+                    -ms-transform: rotate(180deg);
+                    -o-transform: rotate(180deg);
+
+                    position: relative;
+                    left: -1 * $titleOffset;
+
+                    &>span {
+                        margin-top: 0.3em;
+                    }
+                }
+            }
+
+            &>.groupInnerContainer {
+                padding-left: $barInnerGap;
+                padding-bottom: $barInnerGap;
+                border-bottom-left-radius: $barInnerGap;
+                flex-direction: row;
+                height: 100%;
+            }
+        }
+    }
+
+    .mapGroup {
+        height: 100%;
+        flex-direction: row;
+
+        .sTitle {
+            height: 100%;
+            width: $stThickness;
+
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: $barInnerGap;
+
+            &>div {
+                writing-mode: vertical-lr;
+                transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
+
+                width: 120%;
+                margin: 0 -1px;
+
+                &>div {
+                    position: relative;
+                    right: -1 * $titleOffset;
+                    padding: ($barInnerGap * 0.5) 0;
+                }
+            }
+        }
+
+        svg.mapBox {
+            margin: 0 $barInnerGap;
+        }
+    }
+
+    @import "port";
+}

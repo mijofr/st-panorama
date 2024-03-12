@@ -6,9 +6,11 @@ var sizeOf = require('buffer-image-size');
 var htmlOut: string[] = [];
 var landCssOut: string[] = [];
 var portCssOut: string[] = [];
+var delayCssOut: string[] = [];
 var setups: [string, PanoData][] = [];
 var alts: [string, string][] = [];
 
+var sidebarIds: [string, string[]][] = [];
 
 async function main() {
 	let groups: PlanGroup[] = JSON.parse(fs.readFileSync("info.json").toString()) as PlanGroup[];
@@ -21,9 +23,10 @@ async function main() {
     fs.writeFileSync("./../src/svgbar.hbs", htmlEr);
 	fs.writeFileSync("./../src/scss/port.scss", portCssOut.join("\n"));
 	fs.writeFileSync("./../src/scss/land.scss", landCssOut.join("\n"));
+	fs.writeFileSync("./../src/scss/delay.scss", delayCssOut.join("\n"));
 
 
-	fs.writeFileSync("./../src/js/panoSetup.json", JSON.stringify({ panoDatas: setups, alts: alts }));
+	fs.writeFileSync("./../src/js/panoSetup.json", JSON.stringify({ panoDatas: setups, alts: alts, sidebarIds: sidebarIds }, null, "\t"));
 
 	await checkImages(groups);
 
@@ -151,9 +154,9 @@ export function create(groups: PlanGroup[]) {
 			portCssOut.push(` #SVGMAP_${id} { height: ${heightPerc}%; }`)
 			landCssOut.push(` #SVGMAP_${id} { width: ${widthPerc}%; }`)
 
+			htmlOut.push(`<span class="mapGroup">`)
 			htmlOut.push(`<div class="sTitle"><div><div>${plan.name}</div></div></div>`);
-	
-
+			//htmlOut.push(`<div class="mapBoxContainer">`);
 			htmlOut.push(`<svg class="mapBox faded" id="SVGMAP_${id}" viewBox="0 0 ${plan.width.toFixed(4)} ${plan.height.toFixed(4)}" version="1.1" xmlns="http://www.w3.org/2000/svg">`);
 
 			let imgSrc = plan.img;
@@ -172,6 +175,7 @@ export function create(groups: PlanGroup[]) {
 
 			plan.points.forEach(p => {
 				if (p.x != null && p.y != null) {
+
 					htmlOut.push(`<use class="cameraPoint" href="#CIRCLEMARK" x="${p.x.toFixed(4)}" y="${p.y.toFixed(4)}" width="0.11em" height="0.11em" id="${p.id}" onclick="cclick(evt)" />`);
 				}
 			});	
@@ -179,12 +183,33 @@ export function create(groups: PlanGroup[]) {
 			htmlOut.push(`</g>`);
 
 			htmlOut.push(`</svg>`);
+			htmlOut.push(`</span>`)
 			groupIdx++;
 
 		});
 		
 		htmlOut.push('</div></div>');
 	});
+
+
+	groups.filter(n => n.name != "HIDDEN").forEach(group => {
+		group.plans.forEach(plan => {
+
+			let pointCount = plan.points.length;
+			let interval = Math.min(0.15 / pointCount, 0.1);
+			console.log("interval", interval);
+			let newArr = plan.points.map(n => n);
+			newArr.sort((a,b) => a.y - b.y);
+			sidebarIds.push([plan.name, newArr.map(n => n.id)]);
+
+			let planI = 0;
+			for (let p of newArr) {
+				delayCssOut.push(` #${p.id} { animation-delay: ${(planI * interval).toFixed(4)}s; }`)
+				planI++;
+			}
+		});
+	});
+
 
 }
 

@@ -4,7 +4,8 @@
 @import "normalize";
 @import "variables";
 @import "scrollbar";
-@import "inner-bar";
+@import "inner-bar-2";
+@import "delay";
 
 html, body {
     margin: 0;
@@ -158,11 +159,20 @@ body {
 
                     color: $black;
 
+                    transition: color 0.2s ease, 
+                        background-color 0.2s ease, 
+                        opacity 0.2s ease,
+                        border-radius 0.2s ease,
+                        width 0.2s ease,
+                        flex-basis 0.2s ease;
+
+                    opacity: 1;
+
                     &.invisible {
-                        display: none;
+                        opacity: 0;
                     }
 
-                    &:last-child {
+                    &:nth-last-child(1 of .visible) {
                         padding-right: $frameWidth * 0.5;
                         border-top-right-radius: $frameWidth * 2;
                         border-bottom-right-radius: $frameWidth * 2;
@@ -402,9 +412,9 @@ button.red {
 }
 
 #hlBoxPath {
-    fill:$highlightSquareColor;
+    fill:currentColor;
     stroke: $black;
-    stroke-opacity: 0.9;
+    stroke-opacity: 0.4;
     stroke-width: 2;
     
 }

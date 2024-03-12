@@ -34,35 +34,39 @@ $barInnerGap: 0.5rem;
 
 $titleOffset: 1px;
 
-$btnColor: $amber-5;
-$btnHover: $amber-7;
-$btnActive: $amber-6;
+$btnColor: $amber-6;
+$btnHover: $amber-8;
+$btnActive: $amber-7;
 
-$redBtnColor: $red-5;
-$redBtnHoverColor: $red-7;
-$redBtnActiveColor: $red-6;
+$redBtnColor: $red-6;
+$redBtnHoverColor: $red-8;
+$redBtnActiveColor: $red-7;
 
 $bg-color: $black;
 $sb-track-color: $grey-2;
 $sb-thumb-color: $grey-3;
 $sb-thumb-hover-color: $grey-4;
-$sb-thumb-focus-color: $grey-5;
+$sb-thumb-focus-color: $grey-6;
 
-$light-blue: $blue-5;
+$light-blue: $blue-6;
 $dark-blue: $blue-3;
 
-$title-grey: $grey-6;
+$title-grey: $grey-7;
 
 
-$mapBgColor: $blue-7;
+$mapBgColor: $blue-8;
 
-$highlightSquareColor: $amber-5;
+$highlightSquareColor: $amber-6;
 
-$cameraPointInner: $amber-5;
-$cameraPointOuter: rgba($amber-5,0.6);
+$baseStrokeOpacity: 0.6;
 
-$cameraPointInnerHover: $amber-6;
-$cameraPointOuterHover: $amber-6;
+/*
+$cameraPointInner: $amber-6;
+$cameraPointOuter: $amber-6;
+
+$cameraPointInnerHover: $amber-7;
+$cameraPointOuterHover: $amber-7;
+*/
 
 $panoBgColor: $grey-1;
 
@@ -70,7 +74,7 @@ $panoBgColor: $grey-1;
 /*
 #ENTD_BRIDGE_03 {
     fill: $red-4;
-    color: $red-5;
+    color: $red-6;
 }
 */
 
@@ -78,7 +82,7 @@ $panoBgColor: $grey-1;
 @function transpBg($col) {
 
     //$result: $col;
-    //$result: color.scale($col, $alpha: -70%);
+    //$result: color.scale($col, $alpha: -80%);
     $result: transparent;
     @return $result;
 }

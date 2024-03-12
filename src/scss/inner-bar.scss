@@ -8,35 +8,39 @@
 
 .groupContainer {
 
+    
+    font-family: Antonio, 'Arial Narrow', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    white-space: nowrap;
+
     background-color: $light-blue;
     display: flex;
 
     transition: background-color 0.3s ease;
 
     &.highlit {
-        background-color: $blue-6;
+        background-color: $blue-7;
+        
+        .topTitle > div {
+            color: $grey-2;
+        }
     }
-  
+
     .groupInnerContainer {
-  
-      background-color: blackBg(#f82);
-      display: flex;
-      gap: $barInnerGap;
-      align-items: center;
-  
+
+        background-color: blackBg(#f82);
+        display: flex;
+        gap: $barInnerGap;
+        align-items: center;
+
     }
-  }
-  
-  
+}
 
-.topTitle,
-.groupInnerContainer .sTitle {
-
-    font-family: Antonio, 'Arial Narrow', Arial, Helvetica, sans-serif;
-    font-style: normal;
-    text-transform: uppercase;
-    white-space: nowrap;
-
+.mapGroup {
+    display: flex;
+    align-items: center;
+    gap: $barInnerGap;
 }
 
 .topTitle {
@@ -60,9 +64,6 @@
 
 }
 
-.groupContainer.highlit > .topTitle > div {
-    color: $grey-1;
-}
 
 .sTitle {
 
@@ -93,9 +94,10 @@
 
     &.highlit {
         background-color: $blue-4;
-        & > div {
-            color: $grey-7;
-        }    
+
+        &>div {
+            color: $grey-8;
+        }
     }
 
 }
@@ -107,6 +109,7 @@
 
     transition: opacity 0.15s ease;
     opacity: 1;
+
     &.faded {
         opacity: 0;
     }
@@ -116,23 +119,23 @@
         color: $cameraPointOuter;
         fill: $cameraPointInner;
         transition: color 0.3s ease, fill 0.3s ease, opacity 0.3s ease;
-            
+
         &:hover {
 
             color: $cameraPointOuterHover;
             fill: $cameraPointInnerHover;
-            
+
 
             cursor: pointer;
         }
 
         &.highlit {
-            color: $red-6;
-            fill: $red-5;
+            color: $red-7;
+            fill: $red-6;
         }
-    
+
     }
-   
+
     .mapColorRect {
         fill: $mapBgColor;
     }
@@ -145,10 +148,12 @@
     .circleMarkOuter {
         fill: currentColor;
     }
+
     .circleMarkInner {
         mix-blend-mode: screen;
         //fill: $btnColor;
     }
+
     .circleMarkPart {
         mix-blend-mode: screen;
         //stroke: $black;
@@ -156,6 +161,7 @@
         //stroke-width: 0.02em;
         //stroke-opacity: 0.7;
     }
+
     .circleMarkBg {
         fill: $black;
         fill-opacity: 0.5;
@@ -166,6 +172,12 @@
 
 
 @media (orientation: landscape) {
+
+
+    .mapGroup {
+        width: 100%;
+        flex-direction: column;
+    }
 
 
     .groupContainer {
@@ -195,10 +207,11 @@
         justify-content: flex-start;
         padding-left: $barInnerGap * 0.5;
 
-        
+
         &>div {
-            position:relative;
+            position: relative;
             top: -1 * $titleOffset;
+
             &>span {
                 margin-left: 0.3em;
             }
@@ -235,6 +248,8 @@
 @media (orientation: portrait) {
 
 
+
+
     .groupContainer {
 
         padding-bottom: $barInnerGap;
@@ -254,6 +269,11 @@
     }
 
 
+    .mapGroup {
+        height: 100%;
+        flex-direction: row;
+    }
+
     .topTitle {
         height: 100%;
         width: $ttThickness;
@@ -264,7 +284,7 @@
 
 
         &>div {
-            
+
             writing-mode: vertical-lr;
             transform: rotate(180deg);
             -webkit-transform: rotate(180deg);
@@ -274,6 +294,7 @@
 
             position: relative;
             left: -1 * $titleOffset;
+
             &>span {
                 margin-top: 0.3em;
             }
@@ -328,11 +349,25 @@
 
 
 @keyframes flashy {
-    0%   {color: rgba($amber-5,0.6);}
-    25%  {color: rgba($amber-5,0.1);}
-    50%  {color: rgba($amber-5,0.1);}
-    75%  {color: rgba($amber-5,0.6);}
-    100% {color: rgba($amber-5,0.6);}
+    0% {
+        color: rgba($amber-6, 0.6);
+    }
+
+    25% {
+        color: rgba($amber-6, 0.1);
+    }
+
+    50% {
+        color: rgba($amber-6, 0.1);
+    }
+
+    75% {
+        color: rgba($amber-6, 0.6);
+    }
+
+    100% {
+        color: rgba($amber-6, 0.6);
+    }
 }
 
 

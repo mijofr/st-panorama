@@ -1,1 +1,739 @@
-{"panoDatas":[["VOY_TREATMENT",{"fullWidth":3036,"fullHeight":1518,"croppedWidth":3036,"croppedHeight":300,"croppedX":0,"croppedY":609,"poseHeading":0,"posePitch":0,"poseRoll":0}],["VOY_DOC_OFFICE",{"fullWidth":2988,"fullHeight":1494,"croppedWidth":2988,"croppedHeight":300,"croppedX":0,"croppedY":597,"poseHeading":0,"posePitch":0,"poseRoll":0}],["VOY_HALL",{"fullWidth":3032,"fullHeight":1516,"croppedWidth":3032,"croppedHeight":300,"croppedX":0,"croppedY":608,"poseHeading":0,"posePitch":0,"poseRoll":0}],["VOY_HOLODECK_DOOR",{"fullWidth":3092,"fullHeight":1546,"croppedWidth":3092,"croppedHeight":300,"croppedX":0,"croppedY":623,"poseHeading":0,"posePitch":0,"poseRoll":0}],["VOY_TRANSPORTER_00",{"fullWidth":3008,"fullHeight":1504,"croppedWidth":3008,"croppedHeight":300,"croppedX":0,"croppedY":602,"poseHeading":0,"posePitch":0,"poseRoll":0}],["VOY_TRANSPORTER_01",{"fullWidth":2968,"fullHeight":1484,"croppedWidth":2968,"croppedHeight":300,"croppedX":0,"croppedY":592,"poseHeading":0,"posePitch":0,"poseRoll":0}],["VOY_ENGINEERING_00",{"fullWidth":2980,"fullHeight":1490,"croppedWidth":2980,"croppedHeight":300,"croppedX":0,"croppedY":595,"poseHeading":0,"posePitch":0,"poseRoll":0}],["VOY_ENGINEERING_01",{"fullWidth":2952,"fullHeight":1476,"croppedWidth":2952,"croppedHeight":300,"croppedX":0,"croppedY":588,"poseHeading":0,"posePitch":0,"poseRoll":0}],["VOY_MESS",{"fullWidth":3012,"fullHeight":1506,"croppedWidth":3012,"croppedHeight":300,"croppedX":0,"croppedY":603,"poseHeading":0,"posePitch":0,"poseRoll":0}],["KENT_BRIDGE_00",{"fullWidth":4000,"fullHeight":2000,"croppedWidth":4000,"croppedHeight":2000,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["KENT_BRIDGE_01",{"fullWidth":4000,"fullHeight":2000,"croppedWidth":4000,"croppedHeight":2000,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["KENT_HALL_01",{"fullWidth":4000,"fullHeight":2000,"croppedWidth":4000,"croppedHeight":2000,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["KENT_HALL_00",{"fullWidth":4000,"fullHeight":2000,"croppedWidth":4000,"croppedHeight":2000,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["DISCO_BRIDGE_00",{"fullWidth":6144,"fullHeight":3072,"croppedWidth":6144,"croppedHeight":3072,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["DISCO_BRIDGE_01",{"fullWidth":6144,"fullHeight":3072,"croppedWidth":6144,"croppedHeight":3072,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["DISCO_TRANSP_00",{"fullWidth":6144,"fullHeight":3072,"croppedWidth":6144,"croppedHeight":3072,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["DISCO_TRANSP_01",{"fullWidth":6144,"fullHeight":3072,"croppedWidth":6144,"croppedHeight":3072,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["DISCO_MESS",{"fullWidth":6144,"fullHeight":3072,"croppedWidth":6144,"croppedHeight":3072,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["DISCO_HALL",{"fullWidth":6144,"fullHeight":3072,"croppedWidth":6144,"croppedHeight":3072,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["ISS_ZARYA",{"fullWidth":3584,"fullHeight":1792,"croppedWidth":3584,"croppedHeight":1792,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["ISS_DESTINY",{"fullWidth":3584,"fullHeight":1792,"croppedWidth":3584,"croppedHeight":1792,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["ISS_UNITY",{"fullWidth":3584,"fullHeight":1792,"croppedWidth":3584,"croppedHeight":1792,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["ISS_KIBO",{"fullWidth":3584,"fullHeight":1792,"croppedWidth":3584,"croppedHeight":1792,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["ISS_COLUMBUS",{"fullWidth":3584,"fullHeight":1792,"croppedWidth":3584,"croppedHeight":1792,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["ISS_TRANQUILITY",{"fullWidth":3584,"fullHeight":1792,"croppedWidth":3584,"croppedHeight":1792,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["ISS_HARMONY",{"fullWidth":3584,"fullHeight":1792,"croppedWidth":3584,"croppedHeight":1792,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["ISS_ZVEZDA",{"fullWidth":3584,"fullHeight":1792,"croppedWidth":3584,"croppedHeight":1792,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}],["SNW-SB1",{"fullWidth":1884,"fullHeight":942,"croppedWidth":1884,"croppedHeight":942,"croppedX":0,"croppedY":0,"poseHeading":0,"posePitch":0,"poseRoll":0}]],"alts":[["DEF_00","DEF_14"],["KENT_BRIDGE_00","KENT_BRIDGE_01"]]}
+{
+	"panoDatas": [
+		[
+			"VOY_TREATMENT",
+			{
+				"fullWidth": 3036,
+				"fullHeight": 1518,
+				"croppedWidth": 3036,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 609,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"VOY_DOC_OFFICE",
+			{
+				"fullWidth": 2988,
+				"fullHeight": 1494,
+				"croppedWidth": 2988,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 597,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"VOY_HALL",
+			{
+				"fullWidth": 3032,
+				"fullHeight": 1516,
+				"croppedWidth": 3032,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 608,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"VOY_HOLODECK_DOOR",
+			{
+				"fullWidth": 3092,
+				"fullHeight": 1546,
+				"croppedWidth": 3092,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 623,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"VOY_TRANSPORTER_00",
+			{
+				"fullWidth": 3008,
+				"fullHeight": 1504,
+				"croppedWidth": 3008,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 602,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"VOY_TRANSPORTER_01",
+			{
+				"fullWidth": 2968,
+				"fullHeight": 1484,
+				"croppedWidth": 2968,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 592,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"VOY_ENGINEERING_00",
+			{
+				"fullWidth": 2980,
+				"fullHeight": 1490,
+				"croppedWidth": 2980,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 595,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"VOY_ENGINEERING_01",
+			{
+				"fullWidth": 2952,
+				"fullHeight": 1476,
+				"croppedWidth": 2952,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 588,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"VOY_MESS",
+			{
+				"fullWidth": 3012,
+				"fullHeight": 1506,
+				"croppedWidth": 3012,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 603,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"KENT_BRIDGE_00",
+			{
+				"fullWidth": 4000,
+				"fullHeight": 2000,
+				"croppedWidth": 4000,
+				"croppedHeight": 2000,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"KENT_BRIDGE_01",
+			{
+				"fullWidth": 4000,
+				"fullHeight": 2000,
+				"croppedWidth": 4000,
+				"croppedHeight": 2000,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"KENT_HALL_01",
+			{
+				"fullWidth": 4000,
+				"fullHeight": 2000,
+				"croppedWidth": 4000,
+				"croppedHeight": 2000,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"KENT_HALL_00",
+			{
+				"fullWidth": 4000,
+				"fullHeight": 2000,
+				"croppedWidth": 4000,
+				"croppedHeight": 2000,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"DISCO_BRIDGE_00",
+			{
+				"fullWidth": 6144,
+				"fullHeight": 3072,
+				"croppedWidth": 6144,
+				"croppedHeight": 3072,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"DISCO_BRIDGE_01",
+			{
+				"fullWidth": 6144,
+				"fullHeight": 3072,
+				"croppedWidth": 6144,
+				"croppedHeight": 3072,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"DISCO_TRANSP_00",
+			{
+				"fullWidth": 6144,
+				"fullHeight": 3072,
+				"croppedWidth": 6144,
+				"croppedHeight": 3072,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"DISCO_TRANSP_01",
+			{
+				"fullWidth": 6144,
+				"fullHeight": 3072,
+				"croppedWidth": 6144,
+				"croppedHeight": 3072,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"DISCO_MESS",
+			{
+				"fullWidth": 6144,
+				"fullHeight": 3072,
+				"croppedWidth": 6144,
+				"croppedHeight": 3072,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"DISCO_HALL",
+			{
+				"fullWidth": 6144,
+				"fullHeight": 3072,
+				"croppedWidth": 6144,
+				"croppedHeight": 3072,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"ISS_ZARYA",
+			{
+				"fullWidth": 3584,
+				"fullHeight": 1792,
+				"croppedWidth": 3584,
+				"croppedHeight": 1792,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"ISS_DESTINY",
+			{
+				"fullWidth": 3584,
+				"fullHeight": 1792,
+				"croppedWidth": 3584,
+				"croppedHeight": 1792,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"ISS_UNITY",
+			{
+				"fullWidth": 3584,
+				"fullHeight": 1792,
+				"croppedWidth": 3584,
+				"croppedHeight": 1792,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"ISS_KIBO",
+			{
+				"fullWidth": 3584,
+				"fullHeight": 1792,
+				"croppedWidth": 3584,
+				"croppedHeight": 1792,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"ISS_COLUMBUS",
+			{
+				"fullWidth": 3584,
+				"fullHeight": 1792,
+				"croppedWidth": 3584,
+				"croppedHeight": 1792,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"ISS_TRANQUILITY",
+			{
+				"fullWidth": 3584,
+				"fullHeight": 1792,
+				"croppedWidth": 3584,
+				"croppedHeight": 1792,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"ISS_HARMONY",
+			{
+				"fullWidth": 3584,
+				"fullHeight": 1792,
+				"croppedWidth": 3584,
+				"croppedHeight": 1792,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"ISS_ZVEZDA",
+			{
+				"fullWidth": 3584,
+				"fullHeight": 1792,
+				"croppedWidth": 3584,
+				"croppedHeight": 1792,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		],
+		[
+			"SNW-SB1",
+			{
+				"fullWidth": 1884,
+				"fullHeight": 942,
+				"croppedWidth": 1884,
+				"croppedHeight": 942,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			}
+		]
+	],
+	"alts": [
+		[
+			"DEF_00",
+			"DEF_14"
+		],
+		[
+			"KENT_BRIDGE_00",
+			"KENT_BRIDGE_01"
+		]
+	],
+	"sidebarIds": [
+		[
+			"Main Bridge",
+			[
+				"TOS_07",
+				"TOS_08",
+				"TOS_06",
+				"TOS_00",
+				"TOS_09",
+				"TOS_05",
+				"TOS_01",
+				"TOS_02",
+				"TOS_13",
+				"TOS_04",
+				"TOS_10",
+				"TOS_11",
+				"TOS_14",
+				"TOS_03",
+				"TOS_12"
+			]
+		],
+		[
+			"Bridge",
+			[
+				"KLING_00",
+				"KLING_01",
+				"KLING_05",
+				"KLING_10",
+				"KLING_02",
+				"KLING_03",
+				"KLING_04",
+				"KLING_06",
+				"KLING_09",
+				"KLING_07",
+				"KLING_08"
+			]
+		],
+		[
+			"Deck One",
+			[
+				"ENTD_CONFERENCE_05",
+				"ENTD_CONFERENCE_03",
+				"ENTD_CONFERENCE_04",
+				"ENTD_CONFERENCE_01",
+				"ENTD_CONFERENCE_00",
+				"ENTD_CONFERENCE_02",
+				"ENTD_BRIDGE_13",
+				"ENTD_BRIDGE_05",
+				"ENTD_BRIDGE_04",
+				"ENTD_BRIDGE_03",
+				"ENTD_BRIDGE_02",
+				"ENTD_BRIDGE_06",
+				"ENTD_BRIDGE_12",
+				"ENTD_BRIDGE_01",
+				"ENTD_READYROOM_03",
+				"ENTD_READYROOM_04",
+				"ENTD_READYROOM_02",
+				"ENTD_BRIDGE_07",
+				"ENTD_BRIDGE_00",
+				"ENTD_BRIDGE_11",
+				"ENTD_READYROOM_00",
+				"ENTD_READYROOM_01",
+				"ENTD_BRIDGE_08",
+				"ENTD_BRIDGE_10",
+				"ENTD_BRIDGE_09"
+			]
+		],
+		[
+			"Engineering",
+			[
+				"ENTD_ENGINEERING_09",
+				"ENTD_ENGINEERING_10",
+				"ENTD_ENGINEERING_08",
+				"ENTD_ENGINEERING_07",
+				"ENTD_ENGINEERING_06",
+				"ENTD_ENGINEERING_05",
+				"ENTD_ENGINEERING_04",
+				"ENTD_ENGINEERING_03",
+				"ENTD_ENGINEERING_01",
+				"ENTD_ENGINEERING_02",
+				"ENTD_ENGINEERING_00"
+			]
+		],
+		[
+			"Sickbay",
+			[
+				"ENTD_SICKBAY_10",
+				"ENTD_SICKBAY_08",
+				"ENTD_SICKBAY_07",
+				"ENTD_SICKBAY_09",
+				"ENTD_SICKBAY_06",
+				"ENTD_SICKBAY_04",
+				"ENTD_SICKBAY_05",
+				"ENTD_SICKBAY_03",
+				"ENTD_SICKBAY_00",
+				"ENTD_SICKBAY_01",
+				"ENTD_SICKBAY_02"
+			]
+		],
+		[
+			"Ten-Forward Lounge",
+			[
+				"ENTD_TENFORWARD_10",
+				"ENTD_TENFORWARD_06",
+				"ENTD_TENFORWARD_03",
+				"ENTD_TENFORWARD_05",
+				"ENTD_TENFORWARD_12",
+				"ENTD_TENFORWARD_07",
+				"ENTD_TENFORWARD_00",
+				"ENTD_TENFORWARD_09",
+				"ENTD_TENFORWARD_08",
+				"ENTD_TENFORWARD_02",
+				"ENTD_TENFORWARD_04",
+				"ENTD_TENFORWARD_01",
+				"ENTD_TENFORWARD_11"
+			]
+		],
+		[
+			"Transporter Room 3",
+			[
+				"ENTD_TRANSPORTER_03",
+				"ENTD_TRANSPORTER_02",
+				"ENTD_TRANSPORTER_01",
+				"ENTD_TRANSPORTER_04",
+				"ENTD_TRANSPORTER_00"
+			]
+		],
+		[
+			"Cpt Picard's Quarters",
+			[
+				"ENTD_PICARDQUARTERS_03",
+				"ENTD_PICARDQUARTERS_02",
+				"ENTD_PICARDQUARTERS_01",
+				"ENTD_PICARDQUARTERS_00",
+				"ENTD_PICARDQUARTERS_06",
+				"ENTD_PICARDQUARTERS_07",
+				"ENTD_PICARDQUARTERS_05",
+				"ENTD_PICARDQUARTERS_04"
+			]
+		],
+		[
+			"Cns Troi's Quarters",
+			[
+				"ENTD_TROIQUARTERS_00",
+				"ENTD_TROIQUARTERS_02",
+				"ENTD_TROIQUARTERS_06",
+				"ENTD_TROIQUARTERS_01",
+				"ENTD_TROIQUARTERS_05",
+				"ENTD_TROIQUARTERS_03",
+				"ENTD_TROIQUARTERS_04"
+			]
+		],
+		[
+			"Lt Data's Quarters",
+			[
+				"ENTD_DATAQUARTERS_01",
+				"ENTD_DATAQUARTERS_00",
+				"ENTD_DATAQUARTERS_02",
+				"ENTD_DATAQUARTERS_03",
+				"ENTD_DATAQUARTERS_04"
+			]
+		],
+		[
+			"Lt Worf's Quarters",
+			[
+				"ENTD_WORFQUARTERS_02",
+				"ENTD_WORFQUARTERS_01",
+				"ENTD_WORFQUARTERS_00",
+				"ENTD_WORFQUARTERS_03",
+				"ENTD_WORFQUARTERS_05",
+				"ENTD_WORFQUARTERS_04"
+			]
+		],
+		[
+			"Type 6 Shuttlecraft",
+			[
+				"ENTD_SHUTTLE"
+			]
+		],
+		[
+			"Behind the Scenes",
+			[
+				"ENTD_BTS"
+			]
+		],
+		[
+			"Bridge",
+			[
+				"ENTE_01",
+				"ENTE_02",
+				"ENTE_00",
+				"ENTE_03",
+				"ENTE_11",
+				"ENTE_09",
+				"ENTE_04",
+				"ENTE_10",
+				"ENTE_08",
+				"ENTE_07",
+				"ENTE_05",
+				"ENTE_06"
+			]
+		],
+		[
+			"Deck One",
+			[
+				"DEF_14",
+				"DEF_13",
+				"DEF_12",
+				"DEF_10",
+				"DEF_09",
+				"DEF_11",
+				"DEF_08",
+				"DEF_07",
+				"DEF_00",
+				"DEF_15",
+				"DEF_04",
+				"DEF_06",
+				"DEF_01",
+				"DEF_05",
+				"DEF_03",
+				"DEF_02"
+			]
+		],
+		[
+			"Deck One",
+			[
+				"VOY_TURBOLIFT_13",
+				"VOY_CONFERENCE_15",
+				"VOY_BRIDGE_01",
+				"VOY_BRIDGE_00",
+				"VOY_READYROOM_18",
+				"VOY_BRIDGE_03",
+				"VOY_BRIDGE_12",
+				"VOY_BRIDGE_02",
+				"VOY_READYROOM_21",
+				"VOY_CONFERENCE_14",
+				"VOY_BRIDGE_05",
+				"VOY_CONFERENCE_16",
+				"VOY_READYROOM_19",
+				"VOY_BRIDGE_09",
+				"VOY_BRIDGE_08",
+				"VOY_BRIDGE_11",
+				"VOY_READYROOM_20",
+				"VOY_CONFERENCE_17",
+				"VOY_BRIDGE_04",
+				"VOY_BRIDGE_07",
+				"VOY_BRIDGE_06",
+				"VOY_BRIDGE_10"
+			]
+		],
+		[
+			"Sickbay / Deck 5",
+			[
+				"VOY_HOLODECK_DOOR",
+				"VOY_TREATMENT",
+				"VOY_HALL",
+				"VOY_DOC_OFFICE"
+			]
+		],
+		[
+			"Transporter Room",
+			[
+				"VOY_TRANSPORTER_00",
+				"VOY_TRANSPORTER_01"
+			]
+		],
+		[
+			"Engineering",
+			[
+				"VOY_ENGINEERING_00",
+				"VOY_ENGINEERING_01"
+			]
+		],
+		[
+			"Mess Hall",
+			[
+				"VOY_MESS"
+			]
+		],
+		[
+			"Bridge",
+			[
+				"KENT_BRIDGE_01",
+				"KENT_BRIDGE_00"
+			]
+		],
+		[
+			"Corridor",
+			[
+				"KENT_HALL_00",
+				"KENT_HALL_01"
+			]
+		],
+		[
+			"Bridge",
+			[
+				"DISCO_BRIDGE_00",
+				"DISCO_BRIDGE_01"
+			]
+		],
+		[
+			"Transporter Room",
+			[
+				"DISCO_TRANSP_00",
+				"DISCO_TRANSP_01"
+			]
+		],
+		[
+			"Mess Hall",
+			[
+				"DISCO_MESS"
+			]
+		],
+		[
+			"Corridor",
+			[
+				"DISCO_HALL"
+			]
+		],
+		[
+			"Station (1/3 SCALE)",
+			[
+				"ISS_KIBO",
+				"ISS_COLUMBUS",
+				"ISS_HARMONY",
+				"ISS_DESTINY",
+				"ISS_UNITY",
+				"ISS_TRANQUILITY",
+				"ISS_ZARYA",
+				"ISS_ZVEZDA"
+			]
+		]
+	]
+}
