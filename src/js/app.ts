@@ -32,14 +32,6 @@ function getPanoHorizontalRange(p: { croppedWidth: any; fullWidth: number; cropp
 var viewer: Viewer;
 var visibleRangePlugin: VisibleRangePlugin;
 
-var currentHorizRange: [number, number] | null = null;
-var currentVertRange: [number, number] | null = null;
-
-var isOnInitImg = true;
-
-var currentId: string | null = null;
-var redAlertVisible = false;
-
 var pointSet = new Map();
 
 var appConfig: AppConfig = {
@@ -58,19 +50,19 @@ function showRedAlert(redAlertId: string): void {
 	const alertButton = document.getElementById("alertButton");
 	alertButton?.setAttribute("ALT_LINK", redAlertId);
 
-	if (redAlertVisible) {
+	if (appConfig.redAlertVisible) {
 		return;
 	}
-	redAlertVisible = true;
+	appConfig.redAlertVisible = true;
 	alertButton?.classList.remove("invisible");
 	document.getElementById("fsButton")?.classList.remove("rounded");
 };
 
 function hideRedAlert() {
-	if (!redAlertVisible) {
+	if (!appConfig.redAlertVisible) {
 		return;
 	}
-	redAlertVisible = false;
+	appConfig.redAlertVisible = false;
 	document.getElementById("alertButton")?.classList.add("invisible");
 	document.getElementById("fsButton")?.classList.add("rounded");
 };
@@ -84,13 +76,11 @@ function loadFunc(): void {
 
 	supportsWebP.then((supported) => {
 
-		let imgExt = ".jpg";
-
 		if (supported) {
-			window.useWebP = true;
-			imgExt = ".webp";
+			appConfig.useWebP = true;
+			appConfig.imgExt = ".webp";
 		} else {
-			window.useWebP = false;
+			appConfig.useWebP = false;
 		}
 
 		const STARWIDTH = 6144;
@@ -98,7 +88,7 @@ function loadFunc(): void {
 
 		const randVal = Math.random();
 
-		let initPanoSrc = "./panorama-assets/panoramas/STARMAP" + imgExt;
+		let initPanoSrc = "./panorama-assets/panoramas/STARMAP" + appConfig.imgExt;
 		let initPanoData: PanoData = {
 			fullWidth: STARWIDTH,
 			fullHeight: STARHEIGHT,
@@ -178,8 +168,8 @@ function loadFunc(): void {
 			console.log("loaded");
 
 
-			visibleRangePlugin.setHorizontalRange(currentHorizRange as [number, number]); 
-			visibleRangePlugin.setVerticalRange(currentVertRange  as [number, number]); 
+			visibleRangePlugin.setHorizontalRange(appConfig.currentHorizRange as [number, number]); 
+			visibleRangePlugin.setVerticalRange(appConfig.currentVertRange  as [number, number]); 
 
 		});
 
@@ -233,15 +223,10 @@ function activateId(id: string): void {
 		return;
 	}
 
-	currentId = id;
+	appConfig.currentId = id;
 
-	let imgExt = ".jpg";
-	if (window.useWebP) {
-		imgExt = ".webp";
-	}
-
-	if (isOnInitImg) {
-		isOnInitImg = false;
+	if (appConfig.isOnInitImg) {
+		appConfig.isOnInitImg = false;
 		document.getElementById("psvButtons")?.classList.remove("hidden");
 	}
 
@@ -312,7 +297,7 @@ function activateId(id: string): void {
 		hideRedAlert();
 	}
 
-	const url = `./panorama-assets/panoramas/${id}${imgExt}`;
+	const url = `./panorama-assets/panoramas/${id}${appConfig.imgExt}`;
 
 	console.log("loading PanoSetp", panoSetup);
 	// eslint-disable-next-line prefer-const
@@ -325,11 +310,10 @@ function activateId(id: string): void {
 
 	// I have to do this manually apparently because doing it from
 	// panoData seems to be broken if you're using a fade transition.
-	currentHorizRange = getPanoHorizontalRange(panoSetup) as [number, number] | null;
-	currentVertRange = getPanoVerticalRange(panoSetup)  as [number, number] | null;
+	appConfig.currentHorizRange = getPanoHorizontalRange(panoSetup) as [number, number] | null;
+	appConfig.currentVertRange = getPanoVerticalRange(panoSetup)  as [number, number] | null;
 	// visibleRangePlugin.setHorizontalRange(horizRange);
 	// visibleRangePlugin.setVerticalRange(vertRange);
-	console.log("setting variables for Ranges", currentHorizRange, currentVertRange);
 
 	viewer.setPanorama(url, panoOpts).then((res: any) => {
 		console.log("transition complete", res);
@@ -383,8 +367,8 @@ function animationTest() {
 	console.log("directLinkClicked");
 	// window.activateId("SNW-SB1");
 	const newLoc = new URL(window.location.href);
-	if (currentId) {
-		newLoc.hash = currentId;
+	if (appConfig.currentId) {
+		newLoc.hash = appConfig.currentId;
 		window.history.pushState({}, "", newLoc);
 		// eslint-disable-next-line no-undef
 		navigator.clipboard.writeText(newLoc.href);

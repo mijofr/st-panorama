@@ -6,8 +6,8 @@ export interface AppConfig {
     imgExt: string;
     pointSet: Map<string, PointData>;
     isOnInitImg: boolean;
-    currentHorizRange: number[] | null;
-    currentVertRange: number[] | null;
+    currentHorizRange: [number, number] | null;
+    currentVertRange: [number, number] | null;
     redAlertVisible: boolean;
     currentId: string | null;
 }
