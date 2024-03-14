@@ -120,6 +120,10 @@
             &.highlit {
                 // color: $red-7;
                 // fill: $red-6;
+                &.alt-highlit {
+                    color: $red-7;
+                    fill: $red-7;
+                }
             }
         }
 
@@ -168,6 +172,33 @@ $l2Opacity: $floorOpacity + ($diffOpacity * 0.66);
     70% { stroke-opacity: $baseStrokeOpacity; }
     100% { stroke-opacity: $baseStrokeOpacity; }
 }
+
+
+@keyframes flashy {
+    0% { stroke-opacity: $baseStrokeOpacity; fill-opacity: 1; }
+    10% { stroke-opacity: $l2Opacity; fill-opacity: 0.85; }
+    20% { stroke-opacity: $l1Opacity; fill-opacity: 0.7; }
+    30% { stroke-opacity: $floorOpacity; fill-opacity: 0.55; }
+    40% { stroke-opacity: $floorOpacity; fill-opacity: 0.55;}
+    50% { stroke-opacity: $l1Opacity; fill-opacity: 0.7; }
+    60% { stroke-opacity: $l2Opacity; fill-opacity: 0.85; }
+    70% { stroke-opacity: $baseStrokeOpacity; fill-opacity: 1;}
+    100% { stroke-opacity: $baseStrokeOpacity; fill-opacity: 1;}
+}
+
+
+@keyframes flashy {
+    0% { stroke-opacity: $baseStrokeOpacity; fill: $amber-6; }
+    10% { stroke-opacity: $l2Opacity; }
+    20% { stroke-opacity: $l1Opacity; }
+    30% { stroke-opacity: $floorOpacity; fill: $amber-7; }
+    40% { stroke-opacity: $floorOpacity; fill: $amber-7;}
+    50% { stroke-opacity: $l1Opacity; }
+    60% { stroke-opacity: $l2Opacity; }
+    70% { stroke-opacity: $baseStrokeOpacity; fill: $amber-6;}
+    100% { stroke-opacity: $baseStrokeOpacity; fill: $amber-6;}
+}
+
 
 
 @keyframes flashy2 {

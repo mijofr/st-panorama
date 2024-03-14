@@ -735,5 +735,1708 @@
 				"ISS_ZVEZDA"
 			]
 		]
+	],
+	"pointSet": [
+		{
+			"id": "TOS_00",
+			"planName": "Main Bridge",
+			"planGroupName": "USS Enterprise",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "TOS_01",
+			"planName": "Main Bridge",
+			"planGroupName": "USS Enterprise",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "TOS_02",
+			"planName": "Main Bridge",
+			"planGroupName": "USS Enterprise",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "TOS_03",
+			"planName": "Main Bridge",
+			"planGroupName": "USS Enterprise",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "TOS_04",
+			"planName": "Main Bridge",
+			"planGroupName": "USS Enterprise",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "TOS_05",
+			"planName": "Main Bridge",
+			"planGroupName": "USS Enterprise",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "TOS_06",
+			"planName": "Main Bridge",
+			"planGroupName": "USS Enterprise",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "TOS_07",
+			"planName": "Main Bridge",
+			"planGroupName": "USS Enterprise",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "TOS_08",
+			"planName": "Main Bridge",
+			"planGroupName": "USS Enterprise",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "TOS_09",
+			"planName": "Main Bridge",
+			"planGroupName": "USS Enterprise",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "TOS_10",
+			"planName": "Main Bridge",
+			"planGroupName": "USS Enterprise",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "TOS_11",
+			"planName": "Main Bridge",
+			"planGroupName": "USS Enterprise",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "TOS_12",
+			"planName": "Main Bridge",
+			"planGroupName": "USS Enterprise",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "TOS_13",
+			"planName": "Main Bridge",
+			"planGroupName": "USS Enterprise",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "TOS_14",
+			"planName": "Main Bridge",
+			"planGroupName": "USS Enterprise",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "KLING_00",
+			"planName": "Bridge",
+			"planGroupName": "Bird of Prey (D12)",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "KLING_01",
+			"planName": "Bridge",
+			"planGroupName": "Bird of Prey (D12)",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "KLING_02",
+			"planName": "Bridge",
+			"planGroupName": "Bird of Prey (D12)",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "KLING_03",
+			"planName": "Bridge",
+			"planGroupName": "Bird of Prey (D12)",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "KLING_04",
+			"planName": "Bridge",
+			"planGroupName": "Bird of Prey (D12)",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "KLING_05",
+			"planName": "Bridge",
+			"planGroupName": "Bird of Prey (D12)",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "KLING_06",
+			"planName": "Bridge",
+			"planGroupName": "Bird of Prey (D12)",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "KLING_07",
+			"planName": "Bridge",
+			"planGroupName": "Bird of Prey (D12)",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "KLING_08",
+			"planName": "Bridge",
+			"planGroupName": "Bird of Prey (D12)",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "KLING_09",
+			"planName": "Bridge",
+			"planGroupName": "Bird of Prey (D12)",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "KLING_10",
+			"planName": "Bridge",
+			"planGroupName": "Bird of Prey (D12)",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_BRIDGE_00",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_BRIDGE_01",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_BRIDGE_02",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_BRIDGE_03",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_BRIDGE_04",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_BRIDGE_05",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_BRIDGE_06",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_BRIDGE_07",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_BRIDGE_08",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_BRIDGE_09",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_BRIDGE_10",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_BRIDGE_11",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_BRIDGE_12",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_BRIDGE_13",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_CONFERENCE_00",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_CONFERENCE_01",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_CONFERENCE_02",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_CONFERENCE_03",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_CONFERENCE_04",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_CONFERENCE_05",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_READYROOM_00",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_READYROOM_01",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_READYROOM_02",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_READYROOM_03",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_READYROOM_04",
+			"planName": "Deck One",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_ENGINEERING_00",
+			"planName": "Engineering",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_ENGINEERING_01",
+			"planName": "Engineering",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_ENGINEERING_02",
+			"planName": "Engineering",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_ENGINEERING_03",
+			"planName": "Engineering",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_ENGINEERING_04",
+			"planName": "Engineering",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_ENGINEERING_05",
+			"planName": "Engineering",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_ENGINEERING_06",
+			"planName": "Engineering",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_ENGINEERING_07",
+			"planName": "Engineering",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_ENGINEERING_08",
+			"planName": "Engineering",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_ENGINEERING_09",
+			"planName": "Engineering",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_ENGINEERING_10",
+			"planName": "Engineering",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_SICKBAY_00",
+			"planName": "Sickbay",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_SICKBAY_01",
+			"planName": "Sickbay",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_SICKBAY_02",
+			"planName": "Sickbay",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_SICKBAY_03",
+			"planName": "Sickbay",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_SICKBAY_04",
+			"planName": "Sickbay",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_SICKBAY_05",
+			"planName": "Sickbay",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_SICKBAY_06",
+			"planName": "Sickbay",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_SICKBAY_07",
+			"planName": "Sickbay",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_SICKBAY_08",
+			"planName": "Sickbay",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_SICKBAY_09",
+			"planName": "Sickbay",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_SICKBAY_10",
+			"planName": "Sickbay",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TENFORWARD_00",
+			"planName": "Ten-Forward Lounge",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TENFORWARD_01",
+			"planName": "Ten-Forward Lounge",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TENFORWARD_02",
+			"planName": "Ten-Forward Lounge",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TENFORWARD_03",
+			"planName": "Ten-Forward Lounge",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TENFORWARD_04",
+			"planName": "Ten-Forward Lounge",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TENFORWARD_05",
+			"planName": "Ten-Forward Lounge",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TENFORWARD_06",
+			"planName": "Ten-Forward Lounge",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TENFORWARD_07",
+			"planName": "Ten-Forward Lounge",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TENFORWARD_08",
+			"planName": "Ten-Forward Lounge",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TENFORWARD_09",
+			"planName": "Ten-Forward Lounge",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TENFORWARD_10",
+			"planName": "Ten-Forward Lounge",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TENFORWARD_11",
+			"planName": "Ten-Forward Lounge",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TENFORWARD_12",
+			"planName": "Ten-Forward Lounge",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TRANSPORTER_00",
+			"planName": "Transporter Room 3",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TRANSPORTER_01",
+			"planName": "Transporter Room 3",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TRANSPORTER_02",
+			"planName": "Transporter Room 3",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TRANSPORTER_03",
+			"planName": "Transporter Room 3",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TRANSPORTER_04",
+			"planName": "Transporter Room 3",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_PICARDQUARTERS_00",
+			"planName": "Cpt Picard's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_PICARDQUARTERS_01",
+			"planName": "Cpt Picard's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_PICARDQUARTERS_02",
+			"planName": "Cpt Picard's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_PICARDQUARTERS_03",
+			"planName": "Cpt Picard's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_PICARDQUARTERS_04",
+			"planName": "Cpt Picard's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_PICARDQUARTERS_05",
+			"planName": "Cpt Picard's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_PICARDQUARTERS_06",
+			"planName": "Cpt Picard's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_PICARDQUARTERS_07",
+			"planName": "Cpt Picard's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TROIQUARTERS_00",
+			"planName": "Cns Troi's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TROIQUARTERS_01",
+			"planName": "Cns Troi's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TROIQUARTERS_02",
+			"planName": "Cns Troi's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TROIQUARTERS_03",
+			"planName": "Cns Troi's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TROIQUARTERS_04",
+			"planName": "Cns Troi's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TROIQUARTERS_05",
+			"planName": "Cns Troi's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_TROIQUARTERS_06",
+			"planName": "Cns Troi's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_DATAQUARTERS_00",
+			"planName": "Lt Data's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_DATAQUARTERS_01",
+			"planName": "Lt Data's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_DATAQUARTERS_02",
+			"planName": "Lt Data's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_DATAQUARTERS_03",
+			"planName": "Lt Data's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_DATAQUARTERS_04",
+			"planName": "Lt Data's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_WORFQUARTERS_00",
+			"planName": "Lt Worf's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_WORFQUARTERS_01",
+			"planName": "Lt Worf's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_WORFQUARTERS_02",
+			"planName": "Lt Worf's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_WORFQUARTERS_03",
+			"planName": "Lt Worf's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_WORFQUARTERS_04",
+			"planName": "Lt Worf's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_WORFQUARTERS_05",
+			"planName": "Lt Worf's Quarters",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_SHUTTLE",
+			"planName": "Type 6 Shuttlecraft",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTD_BTS",
+			"planName": "Behind the Scenes",
+			"planGroupName": "USS Enterprise-D",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTE_00",
+			"planName": "Bridge",
+			"planGroupName": "USS Enterprise-E",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTE_01",
+			"planName": "Bridge",
+			"planGroupName": "USS Enterprise-E",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTE_02",
+			"planName": "Bridge",
+			"planGroupName": "USS Enterprise-E",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTE_03",
+			"planName": "Bridge",
+			"planGroupName": "USS Enterprise-E",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTE_04",
+			"planName": "Bridge",
+			"planGroupName": "USS Enterprise-E",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTE_05",
+			"planName": "Bridge",
+			"planGroupName": "USS Enterprise-E",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTE_06",
+			"planName": "Bridge",
+			"planGroupName": "USS Enterprise-E",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTE_07",
+			"planName": "Bridge",
+			"planGroupName": "USS Enterprise-E",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTE_08",
+			"planName": "Bridge",
+			"planGroupName": "USS Enterprise-E",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTE_09",
+			"planName": "Bridge",
+			"planGroupName": "USS Enterprise-E",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTE_10",
+			"planName": "Bridge",
+			"planGroupName": "USS Enterprise-E",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "ENTE_11",
+			"planName": "Bridge",
+			"planGroupName": "USS Enterprise-E",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "DEF_00",
+			"planName": "Deck One",
+			"planGroupName": "USS Defiant",
+			"hasAlt": true,
+			"altId": "DEF_14",
+			"isAlt": false
+		},
+		{
+			"id": "DEF_01",
+			"planName": "Deck One",
+			"planGroupName": "USS Defiant",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "DEF_02",
+			"planName": "Deck One",
+			"planGroupName": "USS Defiant",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "DEF_03",
+			"planName": "Deck One",
+			"planGroupName": "USS Defiant",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "DEF_04",
+			"planName": "Deck One",
+			"planGroupName": "USS Defiant",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "DEF_05",
+			"planName": "Deck One",
+			"planGroupName": "USS Defiant",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "DEF_06",
+			"planName": "Deck One",
+			"planGroupName": "USS Defiant",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "DEF_07",
+			"planName": "Deck One",
+			"planGroupName": "USS Defiant",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "DEF_08",
+			"planName": "Deck One",
+			"planGroupName": "USS Defiant",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "DEF_09",
+			"planName": "Deck One",
+			"planGroupName": "USS Defiant",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "DEF_10",
+			"planName": "Deck One",
+			"planGroupName": "USS Defiant",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "DEF_11",
+			"planName": "Deck One",
+			"planGroupName": "USS Defiant",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "DEF_12",
+			"planName": "Deck One",
+			"planGroupName": "USS Defiant",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "DEF_13",
+			"planName": "Deck One",
+			"planGroupName": "USS Defiant",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "DEF_14",
+			"planName": "Deck One",
+			"planGroupName": "USS Defiant",
+			"hasAlt": false,
+			"altId": "DEF_00",
+			"isAlt": true
+		},
+		{
+			"id": "DEF_15",
+			"planName": "Deck One",
+			"planGroupName": "USS Defiant",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_BRIDGE_00",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_BRIDGE_01",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_BRIDGE_02",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_BRIDGE_03",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_BRIDGE_04",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_BRIDGE_05",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_BRIDGE_06",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_BRIDGE_07",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_BRIDGE_08",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_BRIDGE_09",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_BRIDGE_10",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_BRIDGE_11",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_BRIDGE_12",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_CONFERENCE_14",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_CONFERENCE_15",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_CONFERENCE_16",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_CONFERENCE_17",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_READYROOM_18",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_READYROOM_19",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_READYROOM_20",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_READYROOM_21",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_TURBOLIFT_13",
+			"planName": "Deck One",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"isAlt": false
+		},
+		{
+			"id": "VOY_TREATMENT",
+			"planName": "Sickbay / Deck 5",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 3036,
+				"fullHeight": 1518,
+				"croppedWidth": 3036,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 609,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "VOY_DOC_OFFICE",
+			"planName": "Sickbay / Deck 5",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 2988,
+				"fullHeight": 1494,
+				"croppedWidth": 2988,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 597,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "VOY_HALL",
+			"planName": "Sickbay / Deck 5",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 3032,
+				"fullHeight": 1516,
+				"croppedWidth": 3032,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 608,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "VOY_HOLODECK_DOOR",
+			"planName": "Sickbay / Deck 5",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 3092,
+				"fullHeight": 1546,
+				"croppedWidth": 3092,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 623,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "VOY_TRANSPORTER_00",
+			"planName": "Transporter Room",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 3008,
+				"fullHeight": 1504,
+				"croppedWidth": 3008,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 602,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "VOY_TRANSPORTER_01",
+			"planName": "Transporter Room",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 2968,
+				"fullHeight": 1484,
+				"croppedWidth": 2968,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 592,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "VOY_ENGINEERING_00",
+			"planName": "Engineering",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 2980,
+				"fullHeight": 1490,
+				"croppedWidth": 2980,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 595,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "VOY_ENGINEERING_01",
+			"planName": "Engineering",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 2952,
+				"fullHeight": 1476,
+				"croppedWidth": 2952,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 588,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "VOY_MESS",
+			"planName": "Mess Hall",
+			"planGroupName": "USS Voyager",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 3012,
+				"fullHeight": 1506,
+				"croppedWidth": 3012,
+				"croppedHeight": 300,
+				"croppedX": 0,
+				"croppedY": 603,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "KENT_BRIDGE_00",
+			"planName": "Bridge",
+			"planGroupName": "USS Enterprise",
+			"planGroupSubtitle": "(Kelvin)",
+			"hasAlt": true,
+			"altId": "KENT_BRIDGE_01",
+			"panoData": {
+				"fullWidth": 4000,
+				"fullHeight": 2000,
+				"croppedWidth": 4000,
+				"croppedHeight": 2000,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "KENT_BRIDGE_01",
+			"planName": "Bridge",
+			"planGroupName": "USS Enterprise",
+			"planGroupSubtitle": "(Kelvin)",
+			"hasAlt": false,
+			"altId": "KENT_BRIDGE_00",
+			"panoData": {
+				"fullWidth": 4000,
+				"fullHeight": 2000,
+				"croppedWidth": 4000,
+				"croppedHeight": 2000,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": true
+		},
+		{
+			"id": "KENT_HALL_01",
+			"planName": "Corridor",
+			"planGroupName": "USS Enterprise",
+			"planGroupSubtitle": "(Kelvin)",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 4000,
+				"fullHeight": 2000,
+				"croppedWidth": 4000,
+				"croppedHeight": 2000,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "KENT_HALL_00",
+			"planName": "Corridor",
+			"planGroupName": "USS Enterprise",
+			"planGroupSubtitle": "(Kelvin)",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 4000,
+				"fullHeight": 2000,
+				"croppedWidth": 4000,
+				"croppedHeight": 2000,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "DISCO_BRIDGE_00",
+			"planName": "Bridge",
+			"planGroupName": "USS Discovery",
+			"planGroupSubtitle": "(2256)",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 6144,
+				"fullHeight": 3072,
+				"croppedWidth": 6144,
+				"croppedHeight": 3072,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "DISCO_BRIDGE_01",
+			"planName": "Bridge",
+			"planGroupName": "USS Discovery",
+			"planGroupSubtitle": "(2256)",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 6144,
+				"fullHeight": 3072,
+				"croppedWidth": 6144,
+				"croppedHeight": 3072,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "DISCO_TRANSP_00",
+			"planName": "Transporter Room",
+			"planGroupName": "USS Discovery",
+			"planGroupSubtitle": "(2256)",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 6144,
+				"fullHeight": 3072,
+				"croppedWidth": 6144,
+				"croppedHeight": 3072,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "DISCO_TRANSP_01",
+			"planName": "Transporter Room",
+			"planGroupName": "USS Discovery",
+			"planGroupSubtitle": "(2256)",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 6144,
+				"fullHeight": 3072,
+				"croppedWidth": 6144,
+				"croppedHeight": 3072,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "DISCO_MESS",
+			"planName": "Mess Hall",
+			"planGroupName": "USS Discovery",
+			"planGroupSubtitle": "(2256)",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 6144,
+				"fullHeight": 3072,
+				"croppedWidth": 6144,
+				"croppedHeight": 3072,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "DISCO_HALL",
+			"planName": "Corridor",
+			"planGroupName": "USS Discovery",
+			"planGroupSubtitle": "(2256)",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 6144,
+				"fullHeight": 3072,
+				"croppedWidth": 6144,
+				"croppedHeight": 3072,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "ISS_ZARYA",
+			"planName": "Station (1/3 SCALE)",
+			"planGroupName": "ISS",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 3584,
+				"fullHeight": 1792,
+				"croppedWidth": 3584,
+				"croppedHeight": 1792,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "ISS_DESTINY",
+			"planName": "Station (1/3 SCALE)",
+			"planGroupName": "ISS",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 3584,
+				"fullHeight": 1792,
+				"croppedWidth": 3584,
+				"croppedHeight": 1792,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "ISS_UNITY",
+			"planName": "Station (1/3 SCALE)",
+			"planGroupName": "ISS",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 3584,
+				"fullHeight": 1792,
+				"croppedWidth": 3584,
+				"croppedHeight": 1792,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "ISS_KIBO",
+			"planName": "Station (1/3 SCALE)",
+			"planGroupName": "ISS",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 3584,
+				"fullHeight": 1792,
+				"croppedWidth": 3584,
+				"croppedHeight": 1792,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "ISS_COLUMBUS",
+			"planName": "Station (1/3 SCALE)",
+			"planGroupName": "ISS",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 3584,
+				"fullHeight": 1792,
+				"croppedWidth": 3584,
+				"croppedHeight": 1792,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "ISS_TRANQUILITY",
+			"planName": "Station (1/3 SCALE)",
+			"planGroupName": "ISS",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 3584,
+				"fullHeight": 1792,
+				"croppedWidth": 3584,
+				"croppedHeight": 1792,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "ISS_HARMONY",
+			"planName": "Station (1/3 SCALE)",
+			"planGroupName": "ISS",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 3584,
+				"fullHeight": 1792,
+				"croppedWidth": 3584,
+				"croppedHeight": 1792,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "ISS_ZVEZDA",
+			"planName": "Station (1/3 SCALE)",
+			"planGroupName": "ISS",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 3584,
+				"fullHeight": 1792,
+				"croppedWidth": 3584,
+				"croppedHeight": 1792,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		},
+		{
+			"id": "SNW-SB1",
+			"planName": "HIDDEN",
+			"planGroupName": "HIDDEN",
+			"hasAlt": false,
+			"panoData": {
+				"fullWidth": 1884,
+				"fullHeight": 942,
+				"croppedWidth": 1884,
+				"croppedHeight": 942,
+				"croppedX": 0,
+				"croppedY": 0,
+				"poseHeading": 0,
+				"posePitch": 0,
+				"poseRoll": 0
+			},
+			"isAlt": false
+		}
 	]
 }

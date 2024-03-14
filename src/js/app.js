@@ -37,8 +37,38 @@ var currentVertRange = null;
 var initImg = true;
 
 var currentId = null;
+var redAlertVisible = false;
 
-window.addEventListener("load", function () {
+var pointSet = new Map();
+
+window.showRedAlert = (redAlertId) => {
+
+	const alertButton = document.getElementById("alertButton");
+	alertButton.setAttribute("ALT_LINK", redAlertId);
+
+	if (redAlertVisible) {
+		return;
+	}
+	redAlertVisible = true;
+	alertButton.classList.remove("invisible");
+	document.getElementById("fsButton").classList.remove("rounded");
+};
+
+window.hideRedAlert = () => {
+	if (!redAlertVisible) {
+		return;
+	}
+	redAlertVisible = false;
+	document.getElementById("alertButton").classList.add("invisible");
+	document.getElementById("fsButton").classList.add("rounded");
+};
+
+window.loadFunc = () => {
+	console.log(pointSet);
+	for (const c of Array.from(SetupData.pointSet)) {
+		pointSet.set(c.id, c);
+	}
+	console.log(pointSet);
 
 	supportsWebP.then((supported) => {
 
@@ -138,25 +168,16 @@ window.addEventListener("load", function () {
 
 		});
 
-		/*
-		this.document.addEventListener("keydown", (event) => {
-
-			console.log("keypress", event, visibleRangePlugin);
-			console.log(visibleRangePlugin.config.horizontalRange, visibleRangePlugin.config.verticalRange);
-			console.log(viewer.getPosition());
-		});
-		*/
-
 	});
 
-	this.setTimeout(() => {
+	window.setTimeout(() => {
 		const el = document.getElementById("innerBar");
 		if (el) {
 			el.className = "ready";
 		}
 	}, 1500);
 
-});
+};
 
 // had to do some things to this to get it to work in the new version,
 // it used to be fullheight 1536.
@@ -191,7 +212,10 @@ const DEFAULTPANOSETUP = {
 
 window.activateId = (id) => {
 
-	// maybe change the main buttons visible/invisible on initImage to the container element;
+	const selectedPoint = pointSet.get(id);
+	if (!selectedPoint) {
+		return;
+	}
 
 	currentId = id;
 
@@ -202,31 +226,10 @@ window.activateId = (id) => {
 
 	if (initImg) {
 		initImg = false;
-		document.getElementById("lnkButton").classList.remove("invisible");
-		document.getElementById("lnkButton").classList.add("visible");
-
-		document.getElementById("fsButton").classList.remove("invisible");
-		document.getElementById("fsButton").classList.add("visible");
-
-		document.getElementById("dlButton").classList.remove("invisible");
-		document.getElementById("dlButton").classList.add("visible");
+		document.getElementById("psvButtons").classList.remove("hidden");
 	}
 
-	/*
-	const styleTag = document.getElementById("hTag");
-
-	styleTag.innerHTML = `
-		#${id} { fill: #CC3E28; color: #E06147; }
-	`;
-	*/
-
-	let panoSetup = DEFAULTPANOSETUP;
-
-	for (const n of SetupData.default.panoDatas) {
-		if (n[0] === id) {
-			panoSetup = n[1];
-		}
-	}
+	const panoSetup = selectedPoint.panoData === undefined ? DEFAULTPANOSETUP : selectedPoint.panoData;
 
 	let hasAlt = false;
 	let altId = null;
@@ -285,18 +288,15 @@ window.activateId = (id) => {
 		hlItem.classList.add("hide");
 	}
 
-	const alertButton = document.getElementById("alertButton");
 	if (hasAlt) {
-		alertButton.classList.add("visible");
-		alertButton.classList.remove("invisible");
-		alertButton.setAttribute("ALT_LINK", altId);
+		window.showRedAlert(altId);
 	} else {
-		alertButton.classList.remove("visible");
-		alertButton.classList.add("invisible");
+		window.hideRedAlert();
 	}
 
 	const url = `./panorama-assets/panoramas/${id}${imgExt}`;
 
+	console.log("loading PanoSetp", panoSetup);
 	// eslint-disable-next-line prefer-const
 	let panoOpts = {
 		transition: true,
@@ -373,3 +373,7 @@ window.indexClicked = ($element) => {
 window.animationTest = () => {
 	console.log("animationTest");
 };
+
+window.addEventListener("load", function () {
+	window.loadFunc();
+});

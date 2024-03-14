@@ -12,6 +12,8 @@ var alts: [string, string][] = [];
 
 var sidebarIds: [string, string[]][] = [];
 
+var pointSet: Map<string, PointData> = new Map<string, PointData>();
+
 async function main() {
 	let groups: PlanGroup[] = JSON.parse(fs.readFileSync("info.json").toString()) as PlanGroup[];
     create(groups);
@@ -26,7 +28,11 @@ async function main() {
 	fs.writeFileSync("./../src/scss/delay.scss", delayCssOut.join("\n"));
 
 
-	fs.writeFileSync("./../src/js/panoSetup.json", JSON.stringify({ panoDatas: setups, alts: alts, sidebarIds: sidebarIds }, null, "\t"));
+	fs.writeFileSync("./../src/js/panoSetup.json", JSON.stringify({ 
+		panoDatas: setups, 
+		alts: alts, 
+		sidebarIds: sidebarIds,
+		pointSet: Array.from(pointSet.values()) }, null, "\t"));
 
 	await checkImages(groups);
 
@@ -98,6 +104,7 @@ export function create(groups: PlanGroup[]) {
 
 			plan.points.forEach(p => {
 				let setup!: PanoData;
+				let compSetup: PanoData | undefined = undefined;
 				if (p.setup != undefined) {
 					setup = p.setup;
 				} else if (plan.setup != undefined) {
@@ -106,16 +113,39 @@ export function create(groups: PlanGroup[]) {
 					setup = group.setup;
 				}
 				if (setup != undefined) {
-					let compSetup = completePanoData(setup);
+					compSetup = completePanoData(setup);
 					setups.push([p.id, compSetup]);
 				}
 
 				if (p.hasAlt != undefined) {
 					alts.push([p.id, p.hasAlt]);
 				}
+
+
+				pointSet.set(p.id, {
+						id: p.id,
+						planName: plan.name,
+						planGroupName: group.name,
+						planGroupSubtitle: group.subtitle,
+						hasAlt: p.hasAlt != undefined,
+						altId: p.hasAlt,
+						panoData: compSetup,
+						isAlt: false
+					})
 			})
 
 		});
+
+		for (let p of Array.from(pointSet.values())) {
+			if (p.hasAlt) {
+				let n = pointSet.get(p.altId ?? "");
+				if (n) {
+					n.altId = p.id;
+					n.isAlt = true;
+				}
+			}
+		}
+
 	});
 
 
@@ -255,3 +285,13 @@ export interface MapPoint {
 	hasAlt?: string;
 }
 
+export interface PointData {
+	id: string;
+	planName: string;
+	planGroupName: string;
+	planGroupSubtitle?: string;
+	hasAlt: boolean;
+	altId?: string;
+	isAlt: boolean;
+	panoData?: PanoData;
+}

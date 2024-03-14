@@ -142,20 +142,27 @@ body {
                 background-color: transpBg(#102929);
                 display: flex;
                 gap: $frameWidth * 0.5;
+
+                transition: opacity 0.4s ease;
+
+                opacity: 1;
+
+                &.hidden {
+                    pointer-events: none;
+                    opacity: 0;
+                }
+
+                
                 
                 button {
-                    padding: 0 ($frameWidth * 0.25) ($frameWidth * 0.25) 0;
+
                     height: 100%;
-                    flex: 0 1 $frameWidth * 4;
+                    flex: 0 1 $frameWidth * 3.5;
                     border: none;
                     text-transform: uppercase;
                     font-size: $frameWidth * 0.75;
 
-                    display: flex;
-                    align-items: end;
-                    justify-content: flex-end;
-                    font-weight: 900;
-                    text-align: right;
+                    
 
                     color: $black;
 
@@ -168,15 +175,32 @@ body {
 
                     opacity: 1;
 
+                    position: relative;
+
+                    & > div {
+                        position: absolute;
+                        top:0;
+                        bottom:0;
+                        display: flex;
+                        left: 0;
+                        width: $frameWidth * 3.5;
+                        padding: 0 ($frameWidth * 0.25) ($frameWidth * 0.25) 0;
+                        display: flex;
+                        align-items: end;
+                        justify-content: flex-end;
+                        font-weight: 900;
+                        text-align: right;    
+                    }
+
                     &.invisible {
                         opacity: 0;
                     }
 
-                    &:nth-last-child(1 of .visible) {
+                    &.rounded {
                         padding-right: $frameWidth * 0.5;
                         border-top-right-radius: $frameWidth * 2;
                         border-bottom-right-radius: $frameWidth * 2;
-                        flex-basis: $frameWidth * 4.75;
+                        flex-basis: $frameWidth * 4;
                     }
 
                     img {
