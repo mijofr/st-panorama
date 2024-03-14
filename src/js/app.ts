@@ -32,8 +32,6 @@ function getPanoHorizontalRange(p: { croppedWidth: any; fullWidth: number; cropp
 var viewer: Viewer;
 var visibleRangePlugin: VisibleRangePlugin;
 
-var pointSet = new Map();
-
 var appConfig: AppConfig = {
 	useWebP: false,
 	imgExt: ".jpg",
@@ -68,11 +66,10 @@ function hideRedAlert() {
 };
 
 function loadFunc(): void {
-	console.log(pointSet);
 	for (const c of Array.from(SetupData.pointSet)) {
-		pointSet.set(c.id, c);
+		appConfig.pointSet.set(c.id, c as PointData);
 	}
-	console.log(pointSet);
+	appConfig.pointSet;
 
 	supportsWebP.then((supported) => {
 
@@ -187,7 +184,7 @@ function loadFunc(): void {
 // had to do some things to this to get it to work in the new version,
 // it used to be fullheight 1536.
 
-const DEFAULTPANOSETUP = {
+const DEFAULTPANOSETUP: PanoData = {
 	fullWidth: 2496,
 	fullHeight: 1248,
 	croppedWidth: 2496,
@@ -197,6 +194,7 @@ const DEFAULTPANOSETUP = {
 	poseHeading: 0, // 0 to 360
 	posePitch: 0, // -90 to 90
 	poseRoll: 0, // -180 to 180
+	isEquirectangular: true
 };
 
 // doing nasty thing?
@@ -217,7 +215,7 @@ const DEFAULTPANOSETUP = {
 
 function activateId(id: string): void {
 
-	const selectedPoint = pointSet.get(id);
+	const selectedPoint = appConfig.pointSet.get(id);
 	if (!selectedPoint) {
 		console.warn("no selectedPoint");
 		return;
@@ -233,6 +231,7 @@ function activateId(id: string): void {
 	const panoSetup = selectedPoint.panoData == null ? DEFAULTPANOSETUP : selectedPoint.panoData;
 	console.log("selectedPanoData", panoSetup);
 
+	/*
 	let hasAlt = false;
 	let altId = null;
 	let isAlt = false;
@@ -250,6 +249,7 @@ function activateId(id: string): void {
 	console.log(id);
 	console.log("hasAlt", hasAlt, altId);
 	console.log("isAlt", isAlt, origId);
+	*/
 
 	const highlit = Array.from(document.getElementsByClassName("highlit"));
 	for (const n of highlit) {
@@ -258,13 +258,13 @@ function activateId(id: string): void {
 	}
 
 	let idItem = document.getElementById(id);
-	if (idItem == null && isAlt) {
-		idItem = document.getElementById(origId);
+	if (idItem == null && selectedPoint.isAlt && selectedPoint.altId != null) {
+		idItem = document.getElementById(selectedPoint.altId);
 	}
 
 	if (idItem) {
 		idItem.classList.add("highlit");
-		if (isAlt) {
+		if (selectedPoint.isAlt) {
 			idItem.classList.add("alt-highlit");
 		}
 
@@ -282,7 +282,7 @@ function activateId(id: string): void {
 		hlItem.attributes.getNamedItem("y").value = idItem.attributes.getNamedItem("y").value;
 		hlItem.classList.remove("hide");
 		idItem.parentNode?.appendChild(hlItem);
-		if (isAlt) {
+		if (selectedPoint.isAlt) {
 			hlItem.classList.add("alt-highlit");
 		} else {
 			hlItem.classList.remove("alt-highlit");
@@ -291,8 +291,8 @@ function activateId(id: string): void {
 		hlItem.classList.add("hide");
 	}
 
-	if (hasAlt) {
-		showRedAlert(altId);
+	if (selectedPoint.hasAlt && selectedPoint.altId != null) {
+		showRedAlert(selectedPoint.altId);
 	} else {
 		hideRedAlert();
 	}
