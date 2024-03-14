@@ -1,6 +1,6 @@
 import "../scss/index.scss";
 
-import { Viewer, EquirectangularAdapter } from "@photo-sphere-viewer/core";
+import { Viewer, EquirectangularAdapter, AbstractPlugin, PanoData } from "@photo-sphere-viewer/core";
 import { VisibleRangePlugin } from "@photo-sphere-viewer/visible-range-plugin";
 import { AutorotatePlugin } from "@photo-sphere-viewer/autorotate-plugin";
 
@@ -9,61 +9,73 @@ import { AutorotatePlugin } from "@photo-sphere-viewer/autorotate-plugin";
 import supportsWebP from "supports-webp";
 
 import * as SetupData from "./panoSetup.json";
+import { AppConfig,  PointData } from "./types";
 
-function getPanoVerticalRange(p) {
+function getPanoVerticalRange(p: { croppedHeight: any; fullHeight: number; croppedY: any; }) {
 	if (p.croppedHeight === p.fullHeight) {
 		return null;
 	} else {
-		const getAngle = (y) => Math.PI * (1 - y / p.fullHeight) - Math.PI / 2;
+		const getAngle = (y: number) => Math.PI * (1 - y / p.fullHeight) - Math.PI / 2;
 		return [getAngle(p.croppedY + p.croppedHeight), getAngle(p.croppedY)];
 	}
 }
 
-function getPanoHorizontalRange(p) {
+function getPanoHorizontalRange(p: { croppedWidth: any; fullWidth: number; croppedX: any; }) {
 	if (p.croppedWidth === p.fullWidth) {
 		return null;
 	} else {
-		const getAngle = (x) => 2 * Math.PI * (x / p.fullWidth) - Math.PI;
+		const getAngle = (x: number) => 2 * Math.PI * (x / p.fullWidth) - Math.PI;
 		return [getAngle(p.croppedX), getAngle(p.croppedX + p.croppedWidth)];
 	}
 }
 
-var viewer;
-var visibleRangePlugin;
+var viewer: Viewer;
+var visibleRangePlugin: VisibleRangePlugin;
 
-var currentHorizRange = null;
-var currentVertRange = null;
+var currentHorizRange: [number, number] | null = null;
+var currentVertRange: [number, number] | null = null;
 
-var initImg = true;
+var isOnInitImg = true;
 
-var currentId = null;
+var currentId: string | null = null;
 var redAlertVisible = false;
 
 var pointSet = new Map();
 
-window.showRedAlert = (redAlertId) => {
+var appConfig: AppConfig = {
+	useWebP: false,
+	imgExt: ".jpg",
+	pointSet: new Map<string, PointData>(),
+	isOnInitImg: true,
+	currentHorizRange: null,
+	currentVertRange: null,
+	redAlertVisible: false,
+	currentId: null,
+}
+
+function showRedAlert(redAlertId: string): void {
 
 	const alertButton = document.getElementById("alertButton");
-	alertButton.setAttribute("ALT_LINK", redAlertId);
+	alertButton?.setAttribute("ALT_LINK", redAlertId);
 
 	if (redAlertVisible) {
 		return;
 	}
 	redAlertVisible = true;
-	alertButton.classList.remove("invisible");
-	document.getElementById("fsButton").classList.remove("rounded");
+	alertButton?.classList.remove("invisible");
+	document.getElementById("fsButton")?.classList.remove("rounded");
 };
 
-window.hideRedAlert = () => {
+function hideRedAlert() {
 	if (!redAlertVisible) {
 		return;
 	}
 	redAlertVisible = false;
-	document.getElementById("alertButton").classList.add("invisible");
-	document.getElementById("fsButton").classList.add("rounded");
+	document.getElementById("alertButton")?.classList.add("invisible");
+	document.getElementById("fsButton")?.classList.add("rounded");
 };
 
-window.loadFunc = () => {
+function loadFunc(): void {
 	console.log(pointSet);
 	for (const c of Array.from(SetupData.pointSet)) {
 		pointSet.set(c.id, c);
@@ -87,7 +99,7 @@ window.loadFunc = () => {
 		const randVal = Math.random();
 
 		let initPanoSrc = "./panorama-assets/panoramas/STARMAP" + imgExt;
-		let initPanoData = {
+		let initPanoData: PanoData = {
 			fullWidth: STARWIDTH,
 			fullHeight: STARHEIGHT,
 			croppedWidth: STARWIDTH,
@@ -97,6 +109,7 @@ window.loadFunc = () => {
 			poseHeading: 270, // 0 to 360
 			posePitch: 0, // -90 to 90
 			poseRoll: 0, // -180 to 180
+			isEquirectangular: true
 		};
 		let defaultPitch = 0.3;
 		let rotateSpeed = "0.5rpm";
@@ -113,6 +126,7 @@ window.loadFunc = () => {
 				poseHeading: 75, // 0 to 360
 				posePitch: 0, // -90 to 90
 				poseRoll: 0, // -180 to 180
+				isEquirectangular: true
 			};
 			defaultPitch = 0;
 			rotateSpeed = "1rpm";
@@ -146,13 +160,13 @@ window.loadFunc = () => {
 			navbar: false,
 		});
 
-		visibleRangePlugin = viewer.getPlugin(VisibleRangePlugin);
+		visibleRangePlugin = viewer.getPlugin(VisibleRangePlugin) as VisibleRangePlugin;
 
 		const { hash } = window.location;
 		if (hash !== undefined && hash.length > 0) {
 			const id = hash.substring(1);
 			console.log(id);
-			window.activateId(id);
+			activateId(id);
 		}
 
 		viewer.addEventListener("panorama-load", () => {
@@ -163,8 +177,9 @@ window.loadFunc = () => {
 		viewer.addEventListener("panorama-loaded", () => {
 			console.log("loaded");
 
-			visibleRangePlugin.setHorizontalRange(currentHorizRange);
-			visibleRangePlugin.setVerticalRange(currentVertRange);
+
+			visibleRangePlugin.setHorizontalRange(currentHorizRange as [number, number]); 
+			visibleRangePlugin.setVerticalRange(currentVertRange  as [number, number]); 
 
 		});
 
@@ -210,10 +225,11 @@ const DEFAULTPANOSETUP = {
 };
 */
 
-window.activateId = (id) => {
+function activateId(id: string): void {
 
 	const selectedPoint = pointSet.get(id);
 	if (!selectedPoint) {
+		console.warn("no selectedPoint");
 		return;
 	}
 
@@ -224,12 +240,13 @@ window.activateId = (id) => {
 		imgExt = ".webp";
 	}
 
-	if (initImg) {
-		initImg = false;
-		document.getElementById("psvButtons").classList.remove("hidden");
+	if (isOnInitImg) {
+		isOnInitImg = false;
+		document.getElementById("psvButtons")?.classList.remove("hidden");
 	}
 
-	const panoSetup = selectedPoint.panoData === undefined ? DEFAULTPANOSETUP : selectedPoint.panoData;
+	const panoSetup = selectedPoint.panoData == null ? DEFAULTPANOSETUP : selectedPoint.panoData;
+	console.log("selectedPanoData", panoSetup);
 
 	let hasAlt = false;
 	let altId = null;
@@ -266,19 +283,20 @@ window.activateId = (id) => {
 			idItem.classList.add("alt-highlit");
 		}
 
-		const groupCont = idItem.parentElement.parentElement.parentElement.parentElement.parentElement;
-		groupCont.classList.add("highlit");
+		const groupCont = idItem?.parentElement?.parentElement?.parentElement?.parentElement?.parentElement;
+		groupCont?.classList.add("highlit");
 
-		const titleItem = idItem.parentElement.parentElement.previousElementSibling;
-		titleItem.classList.add("highlit");
+		const titleItem = idItem?.parentElement?.parentElement?.previousElementSibling;
+		titleItem?.classList.add("highlit");
 	}
 
 	const hlItem = document.getElementById("hlPoint");
-	if (idItem && hlItem) {
+	if (idItem != null && hlItem != null) {
+
 		hlItem.attributes.getNamedItem("x").value = idItem.attributes.getNamedItem("x").value;
 		hlItem.attributes.getNamedItem("y").value = idItem.attributes.getNamedItem("y").value;
 		hlItem.classList.remove("hide");
-		idItem.parentNode.appendChild(hlItem);
+		idItem.parentNode?.appendChild(hlItem);
 		if (isAlt) {
 			hlItem.classList.add("alt-highlit");
 		} else {
@@ -289,9 +307,9 @@ window.activateId = (id) => {
 	}
 
 	if (hasAlt) {
-		window.showRedAlert(altId);
+		showRedAlert(altId);
 	} else {
-		window.hideRedAlert();
+		hideRedAlert();
 	}
 
 	const url = `./panorama-assets/panoramas/${id}${imgExt}`;
@@ -307,16 +325,17 @@ window.activateId = (id) => {
 
 	// I have to do this manually apparently because doing it from
 	// panoData seems to be broken if you're using a fade transition.
-	currentHorizRange = getPanoHorizontalRange(panoSetup);
-	currentVertRange = getPanoVerticalRange(panoSetup);
+	currentHorizRange = getPanoHorizontalRange(panoSetup) as [number, number] | null;
+	currentVertRange = getPanoVerticalRange(panoSetup)  as [number, number] | null;
 	// visibleRangePlugin.setHorizontalRange(horizRange);
 	// visibleRangePlugin.setVerticalRange(vertRange);
+	console.log("setting variables for Ranges", currentHorizRange, currentVertRange);
 
-	viewer.setPanorama(url, panoOpts).then((res) => {
+	viewer.setPanorama(url, panoOpts).then((res: any) => {
 		console.log("transition complete", res);
 	});
 
-	var autoRotatePlugin = viewer.getPlugin(AutorotatePlugin);
+	var autoRotatePlugin = viewer.getPlugin(AutorotatePlugin) as AutorotatePlugin;
 	console.log(autoRotatePlugin);
 	console.log(autoRotatePlugin.isEnabled());
 
@@ -326,37 +345,44 @@ window.activateId = (id) => {
 
 };
 
-window.alrtClicked = ($element) => {
+
+function animationTest() {
+	console.log("animationTest");
+};
+
+// handlers ==========================
+
+(window as any).alrtClicked = ($element: { getAttribute: (arg0: string) => any; }) => {
 	const altlink = $element.getAttribute("alt_link");
 	if (altlink) {
-		window.activateId(altlink);
+		activateId(altlink);
 	}
 };
 
-window.cclick = ($element) => {
+(window as any).cclick = ($element: { target: any; }) => {
 	const { target } = $element;
 	const { id } = target;
 
-	window.activateId(id);
+	activateId(id);
 
 };
 
-window.downloadClicked = ($element) => {
+(window as any).downloadClicked = ($element: any) => {
 	console.log("downloadClicked");
 	if (viewer && viewer.config != null && viewer.config.panorama != null) {
 		window.open(viewer.config.panorama, "_blank");
 	}
 };
 
-window.fullscreenClicked = ($element) => {
+(window as any).fullscreenClicked = ($element: any) => {
 	console.log("fullscreenClicked");
 	viewer.toggleFullscreen();
 };
 
-window.directLinkClicked = ($element) => {
+(window as any).directLinkClicked = ($element: any) => {
 	console.log("directLinkClicked");
 	// window.activateId("SNW-SB1");
-	const newLoc = new URL(window.location);
+	const newLoc = new URL(window.location.href);
 	if (currentId) {
 		newLoc.hash = currentId;
 		window.history.pushState({}, "", newLoc);
@@ -365,15 +391,12 @@ window.directLinkClicked = ($element) => {
 	}
 };
 
-window.indexClicked = ($element) => {
+(window as any).indexClicked = ($element: any) => {
 	console.log("indexClicked");
-	window.animationTest();
+	animationTest();
 };
 
-window.animationTest = () => {
-	console.log("animationTest");
-};
 
 window.addEventListener("load", function () {
-	window.loadFunc();
+	loadFunc();
 });

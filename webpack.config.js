@@ -14,7 +14,7 @@ const environment = require("./configuration/environment");
 
 module.exports = {
 	entry: {
-		app: path.resolve(environment.paths.source, "js", "app.js"),
+		app: path.resolve(environment.paths.source, "js", "app.ts"),
 	},
 	output: {
 		filename: "js/[name].js",
@@ -27,7 +27,7 @@ module.exports = {
 				use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"],
 			},
 			{
-				test: /\.js$/,
+				test: /\.(js|ts|jsx|tsx)$/,
 				exclude: /node_modules/,
 				use: ["babel-loader"],
 			},

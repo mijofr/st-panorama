@@ -1,3 +1,6 @@
+import { PanoData } from "@photo-sphere-viewer/core";
+import { PointData, Plan, PlanGroup } from "./gb-types";
+
 const fs = require('fs');
 var beautify_html = require('js-beautify').html;
 var sizeOf = require('buffer-image-size');
@@ -48,7 +51,8 @@ const DEFAULT_SETUP: PanoData = {
 		croppedY: 0,
 		poseHeading: 0,
 		posePitch: 0,
-		poseRoll: 0
+		poseRoll: 0,
+		isEquirectangular: true
 }
 
 async function checkImages(groups: PlanGroup[]) {
@@ -243,55 +247,4 @@ export function create(groups: PlanGroup[]) {
 
 }
 
-
-
-
 main();
-
-export interface PlanGroup {
-	name: string;
-	subtitle?: string;
-	plans: Plan[];
-	setup?: PanoData;
-}
-
-export interface Plan {
-	name: string;
-	img: string;
-    height: number;
-    width: number;
-	points: MapPoint[];
-	setup?: PanoData;
-}
-
-export interface PanoData {
-	fullWidth: number;
-	fullHeight: number;
-	croppedWidth: number;
-	croppedHeight: number;
-	croppedX: number;
-	croppedY: number;
-	poseHeading: number;
-	posePitch: number;
-	poseRoll: number;
-}
-
-
-export interface MapPoint {
-	id: string;
-	x: number;
-	y: number;
-	setup?: PanoData;
-	hasAlt?: string;
-}
-
-export interface PointData {
-	id: string;
-	planName: string;
-	planGroupName: string;
-	planGroupSubtitle?: string;
-	hasAlt: boolean;
-	altId?: string;
-	isAlt: boolean;
-	panoData?: PanoData;
-}
