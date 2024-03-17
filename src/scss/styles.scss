@@ -242,10 +242,29 @@ body {
 
                 color: $white;
                 font-weight: 700;
-                span {
+                & > span {
                     line-height: 0.8;
                     font-size: $frameWidth;
+                    text-transform: uppercase;
+
+                    &#titleLeft {
+                        margin-left: -0.05em;
+                    }
+                    &#titleRight {
+                        margin-right: -0.05em;
+                    }
+
+                    #titleLeftSub, #titleRightSub {
+                        font-size: 0.9em;
+                        font-weight: 400;
+                        margin-left: 0.1em;
+                    }
+                    .invisible {
+                        display: none;
+                    }
+
                 }
+                
             }
         }
 

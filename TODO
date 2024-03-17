@@ -1,15 +1,10 @@
 Add extra buttons on frame:
-    fullscreen
-    direct link
     zoom?
-    download?
 
 downloadUrl
 downloadName
 
-
-sort out markers on maps: make them more noticable and understandable, affordance, better highlight for when you pick one. 
-
+need to set up the on-ready transitions for sidebar load.
 
 https://stackoverflow.com/questions/5680013/how-to-be-notified-once-a-web-font-has-loaded
 

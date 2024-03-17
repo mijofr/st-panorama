@@ -1,5 +1,8 @@
 import { PanoData } from "@photo-sphere-viewer/core";
 
+export interface PanoSetupFile {
+	pointSet: PointData[];
+}
 
 export interface AppConfig {
     useWebP: boolean;

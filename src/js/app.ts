@@ -1,36 +1,78 @@
 import "../scss/index.scss";
 
-import { Viewer, EquirectangularAdapter, AbstractPlugin, PanoData } from "@photo-sphere-viewer/core";
+import { Viewer, EquirectangularAdapter, PanoData } from "@photo-sphere-viewer/core";
 import { VisibleRangePlugin } from "@photo-sphere-viewer/visible-range-plugin";
 import { AutorotatePlugin } from "@photo-sphere-viewer/autorotate-plugin";
 
-// import * as VisibleRangePlugin from "photo-sphere-viewer/dist/plugins/visible-range";
-// import { EVENTS } from "photo-sphere-viewer/src/data/constants";
 import supportsWebP from "supports-webp";
 
-import * as SetupData from "./panoSetup.json";
-import { AppConfig,  PointData } from "./types";
+import * as _SetupData from "./panoSetup.json";
+const SetupData: PanoSetupFile = _SetupData as PanoSetupFile;
 
-function getPanoVerticalRange(p: { croppedHeight: any; fullHeight: number; croppedY: any; }) {
-	if (p.croppedHeight === p.fullHeight) {
-		return null;
-	} else {
-		const getAngle = (y: number) => Math.PI * (1 - y / p.fullHeight) - Math.PI / 2;
-		return [getAngle(p.croppedY + p.croppedHeight), getAngle(p.croppedY)];
-	}
-}
+import { AppConfig,  PanoSetupFile,  PointData } from "./types";
 
-function getPanoHorizontalRange(p: { croppedWidth: any; fullWidth: number; croppedX: any; }) {
-	if (p.croppedWidth === p.fullWidth) {
-		return null;
-	} else {
-		const getAngle = (x: number) => 2 * Math.PI * (x / p.fullWidth) - Math.PI;
-		return [getAngle(p.croppedX), getAngle(p.croppedX + p.croppedWidth)];
-	}
-}
 
 var viewer: Viewer;
 var visibleRangePlugin: VisibleRangePlugin;
+
+
+// had to do some things to this to get it to work in the new version,
+// it used to be fullheight 1536.
+
+const DEFAULTPANOSETUP: PanoData = {
+	fullWidth: 2496,
+	fullHeight: 1248,
+	croppedWidth: 2496,
+	croppedHeight: 768,
+	croppedX: 0,
+	croppedY: 240,
+	poseHeading: 0, // 0 to 360
+	posePitch: 0, // -90 to 90
+	poseRoll: 0, // -180 to 180
+	isEquirectangular: true
+};
+
+// doing nasty thing?
+// gives invalid panodata error but does look a bit better
+/*
+const DEFAULTPANOSETUP = {
+	fullWidth: 3072,
+	fullHeight: 1536,
+	croppedWidth: 3072,
+	croppedHeight: 768,
+	croppedX: 0,
+	croppedY: 384,
+	poseHeading: 0, // 0 to 360
+	posePitch: 0, // -90 to 90
+	poseRoll: 0, // -180 to 180
+};
+*/
+
+const STARMAPSETUP: PanoData = {
+	fullWidth: 6144,
+	fullHeight: 3072,
+	croppedWidth: 6144,
+	croppedHeight: 3072,
+	croppedX: 0,
+	croppedY: 0,
+	poseHeading: 270, // 0 to 360
+	posePitch: 0, // -90 to 90
+	poseRoll: 0, // -180 to 180
+	isEquirectangular: true
+}
+
+const HOLOGRIDSETUP: PanoData = {
+	fullWidth: 2880,
+	fullHeight: 1440,
+	croppedWidth: 2880,
+	croppedHeight: 1440,
+	croppedX: 0,
+	croppedY: 0,
+	poseHeading: 75, // 0 to 360
+	posePitch: 0, // -90 to 90
+	poseRoll: 0, // -180 to 180
+	isEquirectangular: true
+};
 
 var appConfig: AppConfig = {
 	useWebP: false,
@@ -41,6 +83,25 @@ var appConfig: AppConfig = {
 	currentVertRange: null,
 	redAlertVisible: false,
 	currentId: null,
+}
+
+
+function getPanoVerticalRange(p: { croppedHeight: any; fullHeight: number; croppedY: any; }): [number, number] | null {
+	if (p.croppedHeight === p.fullHeight) {
+		return null;
+	} else {
+		const getAngle = (y: number) => Math.PI * (1 - y / p.fullHeight) - Math.PI / 2;
+		return [getAngle(p.croppedY + p.croppedHeight), getAngle(p.croppedY)];
+	}
+}
+
+function getPanoHorizontalRange(p: { croppedWidth: any; fullWidth: number; croppedX: any; }): [number, number] | null  {
+	if (p.croppedWidth === p.fullWidth) {
+		return null;
+	} else {
+		const getAngle = (x: number) => 2 * Math.PI * (x / p.fullWidth) - Math.PI;
+		return [getAngle(p.croppedX), getAngle(p.croppedX + p.croppedWidth)];
+	}
 }
 
 function showRedAlert(redAlertId: string): void {
@@ -80,41 +141,16 @@ function loadFunc(): void {
 			appConfig.useWebP = false;
 		}
 
-		const STARWIDTH = 6144;
-		const STARHEIGHT = 3072;
-
-		const randVal = Math.random();
 
 		let initPanoSrc = "./panorama-assets/panoramas/STARMAP" + appConfig.imgExt;
-		let initPanoData: PanoData = {
-			fullWidth: STARWIDTH,
-			fullHeight: STARHEIGHT,
-			croppedWidth: STARWIDTH,
-			croppedHeight: STARHEIGHT,
-			croppedX: 0,
-			croppedY: 0,
-			poseHeading: 270, // 0 to 360
-			posePitch: 0, // -90 to 90
-			poseRoll: 0, // -180 to 180
-			isEquirectangular: true
-		};
+		let initPanoData = STARMAPSETUP;
 		let defaultPitch = 0.3;
 		let rotateSpeed = "0.5rpm";
 
+		const randVal = Math.random();
 		if (randVal < 0.1) {
 			initPanoSrc = "./panorama-assets/panoramas/HOLOGRID_01.png";
-			initPanoData = {
-				fullWidth: 2880,
-				fullHeight: 1440,
-				croppedWidth: 2880,
-				croppedHeight: 1440,
-				croppedX: 0,
-				croppedY: 0,
-				poseHeading: 75, // 0 to 360
-				posePitch: 0, // -90 to 90
-				poseRoll: 0, // -180 to 180
-				isEquirectangular: true
-			};
+			initPanoData = HOLOGRIDSETUP;
 			defaultPitch = 0;
 			rotateSpeed = "1rpm";
 		}
@@ -152,7 +188,7 @@ function loadFunc(): void {
 		const { hash } = window.location;
 		if (hash !== undefined && hash.length > 0) {
 			const id = hash.substring(1);
-			console.log(id);
+			console.log("loading from URL anchor", id);
 			activateId(id);
 		}
 
@@ -163,8 +199,6 @@ function loadFunc(): void {
 		});
 		viewer.addEventListener("panorama-loaded", () => {
 			console.log("loaded");
-
-
 			visibleRangePlugin.setHorizontalRange(appConfig.currentHorizRange as [number, number]); 
 			visibleRangePlugin.setVerticalRange(appConfig.currentVertRange  as [number, number]); 
 
@@ -180,38 +214,6 @@ function loadFunc(): void {
 	}, 1500);
 
 };
-
-// had to do some things to this to get it to work in the new version,
-// it used to be fullheight 1536.
-
-const DEFAULTPANOSETUP: PanoData = {
-	fullWidth: 2496,
-	fullHeight: 1248,
-	croppedWidth: 2496,
-	croppedHeight: 768,
-	croppedX: 0,
-	croppedY: 240,
-	poseHeading: 0, // 0 to 360
-	posePitch: 0, // -90 to 90
-	poseRoll: 0, // -180 to 180
-	isEquirectangular: true
-};
-
-// doing nasty thing?
-// gives invalid panodata error but does look a bit better
-/*
-const DEFAULTPANOSETUP = {
-	fullWidth: 3072,
-	fullHeight: 1536,
-	croppedWidth: 3072,
-	croppedHeight: 768,
-	croppedX: 0,
-	croppedY: 384,
-	poseHeading: 0, // 0 to 360
-	posePitch: 0, // -90 to 90
-	poseRoll: 0, // -180 to 180
-};
-*/
 
 function activateId(id: string): void {
 
@@ -229,27 +231,6 @@ function activateId(id: string): void {
 	}
 
 	const panoSetup = selectedPoint.panoData == null ? DEFAULTPANOSETUP : selectedPoint.panoData;
-	console.log("selectedPanoData", panoSetup);
-
-	/*
-	let hasAlt = false;
-	let altId = null;
-	let isAlt = false;
-	let origId = null;
-	for (const n of SetupData.default.alts) {
-		if (n[0] === id) {
-			hasAlt = true;
-			altId = n[1];
-		} else if (n[1] === id) {
-			isAlt = true;
-			origId = n[0];
-		}
-	}
-
-	console.log(id);
-	console.log("hasAlt", hasAlt, altId);
-	console.log("isAlt", isAlt, origId);
-	*/
 
 	const highlit = Array.from(document.getElementsByClassName("highlit"));
 	for (const n of highlit) {
@@ -257,38 +238,36 @@ function activateId(id: string): void {
 		n.classList.remove("alt-highlit");
 	}
 
-	let idItem = document.getElementById(id);
-	if (idItem == null && selectedPoint.isAlt && selectedPoint.altId != null) {
-		idItem = document.getElementById(selectedPoint.altId);
+	let pointSvgElement = document.getElementById(id) as unknown as SVGUseElement;
+	if (pointSvgElement == null && selectedPoint.isAlt && selectedPoint.altId != null) {
+		pointSvgElement = document.getElementById(selectedPoint.altId) as unknown as SVGUseElement;
 	}
 
-	if (idItem) {
-		idItem.classList.add("highlit");
+	if (pointSvgElement) {
+		pointSvgElement.classList.add("highlit");``
 		if (selectedPoint.isAlt) {
-			idItem.classList.add("alt-highlit");
+			pointSvgElement.classList.add("alt-highlit");
 		}
 
-		const groupCont = idItem?.parentElement?.parentElement?.parentElement?.parentElement?.parentElement;
+		const groupCont = pointSvgElement?.parentElement?.parentElement?.parentElement?.parentElement?.parentElement;
 		groupCont?.classList.add("highlit");
 
-		const titleItem = idItem?.parentElement?.parentElement?.previousElementSibling;
+		const titleItem = pointSvgElement?.parentElement?.parentElement?.previousElementSibling;
 		titleItem?.classList.add("highlit");
 	}
 
-	const hlItem = document.getElementById("hlPoint");
-	if (idItem != null && hlItem != null) {
-
-		hlItem.attributes.getNamedItem("x").value = idItem.attributes.getNamedItem("x").value;
-		hlItem.attributes.getNamedItem("y").value = idItem.attributes.getNamedItem("y").value;
-		hlItem.classList.remove("hide");
-		idItem.parentNode?.appendChild(hlItem);
-		if (selectedPoint.isAlt) {
-			hlItem.classList.add("alt-highlit");
-		} else {
-			hlItem.classList.remove("alt-highlit");
-		}
-	} else if (hlItem != null) {
-		hlItem.classList.add("hide");
+	const highlightFrameElement = document.getElementById("hlPoint") as unknown as SVGUseElement;
+	if (pointSvgElement != null && highlightFrameElement != null) {
+		highlightFrameElement.setAttribute("x", pointSvgElement.getAttribute("x") ?? "0");
+			highlightFrameElement.setAttribute("y", pointSvgElement.getAttribute("y") ?? "0");
+			pointSvgElement.parentNode?.appendChild(highlightFrameElement);
+			if (selectedPoint.isAlt) {
+				highlightFrameElement.classList.add("alt-highlit");
+			} else {
+				highlightFrameElement.classList.remove("alt-highlit");
+			}
+	} else if (highlightFrameElement != null) {
+		highlightFrameElement.classList.add("hide");
 	}
 
 	if (selectedPoint.hasAlt && selectedPoint.altId != null) {
@@ -315,19 +294,39 @@ function activateId(id: string): void {
 	// visibleRangePlugin.setHorizontalRange(horizRange);
 	// visibleRangePlugin.setVerticalRange(vertRange);
 
+	updateTitleElement(document.getElementById("titleLeftMain"), selectedPoint.planName);
+	// updateTitleElement(document.getElementById("titleLeftSub"), selectedPoint.planGroupName);
+	updateTitleElement(document.getElementById("titleRightMain"), selectedPoint.planGroupName);
+	updateTitleElement(document.getElementById("titleRightSub"), selectedPoint.planGroupSubtitle);
+
+	let newTitle = "Trekorama - " + selectedPoint.planGroupName;
+	if (selectedPoint.planGroupSubtitle) {
+		newTitle = newTitle + ` ${selectedPoint.planGroupSubtitle}`;
+	}
+	newTitle = newTitle + `, ${selectedPoint.planName}`;
+	document.title = newTitle;
+
 	viewer.setPanorama(url, panoOpts).then((res: any) => {
 		console.log("transition complete", res);
 	});
 
 	var autoRotatePlugin = viewer.getPlugin(AutorotatePlugin) as AutorotatePlugin;
-	console.log(autoRotatePlugin);
-	console.log(autoRotatePlugin.isEnabled());
-
 	if (autoRotatePlugin.isEnabled()) {
 		autoRotatePlugin.stop();
 	}
 
 };
+
+function updateTitleElement(titleEl: HTMLElement | null, text: string | undefined) {
+	if (titleEl != null) {
+		if (text == null || text === undefined || text.trim() == "") {
+			titleEl.classList.add("invisible");
+		} else {
+			titleEl.classList.remove("invisible");
+			titleEl.innerText = text;
+		}
+	}
+}
 
 
 function animationTest() {

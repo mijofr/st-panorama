@@ -30,12 +30,17 @@ async function main() {
 	fs.writeFileSync("./../src/scss/land.scss", landCssOut.join("\n"));
 	fs.writeFileSync("./../src/scss/delay.scss", delayCssOut.join("\n"));
 
-
+	/*
 	fs.writeFileSync("./../src/js/panoSetup.json", JSON.stringify({ 
 		panoDatas: setups, 
 		alts: alts, 
 		sidebarIds: sidebarIds,
 		pointSet: Array.from(pointSet.values()) }, null, "\t"));
+	*/
+
+
+	fs.writeFileSync("./../src/js/panoSetup.json", JSON.stringify({ pointSet: Array.from(pointSet.values()) }, null, "\t"));
+
 
 	await checkImages(groups);
 
