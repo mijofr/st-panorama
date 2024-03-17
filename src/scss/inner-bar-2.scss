@@ -97,7 +97,7 @@
         }
 
         .cameraPointPlanGroup {
-            transition: opacity 0.2s ease;
+            transition: opacity 0.1s ease;
             opacity: 0;
         }
 
@@ -153,8 +153,8 @@
         svg.mapBox {
             .cameraPoint {
                 // animation-delay: 0;
-                animation-duration: 0.5s;
-                // animation-fill-mode: none;
+                // animation-fill-mode: none;                
+                animation-duration: 0.3s;
                 animation-iteration-count: 1;
                 animation-name: flashy;
             
@@ -189,6 +189,7 @@ $diffOpacity: $baseStrokeOpacity - $floorOpacity;
 $l1Opacity: $floorOpacity + ($diffOpacity * 0.33);
 $l2Opacity: $floorOpacity + ($diffOpacity * 0.66);
 
+/*
 @keyframes flashy {
     0% { stroke-opacity: $baseStrokeOpacity; }
     10% { stroke-opacity: $l2Opacity; }
@@ -225,6 +226,30 @@ $l2Opacity: $floorOpacity + ($diffOpacity * 0.66);
     60% { stroke-opacity: $l2Opacity; }
     70% { stroke-opacity: $baseStrokeOpacity; fill: $amber-6;}
     100% { stroke-opacity: $baseStrokeOpacity; fill: $amber-6;}
+}
+*/
+
+/*
+@keyframes flashy {
+    0% { stroke-opacity: $baseStrokeOpacity; fill: $amber-6; }
+    30% { stroke-opacity: 0; fill: $amber-7 }
+    40% { stroke-opacity: 0; fill: $amber-7 }
+    70% { stroke-opacity: $baseStrokeOpacity; fill: $amber-6;}
+    100% { stroke-opacity: $baseStrokeOpacity; fill: $amber-6;}
+}
+*/
+
+@keyframes flashy {
+    0% { stroke-opacity: $baseStrokeOpacity; }
+    1% { stroke-opacity: $baseStrokeOpacity; }
+    10% { stroke-opacity: $l2Opacity; }
+    20% { stroke-opacity: $l1Opacity; }
+    30% { stroke-opacity: $floorOpacity; }
+    70% { stroke-opacity: $floorOpacity; }
+    80% { stroke-opacity: $l1Opacity; }
+    90% { stroke-opacity: $l2Opacity; }
+    99% { stroke-opacity: $baseStrokeOpacity; }
+    100% { stroke-opacity: $baseStrokeOpacity; }
 }
 
 
