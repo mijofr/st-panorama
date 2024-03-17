@@ -15,6 +15,7 @@ import { AppConfig,  PanoSetupFile,  PointData } from "./types";
 var viewer: Viewer;
 var visibleRangePlugin: VisibleRangePlugin;
 
+const READYDELAY: number = 1200;
 
 // had to do some things to this to get it to work in the new version,
 // it used to be fullheight 1536.
@@ -211,7 +212,7 @@ function loadFunc(): void {
 		if (el) {
 			el.className = "ready";
 		}
-	}, 1500);
+	}, READYDELAY);
 
 };
 

@@ -3,5 +3,14 @@
 
 $psv-main-background: $panoBgColor;
 $psv-loader-color: $white;
+$psv-loader-bg-color: $black;
+$psv-overlay-title-color: $white;
+$psv-overlay-title-font: 30px Antonio;
+$psv-overlay-text-color: rgba($white, 0.8);
+$psv-overlay-text-font: 20px Antonio;
 
 @import "./../../node_modules/@photo-sphere-viewer/core/index.scss";
+
+.psv-overlay-image {
+    color: rgba($white, 0.8);
+}
