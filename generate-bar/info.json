@@ -1,11 +1,12 @@
 [
     {
         "name": "USS Enterprise",
-        "id": "TOS",
+        "id": "TOSENT",
         "plans": [
             {
                 "name": "Main Bridge",
                 "img": "tos.svg",
+                "id": "TOS",
                 "height": 14,
                 "width": 12.67,
                 "points": [
@@ -96,6 +97,7 @@
             {
                 "name": "Bridge",
                 "img": "kbop.svg",
+                "id": "KBOP",
                 "height": 12,
                 "width": 9.8,
                 "points": [
@@ -165,6 +167,7 @@
             {
                 "name": "Deck One",
                 "img": "entd.svg",
+                "id": "ENTD",
                 "height": 24.164154,
                 "width": 18.58906,
                 "points": [
@@ -298,6 +301,7 @@
             {
                 "name": "Engineering",
                 "img": "eng.svg",
+                "id": "ENG",
                 "height": 20.981213,
                 "width": 11.970091,
                 "points": [
@@ -361,6 +365,7 @@
             {
                 "name": "Sickbay",
                 "img": "sickbay.svg",
+                "id": "SICKBAY",
                 "height": 16.004055,
                 "width": 12.935,
                 "points": [
@@ -424,6 +429,7 @@
             {
                 "name": "Ten-Forward Lounge",
                 "img": "tenforward.svg",
+                "id": "TENFORWARD",
                 "height": 21.890032,
                 "width": 17.937931,
                 "points": [
@@ -497,6 +503,7 @@
             {
                 "name": "Transporter Room 3",
                 "img": "transp.svg",
+                "id": "TRANSP",
                 "height": 10.456047,
                 "width": 8.1097012,
                 "points": [
@@ -530,6 +537,7 @@
             {
                 "name": "Cpt Picard's Quarters",
                 "img": "picard.svg",
+                "id": "PICARD",
                 "height": 14.715970,
                 "width": 6.2053618,
                 "points": [
@@ -578,6 +586,7 @@
             {
                 "name": "Cns Troi's Quarters",
                 "img": "troi.svg",
+                "id": "TROI",
                 "height": 11.961047,
                 "width": 6.2183652,
                 "points": [
@@ -621,6 +630,7 @@
             {
                 "name": "Lt Data's Quarters",
                 "img": "data.svg",
+                "id": "DATA",
                 "height": 8.5038052,
                 "width": 6.4388275,
                 "points": [
@@ -654,6 +664,7 @@
             {
                 "name": "Lt Worf's Quarters",
                 "img": "worf.svg",
+                "id": "WORF",
                 "height": 13.909777,
                 "width": 8.56738,
                 "points": [
@@ -692,6 +703,7 @@
             {
                 "name": "Type 6 Shuttlecraft",
                 "img": "type6.svg",
+                "id": "TYPE6",
                 "height": 2.8,
                 "width": 7,
                 "points": [
@@ -705,6 +717,7 @@
             {
                 "name": "Behind the Scenes",
                 "img": "clapper.svg",
+                "id": "CLAPPER",
                 "height": 3,
                 "width": 3,
                 "points": [
@@ -724,6 +737,7 @@
             {
                 "name": "Bridge",
                 "img": "ee.svg",
+                "id": "EE",
                 "height": 15,
                 "width": 15,
                 "points": [
@@ -793,11 +807,12 @@
     },
     {
         "name": "USS Defiant",
-        "id": "DEF",
+        "id": "DEFIANT",
         "plans": [
             {
                 "name": "Deck One",
                 "img": "def.svg",
+                "id": "DEF",
                 "height": 21,
                 "width": 10,
                 "points": [
@@ -888,11 +903,12 @@
     },
     {
         "name": "USS Voyager",
-        "id": "VOY",
+        "id": "VOYAGER",
         "plans": [
             {
                 "name": "Deck One",
                 "img": "voy.svg",
+                "id": "VOY",
                 "height": 13.388122,
                 "width": 26.228914,
                 "points": [
@@ -1011,6 +1027,7 @@
             {
                 "name": "Sickbay / Deck 5",
                 "img": "VOY_SICKBAY.svg",
+                "id": "VOY_SICKBAY",
                 "height": 16,
                 "width": 24,
                 "points": [
@@ -1067,6 +1084,7 @@
             {
                 "name": "Transporter Room",
                 "img": "VOY_TRANSP.svg",
+                "id": "VOY_TRANSP",
                 "height": 10.400,
                 "width": 7.150,
                 "points": [
@@ -1099,6 +1117,7 @@
             {
                 "name": "Engineering",
                 "img": "VOY_ENG.svg",
+                "id": "VOY_ENG",
                 "height": 19,
                 "width": 25,
                 "points": [
@@ -1131,6 +1150,7 @@
             {
                 "name": "Mess Hall",
                 "img": "VOY_MESS.svg",
+                "id": "VOY_MESS",
                 "height": 11,
                 "width": 13,
                 "points": [
@@ -1158,6 +1178,7 @@
             {
                 "name": "Bridge",
                 "img": "JJ.svg",
+                "id": "JJ",
                 "height": 14,
                 "width": 18,
                 "setup": {
@@ -1188,6 +1209,7 @@
             {
                 "name": "Corridor",
                 "img": "JJhall.svg",
+                "id": "JJHALL",
                 "height": 11,
                 "width": 22,
                 "setup": {
@@ -1235,6 +1257,7 @@
             {
                 "name": "Bridge",
                 "img": "disco_bridge.svg",
+                "id": "DISCO_BRIDGE",
                 "height": 19.405,
                 "width": 20.750,
                 "points": [
@@ -1253,6 +1276,7 @@
             {
                 "name": "Transporter Room",
                 "img": "disco_transp.svg",
+                "id": "DISCO_TRANSP",
                 "height": 13.000,
                 "width": 16.400,
                 "points": [
@@ -1271,6 +1295,7 @@
             {
                 "name": "Mess Hall",
                 "img": "disco_mess.svg",
+                "id": "DISCO_MESS",
                 "height": 12.6,
                 "width":22.35,
                 "points": [
@@ -1284,6 +1309,7 @@
             {
                 "name": "Corridor",
                 "img": "disco_hall.svg",
+                "id": "DISCO_HALL",
                 "height": 8.0,
                 "width": 16.7,
                 "points": [
@@ -1298,11 +1324,12 @@
     },
     {
         "name": "ISS",
-        "id": "ISS",
+        "id": "SPACESTATION",
         "plans": [
             {
                 "name": "Station (1/3 SCALE)",
                 "img": "iss.svg",
+                "id": "ISS",
                 "height": 18.33,
                 "width": 25,
                 "setup": {
@@ -1363,10 +1390,12 @@
     },
     {
         "name": "HIDDEN",
+        "id": "HIDDENGRP",
         "plans": [
             {
                 "name": "HIDDEN",
                 "img": "HIDDEN",
+                "id": "HIDDENPLAN",
                 "height": 0,
                 "width": 0,
                 "points": [

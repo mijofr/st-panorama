@@ -3,6 +3,7 @@ import { PanoData } from "@photo-sphere-viewer/core";
 export interface PlanGroup {
 	name: string;
 	subtitle?: string;
+	id: string;
 	plans: Plan[];
 	setup?: PanoData;
 }
@@ -10,6 +11,7 @@ export interface PlanGroup {
 export interface Plan {
 	name: string;
 	img: string;
+	id: string;
     height: number;
     width: number;
 	points: MapPoint[];
@@ -31,6 +33,8 @@ export interface PointData {
 	planName: string;
 	planGroupName: string;
 	planGroupSubtitle?: string;
+	planGroupId: string;
+	planId: string;
 	hasAlt: boolean;
 	altId?: string;
 	isAlt: boolean;

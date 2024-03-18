@@ -44,6 +44,8 @@ export interface PointData {
 	planName: string;
 	planGroupName: string;
 	planGroupSubtitle?: string;
+	planGroupId: string;
+	planId: string;
 	hasAlt: boolean;
 	altId?: string;
 	isAlt: boolean;

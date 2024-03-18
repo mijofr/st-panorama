@@ -1,0 +1,2185 @@
+#photosphere {
+  background-image: url("images/pano-test.jpg");
+  background-size: cover;
+}
+
+/*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.15; /* 1. Correct the line height in all browsers. */
+  -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+  -moz-tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+  tab-size: 4; /* 3 */
+}
+
+/*
+Sections
+========
+*/
+body {
+  margin: 0; /* Remove the margin in all browsers. */
+}
+
+/*
+Grouping content
+================
+*/
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+button,
+select {
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+:root {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+/*
+
+0.5rem: 8px;
+0.75rem: 12px;
+1rem: 16px;
+1.125rem: 18px;
+1.25rem: 20px;
+1.375rem: 22px;
+1.5rem: 24px;
+
+*/
+/*
+$cameraPointInner: $amber-6;
+$cameraPointOuter: $amber-6;
+
+$cameraPointInnerHover: $amber-7;
+$cameraPointOuterHover: $amber-7;
+*/
+/*
+#ENTD_BRIDGE_03 {
+    fill: $red-4;
+    color: $red-6;
+}
+*/
+/*
+
+0.5rem: 8px;
+0.75rem: 12px;
+1rem: 16px;
+1.125rem: 18px;
+1.25rem: 20px;
+1.375rem: 22px;
+1.5rem: 24px;
+
+*/
+/*
+$cameraPointInner: $amber-6;
+$cameraPointOuter: $amber-6;
+
+$cameraPointInnerHover: $amber-7;
+$cameraPointOuterHover: $amber-7;
+*/
+/*
+#ENTD_BRIDGE_03 {
+    fill: $red-4;
+    color: $red-6;
+}
+*/
+@supports selector(::-webkit-scrollbar) {
+  #bar::-webkit-scrollbar {
+    width: auto;
+    height: auto;
+  }
+  #bar::-webkit-scrollbar:vertical {
+    width: 11px;
+    height: auto;
+  }
+  #bar::-webkit-scrollbar:horizontal {
+    height: 11px;
+    width: auto;
+  }
+  #bar::-webkit-scrollbar-track {
+    background: #1E1E1E;
+    border-radius: 11px;
+  }
+  #bar::-webkit-scrollbar-thumb {
+    background-color: #3D3D3D;
+    border-radius: 11px;
+  }
+  #bar::-webkit-scrollbar-thumb:hover {
+    background-color: #5E5E5E;
+  }
+  #bar::-webkit-scrollbar-thumb:active {
+    background-color: #7A7A7A;
+  }
+}
+@supports not selector(::-webkit-scrollbar) {
+  #bar {
+    scrollbar-width: thin;
+    scrollbar-color: #3D3D3D #1E1E1E;
+  }
+}
+
+/*
+
+0.5rem: 8px;
+0.75rem: 12px;
+1rem: 16px;
+1.125rem: 18px;
+1.25rem: 20px;
+1.375rem: 22px;
+1.5rem: 24px;
+
+*/
+/*
+$cameraPointInner: $amber-6;
+$cameraPointOuter: $amber-6;
+
+$cameraPointInnerHover: $amber-7;
+$cameraPointOuterHover: $amber-7;
+*/
+/*
+#ENTD_BRIDGE_03 {
+    fill: $red-4;
+    color: $red-6;
+}
+*/
+#innerBar {
+  font-family: Antonio, "Arial Narrow", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+#innerBar .groupContainer {
+  background-color: #6795AD;
+  display: flex;
+  transition: background-color 0.3s ease;
+}
+#innerBar .groupContainer > .topTitle {
+  font-weight: 700;
+  position: relative;
+  font-size: 1.25rem;
+  display: flex;
+}
+#innerBar .groupContainer > .topTitle > div {
+  line-height: 0.8;
+  color: #060606;
+}
+#innerBar .groupContainer > .topTitle > div > span {
+  font-size: 0.8em;
+  font-weight: 400;
+}
+#innerBar .groupContainer > .groupInnerContainer {
+  background-color: #060606;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+#innerBar .groupContainer.highlit {
+  background-color: #C4D9E4;
+}
+#innerBar .groupContainer.highlit .topTitle > div {
+  color: #1E1E1E;
+}
+
+.planContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.planContainer .sTitle {
+  font-weight: 700;
+  position: relative;
+  background-color: #2C6887;
+  font-size: 1.25rem;
+  display: flex;
+  transition: background-color 0.3s ease;
+}
+.planContainer .sTitle > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999999;
+  background-color: #060606;
+  line-height: 0.8;
+  transition: color 0.3s ease;
+}
+.planContainer .sTitle.highlit {
+  background-color: #528AA5;
+}
+.planContainer .sTitle.highlit > div {
+  color: #D6D6D6;
+}
+.planContainer svg.mapBox {
+  font-size: 0.7rem;
+  transition: opacity 0.15s ease;
+  opacity: 1;
+}
+.planContainer svg.mapBox.faded {
+  opacity: 0;
+}
+.planContainer svg.mapBox .cameraPointPlanGroup {
+  transition: opacity 0.1s ease;
+  opacity: 0;
+}
+.planContainer svg.mapBox .cameraPointPlanGroup {
+  transition-delay: 0.9s;
+}
+.planContainer svg.mapBox .cameraPointPlanGroup.cameraPointPlanGroup_00 {
+  transition-delay: 0s;
+}
+.planContainer svg.mapBox .cameraPointPlanGroup.cameraPointPlanGroup_01 {
+  transition-delay: 0.1s;
+}
+.planContainer svg.mapBox .cameraPointPlanGroup.cameraPointPlanGroup_02 {
+  transition-delay: 0.2s;
+}
+.planContainer svg.mapBox .cameraPointPlanGroup.cameraPointPlanGroup_03 {
+  transition-delay: 0.3s;
+}
+.planContainer svg.mapBox .cameraPointPlanGroup.cameraPointPlanGroup_04 {
+  transition-delay: 0.4s;
+}
+.planContainer svg.mapBox .cameraPointPlanGroup.cameraPointPlanGroup_05 {
+  transition-delay: 0.5s;
+}
+.planContainer svg.mapBox .cameraPointPlanGroup.cameraPointPlanGroup_06 {
+  transition-delay: 0.6s;
+}
+.planContainer svg.mapBox .cameraPointPlanGroup.cameraPointPlanGroup_07 {
+  transition-delay: 0.7s;
+}
+.planContainer svg.mapBox .cameraPointPlanGroup.cameraPointPlanGroup_08 {
+  transition-delay: 0.8s;
+}
+.planContainer svg.mapBox .cameraPoint {
+  color: #EFC5A7;
+  fill: #EFC5A7;
+  stroke-opacity: 0.6;
+  /*
+  transition: 
+      color 0.3s ease, 
+      fill 0.3s ease, 
+      opacity 0.3s ease,
+      stroke-opacity 0.3 ease,
+      fill-opacity 0.3 ease;
+  */
+}
+.planContainer svg.mapBox .cameraPoint:hover {
+  color: #F2D5C1;
+  fill: #F2D5C1;
+  stroke-opacity: 0.8;
+  cursor: pointer;
+}
+.planContainer svg.mapBox .cameraPoint.highlit.alt-highlit {
+  color: #EF8773;
+  fill: #EF8773;
+}
+.planContainer svg.mapBox .mapColorRect {
+  fill: #e0eef5;
+}
+.planContainer:hover svg.mapBox .cameraPoint {
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-name: flashy;
+}
+
+#innerBar.ready .planContainer svg.mapBox .cameraPointPlanGroup {
+  opacity: 1;
+}
+
+/*
+#innerBar.ready svg.mapBox .cameraPoint {
+    animation-delay: 0;
+    animation-duration: 0.2s;
+    animation-fill-mode: none;
+    animation-iteration-count: 2;
+    animation-name: flashy;
+}*/
+/*
+@keyframes flashy {
+    0% { stroke-opacity: $baseStrokeOpacity; }
+    10% { stroke-opacity: $l2Opacity; }
+    20% { stroke-opacity: $l1Opacity; }
+    30% { stroke-opacity: $floorOpacity; }
+    40% { stroke-opacity: $floorOpacity; }
+    50% { stroke-opacity: $l1Opacity; }
+    60% { stroke-opacity: $l2Opacity; }
+    70% { stroke-opacity: $baseStrokeOpacity; }
+    100% { stroke-opacity: $baseStrokeOpacity; }
+}
+
+
+@keyframes flashy {
+    0% { stroke-opacity: $baseStrokeOpacity; fill-opacity: 1; }
+    10% { stroke-opacity: $l2Opacity; fill-opacity: 0.85; }
+    20% { stroke-opacity: $l1Opacity; fill-opacity: 0.7; }
+    30% { stroke-opacity: $floorOpacity; fill-opacity: 0.55; }
+    40% { stroke-opacity: $floorOpacity; fill-opacity: 0.55;}
+    50% { stroke-opacity: $l1Opacity; fill-opacity: 0.7; }
+    60% { stroke-opacity: $l2Opacity; fill-opacity: 0.85; }
+    70% { stroke-opacity: $baseStrokeOpacity; fill-opacity: 1;}
+    100% { stroke-opacity: $baseStrokeOpacity; fill-opacity: 1;}
+}
+
+
+@keyframes flashy {
+    0% { stroke-opacity: $baseStrokeOpacity; fill: $amber-6; }
+    10% { stroke-opacity: $l2Opacity; }
+    20% { stroke-opacity: $l1Opacity; }
+    30% { stroke-opacity: $floorOpacity; fill: $amber-7; }
+    40% { stroke-opacity: $floorOpacity; fill: $amber-7;}
+    50% { stroke-opacity: $l1Opacity; }
+    60% { stroke-opacity: $l2Opacity; }
+    70% { stroke-opacity: $baseStrokeOpacity; fill: $amber-6;}
+    100% { stroke-opacity: $baseStrokeOpacity; fill: $amber-6;}
+}
+*/
+/*
+@keyframes flashy {
+    0% { stroke-opacity: $baseStrokeOpacity; fill: $amber-6; }
+    30% { stroke-opacity: 0; fill: $amber-7 }
+    40% { stroke-opacity: 0; fill: $amber-7 }
+    70% { stroke-opacity: $baseStrokeOpacity; fill: $amber-6;}
+    100% { stroke-opacity: $baseStrokeOpacity; fill: $amber-6;}
+}
+*/
+@keyframes flashy {
+  0% {
+    stroke-opacity: 0.6;
+  }
+  1% {
+    stroke-opacity: 0.6;
+  }
+  10% {
+    stroke-opacity: 0.43;
+  }
+  20% {
+    stroke-opacity: 0.265;
+  }
+  30% {
+    stroke-opacity: 0.1;
+  }
+  70% {
+    stroke-opacity: 0.1;
+  }
+  80% {
+    stroke-opacity: 0.265;
+  }
+  90% {
+    stroke-opacity: 0.43;
+  }
+  99% {
+    stroke-opacity: 0.6;
+  }
+  100% {
+    stroke-opacity: 0.6;
+  }
+}
+@keyframes flashy2 {
+  0% {
+    stroke-opacity: 0;
+  }
+  10% {
+    stroke-opacity: 0;
+  }
+  20% {
+    stroke-opacity: 0;
+  }
+  30% {
+    stroke-opacity: 0;
+  }
+  40% {
+    stroke-opacity: 0;
+  }
+  50% {
+    stroke-opacity: 0;
+  }
+  60% {
+    stroke-opacity: 0;
+  }
+  70% {
+    stroke-opacity: 0;
+  }
+  80% {
+    stroke-opacity: 0;
+  }
+  90% {
+    stroke-opacity: 0;
+  }
+  100% {
+    stroke-opacity: 0;
+  }
+}
+#hlPoint {
+  pointer-events: none;
+  color: #EF8773;
+}
+#hlPoint.hide {
+  display: none;
+}
+#hlPoint.alt-highlit {
+  color: #E06147;
+}
+
+.circleMark .circleMarkOuter {
+  fill: none;
+  stroke: currentColor;
+}
+.circleMark .circleMarkInner {
+  mix-blend-mode: screen;
+}
+.circleMark .circleMarkPart {
+  mix-blend-mode: screen;
+}
+.circleMark .circleMarkBg {
+  fill: #060606;
+  fill-opacity: 0.5;
+}
+
+@media (orientation: landscape) {
+  #innerBar .groupContainer {
+    padding-left: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    flex-direction: column;
+    width: 100%;
+  }
+  #innerBar .groupContainer > .topTitle {
+    width: 100%;
+    height: 1.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0.25rem;
+  }
+  #innerBar .groupContainer > .topTitle > div {
+    position: relative;
+    top: -1px;
+  }
+  #innerBar .groupContainer > .topTitle > div > span {
+    margin-left: 0.3em;
+  }
+  #innerBar .groupContainer > .groupInnerContainer {
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    flex-direction: column;
+    width: 100%;
+  }
+  .planContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+  .planContainer .sTitle {
+    width: 100%;
+    height: 1.25rem;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0.5rem;
+  }
+  .planContainer .sTitle > div {
+    height: 120%;
+  }
+  .planContainer .sTitle > div > div {
+    position: relative;
+    top: -1px;
+    padding: 0 0.25rem;
+  }
+  .planContainer svg.mapBox {
+    margin: 0.5rem 0;
+  }
+  #SVGMAP_USS_ENTERPRISE_MAIN_BRIDGE {
+    width: 46.373250528%;
+  }
+  #SVGMAP_BIRD_OF_PREY_BRIDGE {
+    width: 35.8688125631%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_DECK_ONE {
+    width: 68.0375009045%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_ENGINEERING {
+    width: 43.8115255553%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_SICKBAY {
+    width: 47.3431725004%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_TEN-FORWARD_LOUNGE {
+    width: 65.6543147764%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_TRANSPORTER_ROOM_3 {
+    width: 29.6821788047%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_CPT_PICARDS_QUARTERS {
+    width: 22.7121387031%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_CNS_TROIS_QUARTERS {
+    width: 22.7597322253%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_LT_DATAS_QUARTERS {
+    width: 23.5666425228%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_LT_WORFS_QUARTERS {
+    width: 31.3573211609%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_TYPE_6_SHUTTLECRAFT {
+    width: 25.6205804022%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_BEHIND_THE_SCENES {
+    width: 10.9802487438%;
+  }
+  #SVGMAP_USS_ENTERPRISE-E_BRIDGE {
+    width: 54.901243719%;
+  }
+  #SVGMAP_USS_DEFIANT_DECK_ONE {
+    width: 36.600829146%;
+  }
+  #SVGMAP_USS_VOYAGER_DECK_ONE {
+    width: 96%;
+  }
+  #SVGMAP_USS_VOYAGER_SICKBAY__DECK_5 {
+    width: 87.8419899505%;
+  }
+  #SVGMAP_USS_VOYAGER_TRANSPORTER_ROOM {
+    width: 26.1695928394%;
+  }
+  #SVGMAP_USS_VOYAGER_ENGINEERING {
+    width: 91.5020728651%;
+  }
+  #SVGMAP_USS_VOYAGER_MESS_HALL {
+    width: 47.5810778898%;
+  }
+  #SVGMAP_USS_ENTERPRISE_BRIDGE {
+    width: 65.8814924629%;
+  }
+  #SVGMAP_USS_ENTERPRISE_CORRIDOR {
+    width: 80.5218241213%;
+  }
+  #SVGMAP_USS_DISCOVERY_BRIDGE {
+    width: 75.946720478%;
+  }
+  #SVGMAP_USS_DISCOVERY_TRANSPORTER_ROOM {
+    width: 60.0253597995%;
+  }
+  #SVGMAP_USS_DISCOVERY_MESS_HALL {
+    width: 81.8028531414%;
+  }
+  #SVGMAP_USS_DISCOVERY_CORRIDOR {
+    width: 61.1233846739%;
+  }
+  #SVGMAP_ISS_STATION_13_SCALE {
+    width: 91.5020728651%;
+  }
+}
+@media (orientation: portrait) {
+  #innerBar .groupContainer {
+    padding-bottom: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    flex-direction: row;
+    height: 100%;
+  }
+  #innerBar .groupContainer > .topTitle {
+    height: 100%;
+    width: 1.5rem;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 0.25rem;
+  }
+  #innerBar .groupContainer > .topTitle > div {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    position: relative;
+    left: -1px;
+  }
+  #innerBar .groupContainer > .topTitle > div > span {
+    margin-top: 0.3em;
+  }
+  #innerBar .groupContainer > .groupInnerContainer {
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    flex-direction: row;
+    height: 100%;
+  }
+  .planContainer {
+    height: 100%;
+    flex-direction: row;
+  }
+  .planContainer .sTitle {
+    height: 100%;
+    width: 1.25rem;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 0.5rem;
+  }
+  .planContainer .sTitle > div {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    width: 120%;
+    margin: 0 -1px;
+  }
+  .planContainer .sTitle > div > div {
+    position: relative;
+    right: -1px;
+    padding: 0.25rem 0;
+  }
+  .planContainer svg.mapBox {
+    margin: 0 0.5rem;
+  }
+  #SVGMAP_USS_ENTERPRISE_MAIN_BRIDGE {
+    height: 55.619576005%;
+  }
+  #SVGMAP_BIRD_OF_PREY_BRIDGE {
+    height: 47.67392229%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_DECK_ONE {
+    height: 96%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_ENGINEERING {
+    height: 83.3547265094%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_SICKBAY {
+    height: 63.5813395329%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_TEN-FORWARD_LOUNGE {
+    height: 86.9653070412%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_TRANSPORTER_ROOM_3 {
+    height: 41.5400643449%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_CPT_PICARDS_QUARTERS {
+    height: 58.4640008502%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_CNS_TROIS_QUARTERS {
+    height: 47.5191687654%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_LT_DATAS_QUARTERS {
+    height: 33.7841456895%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_LT_WORFS_QUARTERS {
+    height: 55.2611356475%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_TYPE_6_SHUTTLECRAFT {
+    height: 11.123915201%;
+  }
+  #SVGMAP_USS_ENTERPRISE-D_BEHIND_THE_SCENES {
+    height: 11.9184805725%;
+  }
+  #SVGMAP_USS_ENTERPRISE-E_BRIDGE {
+    height: 59.5924028625%;
+  }
+  #SVGMAP_USS_DEFIANT_DECK_ONE {
+    height: 83.4293640075%;
+  }
+  #SVGMAP_USS_VOYAGER_DECK_ONE {
+    height: 53.1886906531%;
+  }
+  #SVGMAP_USS_VOYAGER_SICKBAY__DECK_5 {
+    height: 63.56522972%;
+  }
+  #SVGMAP_USS_VOYAGER_TRANSPORTER_ROOM {
+    height: 41.317399318%;
+  }
+  #SVGMAP_USS_VOYAGER_ENGINEERING {
+    height: 75.4837102925%;
+  }
+  #SVGMAP_USS_VOYAGER_MESS_HALL {
+    height: 43.7010954325%;
+  }
+  #SVGMAP_USS_ENTERPRISE_BRIDGE {
+    height: 55.619576005%;
+  }
+  #SVGMAP_USS_ENTERPRISE_CORRIDOR {
+    height: 43.7010954325%;
+  }
+  #SVGMAP_USS_DISCOVERY_BRIDGE {
+    height: 77.0927051698%;
+  }
+  #SVGMAP_USS_DISCOVERY_TRANSPORTER_ROOM {
+    height: 51.6467491475%;
+  }
+  #SVGMAP_USS_DISCOVERY_MESS_HALL {
+    height: 50.0576184045%;
+  }
+  #SVGMAP_USS_DISCOVERY_CORRIDOR {
+    height: 31.78261486%;
+  }
+  #SVGMAP_ISS_STATION_13_SCALE {
+    height: 72.821916298%;
+  }
+}
+#TOS_07 {
+  animation-delay: 0s;
+}
+
+#TOS_08 {
+  animation-delay: 0.01s;
+}
+
+#TOS_06 {
+  animation-delay: 0.02s;
+}
+
+#TOS_00 {
+  animation-delay: 0.03s;
+}
+
+#TOS_09 {
+  animation-delay: 0.04s;
+}
+
+#TOS_05 {
+  animation-delay: 0.05s;
+}
+
+#TOS_01 {
+  animation-delay: 0.06s;
+}
+
+#TOS_02 {
+  animation-delay: 0.07s;
+}
+
+#TOS_13 {
+  animation-delay: 0.08s;
+}
+
+#TOS_04 {
+  animation-delay: 0.09s;
+}
+
+#TOS_10 {
+  animation-delay: 0.1s;
+}
+
+#TOS_11 {
+  animation-delay: 0.11s;
+}
+
+#TOS_14 {
+  animation-delay: 0.12s;
+}
+
+#TOS_03 {
+  animation-delay: 0.13s;
+}
+
+#TOS_12 {
+  animation-delay: 0.14s;
+}
+
+#KLING_00 {
+  animation-delay: 0s;
+}
+
+#KLING_01 {
+  animation-delay: 0.0136s;
+}
+
+#KLING_05 {
+  animation-delay: 0.0273s;
+}
+
+#KLING_10 {
+  animation-delay: 0.0409s;
+}
+
+#KLING_02 {
+  animation-delay: 0.0545s;
+}
+
+#KLING_03 {
+  animation-delay: 0.0682s;
+}
+
+#KLING_04 {
+  animation-delay: 0.0818s;
+}
+
+#KLING_06 {
+  animation-delay: 0.0955s;
+}
+
+#KLING_09 {
+  animation-delay: 0.1091s;
+}
+
+#KLING_07 {
+  animation-delay: 0.1227s;
+}
+
+#KLING_08 {
+  animation-delay: 0.1364s;
+}
+
+#ENTD_CONFERENCE_05 {
+  animation-delay: 0s;
+}
+
+#ENTD_CONFERENCE_03 {
+  animation-delay: 0.006s;
+}
+
+#ENTD_CONFERENCE_04 {
+  animation-delay: 0.012s;
+}
+
+#ENTD_CONFERENCE_01 {
+  animation-delay: 0.018s;
+}
+
+#ENTD_CONFERENCE_00 {
+  animation-delay: 0.024s;
+}
+
+#ENTD_CONFERENCE_02 {
+  animation-delay: 0.03s;
+}
+
+#ENTD_BRIDGE_13 {
+  animation-delay: 0.036s;
+}
+
+#ENTD_BRIDGE_05 {
+  animation-delay: 0.042s;
+}
+
+#ENTD_BRIDGE_04 {
+  animation-delay: 0.048s;
+}
+
+#ENTD_BRIDGE_03 {
+  animation-delay: 0.054s;
+}
+
+#ENTD_BRIDGE_02 {
+  animation-delay: 0.06s;
+}
+
+#ENTD_BRIDGE_06 {
+  animation-delay: 0.066s;
+}
+
+#ENTD_BRIDGE_12 {
+  animation-delay: 0.072s;
+}
+
+#ENTD_BRIDGE_01 {
+  animation-delay: 0.078s;
+}
+
+#ENTD_READYROOM_03 {
+  animation-delay: 0.084s;
+}
+
+#ENTD_READYROOM_04 {
+  animation-delay: 0.09s;
+}
+
+#ENTD_READYROOM_02 {
+  animation-delay: 0.096s;
+}
+
+#ENTD_BRIDGE_07 {
+  animation-delay: 0.102s;
+}
+
+#ENTD_BRIDGE_00 {
+  animation-delay: 0.108s;
+}
+
+#ENTD_BRIDGE_11 {
+  animation-delay: 0.114s;
+}
+
+#ENTD_READYROOM_00 {
+  animation-delay: 0.12s;
+}
+
+#ENTD_READYROOM_01 {
+  animation-delay: 0.126s;
+}
+
+#ENTD_BRIDGE_08 {
+  animation-delay: 0.132s;
+}
+
+#ENTD_BRIDGE_10 {
+  animation-delay: 0.138s;
+}
+
+#ENTD_BRIDGE_09 {
+  animation-delay: 0.144s;
+}
+
+#ENTD_ENGINEERING_09 {
+  animation-delay: 0s;
+}
+
+#ENTD_ENGINEERING_10 {
+  animation-delay: 0.0136s;
+}
+
+#ENTD_ENGINEERING_08 {
+  animation-delay: 0.0273s;
+}
+
+#ENTD_ENGINEERING_07 {
+  animation-delay: 0.0409s;
+}
+
+#ENTD_ENGINEERING_06 {
+  animation-delay: 0.0545s;
+}
+
+#ENTD_ENGINEERING_05 {
+  animation-delay: 0.0682s;
+}
+
+#ENTD_ENGINEERING_04 {
+  animation-delay: 0.0818s;
+}
+
+#ENTD_ENGINEERING_03 {
+  animation-delay: 0.0955s;
+}
+
+#ENTD_ENGINEERING_01 {
+  animation-delay: 0.1091s;
+}
+
+#ENTD_ENGINEERING_02 {
+  animation-delay: 0.1227s;
+}
+
+#ENTD_ENGINEERING_00 {
+  animation-delay: 0.1364s;
+}
+
+#ENTD_SICKBAY_10 {
+  animation-delay: 0s;
+}
+
+#ENTD_SICKBAY_08 {
+  animation-delay: 0.0136s;
+}
+
+#ENTD_SICKBAY_07 {
+  animation-delay: 0.0273s;
+}
+
+#ENTD_SICKBAY_09 {
+  animation-delay: 0.0409s;
+}
+
+#ENTD_SICKBAY_06 {
+  animation-delay: 0.0545s;
+}
+
+#ENTD_SICKBAY_04 {
+  animation-delay: 0.0682s;
+}
+
+#ENTD_SICKBAY_05 {
+  animation-delay: 0.0818s;
+}
+
+#ENTD_SICKBAY_03 {
+  animation-delay: 0.0955s;
+}
+
+#ENTD_SICKBAY_00 {
+  animation-delay: 0.1091s;
+}
+
+#ENTD_SICKBAY_01 {
+  animation-delay: 0.1227s;
+}
+
+#ENTD_SICKBAY_02 {
+  animation-delay: 0.1364s;
+}
+
+#ENTD_TENFORWARD_10 {
+  animation-delay: 0s;
+}
+
+#ENTD_TENFORWARD_06 {
+  animation-delay: 0.0115s;
+}
+
+#ENTD_TENFORWARD_03 {
+  animation-delay: 0.0231s;
+}
+
+#ENTD_TENFORWARD_05 {
+  animation-delay: 0.0346s;
+}
+
+#ENTD_TENFORWARD_12 {
+  animation-delay: 0.0462s;
+}
+
+#ENTD_TENFORWARD_07 {
+  animation-delay: 0.0577s;
+}
+
+#ENTD_TENFORWARD_00 {
+  animation-delay: 0.0692s;
+}
+
+#ENTD_TENFORWARD_09 {
+  animation-delay: 0.0808s;
+}
+
+#ENTD_TENFORWARD_08 {
+  animation-delay: 0.0923s;
+}
+
+#ENTD_TENFORWARD_02 {
+  animation-delay: 0.1038s;
+}
+
+#ENTD_TENFORWARD_04 {
+  animation-delay: 0.1154s;
+}
+
+#ENTD_TENFORWARD_01 {
+  animation-delay: 0.1269s;
+}
+
+#ENTD_TENFORWARD_11 {
+  animation-delay: 0.1385s;
+}
+
+#ENTD_TRANSPORTER_03 {
+  animation-delay: 0s;
+}
+
+#ENTD_TRANSPORTER_02 {
+  animation-delay: 0.03s;
+}
+
+#ENTD_TRANSPORTER_01 {
+  animation-delay: 0.06s;
+}
+
+#ENTD_TRANSPORTER_04 {
+  animation-delay: 0.09s;
+}
+
+#ENTD_TRANSPORTER_00 {
+  animation-delay: 0.12s;
+}
+
+#ENTD_PICARDQUARTERS_03 {
+  animation-delay: 0s;
+}
+
+#ENTD_PICARDQUARTERS_02 {
+  animation-delay: 0.0187s;
+}
+
+#ENTD_PICARDQUARTERS_01 {
+  animation-delay: 0.0375s;
+}
+
+#ENTD_PICARDQUARTERS_00 {
+  animation-delay: 0.0562s;
+}
+
+#ENTD_PICARDQUARTERS_06 {
+  animation-delay: 0.075s;
+}
+
+#ENTD_PICARDQUARTERS_07 {
+  animation-delay: 0.0938s;
+}
+
+#ENTD_PICARDQUARTERS_05 {
+  animation-delay: 0.1125s;
+}
+
+#ENTD_PICARDQUARTERS_04 {
+  animation-delay: 0.1313s;
+}
+
+#ENTD_TROIQUARTERS_00 {
+  animation-delay: 0s;
+}
+
+#ENTD_TROIQUARTERS_02 {
+  animation-delay: 0.0214s;
+}
+
+#ENTD_TROIQUARTERS_06 {
+  animation-delay: 0.0429s;
+}
+
+#ENTD_TROIQUARTERS_01 {
+  animation-delay: 0.0643s;
+}
+
+#ENTD_TROIQUARTERS_05 {
+  animation-delay: 0.0857s;
+}
+
+#ENTD_TROIQUARTERS_03 {
+  animation-delay: 0.1071s;
+}
+
+#ENTD_TROIQUARTERS_04 {
+  animation-delay: 0.1286s;
+}
+
+#ENTD_DATAQUARTERS_01 {
+  animation-delay: 0s;
+}
+
+#ENTD_DATAQUARTERS_00 {
+  animation-delay: 0.03s;
+}
+
+#ENTD_DATAQUARTERS_02 {
+  animation-delay: 0.06s;
+}
+
+#ENTD_DATAQUARTERS_03 {
+  animation-delay: 0.09s;
+}
+
+#ENTD_DATAQUARTERS_04 {
+  animation-delay: 0.12s;
+}
+
+#ENTD_WORFQUARTERS_02 {
+  animation-delay: 0s;
+}
+
+#ENTD_WORFQUARTERS_01 {
+  animation-delay: 0.025s;
+}
+
+#ENTD_WORFQUARTERS_00 {
+  animation-delay: 0.05s;
+}
+
+#ENTD_WORFQUARTERS_03 {
+  animation-delay: 0.075s;
+}
+
+#ENTD_WORFQUARTERS_05 {
+  animation-delay: 0.1s;
+}
+
+#ENTD_WORFQUARTERS_04 {
+  animation-delay: 0.125s;
+}
+
+#ENTD_SHUTTLE {
+  animation-delay: 0s;
+}
+
+#ENTD_BTS {
+  animation-delay: 0s;
+}
+
+#ENTE_01 {
+  animation-delay: 0s;
+}
+
+#ENTE_02 {
+  animation-delay: 0.0125s;
+}
+
+#ENTE_00 {
+  animation-delay: 0.025s;
+}
+
+#ENTE_03 {
+  animation-delay: 0.0375s;
+}
+
+#ENTE_11 {
+  animation-delay: 0.05s;
+}
+
+#ENTE_09 {
+  animation-delay: 0.0625s;
+}
+
+#ENTE_04 {
+  animation-delay: 0.075s;
+}
+
+#ENTE_10 {
+  animation-delay: 0.0875s;
+}
+
+#ENTE_08 {
+  animation-delay: 0.1s;
+}
+
+#ENTE_07 {
+  animation-delay: 0.1125s;
+}
+
+#ENTE_05 {
+  animation-delay: 0.125s;
+}
+
+#ENTE_06 {
+  animation-delay: 0.1375s;
+}
+
+#DEF_14 {
+  animation-delay: 0s;
+}
+
+#DEF_13 {
+  animation-delay: 0.0094s;
+}
+
+#DEF_12 {
+  animation-delay: 0.0187s;
+}
+
+#DEF_10 {
+  animation-delay: 0.0281s;
+}
+
+#DEF_09 {
+  animation-delay: 0.0375s;
+}
+
+#DEF_11 {
+  animation-delay: 0.0469s;
+}
+
+#DEF_08 {
+  animation-delay: 0.0562s;
+}
+
+#DEF_07 {
+  animation-delay: 0.0656s;
+}
+
+#DEF_00 {
+  animation-delay: 0.075s;
+}
+
+#DEF_15 {
+  animation-delay: 0.0844s;
+}
+
+#DEF_04 {
+  animation-delay: 0.0938s;
+}
+
+#DEF_06 {
+  animation-delay: 0.1031s;
+}
+
+#DEF_01 {
+  animation-delay: 0.1125s;
+}
+
+#DEF_05 {
+  animation-delay: 0.1219s;
+}
+
+#DEF_03 {
+  animation-delay: 0.1313s;
+}
+
+#DEF_02 {
+  animation-delay: 0.1406s;
+}
+
+#VOY_TURBOLIFT_13 {
+  animation-delay: 0s;
+}
+
+#VOY_CONFERENCE_15 {
+  animation-delay: 0.0068s;
+}
+
+#VOY_BRIDGE_01 {
+  animation-delay: 0.0136s;
+}
+
+#VOY_BRIDGE_00 {
+  animation-delay: 0.0205s;
+}
+
+#VOY_READYROOM_18 {
+  animation-delay: 0.0273s;
+}
+
+#VOY_BRIDGE_03 {
+  animation-delay: 0.0341s;
+}
+
+#VOY_BRIDGE_12 {
+  animation-delay: 0.0409s;
+}
+
+#VOY_BRIDGE_02 {
+  animation-delay: 0.0477s;
+}
+
+#VOY_READYROOM_21 {
+  animation-delay: 0.0545s;
+}
+
+#VOY_CONFERENCE_14 {
+  animation-delay: 0.0614s;
+}
+
+#VOY_BRIDGE_05 {
+  animation-delay: 0.0682s;
+}
+
+#VOY_CONFERENCE_16 {
+  animation-delay: 0.075s;
+}
+
+#VOY_READYROOM_19 {
+  animation-delay: 0.0818s;
+}
+
+#VOY_BRIDGE_09 {
+  animation-delay: 0.0886s;
+}
+
+#VOY_BRIDGE_08 {
+  animation-delay: 0.0955s;
+}
+
+#VOY_BRIDGE_11 {
+  animation-delay: 0.1023s;
+}
+
+#VOY_READYROOM_20 {
+  animation-delay: 0.1091s;
+}
+
+#VOY_CONFERENCE_17 {
+  animation-delay: 0.1159s;
+}
+
+#VOY_BRIDGE_04 {
+  animation-delay: 0.1227s;
+}
+
+#VOY_BRIDGE_07 {
+  animation-delay: 0.1295s;
+}
+
+#VOY_BRIDGE_06 {
+  animation-delay: 0.1364s;
+}
+
+#VOY_BRIDGE_10 {
+  animation-delay: 0.1432s;
+}
+
+#VOY_HOLODECK_DOOR {
+  animation-delay: 0s;
+}
+
+#VOY_TREATMENT {
+  animation-delay: 0.0375s;
+}
+
+#VOY_HALL {
+  animation-delay: 0.075s;
+}
+
+#VOY_DOC_OFFICE {
+  animation-delay: 0.1125s;
+}
+
+#VOY_TRANSPORTER_00 {
+  animation-delay: 0s;
+}
+
+#VOY_TRANSPORTER_01 {
+  animation-delay: 0.075s;
+}
+
+#VOY_ENGINEERING_00 {
+  animation-delay: 0s;
+}
+
+#VOY_ENGINEERING_01 {
+  animation-delay: 0.075s;
+}
+
+#VOY_MESS {
+  animation-delay: 0s;
+}
+
+#KENT_BRIDGE_01 {
+  animation-delay: 0s;
+}
+
+#KENT_BRIDGE_00 {
+  animation-delay: 0.075s;
+}
+
+#KENT_HALL_00 {
+  animation-delay: 0s;
+}
+
+#KENT_HALL_01 {
+  animation-delay: 0.075s;
+}
+
+#DISCO_BRIDGE_00 {
+  animation-delay: 0s;
+}
+
+#DISCO_BRIDGE_01 {
+  animation-delay: 0.075s;
+}
+
+#DISCO_TRANSP_00 {
+  animation-delay: 0s;
+}
+
+#DISCO_TRANSP_01 {
+  animation-delay: 0.075s;
+}
+
+#DISCO_MESS {
+  animation-delay: 0s;
+}
+
+#DISCO_HALL {
+  animation-delay: 0s;
+}
+
+#ISS_KIBO {
+  animation-delay: 0s;
+}
+
+#ISS_COLUMBUS {
+  animation-delay: 0.0187s;
+}
+
+#ISS_HARMONY {
+  animation-delay: 0.0375s;
+}
+
+#ISS_DESTINY {
+  animation-delay: 0.0562s;
+}
+
+#ISS_UNITY {
+  animation-delay: 0.075s;
+}
+
+#ISS_TRANQUILITY {
+  animation-delay: 0.0938s;
+}
+
+#ISS_ZARYA {
+  animation-delay: 0.1125s;
+}
+
+#ISS_ZVEZDA {
+  animation-delay: 0.1313s;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+html {
+  background-color: #060606;
+  font-size: 16px;
+}
+
+html body {
+  opacity: 1;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  font-family: Antonio;
+  padding: 1.5rem;
+}
+
+#defs {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  width: 10px;
+  height: 10px;
+}
+
+#page-wrap {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  gap: 0;
+}
+
+.spacer {
+  height: 100%;
+  flex: 1 0 auto;
+  background-color: transparent;
+}
+
+#main {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 3rem;
+  padding-bottom: 4.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+#main #psvContainer1 {
+  aspect-ratio: 4/3;
+  background-color: transparent;
+  margin: auto;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#main #psvContainer1 #psvContainer2 {
+  aspect-ratio: 4/3;
+  background-color: transparent;
+  margin: auto;
+  flex: 1 1 auto;
+  position: relative;
+}
+#main #psvContainer1 #psvCosmeticFrame {
+  border-radius: 3rem;
+  background-color: #EFC5A7;
+  position: absolute;
+  top: -3rem;
+  bottom: -4.5rem;
+  left: -3rem;
+  right: -3rem;
+  /*
+  &:after {
+      content: '';
+      position: absolute;
+      top: -1.05 * $frameWidth;
+      bottom: -1.05 * $frameWidth;
+      left: 1.5 * $frameWidth;
+      right: 1.5 * $frameWidth;
+      background-color: $black;
+  }
+  */
+}
+#main #psvContainer1 #psvCosmeticFrame #psvCosmeticInner1 {
+  position: absolute;
+  top: 1.5rem;
+  bottom: 3rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  background-color: #060606;
+  border-radius: 1.5rem;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvCosmeticInner2 {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: 3.75rem;
+  right: 3.75rem;
+  background-color: #060606;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons {
+  position: absolute;
+  right: 4.5rem;
+  left: 4.5rem;
+  height: 3rem;
+  bottom: 0;
+  background-color: transparent;
+  display: flex;
+  gap: 0.75rem;
+  transition: opacity 0.4s ease;
+  opacity: 1;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons.hidden {
+  pointer-events: none;
+  opacity: 0;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button {
+  height: 100%;
+  flex: 0 1 5.25rem;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  color: #060606;
+  transition: color 0.2s ease, background-color 0.2s ease, opacity 0.2s ease, border-radius 0.2s ease, width 0.2s ease, flex-basis 0.2s ease;
+  opacity: 1;
+  position: relative;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button > div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  left: 0;
+  width: 5.25rem;
+  padding: 0 0.375rem 0.375rem 0;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  font-weight: 900;
+  text-align: right;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button.invisible {
+  opacity: 0;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button.rounded {
+  padding-right: 0.75rem;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  flex-basis: 6rem;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button img {
+  height: 1.6em;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button:hover {
+  color: #3D3D3D;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button:hover img {
+  opacity: 0.7;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button:active {
+  color: #1E1E1E;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button.redAlert {
+  padding-right: 1.125rem;
+  font-size: 1.125rem;
+  line-height: 1;
+  align-items: center;
+  padding-bottom: 0;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvTitle {
+  position: absolute;
+  right: 4.5rem;
+  left: 4.5rem;
+  height: 1.5rem;
+  top: 0;
+  background-color: transparent;
+  display: flex;
+  color: #F4F4F4;
+  font-weight: 700;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvTitle > span {
+  line-height: 0.8;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvTitle > span#titleLeft {
+  margin-left: -0.05em;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvTitle > span#titleRight {
+  margin-right: -0.05em;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvTitle > span #titleLeftSub, #main #psvContainer1 #psvCosmeticFrame #psvTitle > span #titleRightSub {
+  font-size: 0.9em;
+  font-weight: 400;
+  margin-left: 0.1em;
+}
+#main #psvContainer1 #psvCosmeticFrame #psvTitle > span .invisible {
+  display: none;
+}
+#main #psvContainer1 #psvMain {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0F0F0F;
+  overflow: hidden;
+  border-radius: 3px;
+  background-size: cover;
+}
+#main #psvContainer1 #psvMain #photosphere {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#main #psvContainer1 #bodyText {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  padding: 1px;
+  background-color: #060606;
+  overflow: hidden;
+  border-radius: 3px;
+  background-size: cover;
+  color: #EFC5A7;
+  font-size: 2vmin;
+  font-weight: 400;
+}
+#main #psvContainer1 #bodyText p {
+  margin-bottom: 1em;
+}
+
+button {
+  background-color: #EFC5A7;
+}
+button:hover {
+  background-color: #F2E1D5;
+  cursor: pointer;
+}
+button:active {
+  background-color: #F2D5C1;
+}
+
+button.red {
+  background-color: #E06147;
+}
+button.red:hover {
+  background-color: #E59C8E;
+  cursor: pointer;
+}
+button.red:active {
+  background-color: #EF8773;
+}
+
+#bar {
+  background-color: transparent;
+}
+#bar #innerBar {
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+#bar #innerBar #testItem1 {
+  border: 1px solid #444444;
+}
+#bar #innerBar #testItem2 {
+  border: 1px solid #444444;
+}
+
+/*
+
+0.5rem: 8px;
+0.75rem: 12px;
+1rem: 16px;
+1.125rem: 18px;
+1.25rem: 20px;
+1.375rem: 22px;
+1.5rem: 24px;
+
+*/
+/*
+$cameraPointInner: $amber-6;
+$cameraPointOuter: $amber-6;
+
+$cameraPointInnerHover: $amber-7;
+$cameraPointOuterHover: $amber-7;
+*/
+/*
+#ENTD_BRIDGE_03 {
+    fill: $red-4;
+    color: $red-6;
+}
+*/
+@supports selector(::-webkit-scrollbar) {
+  #bar::-webkit-scrollbar {
+    width: auto;
+    height: auto;
+  }
+  #bar::-webkit-scrollbar:vertical {
+    width: 11px;
+    height: auto;
+  }
+  #bar::-webkit-scrollbar:horizontal {
+    height: 11px;
+    width: auto;
+  }
+  #bar::-webkit-scrollbar-track {
+    background: #1E1E1E;
+    border-radius: 11px;
+  }
+  #bar::-webkit-scrollbar-thumb {
+    background-color: #3D3D3D;
+    border-radius: 11px;
+  }
+  #bar::-webkit-scrollbar-thumb:hover {
+    background-color: #5E5E5E;
+  }
+  #bar::-webkit-scrollbar-thumb:active {
+    background-color: #7A7A7A;
+  }
+}
+@supports not selector(::-webkit-scrollbar) {
+  #bar {
+    scrollbar-width: thin;
+    scrollbar-color: #3D3D3D #1E1E1E;
+  }
+}
+
+@media (orientation: landscape) {
+  #page-wrap {
+    flex-direction: row;
+  }
+  #main {
+    height: 100%;
+    width: auto;
+  }
+  #bar {
+    margin-right: 1.5rem;
+    height: 100%;
+    overflow-y: scroll;
+    direction: rtl;
+    padding-left: 11px;
+  }
+  #bar #innerBar {
+    direction: ltr;
+    width: 100%;
+    height: 4000px;
+    flex-direction: column;
+  }
+  #bar #innerBar #testItem1 {
+    height: 100px;
+    width: 30%;
+  }
+  #bar #innerBar #testItem2 {
+    height: 100px;
+    width: 60%;
+  }
+  /*
+  #buffer {
+      display: none;
+  }
+  */
+}
+@media (orientation: portrait) {
+  #page-wrap {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  #main {
+    width: 100%;
+    height: auto;
+  }
+  #bar {
+    margin-top: 1.5rem;
+    width: 100%;
+    overflow-x: scroll;
+    padding-bottom: 11px;
+  }
+  #bar #innerBar {
+    height: 100%;
+    width: 4000px;
+    flex-direction: row;
+  }
+  #bar #innerBar #testItem1 {
+    width: 100px;
+    height: 30%;
+  }
+  #bar #innerBar #testItem2 {
+    width: 100px;
+    height: 60%;
+  }
+  /*
+  #buffer {
+      width: 100%;
+      flex: 0 1 $frameWidth * 2.5;
+  }
+  */
+}
+#hlBoxPath {
+  fill: currentColor;
+  stroke: #060606;
+  stroke-opacity: 0.4;
+  stroke-width: 2;
+}
+
+#ghlink {
+  position: absolute;
+  right: 1vmin;
+  top: 1vmin;
+  height: 2vmin;
+  width: 2vmin;
+  background-image: url("./../images/GitHub-Mark-64px.png");
+  background-size: contain;
+  display: block;
+}
+#ghlink:hover {
+  background-image: url("./../images/GitHub-Mark-Light-64px.png");
+}
+
+#ana {
+  position: fixed;
+  top: -2px;
+  left: -2px;
+  z-index: -10;
+  width: 2px;
+  height: 2px;
+  overflow: hidden;
+}
+
+.no-display {
+  display: none;
+}
+
+@media (orientation: landscape) {
+  #page-wrap #bar {
+    flex: 0 2 35vw;
+    max-width: 35vh;
+  }
+  #page-wrap #main {
+    flex: 3 4 auto;
+  }
+}
+@media (orientation: portrait) {
+  #page-wrap #bar {
+    flex: 3 1 auto;
+    max-height: 40vh;
+    min-height: 25vh;
+  }
+  #page-wrap #main {
+    flex: 2 1 auto;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,88 @@
+
+
+#photosphere {
+    background-image: url("images/pano-test.jpg");
+    background-size: cover;
+}
+
+#psvTitle, button, .topTitle, .sTitle {
+    user-select: none;
+}
+
+#page-wrap {
+    #bar {
+
+    }
+    #main {
+    }
+}
+
+@media (orientation: landscape) {
+    #page-wrap {
+        #bar {
+            flex: 0 2 35vw;
+            max-width: 35vh;
+        }
+        #main {
+            flex: 3 4 auto;
+        }
+    }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+
+
+}
+
+html {
+    @media (max-width: 400px) {
+        font-size: 10px;
+    }
+    @media (max-width: 440px) {
+        font-size: 12px;
+    }
+    @media (max-width: 800px) {
+        font-size: 12px;
+    }
+
+}
+
+#main #psvContainer1 #psvCosmeticFrame #psvButtons button > div {
+    max-width: 100%;
+}
+
+#main #psvContainer1 #psvMain {
+
+
+    @media (max-height: 700px) and (max-width: 700px) {
+        border-radius: 2px;
+    }
+
+    @media (min-width: 1100px) and (min-height: 900px) {
+        border-radius: 4px;
+    }
+
+    @media (min-width: 1500px) and (min-height: 1000px) {
+        border-radius: 5px;
+    }
+}
+
+
+
+
+// @media (resolution: 150dpi) {
+
+@media (orientation: portrait) {
+    #page-wrap {
+        #bar {
+            flex: 3 1 auto;
+            max-height: 40vh;
+            min-height: 25vh;
+        }
+        #main {
+            flex: 2 1 auto;  
+        }
+    }
+}
+
+

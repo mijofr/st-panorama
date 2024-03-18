@@ -15,7 +15,7 @@ import { AppConfig,  PanoSetupFile,  PointData } from "./types";
 var viewer: Viewer;
 var visibleRangePlugin: VisibleRangePlugin;
 
-const READYDELAY: number = 1200;
+const READYDELAY: number = 500;
 
 // had to do some things to this to get it to work in the new version,
 // it used to be fullheight 1536.
@@ -189,8 +189,11 @@ function loadFunc(): void {
 		const { hash } = window.location;
 		if (hash !== undefined && hash.length > 0) {
 			const id = hash.substring(1);
-			console.log("loading from URL anchor", id);
-			activateId(id);
+			if (appConfig.pointSet.has(id)) {
+				setInnerBarReady();
+				console.log("loading from URL anchor", id);
+				activateId(id, true);	
+			}
 		}
 
 		viewer.addEventListener("panorama-load", () => {
@@ -208,20 +211,36 @@ function loadFunc(): void {
 	});
 
 	window.setTimeout(() => {
-		const el = document.getElementById("innerBar");
-		if (el) {
-			el.className = "ready";
-		}
+		setInnerBarReady();
 	}, READYDELAY);
 
 };
 
-function activateId(id: string): void {
+function setInnerBarReady() {
+	const el = document.getElementById("innerBar");
+	if (el) {
+		el.className = "ready";
+	}
+
+}
+
+function activateId(id: string, scrollTo: boolean = false): void {
+
+	
 
 	const selectedPoint = appConfig.pointSet.get(id);
 	if (!selectedPoint) {
 		console.warn("no selectedPoint");
 		return;
+	}
+
+	if (scrollTo) {
+		let planContainerEl = document.getElementById("PLN_" + selectedPoint.planId);
+		console.log("scrollTo", planContainerEl, selectedPoint.planId)
+		if (planContainerEl) {
+			
+			planContainerEl.scrollIntoView();
+		}	
 	}
 
 	appConfig.currentId = id;
@@ -335,6 +354,16 @@ function animationTest() {
 };
 
 // handlers ==========================
+
+
+(window as any).scrollBarTo = (elementId: any) => {
+	let elementItem = document.getElementById(elementId);
+	if (elementItem) {
+		elementItem.scrollIntoView();
+	}
+};
+
+
 
 (window as any).alrtClicked = ($element: { getAttribute: (arg0: string) => any; }) => {
 	const altlink = $element.getAttribute("alt_link");

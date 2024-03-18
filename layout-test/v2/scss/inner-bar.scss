@@ -101,14 +101,14 @@
             opacity: 0;
         }
 
-        .cameraPointPlanGroup { transition-delay: 0.6s }
+        .cameraPointPlanGroup { transition-delay: 0.5s }
         .cameraPointPlanGroup.cameraPointPlanGroup_00 { transition-delay: 0.0s }
         .cameraPointPlanGroup.cameraPointPlanGroup_01 { transition-delay: 0.1s }
         .cameraPointPlanGroup.cameraPointPlanGroup_02 { transition-delay: 0.2s }
         .cameraPointPlanGroup.cameraPointPlanGroup_03 { transition-delay: 0.3s }
         .cameraPointPlanGroup.cameraPointPlanGroup_04 { transition-delay: 0.4s }
         .cameraPointPlanGroup.cameraPointPlanGroup_05 { transition-delay: 0.5s }
-        .cameraPointPlanGroup.cameraPointPlanGroup_06 { transition-delay: 0.6s }
+
 
         .cameraPoint {
             color: $amber-6;

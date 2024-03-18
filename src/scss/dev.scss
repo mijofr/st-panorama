@@ -1,0 +1,21 @@
+#bodyText p {
+    a {
+        margin-right: 1em;
+        text-transform: uppercase;
+        display: inline-block;
+        line-height: 2;
+
+        color: #CCC;
+    }
+    a:hover {
+        color: #fff;
+    }
+    a:visited {
+        color: #ddf;
+    }
+    button {
+        border: none;
+        border-radius: 4px;
+    }
+
+}

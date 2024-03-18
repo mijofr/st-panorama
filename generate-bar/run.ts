@@ -17,6 +17,8 @@ var sidebarIds: [string, string[]][] = [];
 
 var pointSet: Map<string, PointData> = new Map<string, PointData>();
 
+var debugbits: string[] = [];
+
 async function main() {
 	let groups: PlanGroup[] = JSON.parse(fs.readFileSync("info.json").toString()) as PlanGroup[];
     create(groups);
@@ -43,6 +45,8 @@ async function main() {
 
 
 	await checkImages(groups);
+
+	console.log(debugbits.join("\n"));
 
 }
 
@@ -136,6 +140,8 @@ export function create(groups: PlanGroup[]) {
 						planName: plan.name,
 						planGroupName: group.name,
 						planGroupSubtitle: group.subtitle,
+						planGroupId: group.id,
+						planId: plan.id,
 						hasAlt: p.hasAlt != undefined,
 						altId: p.hasAlt,
 						panoData: compSetup,
@@ -158,12 +164,18 @@ export function create(groups: PlanGroup[]) {
 	});
 
 
+	let planIdx = 0;
 	let groupIdx = 0;
 
 	groups.filter(n => n.name != "HIDDEN").forEach(group => {
 
 
-		htmlOut.push(`<div class="groupContainer">`);
+		htmlOut.push(`<div class="groupContainer" id="GRP_${group.id.toLocaleUpperCase()}">`);
+
+		// debugbits.push(`<a href="#GRP_${groupIdx.toString().padStart(2, '0')}">${group.name} ${group.subtitle ? group.subtitle: ''}</a>`)
+		debugbits.push(`<button type="button" onclick="scrollBarTo('GRP_${group.id}');">${group.name}${group.subtitle ? ' ' + group.subtitle: ''}</button>`)
+		
+
 
 		let subtitleStr: string = group.subtitle != null ? `<span>${group.subtitle}</span>` : ``;
 		htmlOut.push(`<div class="topTitle"><div>${group.name}${subtitleStr}</div></div>`);
@@ -172,6 +184,7 @@ export function create(groups: PlanGroup[]) {
 
 		group.plans.forEach(plan => {
 
+			/*
 			let id = (group.name + "_" + plan.name)
 				.split("'")
 				.join("")
@@ -184,8 +197,9 @@ export function create(groups: PlanGroup[]) {
 				.split(" ")
 				.join("_")
 				.toUpperCase();
+				*/
 
-
+			let id = `PLN_${plan.id.toLocaleUpperCase()}`;
 
 			let heightPerc: number = 96 * plan.height / maxHeight;
 			let widthPerc: number = 96 * plan.width / maxWidth;
@@ -193,7 +207,7 @@ export function create(groups: PlanGroup[]) {
 			portCssOut.push(` #SVGMAP_${id} { height: ${heightPerc}%; }`)
 			landCssOut.push(` #SVGMAP_${id} { width: ${widthPerc}%; }`)
 
-			htmlOut.push(`<span class="mapGroup">`)
+			htmlOut.push(`<span class="planContainer" id="${id}">`)
 			htmlOut.push(`<div class="sTitle"><div><div>${plan.name}</div></div></div>`);
 			//htmlOut.push(`<div class="mapBoxContainer">`);
 			htmlOut.push(`<svg class="mapBox faded" id="SVGMAP_${id}" viewBox="0 0 ${plan.width.toFixed(4)} ${plan.height.toFixed(4)}" version="1.1" xmlns="http://www.w3.org/2000/svg">`);
@@ -210,7 +224,7 @@ export function create(groups: PlanGroup[]) {
 			htmlOut.push(`</mask></defs>`)
 			htmlOut.push(`<rect class="mapColorRect" x="0" y="0" width="100%" height="100%" mask="url(#MAPMASK_${id})" />`)
 			
-			htmlOut.push(`<g class="cameraPointPlanGroup cameraPointPlanGroup_${groupIdx.toString().padStart(2,'0')}">`);
+			htmlOut.push(`<g class="cameraPointPlanGroup cameraPointPlanGroup_${planIdx.toString().padStart(2,'0')}">`);
 
 			plan.points.forEach(p => {
 				if (p.x != null && p.y != null) {
@@ -223,11 +237,12 @@ export function create(groups: PlanGroup[]) {
 
 			htmlOut.push(`</svg>`);
 			htmlOut.push(`</span>`)
-			groupIdx++;
+			planIdx++;
 
 		});
 		
 		htmlOut.push('</div></div>');
+		groupIdx++;
 	});
 
 
