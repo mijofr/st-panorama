@@ -1,25 +1,7 @@
-Add extra buttons on frame:
-    zoom?
-
-downloadUrl
-downloadName
-
-need to set up the on-ready transitions for sidebar load.
 
 https://stackoverflow.com/questions/5680013/how-to-be-notified-once-a-web-font-has-loaded
 
-crop: 
-enterprise-e bridge 
-voyager transporter room
-
-// TODO: MAKE SURE GROUP IDS AND PLAN IDS ARE UNIQUE
-
-switch out the generated ID in mapgroup for the formal one
-
 do something about the missing images in generate-bar
-
-scroll sidebar to plan when you load by hash link
-
 
 initially, just scale all images to maximum 600
 magick mogrify -resize 600x600> -format png -path "./600/" *.png

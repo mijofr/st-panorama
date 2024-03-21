@@ -282,6 +282,7 @@ $l2Opacity: $floorOpacity + ($diffOpacity * 0.66);
     .circleMarkOuter {
         fill: none;
         stroke: currentColor;
+        stroke-linecap: round;
     }
 
     .circleMarkInner {

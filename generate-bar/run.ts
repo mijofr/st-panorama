@@ -19,6 +19,10 @@ var pointSet: Map<string, PointData> = new Map<string, PointData>();
 
 var debugbits: string[] = [];
 
+let planIdSet: Set<string> = new Set<string>();
+let groupIdSet: Set<string> = new Set<string>();
+let pointIdSet: Set<string> = new Set<string>();
+
 async function main() {
 	let groups: PlanGroup[] = JSON.parse(fs.readFileSync("info.json").toString()) as PlanGroup[];
     create(groups);
@@ -113,9 +117,32 @@ export function create(groups: PlanGroup[]) {
 	})
 
 	groups.forEach(group => {
+
+		const groupId = group.id.toLocaleUpperCase();
+		if (groupIdSet.has(groupId)) {
+			console.error("Duplicate group ID: " + groupId);
+		} else {
+			groupIdSet.add(groupId);
+		}
+
 		group.plans.forEach(plan => {
 
+			const planId = plan.id.toLocaleUpperCase();
+			if (planIdSet.has(planId)) {
+				console.error("Duplicate plan ID: " + planId);
+			} else {
+				planIdSet.add(planId);
+			}
+
 			plan.points.forEach(p => {
+
+				const pointId = p.id.toLocaleUpperCase();
+				if (pointIdSet.has(pointId)) {
+					console.error("Duplicate point ID: " + pointId);
+				} else {
+					pointIdSet.add(pointId);
+				}
+
 				let setup!: PanoData;
 				let compSetup: PanoData | undefined = undefined;
 				if (p.setup != undefined) {

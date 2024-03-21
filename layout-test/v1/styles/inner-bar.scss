@@ -113,6 +113,7 @@
 .circleMark {
     .circleMarkOuter {
         fill: currentColor;
+        stroke-linecap: round;
     }
     .circleMarkInner {
         mix-blend-mode: screen;

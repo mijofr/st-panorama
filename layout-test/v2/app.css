@@ -687,6 +687,7 @@ $cameraPointOuterHover: $amber-7;
 .circleMark .circleMarkOuter {
   fill: none;
   stroke: currentColor;
+  stroke-linecap: round;
 }
 .circleMark .circleMarkInner {
   mix-blend-mode: screen;
