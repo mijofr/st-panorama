@@ -134,8 +134,10 @@
             &.highlit {
                 // color: $red-7;
                 // fill: $red-6;
+                color: transparent;
                 &.alt-highlit {
-                    color: $red-7;
+                    // color: $red-7;
+                    color: transparent;
                     fill: $red-7;
                 }
             }
