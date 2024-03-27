@@ -7,13 +7,40 @@
   user-select: none;
 }
 
+#page-wrap {
+  position: relative;
+}
+#page-wrap #minWidth {
+  background-color: rgba(255, 100, 100, 0.1);
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#page-wrap #maxWidth {
+  background-color: rgba(100, 255, 100, 0.1);
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
 @media (orientation: landscape) {
   #page-wrap #bar {
-    flex: 0 2 35vw;
-    max-width: 35vh;
+    flex: 1 10 35vw;
+    max-width: 75vh;
+    min-width: 30vh;
   }
   #page-wrap #main {
-    flex: 3 4 auto;
+    flex: 1 1 130vh;
+  }
+  #page-wrap #minWidth {
+    top: 0;
+    width: 30vh;
+  }
+  #page-wrap #maxWidth {
+    top: 0;
+    width: 75vh;
   }
 }
 @media (max-width: 400px) {
@@ -54,12 +81,20 @@
 
 @media (orientation: portrait) {
   #page-wrap #bar {
-    flex: 3 1 auto;
-    max-height: 40vh;
-    min-height: 25vh;
+    flex: 4 3 auto;
+    max-height: 50vh;
+    min-height: 30vh;
   }
   #page-wrap #main {
-    flex: 2 1 auto;
+    flex: 1 1 80vw;
+  }
+  #page-wrap #minWidth {
+    right: 0;
+    height: 30vh;
+  }
+  #page-wrap #maxWidth {
+    right: 0;
+    height: 50vh;
   }
 }
 /*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -2241,13 +2276,40 @@ $cameraPointOuterHover: $amber-7;
   user-select: none;
 }
 
+#page-wrap {
+  position: relative;
+}
+#page-wrap #minWidth {
+  background-color: rgba(255, 100, 100, 0.1);
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#page-wrap #maxWidth {
+  background-color: rgba(100, 255, 100, 0.1);
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
 @media (orientation: landscape) {
   #page-wrap #bar {
-    flex: 0 2 35vw;
-    max-width: 35vh;
+    flex: 1 10 35vw;
+    max-width: 75vh;
+    min-width: 30vh;
   }
   #page-wrap #main {
-    flex: 3 4 auto;
+    flex: 1 1 130vh;
+  }
+  #page-wrap #minWidth {
+    top: 0;
+    width: 30vh;
+  }
+  #page-wrap #maxWidth {
+    top: 0;
+    width: 75vh;
   }
 }
 @media (max-width: 400px) {
@@ -2288,12 +2350,20 @@ $cameraPointOuterHover: $amber-7;
 
 @media (orientation: portrait) {
   #page-wrap #bar {
-    flex: 3 1 auto;
-    max-height: 40vh;
-    min-height: 25vh;
+    flex: 4 3 auto;
+    max-height: 50vh;
+    min-height: 30vh;
   }
   #page-wrap #main {
-    flex: 2 1 auto;
+    flex: 1 1 80vw;
+  }
+  #page-wrap #minWidth {
+    right: 0;
+    height: 30vh;
+  }
+  #page-wrap #maxWidth {
+    right: 0;
+    height: 50vh;
   }
 }
 

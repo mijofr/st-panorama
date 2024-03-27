@@ -10,21 +10,53 @@
 }
 
 #page-wrap {
+
+    position:relative;
+
     #bar {
 
     }
     #main {
     }
+    
+
+    #minWidth {
+        background-color: rgba(255,100,100,0.1);
+        pointer-events: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    #maxWidth {
+        background-color: rgba(100,255,100,0.1);
+        pointer-events: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
 }
 
 @media (orientation: landscape) {
     #page-wrap {
+
+        $minWidth: 30vh;
+        $maxWidth: 75vh;
+
         #bar {
-            flex: 0 2 35vw;
-            max-width: 35vh;
+            flex: 1 10 35vw;
+            max-width: $maxWidth;
+            min-width: $minWidth;
         }
         #main {
-            flex: 3 4 auto;
+            flex: 1 1 130vh;
+        }
+        #minWidth {
+            top: 0;
+            width: $minWidth;
+        }
+        #maxWidth {
+            top: 0;
+            width: $maxWidth;
         }
     }
 }
@@ -74,13 +106,28 @@ html {
 
 @media (orientation: portrait) {
     #page-wrap {
+
+        $minHeight: 30vh;
+        $maxHeight: 50vh;
+
+        
         #bar {
-            flex: 3 1 auto;
-            max-height: 40vh;
-            min-height: 25vh;
+            flex: 4 3 auto;
+            max-height: $maxHeight;
+            min-height: $minHeight;
         }
         #main {
-            flex: 2 1 auto;  
+            flex: 1 1 80vw;  
+        }
+
+
+        #minWidth {
+            right: 0;
+            height: $minHeight;
+        }
+        #maxWidth {
+            right: 0;
+            height: $maxHeight;
         }
     }
 }
