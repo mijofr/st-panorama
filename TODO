@@ -1,9 +1,11 @@
 
 https://stackoverflow.com/questions/5680013/how-to-be-notified-once-a-web-font-has-loaded
 
-do something about the missing images in generate-bar
-
-initially, just scale all images to maximum 600
-magick mogrify -resize 600x600> -format png -path "./600/" *.png
 
 <img src="./panorama-assets/rooms/voy.png" srcset="./panorama-assets/rooms/voy_s3.png 196w, ./panorama-assets/rooms/voy_s2.png 294w, ./panorama-assets/rooms/voy_s.png 392w, ./panorama-assets/rooms/voy.png 1500w" />
+
+
+TODO:
+sort out fisheye/stretch
+
+better map SVGs, get originals

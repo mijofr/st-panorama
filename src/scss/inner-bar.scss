@@ -89,6 +89,8 @@
     svg.mapBox {
         font-size: 0.7rem;
 
+        overflow:visible;
+
         transition: opacity 0.15s ease;
         opacity: 1;
 

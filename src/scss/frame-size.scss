@@ -9,11 +9,12 @@
 @media (orientation: landscape) {
     #page-wrap {
         #bar {
-            flex: 0 2 35vw;
-            max-width: 35vh;
+            flex: 1 10 35vw;
+            min-width: 30vh;
+            max-width: 80vh;
         }
         #main {
-            flex: 3 4 auto;
+            flex: 1 1 130vh;
         }
     }
 }
@@ -22,15 +23,43 @@
 @media (orientation: portrait) {
     #page-wrap {
         #bar {
-            flex: 3 1 auto;
-            max-height: 40vh;
-            min-height: 25vh;
+            flex: 4 3 auto;
+            min-height: 30vh;
+            max-height: 50vh;
+            
         }
         #main {
-            flex: 2 1 auto;  
+            flex: 1 1 80vw;
         }
     }
 }
 
+
+html {
+    @media (max-width: 400px) {
+        font-size: 10px;
+    }
+    @media (max-width: 440px) {
+        font-size: 12px;
+    }
+    @media (max-width: 800px) {
+        font-size: 12px;
+    }
+}
+
+#main #psvContainer1 #psvMain {
+
+    @media (max-height: 700px) and (max-width: 700px) {
+        border-radius: 2px;
+    }
+
+    @media (min-width: 1100px) and (min-height: 900px) {
+        border-radius: 4px;
+    }
+
+    @media (min-width: 1500px) and (min-height: 1000px) {
+        border-radius: 5px;
+    }
+}
 
 

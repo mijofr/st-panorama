@@ -1210,8 +1210,8 @@
                 "name": "Corridor",
                 "img": "JJhall.svg",
                 "id": "JJHALL",
-                "height": 11,
-                "width": 22,
+                "height": 10,
+                "width": 21,
                 "setup": {
                     "fullWidth": 4000,
                     "fullHeight": 2000,
@@ -1225,13 +1225,13 @@
                 },
                 "points": [
                     {
-                        "x": 5.76,
-                        "y": 5.59,
+                        "x": 5.18,
+                        "y": 4.97,
                         "id": "KENT_HALL_01"
                     },
                     {
-                        "x": 14.9,
-                        "y": 4.26,
+                        "x": 14.32,
+                        "y": 3.64,
                         "id": "KENT_HALL_00"
                     }
                 ]

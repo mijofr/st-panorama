@@ -1,0 +1,15 @@
+The ones I just auto'd with potrace
+
+-a----        29/03/2024   2:45 AM           9823 data.svg
+-a----        29/03/2024   2:45 AM          40868 eng.svg
+-a----        29/03/2024   2:45 AM          28005 entd.svg
+-a----        29/03/2024   2:45 AM          20255 picard.svg
+-a----        29/03/2024   2:45 AM          30599 sickbay.svg
+-a----        29/03/2024   2:45 AM          31219 tenforward.svg
+-a----        29/03/2024   2:45 AM          12352 transp.svg
+-a----        29/03/2024   2:45 AM          17849 troi.svg
+-a----        29/03/2024   2:45 AM          14173 worf.svg
+
+magick mogrify -background black -alpha remove -alpha off -negate -format pgm *.png
+
+Get-ChildItem -Filter *.PGM -File | Foreach { potrace --color `#ffffff  -s -t 1 -u 1 --flat -o ($_.basename + ".svg") ($_.basename + ".PGM") }

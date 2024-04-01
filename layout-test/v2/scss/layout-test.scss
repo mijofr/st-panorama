@@ -40,7 +40,7 @@
     #page-wrap {
 
         $minWidth: 30vh;
-        $maxWidth: 75vh;
+        $maxWidth: 80vh;
 
         #bar {
             flex: 1 10 35vw;
@@ -59,11 +59,6 @@
             width: $maxWidth;
         }
     }
-}
-
-@media (orientation: landscape) and (max-width: 900px) {
-
-
 }
 
 html {

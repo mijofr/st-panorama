@@ -8,7 +8,8 @@
 @import "inner-bar";
 @import "delay";
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -32,7 +33,7 @@ body {
 }
 
 #defs {
-    position:fixed;
+    position: fixed;
     top: -100px;
     left: -100px;
     width: 10px;
@@ -40,8 +41,8 @@ body {
 }
 
 #page-wrap {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     background-color: transpBg(green);
 
     display: flex;
@@ -73,9 +74,9 @@ body {
     #psvContainer1 {
         aspect-ratio: 4/3;
         background-color: transpBg(blueviolet);
-        margin:auto;
+        margin: auto;
         flex: 1 1 auto;
-        
+
         display: flex;
         flex-direction: row;
         position: relative;
@@ -87,14 +88,14 @@ body {
         #psvContainer2 {
             aspect-ratio: 4/3;
             background-color: transpBg(violet);
-            margin:auto;
+            margin: auto;
             flex: 1 1 auto;
             position: relative;
-    
+
         }
 
 
-        
+
         #psvCosmeticFrame {
             border-radius: 2 * $frameWidth;
             background-color: $btnColor;
@@ -120,9 +121,9 @@ body {
                 top: 1 * $frameWidth;
                 bottom: 2 * $frameWidth;
                 left: 1 * $frameWidth;
-                right: 1 * $frameWidth;   
+                right: 1 * $frameWidth;
                 background-color: blackBg(rgb(59, 44, 153));
-                border-radius: $frameWidth; 
+                border-radius: $frameWidth;
             }
 
             #psvCosmeticInner2 {
@@ -130,12 +131,12 @@ body {
                 top: -1px;
                 bottom: -1px;
                 left: 2.5 * $frameWidth;
-                right: 2.5 * $frameWidth;   
+                right: 2.5 * $frameWidth;
                 background-color: blackBg(rgb(204, 215, 140));
             }
-            
+
             #psvButtons {
-                position:absolute;
+                position: absolute;
                 right: 3 * $frameWidth;
                 left: 3 * $frameWidth;
                 height: 2 * $frameWidth;
@@ -153,8 +154,8 @@ body {
                     opacity: 0;
                 }
 
-                
-                
+
+
                 button {
 
                     height: 100%;
@@ -163,12 +164,12 @@ body {
                     text-transform: uppercase;
                     font-size: $frameWidth * 0.75;
 
-                    
+
 
                     color: $black;
 
-                    transition: color 0.2s ease, 
-                        background-color 0.2s ease, 
+                    transition: color 0.2s ease,
+                        background-color 0.2s ease,
                         opacity 0.2s ease,
                         border-radius 0.2s ease,
                         width 0.2s ease,
@@ -178,10 +179,10 @@ body {
 
                     position: relative;
 
-                    & > div {
+                    &>div {
                         position: absolute;
-                        top:0;
-                        bottom:0;
+                        top: 0;
+                        bottom: 0;
                         display: flex;
                         left: 0;
                         width: $frameWidth * 3.5;
@@ -190,7 +191,8 @@ body {
                         align-items: end;
                         justify-content: flex-end;
                         font-weight: 900;
-                        text-align: right;    
+                        text-align: right;
+                        max-width: 100%;
                     }
 
                     &.invisible {
@@ -205,15 +207,17 @@ body {
                     }
 
                     img {
-                        height:1.6em;
+                        height: 1.6em;
                     }
 
                     &:hover {
                         img {
                             opacity: 0.7;
                         }
+
                         color: $grey-3;
                     }
+
                     &:active {
                         color: $grey-2;
                     }
@@ -225,15 +229,16 @@ body {
                         align-items: center;
                         padding-bottom: 0;
                     }
-                    
+
                 }
 
 
 
-                
+
             }
+
             #psvTitle {
-                position:absolute;
+                position: absolute;
                 right: 3 * $frameWidth;
                 left: 3 * $frameWidth;
                 height: $frameWidth;
@@ -243,7 +248,8 @@ body {
 
                 color: $white;
                 font-weight: 700;
-                & > span {
+
+                &>span {
                     line-height: 0.8;
                     font-size: $frameWidth;
                     text-transform: uppercase;
@@ -251,52 +257,57 @@ body {
                     &#titleLeft {
                         margin-left: -0.05em;
                     }
+
                     &#titleRight {
                         margin-right: -0.05em;
                     }
 
-                    #titleLeftSub, #titleRightSub {
+                    #titleLeftSub,
+                    #titleRightSub {
                         font-size: 0.9em;
                         font-weight: 400;
                         margin-left: 0.1em;
                     }
+
                     .invisible {
                         display: none;
                     }
 
                 }
-                
+
             }
         }
 
         $innerBorderRadius: 3px;
+
         #psvMain {
             position: absolute;
-            top:0;
-            bottom:0;
-            left:0;
-            right:0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             background-color: $panoBgColor;
             overflow: hidden;
             border-radius: $innerBorderRadius;
             //background-image: url('./assets/pano3.png');
             background-size: cover;
+
             #photosphere {
                 position: absolute;
                 top: 0;
                 bottom: 0;
                 left: 0;
-                right:0;
-                
+                right: 0;
+
             }
         }
 
         #bodyText {
             position: absolute;
-            top:-1px;
-            bottom:-1px;
-            left:-1px;
-            right:-1px;
+            top: -1px;
+            bottom: -1px;
+            left: -1px;
+            right: -1px;
             padding: 1px;
             background-color: $black;
             overflow: hidden;
@@ -305,12 +316,13 @@ body {
             color: $btnColor;
             font-size: 2vmin;
             font-weight: 400;
+
             p {
                 margin-bottom: 1em;
             }
         }
 
-        
+
 
     }
 }
@@ -322,10 +334,12 @@ button {
         background-color: $btnHover;
         cursor: pointer;
     }
+
     &:active {
         background-color: $btnActive;
-    }    
+    }
 }
+
 button.red {
     background-color: $redBtnColor;
 
@@ -333,29 +347,32 @@ button.red {
         background-color: $redBtnHoverColor;
         cursor: pointer;
     }
+
     &:active {
         background-color: $redBtnActiveColor;
-    }    
+    }
 }
 
 #bar {
     background-color: transpBg(aquamarine);
+
     #innerBar {
-            // background-image: url("./assets/bg.png");
-            width:100%;
-            height: 100%;
+        // background-image: url("./assets/bg.png");
+        width: 100%;
+        height: 100%;
 
-            gap: $barInnerGap;
-            display: flex;
+        gap: $barInnerGap;
+        display: flex;
 
-            align-items: center;
+        align-items: center;
 
-            #testItem1 {
-                border: 1px solid #444444;
-            }
-            #testItem2 {
-                border: 1px solid #444444;
-            }
+        #testItem1 {
+            border: 1px solid #444444;
+        }
+
+        #testItem2 {
+            border: 1px solid #444444;
+        }
     }
 }
 
@@ -372,8 +389,8 @@ button.red {
     }
 
     #main {
-        height:100%;
-        width: auto;        
+        height: 100%;
+        width: auto;
     }
 
     #bar {
@@ -381,7 +398,7 @@ button.red {
         height: 100%;
         overflow-y: scroll;
         direction: rtl;
-        padding-left:$sidebarScrollBarPadding;
+        padding-left: $sidebarScrollBarPadding;
 
         #innerBar {
             direction: ltr;
@@ -393,6 +410,7 @@ button.red {
                 height: 100px;
                 width: 30%;
             }
+
             #testItem2 {
                 height: 100px;
                 width: 60%;
@@ -408,6 +426,7 @@ button.red {
     }
     */
 }
+
 @media (orientation: portrait) {
     body {
         // padding: 1vh;
@@ -420,24 +439,25 @@ button.red {
 
     #main {
         width: 100%;
-        height :auto;
+        height: auto;
     }
 
     #bar {
         margin-top: $sidebarFrameGap;
-        width:100%;
+        width: 100%;
         overflow-x: scroll;
-        padding-bottom:$sidebarScrollBarPadding;
+        padding-bottom: $sidebarScrollBarPadding;
 
         #innerBar {
             height: 100%;
-            width:4000px;
+            width: 4000px;
             flex-direction: row;
 
             #testItem1 {
                 width: 100px;
                 height: 30%;
             }
+
             #testItem2 {
                 width: 100px;
                 height: 60%;
@@ -456,11 +476,11 @@ button.red {
 }
 
 #hlBoxPath {
-    fill:currentColor;
+    fill: currentColor;
     stroke: $black;
     stroke-opacity: 0.4;
     stroke-width: 2;
-    
+
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/vector-effect
@@ -468,27 +488,31 @@ button.red {
 
 #ghlink {
     position: absolute;
-    right:1vmin;
-    top:1vmin;
-    height:2vmin;
-    width:2vmin;
+    right: 1vmin;
+    top: 1vmin;
+    height: 2vmin;
+    width: 2vmin;
     background-image: url("./../images/GitHub-Mark-64px.png");
     background-size: contain;
     display: block;
+
     &:hover {
-      background-image: url("./../images/GitHub-Mark-Light-64px.png");
+        background-image: url("./../images/GitHub-Mark-Light-64px.png");
     }
-  }
-  
-  
+}
+
+
+#psvTitle, button, .topTitle, .sTitle {
+    user-select: none;
+}
 
 #ana {
-    position:fixed;
+    position: fixed;
     top: -2px;
     left: -2px;
-    z-index:-10;
-    width:2px;
-    height:2px;
+    z-index: -10;
+    width: 2px;
+    height: 2px;
     overflow: hidden;
 }
 

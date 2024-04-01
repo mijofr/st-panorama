@@ -240,11 +240,6 @@ export function create(groups: PlanGroup[]) {
 			htmlOut.push(`<svg class="mapBox faded" id="SVGMAP_${id}" viewBox="0 0 ${plan.width.toFixed(4)} ${plan.height.toFixed(4)}" version="1.1" xmlns="http://www.w3.org/2000/svg">`);
 
 			let imgSrc = plan.img;
-			if (imgSrc.endsWith(".png")) {
-				imgSrc = "600/" + plan.img;
-			} else if (imgSrc.endsWith(".svg")) {
-				imgSrc = "svg/" + plan.img;
-			}
 
 			htmlOut.push(`<defs><mask id="MAPMASK_${id}">`)
 			htmlOut.push(`<image onload="onMapImgLoad(event)" class="mapPlanImg" xlink:href="./panorama-assets/rooms/${imgSrc}" y="0" x="0" height="100%" width="100%" />`);

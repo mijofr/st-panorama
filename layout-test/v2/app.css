@@ -28,7 +28,7 @@
 @media (orientation: landscape) {
   #page-wrap #bar {
     flex: 1 10 35vw;
-    max-width: 75vh;
+    max-width: 80vh;
     min-width: 30vh;
   }
   #page-wrap #main {
@@ -40,7 +40,7 @@
   }
   #page-wrap #maxWidth {
     top: 0;
-    width: 75vh;
+    width: 80vh;
   }
 }
 @media (max-width: 400px) {
@@ -1796,7 +1796,8 @@ $cameraPointOuterHover: $amber-7;
   animation-delay: 0.1313s;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -1949,6 +1950,7 @@ body {
   justify-content: flex-end;
   font-weight: 900;
   text-align: right;
+  max-width: 100%;
 }
 #main #psvContainer1 #psvCosmeticFrame #psvButtons button.invisible {
   opacity: 0;
@@ -2000,7 +2002,8 @@ body {
 #main #psvContainer1 #psvCosmeticFrame #psvTitle > span#titleRight {
   margin-right: -0.05em;
 }
-#main #psvContainer1 #psvCosmeticFrame #psvTitle > span #titleLeftSub, #main #psvContainer1 #psvCosmeticFrame #psvTitle > span #titleRightSub {
+#main #psvContainer1 #psvCosmeticFrame #psvTitle > span #titleLeftSub,
+#main #psvContainer1 #psvCosmeticFrame #psvTitle > span #titleRightSub {
   font-size: 0.9em;
   font-weight: 400;
   margin-left: 0.1em;
@@ -2234,6 +2237,10 @@ $cameraPointOuterHover: $amber-7;
   background-image: url("./../images/GitHub-Mark-Light-64px.png");
 }
 
+#psvTitle, button, .topTitle, .sTitle {
+  user-select: none;
+}
+
 #ana {
   position: fixed;
   top: -2px;
@@ -2297,7 +2304,7 @@ $cameraPointOuterHover: $amber-7;
 @media (orientation: landscape) {
   #page-wrap #bar {
     flex: 1 10 35vw;
-    max-width: 75vh;
+    max-width: 80vh;
     min-width: 30vh;
   }
   #page-wrap #main {
@@ -2309,7 +2316,7 @@ $cameraPointOuterHover: $amber-7;
   }
   #page-wrap #maxWidth {
     top: 0;
-    width: 75vh;
+    width: 80vh;
   }
 }
 @media (max-width: 400px) {
