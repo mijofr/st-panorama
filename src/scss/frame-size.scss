@@ -9,9 +9,13 @@
 @media (orientation: landscape) {
     #page-wrap {
         #bar {
-            flex: 1 10 35vw;
+            flex: 1 10 25vw;
             min-width: 30vh;
             max-width: 80vh;
+            @media (max-height: 900px) {
+                flex-basis: 35;
+            }
+
         }
         #main {
             flex: 1 1 130vh;
@@ -36,15 +40,31 @@
 
 
 html {
-    @media (max-width: 400px) {
-        font-size: 10px;
+
+    @media (orientation: portrait) {
+        @media (max-width: 800px) {
+            font-size: 12px;
+        }
+        @media (max-width: 440px) {
+            font-size: 12px;
+        }
+        @media (max-width: 400px) {
+            font-size: 10px;
+        }
     }
-    @media (max-width: 440px) {
-        font-size: 12px;
+
+    @media (orientation: landscape) {
+        @media (max-height: 700px) {
+            font-size: 14px;
+        }
+        @media (max-height: 600px) {
+            font-size: 12px;
+        }
+        @media (max-height: 450px) {
+            font-size: 10px;
+        }
     }
-    @media (max-width: 800px) {
-        font-size: 12px;
-    }
+
 }
 
 #main #psvContainer1 #psvMain {

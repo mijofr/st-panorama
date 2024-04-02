@@ -20,12 +20,12 @@
             display: flex;
 
             &>div {
-                line-height: 0.8;
+                line-height: 0.85;
                 color: $bg-color;
 
                 &>span {
-                    font-size: 0.8em;
-                    font-weight: 400;
+                    font-size: 0.85em;
+                    font-weight: 600;
                 }
             }
         }
@@ -325,6 +325,8 @@ $l2Opacity: $floorOpacity + ($diffOpacity * 0.66);
 
                     &>span {
                         margin-left: 0.3em;
+                        position: relative;
+                        top: -0.1em;
                     }
                 }
             }
@@ -358,6 +360,7 @@ $l2Opacity: $floorOpacity + ($diffOpacity * 0.66);
                     position: relative;
                     top: -1 * $titleOffset;
                     padding: 0 ($barInnerGap * 0.5);
+                    left: -0.1em;
                 }
             }
         }

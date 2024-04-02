@@ -178,9 +178,9 @@ function loadFunc(): void {
 			loadingImg: "./images/loading.png",
 			defaultPitch: defaultPitch,
 			touchmoveTwoFingers: false,
-			mousewheelCtrlKey: false,
+			mousewheelCtrlKey: false, 
 			panoData: initPanoData,
-			fisheye: 0, // this causes that jump after load.
+			fisheye: 0, // this causes that jump after load. -0.1
 			navbar: false,
 		});
 

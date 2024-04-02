@@ -200,7 +200,7 @@ export function create(groups: PlanGroup[]) {
 		htmlOut.push(`<div class="groupContainer" id="GRP_${group.id.toLocaleUpperCase()}">`);
 
 		// debugbits.push(`<a href="#GRP_${groupIdx.toString().padStart(2, '0')}">${group.name} ${group.subtitle ? group.subtitle: ''}</a>`)
-		debugbits.push(`<button type="button" onclick="scrollBarTo('GRP_${group.id}');">${group.name}${group.subtitle ? ' ' + group.subtitle: ''}</button>`)
+		// debugbits.push(`<button type="button" onclick="scrollBarTo('GRP_${group.id}');">${group.name}${group.subtitle ? ' ' + group.subtitle: ''}</button>`)
 		
 
 
@@ -273,7 +273,7 @@ export function create(groups: PlanGroup[]) {
 
 			let pointCount = plan.points.length;
 			let interval = Math.min(0.15 / pointCount, 0.1);
-			console.log("interval", interval);
+			// console.log("interval", interval);
 			let newArr = plan.points.map(n => n);
 			newArr.sort((a,b) => a.y - b.y);
 			sidebarIds.push([plan.name, newArr.map(n => n.id)]);

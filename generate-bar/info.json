@@ -1118,12 +1118,12 @@
                 "name": "Engineering",
                 "img": "VOY_ENG.svg",
                 "id": "VOY_ENG",
-                "height": 19,
-                "width": 25,
+                "height": 18.5,
+                "width": 24.7,
                 "points": [
                     {
                         "x": 8.2,
-                        "y": 8.9,
+                        "y": 8.8,
                         "id": "VOY_ENGINEERING_00",
                         "setup": {
                             "fullWidth": 2980,
@@ -1135,7 +1135,7 @@
                     },
                     {
                         "x": 22.1,
-                        "y": 15,
+                        "y": 14.9,
                         "id": "VOY_ENGINEERING_01",
                         "setup": {
                             "fullWidth": 2952,
@@ -1394,10 +1394,10 @@
         "plans": [
             {
                 "name": "HIDDEN",
-                "img": "HIDDEN",
+                "img": "HIDDEN.SVG",
                 "id": "HIDDENPLAN",
-                "height": 0,
-                "width": 0,
+                "height": 10,
+                "width": 10,
                 "points": [
                     {
                         "x": 4,

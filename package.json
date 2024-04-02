@@ -48,6 +48,7 @@
     "sass-lint": "^1.13.1",
     "sass-loader": "^11.1.1",
     "supports-webp": "^3.0.0",
+    "svg-dimensions": "^1.0.2",
     "terser-webpack-plugin": "^5.3.10",
     "three": "^0.161.0",
     "unified": "^11.0.4",
