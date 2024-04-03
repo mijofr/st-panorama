@@ -6,10 +6,7 @@ import {
     Cubemap2AdapterConfig,
     CubemapData,
     CubemapFaces,
-    CubemapNet,
-    CubemapPanorama,
-    CubemapSeparate,
-    CubemapStripe,
+    CubemapPanorama
 } from './model.ts';
 import { cleanCubemap, cleanCubemapArray, isCubemap } from './utils.ts';
 
@@ -150,33 +147,10 @@ export class Cubemap2Adapter extends AbstractAdapter<CubemapPanorama, Texture[],
             utils.logWarn('fisheye effect with cubemap texture can generate distorsion');
         }
 
-        let cleanPanorama: CubemapSeparate | CubemapStripe | CubemapNet;
-        if (Array.isArray(panorama) || isCubemap(panorama)) {
-            cleanPanorama = {
-                type: 'separate',
-                paths: panorama,
-            } as CubemapSeparate;
-        } else {
-            cleanPanorama = panorama as any;
-        }
+        let cleanPanorama: CubemapPanorama = panorama;
 
         let result: { textures: Texture[]; flipTopBottom: boolean; cacheKey: string };
-        switch (cleanPanorama.type) {
-            case 'separate':
-                result = await this.loadTexturesSeparate(cleanPanorama, loader);
-                break;
-
-            case 'stripe':
-                result = await this.loadTexturesStripe(cleanPanorama, loader);
-                break;
-
-            case 'net':
-                result = await this.loadTexturesNet(cleanPanorama, loader);
-                break;
-
-            default:
-                throw new PSVError('Invalid cubemap panorama, are you using the right adapter?');
-        }
+        result = await this.loadTexturesNet(cleanPanorama, loader);
 
         return {
             panorama,
@@ -190,116 +164,9 @@ export class Cubemap2Adapter extends AbstractAdapter<CubemapPanorama, Texture[],
         };
     }
 
-    private async loadTexturesSeparate(panorama: CubemapSeparate, loader: boolean) {
-        let paths: string[];
-        if (Array.isArray(panorama.paths)) {
-            paths = cleanCubemapArray(panorama.paths as string[]);
-        } else {
-            paths = cleanCubemap(panorama.paths as Cubemap);
-        }
 
-        const cacheKey = paths[0];
-        const promises: Array<Promise<Texture>> = [];
-        const progress = [0, 0, 0, 0, 0, 0];
-
-        for (let i = 0; i < 6; i++) {
-            promises.push(
-                this.viewer.textureLoader
-                    .loadImage(paths[i], loader ? (p) => {
-                        progress[i] = p;
-                        this.viewer.loader.setProgress(utils.sum(progress) / 6);
-                    } : null, cacheKey)
-                    .then((img) => this.createCubemapTexture(img))
-            );
-        }
-
-        return {
-            textures: await Promise.all(promises),
-            cacheKey,
-            flipTopBottom: panorama.flipTopBottom ?? false,
-        };
-    }
-
-    private createCubemapTexture(img: HTMLImageElement): Texture {
-        if (img.width !== img.height) {
-            utils.logWarn('Invalid cubemap image, the width should equal the height');
-        }
-
-        // resize image
-        if (this.config.blur || img.width > SYSTEM.maxTextureWidth) {
-            const ratio = Math.min(1, SYSTEM.maxCanvasWidth / img.width);
-
-            const buffer = document.createElement('canvas');
-            buffer.width = img.width * ratio;
-            buffer.height = img.height * ratio;
-
-            const ctx = buffer.getContext('2d');
-            if (ctx == null) {  throw new Error("no ctx"); }
-
-            if (this.config.blur) {
-                ctx.filter = `blur(${buffer.width / 512}px)`;
-            }
-
-            ctx.drawImage(img, 0, 0, buffer.width, buffer.height);
-
-            return utils.createTexture(buffer);
-        }
-
-        return utils.createTexture(img);
-    }
-
-    private async loadTexturesStripe(panorama: CubemapStripe, loader: boolean) {
-        if (!panorama.order) {
-            panorama.order = ['left', 'front', 'right', 'back', 'top', 'bottom'];
-        }
-
-        const cacheKey = panorama.path;
-        const img = await this.viewer.textureLoader.loadImage(
-            panorama.path,
-            loader ? (p) => this.viewer.loader.setProgress(p) : null,
-            cacheKey
-        );
-
-        if (img.width !== img.height * 6) {
-            utils.logWarn('Invalid cubemap image, the width should be six times the height');
-        }
-
-        const ratio = Math.min(1, SYSTEM.maxCanvasWidth / img.height);
-        const tileWidth = img.height * ratio;
-
-        const textures = {} as { [K in CubemapFaces]: Texture };
-
-        for (let i = 0; i < 6; i++) {
-            const buffer = document.createElement('canvas');
-            buffer.width = tileWidth;
-            buffer.height = tileWidth;
-
-            const ctx = buffer.getContext('2d');
-            if (ctx == null) {  throw new Error("no ctx"); }
-
-            if (this.config.blur) {
-                ctx.filter = 'blur(1px)';
-            }
-
-            ctx.drawImage(
-                img,
-                img.height * i, 0,
-                img.height, img.height,
-                0, 0,
-                tileWidth, tileWidth
-            );
-
-            textures[panorama.order[i]] = utils.createTexture(buffer);
-        }
-
-        return {
-            textures: cleanCubemap(textures),
-            cacheKey,
-            flipTopBottom: panorama.flipTopBottom ?? false,
-        };
-    }
-
-    private async loadTexturesNet(panorama: CubemapNet, loader: boolean) {
+    private async loadTexturesNet(panorama: CubemapPanorama, loader: boolean) {
+        console.log("pano", panorama);
         const cacheKey = panorama.path;
         const img = await this.viewer.textureLoader.loadImage(
             panorama.path,
