@@ -20,6 +20,7 @@ const READYDELAY: number = 500;
 // had to do some things to this to get it to work in the new version,
 // it used to be fullheight 1536.
 
+/*
 const DEFAULTPANOSETUP: PanoData = {
 	fullWidth: 2496,
 	fullHeight: 1248,
@@ -32,6 +33,7 @@ const DEFAULTPANOSETUP: PanoData = {
 	poseRoll: 0, // -180 to 180
 	isEquirectangular: true
 };
+*/
 
 // doing nasty thing?
 // gives invalid panodata error but does look a bit better
@@ -48,6 +50,25 @@ const DEFAULTPANOSETUP = {
 	poseRoll: 0, // -180 to 180
 };
 */
+
+
+const fullHeight = 1248;
+const croppedHeight = 512;
+const croppedY = (fullHeight - croppedHeight) / 2;
+
+const DEFAULTPANOSETUP = {
+	fullWidth: 2496,
+	fullHeight: fullHeight,
+	croppedWidth: 2496,
+	croppedHeight: croppedHeight,
+	croppedX: 0,
+	croppedY: croppedY,
+	poseHeading: 0, // 0 to 360
+	posePitch: 0, // -90 to 90
+	poseRoll: 0, // -180 to 180
+	isEquirectangular: true
+};
+
 
 const STARMAPSETUP: PanoData = {
 	fullWidth: 6144,

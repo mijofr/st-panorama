@@ -89,6 +89,7 @@ body {
             margin:auto;
             flex: 1 1 auto;
             position: relative;
+
     
         }
 
@@ -268,13 +269,25 @@ body {
             }
         }
 
+
+        /*
+
+        640x324
+        960x486
+        1280x648
+        1920x972
+        */
+
         $innerBorderRadius: 3px;
         #psvMain {
             position: absolute;
-            top:0;
-            bottom:0;
-            left:0;
-            right:0;
+            //top:20px;
+            bottom:300px;
+            left:1px;
+            //right:0;
+            width:1280px;
+            height:648px;
+
             background-color: $panoBgColor;
             overflow: hidden;
             border-radius: $innerBorderRadius;
