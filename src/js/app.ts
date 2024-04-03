@@ -1,8 +1,8 @@
 import "../scss/index.scss";
 
 import { Viewer, EquirectangularAdapter, PanoData } from "@photo-sphere-viewer/core";
-// import { CubemapAdapter } from "@photo-sphere-viewer/cubemap-adapter";
-import { Cubemap2Adapter } from "./cubemap2-adapter/index.ts";
+// import { CylindricalAdapter } from "@photo-sphere-viewer/cylindrical-adapter";
+import { CylindricalAdapter } from "./cylindrical-adapter/index.ts";
 
 import { VisibleRangePlugin } from "@photo-sphere-viewer/visible-range-plugin";
 import { AutorotatePlugin } from "@photo-sphere-viewer/autorotate-plugin";
@@ -183,11 +183,11 @@ function loadFunc2(): void {
 	let initPanoData = DEFAULTPANOSETUP;
 
 	viewer = new Viewer({
-		adapter: [Cubemap2Adapter, {
-			type: 'net'
+		adapter: [CylindricalAdapter, {
+			type: 'cylindrical'
 		}],
 		panorama: {
-			type: 'net',
+			type: 'cylindrical',
 			path: './panorama-assets/testNet.png'
 		},	
 		plugins: [],

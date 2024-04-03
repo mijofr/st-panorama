@@ -2,18 +2,17 @@ import type { PanoramaPosition, Position, TextureData, Viewer } from '@photo-sph
 import { AbstractAdapter, CONSTANTS, PSVError, SYSTEM, utils } from '@photo-sphere-viewer/core';
 import { BoxGeometry, MathUtils, Mesh, MeshBasicMaterial, Texture, Vector2, Vector3 } from 'three';
 import {
-    Cubemap,
-    Cubemap2AdapterConfig,
-    CubemapData,
-    CubemapFaces,
-    CubemapPanorama
+    CylindricalAdapterConfig,
+    CylindricalData,
+    CylindricalFaces,
+    CylindricalPanorama
 } from './model.ts';
-import { cleanCubemap, cleanCubemapArray, isCubemap } from './utils.ts';
+import { cleanCylindrical, cleanCylindricalArray, isCylindrical } from './utils.ts';
 
-type CubemapMesh = Mesh<BoxGeometry, MeshBasicMaterial[]>;
-type CubemapTexture = TextureData<Texture[], CubemapPanorama, CubemapData>;
+type CylindricalMesh = Mesh<BoxGeometry, MeshBasicMaterial[]>;
+type CylindricalTexture = TextureData<Texture[], CylindricalPanorama, CylindricalData>;
 
-const getConfig = utils.getConfigParser<Cubemap2AdapterConfig>({
+const getConfig = utils.getConfigParser<CylindricalAdapterConfig>({
     blur: false,
 });
 
@@ -21,16 +20,16 @@ const EPS = 0.000001;
 const ORIGIN = new Vector3();
 
 /**
- * Adapter for cubemaps
+ * Adapter for cylindricals
  */
-export class Cubemap2Adapter extends AbstractAdapter<CubemapPanorama, Texture[], CubemapData> {
-    static override readonly id = 'cubemap2';
+export class CylindricalAdapter extends AbstractAdapter<CylindricalPanorama, Texture[], CylindricalData> {
+    static override readonly id = 'cylindrical2';
     static override readonly VERSION = "5.7.2"; // PKG_VERSION;
     static override readonly supportsDownload = false;
 
-    private readonly config: Cubemap2AdapterConfig;
+    private readonly config: CylindricalAdapterConfig;
 
-    constructor(viewer: Viewer, config: Cubemap2AdapterConfig) {
+    constructor(viewer: Viewer, config: CylindricalAdapterConfig) {
         super(viewer);
 
         this.config = getConfig(config);
@@ -45,9 +44,9 @@ export class Cubemap2Adapter extends AbstractAdapter<CubemapPanorama, Texture[],
     }
 
     /**
-     * {@link https://github.com/bhautikj/vrProjector/blob/master/vrProjector/CubemapProjection.py#L130}
+     * {@link https://github.com/bhautikj/vrProjector/blob/master/vrProjector/CylindricalProjection.py#L130}
      */
-    override textureCoordsToSphericalCoords(point: PanoramaPosition, data: CubemapData): Position {
+    override textureCoordsToSphericalCoords(point: PanoramaPosition, data: CylindricalData): Position {
         if (utils.isNil(point.textureX) || utils.isNil(point.textureY) || utils.isNil(point.textureFace)) {
             throw new PSVError(`Texture position is missing 'textureX', 'textureY' or 'textureFace'`);
         }
@@ -88,7 +87,7 @@ export class Cubemap2Adapter extends AbstractAdapter<CubemapPanorama, Texture[],
         return { yaw, pitch };
     }
 
-    override sphericalCoordsToTextureCoords(position: Position, data: CubemapData): PanoramaPosition {
+    override sphericalCoordsToTextureCoords(position: Position, data: CylindricalData): PanoramaPosition {
         // @ts-ignore
         const raycaster = this.viewer.renderer.raycaster;
         // @ts-ignore
@@ -100,7 +99,7 @@ export class Cubemap2Adapter extends AbstractAdapter<CubemapPanorama, Texture[],
             return Math.round(MathUtils.mapLinear(x, a1, a2, 0, data.faceSize));
         }
 
-        let textureFace: CubemapFaces;
+        let textureFace: CylindricalFaces;
         let textureX: number;
         let textureY: number;
         if (1 - Math.abs(point.z) < EPS) {
@@ -142,12 +141,12 @@ export class Cubemap2Adapter extends AbstractAdapter<CubemapPanorama, Texture[],
         return { textureFace, textureX, textureY };
     }
 
-    async loadTexture(panorama: CubemapPanorama, loader = true): Promise<CubemapTexture> {
+    async loadTexture(panorama: CylindricalPanorama, loader = true): Promise<CylindricalTexture> {
         if (this.viewer.config.fisheye) {
-            utils.logWarn('fisheye effect with cubemap texture can generate distorsion');
+            utils.logWarn('fisheye effect with cylindrical texture can generate distorsion');
         }
 
-        let cleanPanorama: CubemapPanorama = panorama;
+        let cleanPanorama: CylindricalPanorama = panorama;
 
         let result: { textures: Texture[]; flipTopBottom: boolean; cacheKey: string };
         result = await this.loadTexturesNet(cleanPanorama, loader);
@@ -157,7 +156,7 @@ export class Cubemap2Adapter extends AbstractAdapter<CubemapPanorama, Texture[],
             texture: result.textures,
             cacheKey: result.cacheKey,
             panoData: {
-                isCubemap: true,
+                isCylindrical: true,
                 flipTopBottom: result.flipTopBottom,
                 faceSize: (result.textures[0].image as HTMLImageElement | HTMLCanvasElement).width,
             },
@@ -165,7 +164,7 @@ export class Cubemap2Adapter extends AbstractAdapter<CubemapPanorama, Texture[],
     }
 
 
-    private async loadTexturesNet(panorama: CubemapPanorama, loader: boolean) {
+    private async loadTexturesNet(panorama: CylindricalPanorama, loader: boolean) {
         console.log("pano", panorama);
         const cacheKey = panorama.path;
         const img = await this.viewer.textureLoader.loadImage(
@@ -175,7 +174,7 @@ export class Cubemap2Adapter extends AbstractAdapter<CubemapPanorama, Texture[],
         );
 
         if (img.width / 4 !== img.height / 3) {
-            utils.logWarn('Invalid cubemap image, the width should be 4/3rd of the height');
+            utils.logWarn('Invalid cylindrical image, the width should be 4/3rd of the height');
         }
 
         const ratio = Math.min(1, SYSTEM.maxCanvasWidth / (img.width / 4));
@@ -222,7 +221,7 @@ export class Cubemap2Adapter extends AbstractAdapter<CubemapPanorama, Texture[],
         };
     }
 
-    createMesh(scale = 1): CubemapMesh {
+    createMesh(scale = 1): CylindricalMesh {
         const cubeSize = CONSTANTS.SPHERE_RADIUS * 2 * scale;
         const geometry = new BoxGeometry(cubeSize, cubeSize, cubeSize).scale(1, 1, -1);
 
@@ -234,7 +233,7 @@ export class Cubemap2Adapter extends AbstractAdapter<CubemapPanorama, Texture[],
         return new Mesh(geometry, materials);
     }
 
-    setTexture(mesh: CubemapMesh, textureData: CubemapTexture) {
+    setTexture(mesh: CylindricalMesh, textureData: CylindricalTexture) {
         const { texture, panoData } = textureData;
 
         for (let i = 0; i < 6; i++) {
@@ -247,14 +246,14 @@ export class Cubemap2Adapter extends AbstractAdapter<CubemapPanorama, Texture[],
         }
     }
 
-    setTextureOpacity(mesh: CubemapMesh, opacity: number) {
+    setTextureOpacity(mesh: CylindricalMesh, opacity: number) {
         for (let i = 0; i < 6; i++) {
             mesh.material[i].opacity = opacity;
             mesh.material[i].transparent = opacity < 1;
         }
     }
 
-    disposeTexture(textureData: CubemapTexture) {
+    disposeTexture(textureData: CylindricalTexture) {
         textureData.texture?.forEach((texture) => texture.dispose());
     }
 }
