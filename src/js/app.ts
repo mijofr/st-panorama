@@ -1,6 +1,9 @@
 import "../scss/index.scss";
 
 import { Viewer, EquirectangularAdapter, PanoData } from "@photo-sphere-viewer/core";
+// import { CubemapAdapter } from "@photo-sphere-viewer/cubemap-adapter";
+import { Cubemap2Adapter } from "./cubemap2-adapter/index.ts";
+
 import { VisibleRangePlugin } from "@photo-sphere-viewer/visible-range-plugin";
 import { AutorotatePlugin } from "@photo-sphere-viewer/autorotate-plugin";
 
@@ -56,7 +59,7 @@ const fullHeight = 1248;
 const croppedHeight = 512;
 const croppedY = (fullHeight - croppedHeight) / 2;
 
-const DEFAULTPANOSETUP = {
+const DEFAULTPANOSETUP: PanoData = {
 	fullWidth: 2496,
 	fullHeight: fullHeight,
 	croppedWidth: 2496,
@@ -147,6 +150,59 @@ function hideRedAlert() {
 	document.getElementById("alertButton")?.classList.add("invisible");
 	document.getElementById("fsButton")?.classList.add("rounded");
 };
+
+function loadFunc2(): void {
+
+	/*
+	let initPanoSrc = "./panorama-assets/panoramas/KLING_05.webp";
+	let initPanoData = DEFAULTPANOSETUP;
+
+	viewer = new Viewer({
+		adapter: [
+			EquirectangularAdapter, {
+				interpolateBackground: true,
+				backgroundColor: "#000",
+				// useXmpData: true,
+			},
+		],
+		plugins: [],
+		panorama: initPanoSrc,
+		container: "photosphere",
+		// caption: 'Parc national du Mercantour <b>&copy; Damien Sorel</b>',
+		loadingImg: "./images/loading.png",
+		defaultPitch: 0.1,
+		touchmoveTwoFingers: false,
+		mousewheelCtrlKey: false, 
+		panoData: initPanoData,
+		fisheye: 0, // this causes that jump after load. -0.1
+		navbar: false,
+	});
+	*/
+
+	let initPanoSrc = "./panorama-assets/panoramas/KLING_05.webp";
+	let initPanoData = DEFAULTPANOSETUP;
+
+	viewer = new Viewer({
+		adapter: [Cubemap2Adapter, {
+			type: 'net'
+		}],
+		panorama: {
+			type: 'net',
+			path: './panorama-assets/testNet.png'
+		},	
+		plugins: [],
+		container: "photosphere",
+		// caption: 'Parc national du Mercantour <b>&copy; Damien Sorel</b>',
+		loadingImg: "./images/loading.png",
+		defaultPitch: 0.1,
+		touchmoveTwoFingers: false,
+		mousewheelCtrlKey: false, 
+		panoData: initPanoData,
+		fisheye: 0, // this causes that jump after load. -0.1
+		navbar: false,
+	});
+
+}
 
 function loadFunc(): void {
 	for (const c of Array.from(SetupData.pointSet)) {
@@ -432,5 +488,5 @@ function animationTest() {
 
 
 window.addEventListener("load", function () {
-	loadFunc();
+	loadFunc2();
 });

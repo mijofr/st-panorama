@@ -9,16 +9,16 @@
 @media (orientation: landscape) {
     #page-wrap {
         #bar {
-            flex: 1 10 25vw;
-            min-width: 30vh;
-            max-width: 80vh;
-            @media (max-height: 900px) {
-                flex-basis: 35;
-            }
+            flex: 0 10 4vw;
+            //min-width: 4vw;
+            //max-width: 80vh;
+            //@media (max-height: 900px) {
+                //flex-basis: 4vw;
+            //}
 
         }
         #main {
-            flex: 1 1 130vh;
+            flex: 1 1 auto;
         }
     }
 }
