@@ -1,6 +1,6 @@
 import type { PanoramaPosition, Position, TextureData, Viewer } from '@photo-sphere-viewer/core';
 import { AbstractAdapter, CONSTANTS, PSVError, SYSTEM, utils } from '@photo-sphere-viewer/core';
-import { BoxGeometry, MathUtils, Mesh, MeshBasicMaterial, Texture, Vector2, Vector3 } from 'three';
+import { BoxGeometry, Color, CylinderGeometry, DataTexture, MathUtils, Mesh, MeshBasicMaterial, RGBAFormat, Texture, Vector2, Vector3 } from 'three';
 import {
     CylindricalAdapterConfig,
     CylindricalData,
@@ -9,7 +9,7 @@ import {
 } from './model.ts';
 import { cleanCylindrical, cleanCylindricalArray, isCylindrical } from './utils.ts';
 
-type CylindricalMesh = Mesh<BoxGeometry, MeshBasicMaterial[]>;
+type CylindricalMesh = Mesh<CylinderGeometry, MeshBasicMaterial>;
 type CylindricalTexture = TextureData<Texture[], CylindricalPanorama, CylindricalData>;
 
 const getConfig = utils.getConfigParser<CylindricalAdapterConfig>({
@@ -19,11 +19,13 @@ const getConfig = utils.getConfigParser<CylindricalAdapterConfig>({
 const EPS = 0.000001;
 const ORIGIN = new Vector3();
 
+const CylinderHeight: number = CONSTANTS.SPHERE_RADIUS;
+
 /**
  * Adapter for cylindricals
  */
 export class CylindricalAdapter extends AbstractAdapter<CylindricalPanorama, Texture[], CylindricalData> {
-    static override readonly id = 'cylindrical2';
+    static override readonly id = 'cylindrical';
     static override readonly VERSION = "5.7.2"; // PKG_VERSION;
     static override readonly supportsDownload = false;
 
@@ -222,20 +224,28 @@ export class CylindricalAdapter extends AbstractAdapter<CylindricalPanorama, Tex
     }
 
     createMesh(scale = 1): CylindricalMesh {
-        const cubeSize = CONSTANTS.SPHERE_RADIUS * 2 * scale;
-        const geometry = new BoxGeometry(cubeSize, cubeSize, cubeSize).scale(1, 1, -1);
+        const cubeSize = CONSTANTS.SPHERE_RADIUS;
+        const geometry = new CylinderGeometry(cubeSize, cubeSize, CylinderHeight, 64, 1, true).scale(-1, 1, 1);
 
+        let cMaterial = new MeshBasicMaterial({
+            color: new Color(0xffff00),
+            wireframe: true
+        });
+
+        /*
         const materials = [];
         for (let i = 0; i < 6; i++) {
             materials.push(new MeshBasicMaterial());
         }
+        */
 
-        return new Mesh(geometry, materials);
+        return new Mesh(geometry, cMaterial);
     }
 
     setTexture(mesh: CylindricalMesh, textureData: CylindricalTexture) {
         const { texture, panoData } = textureData;
 
+        /*
         for (let i = 0; i < 6; i++) {
             if (panoData.flipTopBottom && (i === 2 || i === 3)) {
                 texture[i].center = new Vector2(0.5, 0.5);
@@ -243,17 +253,35 @@ export class CylindricalAdapter extends AbstractAdapter<CylindricalPanorama, Tex
             }
 
             mesh.material[i].map = texture[i];
-        }
+            */
+            
     }
 
     setTextureOpacity(mesh: CylindricalMesh, opacity: number) {
+        /*
         for (let i = 0; i < 6; i++) {
             mesh.material[i].opacity = opacity;
             mesh.material[i].transparent = opacity < 1;
         }
+        */
     }
 
     disposeTexture(textureData: CylindricalTexture) {
         textureData.texture?.forEach((texture) => texture.dispose());
     }
 }
+
+
+export function createDataTexture(r: number, g: number, b: number) {
+
+    const data = new Uint8Array(4);
+    data[0] = Math.floor(r * 255);
+    data[1] = Math.floor(g * 255);
+    data[2] = Math.floor(b * 255);
+    data[3] = 255;
+    const texture = new DataTexture( data, 1, 1, RGBAFormat);
+    texture.needsUpdate = true;
+    return texture;
+  }
+  
+  
