@@ -1,0 +1,8 @@
+Pitch goes from 1.5707963267948966 (up) to -1.5707963267948966 (down), 0 as axis.
+
+π/2 = 1.5707963267948966;
+
+Yaw is distance around, from 0 to 2π
+
+Do an equatorial one, check sphericalCoordsToTextureCoords and textureCoordsToSphericalCoords. Feed the getPosition into it. (just switch branches back
+and use the disco one) (or the non disco to check truncated coords)

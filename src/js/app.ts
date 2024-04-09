@@ -179,7 +179,7 @@ function loadFunc2(): void {
 	});
 	*/
 
-	let initPanoSrc = "./panorama-assets/panoramas/KLING_05.webp";
+	let initPanoSrc = "./panorama-assets/panoramas/KLING_06.webp";
 	let initPanoData = DEFAULTPANOSETUP;
 
 	viewer = new Viewer({
@@ -187,9 +187,10 @@ function loadFunc2(): void {
 			type: 'cylindrical'
 		}],
 		panorama: {
+			path: './panorama-assets/KLING_06.png',
 			type: 'cylindrical',
-			path: './panorama-assets/testNet.png'
-		},	
+			height: 1
+		},
 		plugins: [],
 		container: "photosphere",
 		// caption: 'Parc national du Mercantour <b>&copy; Damien Sorel</b>',
@@ -201,6 +202,22 @@ function loadFunc2(): void {
 		fisheye: 0, // this causes that jump after load. -0.1
 		navbar: false,
 	});
+
+	
+    window.addEventListener("keypress", (e: any) => {
+		e = e || window.event;
+		if (e && e.key) {
+		  let key = e.key.toUpperCase();
+		  switch (key) {
+			case "T":
+			  console.log("T Pressed");
+			  console.log(viewer.getPosition());
+			  break;
+			default:
+			  break;
+		  }
+		}
+	  });
 
 }
 

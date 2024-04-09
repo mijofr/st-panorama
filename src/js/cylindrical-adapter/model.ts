@@ -1,4 +1,3 @@
-export type CylindricalFaces = 'left' | 'front' | 'right' | 'back' | 'top' | 'bottom';
 
 /**
  * Object defining a cylindrical as a single net file (cross arrangement)
@@ -6,21 +5,31 @@ export type CylindricalFaces = 'left' | 'front' | 'right' | 'back' | 'top' | 'bo
 export type CylindricalPanorama = {
     type: 'cylindrical';
     path: string;
+    height: number;
 };
 
 /**
  * Size information of a cylindrical panorama
  */
-export type CylindricalData = {
+export type CylindricalPanoData = {
     isCylindrical: true;
-    flipTopBottom: boolean;
-    faceSize: number;
+    fullWidth: number,
+	fullHeight: number
 };
 
 export type CylindricalAdapterConfig = {
     /**
-     * used for cylindrical tiles adapter
-     * @internal
+     * Background color of the canvas, which will be visible when using cropped panoramas
+     * @default '#000'
      */
-    blur?: boolean;
+    backgroundColor?: string;
+    /**
+     * Interpolate the missing parts of cropped panoramas (async)
+     */
+    interpolateBackground?: boolean;
+    /**
+     * number of faces of the sphere geometry, higher values may decrease performances
+     * @default 64
+     */
+    resolution?: number;
 };
