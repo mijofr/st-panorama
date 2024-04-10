@@ -6,3 +6,56 @@ Yaw is distance around, from 0 to 2π
 
 Do an equatorial one, check sphericalCoordsToTextureCoords and textureCoordsToSphericalCoords. Feed the getPosition into it. (just switch branches back
 and use the disco one) (or the non disco to check truncated coords)
+
+
+
+yaw increases as you turn clockwise
+pitch increases as you angle up
+YAW 0 PITCH 0 is 
+
+ENT-D bridge 04
+
+"fullWidth": 2496,
+"fullHeight": 1248,
+"croppedWidth": 2496,
+"croppedHeight": 768,
+"croppedX": 0,
+"croppedY": 240,
+
+yaw:6.11297	pitch:-0.11063	x:1180	y:428
+yaw:6.09365	pitch:0.36451	x:1173	y:239
+yaw:6.10270	pitch:-0.36451	x:1176	y:529
+yaw:3.14370	pitch:0.01352	x:1	y:379
+yaw:3.12041	pitch:0.00652	x:2488	y:381
+yaw:3.14064	pitch:-0.18497	x:2496	y:457
+yaw:4.52032	pitch:-0.12850	x:548	y:435
+yaw:6.11786	pitch:0.96607	x:1182	y:0
+yaw:6.08932	pitch:-0.96588	x:1171	y:768
+yaw:0.00559	pitch:-1.57080	x:1250	y:1008
+yaw:6.21060	pitch:1.16857	x:1219	y:-80
+yaw:6.25728	pitch:1.57080	x:1238	y:-240
+yaw:0		pitch:0			x:1248	y:384
+yaw:PI 		pitch:0, 		x: 0, 	y: 384
+
+
+DISCO_BRIDGE_1
+
+"fullWidth": 6144,
+"fullHeight": 3072,
+"croppedWidth": 6144,
+"croppedHeight": 3072,
+"croppedX": 0,
+"croppedY": 0,
+
+yaw:0.00000	pitch:0.30000	x:3072	y:1243
+yaw:0.00129	pitch:-0.02628	x:3073	y:1562
+yaw:6.27672	pitch:-0.03188	x:3066	y:1567
+
+STRAIGHT UP
+yaw:0.01164	pitch:1.57080	x:3083	y:0
+yaw:3.08805	pitch:1.57080	x:6092	y:0
+
+STRAIGHT DOWN
+yaw:2.94880	pitch:-1.57080	x:5955	y:3072
+yaw:5.63512	pitch:-1.57080	x:2438	y:3072
+

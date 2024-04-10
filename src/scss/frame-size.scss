@@ -170,3 +170,20 @@ html {
 
     }
 }
+
+#data {
+    position: fixed;
+    top:4px;
+    left:4px;
+    font-family: monospace;
+    z-index: 9999;
+    color: white;
+    td {
+        font-size: 16px;
+        margin: 2px;
+        background-color: black;
+        width: 120px;
+        text-align: right;
+        padding: 0px 2px;
+    }
+}

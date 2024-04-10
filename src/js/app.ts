@@ -1,6 +1,6 @@
 import "../scss/index.scss";
 
-import { Viewer, EquirectangularAdapter, PanoData } from "@photo-sphere-viewer/core";
+import { Viewer, EquirectangularAdapter, PanoData, AbstractAdapter } from "@photo-sphere-viewer/core";
 // import { CylindricalAdapter } from "@photo-sphere-viewer/cylindrical-adapter";
 import { CylindricalAdapter } from "./cylindrical-adapter/index.ts";
 
@@ -211,7 +211,10 @@ function loadFunc2(): void {
 		  switch (key) {
 			case "T":
 			  console.log("T Pressed");
+			  let adapter = (viewer as any).adapter as CylindricalAdapter;
+		      console.log(adapter);
 			  console.log(viewer.getPosition());
+			  console.log(adapter.logPAno());
 			  break;
 			default:
 			  break;
@@ -219,6 +222,42 @@ function loadFunc2(): void {
 		}
 	  });
 
+	viewer.addEventListener('position-updated', ({ position }) => {
+		setIdName("pitchData", position.pitch.toFixed(6));
+		setIdName("yawData", position.yaw.toFixed(6));
+		let adapter = (viewer as any).adapter as CylindricalAdapter;
+		if (adapter) {
+
+			try {
+				let texturePos = adapter.sphericalCoordsToTextureCoords(position, null);
+				setIdName("txData", texturePos.textureX.toFixed(6));
+				setIdName("tyData", texturePos.textureY.toFixed(6));
+
+				try {
+					let newPos = adapter.textureCoordsToSphericalCoords(texturePos, null);
+					setIdName("pitch2Data", newPos.pitch.toFixed(6));
+					setIdName("yaw2Data", newPos.yaw.toFixed(6));
+				}
+				catch {
+					console.log("crash2");
+				}
+
+			} catch {
+				console.log("crash1");
+			}
+			
+			// RUN THE NUMBERS BACK THROUGH THE ADAPTER
+			// let tPos = adapter.
+
+
+		}
+	});
+	
+
+}
+
+function setIdName(id: string, txt: string) {
+	document.getElementById(id).innerHTML = txt;
 }
 
 function loadFunc(): void {
@@ -301,6 +340,8 @@ function loadFunc(): void {
 			visibleRangePlugin.setVerticalRange(appConfig.currentVertRange  as [number, number]); 
 
 		});
+
+	  
 
 	});
 
