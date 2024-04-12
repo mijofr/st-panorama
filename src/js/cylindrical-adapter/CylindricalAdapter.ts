@@ -82,14 +82,19 @@ export class CylindricalAdapter extends AbstractAdapter<CylindricalPanorama, Tex
             return {textureX:-1, textureY:-1}
         }
 
-        // @ts-ignore
-        const raycaster = this.viewer.renderer.raycaster;
-        // @ts-ignore
-        const mesh = this.viewer.renderer.mesh;
-        raycaster.set(ORIGIN, this.viewer.dataHelper.sphericalCoordsToVector3(position));
-        const point = raycaster.intersectObject(mesh)[0].point.multiplyScalar(1 / CONSTANTS.SPHERE_RADIUS);
 
-        let textureX: number = 0;
+        let yaw = position.yaw / Math.PI/2;
+        if (yaw < 0) { yaw = 0; }
+        if (yaw > 1) { yaw = 1; }
+
+        yaw = (yaw + 0.5) % 1;
+
+        
+
+ 
+        let textureX: number = Math.ceil(yaw * data.fullWidth);
+        if (textureX < 1) { textureX = 1};
+
         let textureY: number = 0;
         return { textureX, textureY };
     }
