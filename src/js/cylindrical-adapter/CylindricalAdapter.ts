@@ -67,8 +67,29 @@ export class CylindricalAdapter extends AbstractAdapter<CylindricalPanorama, Tex
             return {pitch:-1, yaw:-1}
         }
 
-        let yaw: number = 0;
+        // WAIT it seems like it's zero to maxnumber?
+
+        // minus 0.5 because it's 1 to maxnuber and the average coordinate for each pixel
+        // is in the middle at 0.5
+        let textureX: number = point.textureX - 0.5;
+        textureX = textureX / data.fullWidth;
+        textureX = (textureX + 0.5) % 1;
+
+        let yaw: number = textureX * Math.PI * 2;
+
+
+        const CYLHEIGHT = 18.5;
+
+        
         let pitch: number = 0;
+
+
+        let perc = point.textureY/data.fullHeight;
+        perc = (0.5 - perc) % 1;
+
+        let H = perc * CYLHEIGHT;
+        let theta = Math.atan(H/CONSTANTS.SPHERE_RADIUS);
+        pitch = theta;
 
         return { yaw, pitch };
     }
@@ -82,6 +103,7 @@ export class CylindricalAdapter extends AbstractAdapter<CylindricalPanorama, Tex
             return {textureX:-1, textureY:-1}
         }
 
+        // X
 
         let yaw = position.yaw / Math.PI/2;
         if (yaw < 0) { yaw = 0; }
@@ -89,13 +111,21 @@ export class CylindricalAdapter extends AbstractAdapter<CylindricalPanorama, Tex
 
         yaw = (yaw + 0.5) % 1;
 
-        
-
- 
         let textureX: number = Math.ceil(yaw * data.fullWidth);
         if (textureX < 1) { textureX = 1};
 
-        let textureY: number = 0;
+        // Y
+
+        let textureY: number = CONSTANTS.SPHERE_RADIUS * Math.tan(position.pitch)
+
+        const CYLHEIGHT = 18.5;
+        textureY = 0.5 - (textureY / CYLHEIGHT);
+
+        textureY *= data.fullHeight;
+        textureY = Math.ceil(textureY);
+
+
+
         return { textureX, textureY };
     }
 
