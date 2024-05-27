@@ -99,6 +99,21 @@ const HOLOGRIDSETUP: PanoData = {
 	isEquirectangular: true
 };
 
+
+const MESHYPANO: PanoData = {
+	fullWidth: 20,
+	fullHeight: 6,
+	croppedWidth: 20,
+	croppedHeight: 6,
+	croppedX: 0,
+	croppedY: 0,
+	poseHeading: 0, // 0 to 360
+	posePitch: 0, // -90 to 90
+	poseRoll: 0, // -180 to 180
+	isEquirectangular: true
+};
+
+
 var appConfig: AppConfig = {
 	useWebP: false,
 	imgExt: ".jpg",
@@ -180,8 +195,9 @@ function loadFunc2(): void {
 	*/
 
 	let initPanoSrc = "./panorama-assets/panoramas/KLING_06.webp";
-	let initPanoData = DEFAULTPANOSETUP;
+	let initPanoData = MESHYPANO;
 
+	/*
 	viewer = new Viewer({
 		adapter: [CylindricalAdapter, {
 			type: 'cylindrical'
@@ -202,6 +218,29 @@ function loadFunc2(): void {
 		fisheye: 0, // this causes that jump after load. -0.1
 		navbar: false,
 	});
+	*/
+
+	viewer = new Viewer({
+		adapter: [CylindricalAdapter, {
+			type: 'cylindrical'
+		}],
+		panorama: {
+			path: './panorama-assets/MESHY.png',
+			type: 'cylindrical',
+			height: 1
+		},
+		plugins: [],
+		container: "photosphere",
+		// caption: 'Parc national du Mercantour <b>&copy; Damien Sorel</b>',
+		loadingImg: "./images/loading.png",
+		defaultPitch: 0.1,
+		touchmoveTwoFingers: false,
+		mousewheelCtrlKey: false, 
+		panoData: initPanoData,
+		fisheye: 0, // this causes that jump after load. -0.1
+		navbar: false,
+	});
+
 
 	
     window.addEventListener("keypress", (e: any) => {

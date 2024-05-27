@@ -94,6 +94,7 @@ export class CylindricalAdapter extends AbstractAdapter<CylindricalPanorama, Tex
         return { yaw, pitch };
     }
 
+
     override sphericalCoordsToTextureCoords(position: Position, data: CylindricalPanoData): PanoramaPosition {
 
         if (this.cylindricalPano) {
@@ -103,30 +104,54 @@ export class CylindricalAdapter extends AbstractAdapter<CylindricalPanorama, Tex
             return {textureX:-1, textureY:-1}
         }
 
-        // X
 
-        let yaw = position.yaw / Math.PI/2;
+        return { textureX: this.yawToTextureX(position.yaw, data), textureY: this.pitchToTextureY(position.pitch, data) };
+    }
+
+    private yawToTextureX(yaw: number, data: CylindricalPanoData): number {
+        yaw = yaw / Math.PI/2;
         if (yaw < 0) { yaw = 0; }
         if (yaw > 1) { yaw = 1; }
 
         yaw = (yaw + 0.5) % 1;
 
-        let textureX: number = Math.ceil(yaw * data.fullWidth);
-        if (textureX < 1) { textureX = 1};
+        let textureX: number = Math.floor(yaw * data.fullWidth);
+        // if (textureX < 1) { textureX = 1};
+        return textureX;
 
-        // Y
+        if (textureX < 0) {
+            textureX = NaN;
+        } else if (textureX == data.fullWidth) {
+            textureX = data.fullHeight - 1;
+        } else if (textureX > data.fullWidth) {
+            textureX = NaN
+        } else {
+            textureX = Math.floor(textureX);
+        }
 
-        let textureY: number = CONSTANTS.SPHERE_RADIUS * Math.tan(position.pitch)
+
+    }
+
+    private pitchToTextureY(pitch: number, data: CylindricalPanoData): number {
+        let textureY: number = CONSTANTS.SPHERE_RADIUS * Math.tan(pitch)
 
         const CYLHEIGHT = 18.5;
         textureY = 0.5 - (textureY / CYLHEIGHT);
 
         textureY *= data.fullHeight;
-        textureY = Math.ceil(textureY);
 
 
+        if (textureY < 0) {
+            textureY = NaN;
+        } else if (textureY == data.fullHeight) {
+            textureY = data.fullHeight - 1;
+        } else if (textureY > data.fullHeight) {
+            textureY = NaN
+        } else {
+            textureY = Math.floor(textureY);
+        }
 
-        return { textureX, textureY };
+        return textureY;
     }
 
     async loadTexture(panorama: CylindricalPanorama, loader = true): Promise<CylindricalTexture> {
@@ -187,6 +212,8 @@ export class CylindricalAdapter extends AbstractAdapter<CylindricalPanorama, Tex
         
 
         const { texture, panoData } = textureData;
+        texture[0].magFilter = THREE.NearestFilter;
+        texture[0].minFilter = THREE.NearestFilter;
 
         console.log("tex", texture[0]);
 

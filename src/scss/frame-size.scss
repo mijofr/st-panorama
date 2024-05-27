@@ -165,9 +165,9 @@ html {
         width: 10px;
         height:10px;
         display: block;
-        border: 1px solid #ffffff66;
+        border: 1px solid #77777799;
         border-radius: 3px;
-
+        box-shadow: 0 0 2px 1px #ffffff33, inset 0 0 2px 1px #ffffff33;
     }
 }
 
@@ -179,6 +179,7 @@ html {
     z-index: 9999;
     color: white;
     td {
+        color: #ddd;
         font-size: 16px;
         margin: 2px;
         background-color: black;
