@@ -1,12 +1,12 @@
 /*!
- * PhotoSphereViewer 5.7.2
+ * PhotoSphereViewer 5.7.4
  * @copyright 2014-2015 Jérémy Heleine
  * @copyright 2024 Damien "Mistic" Sorel
  * @licence MIT (https://opensource.org/licenses/MIT)
  */
 
 /*!
- * PhotoSphereViewer.AutorotatePlugin 5.7.2
+ * PhotoSphereViewer.AutorotatePlugin 5.7.4
  * @copyright 2024 Damien "Mistic" Sorel
  * @licence MIT (https://opensource.org/licenses/MIT)
  */
