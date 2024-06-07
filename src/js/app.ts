@@ -143,7 +143,7 @@ function loadFunc(): void {
 		}
 
 
-		let initPanoSrc = "./panorama-assets/panoramas/STARMAP" + appConfig.imgExt;
+		let initPanoSrc = "./panorama-assets/panoramas/starmap" + appConfig.imgExt;
 		let initPanoData = STARMAPSETUP;
 		let defaultPitch = 0.3;
 		let rotateSpeed = "0.5rpm";
