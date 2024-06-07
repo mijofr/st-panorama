@@ -278,6 +278,7 @@ body {
             background-color: $panoBgColor;
             overflow: hidden;
             border-radius: $innerBorderRadius;
+            user-select: none;
             //background-image: url('./assets/pano3.png');
             background-size: cover;
             #photosphere {
