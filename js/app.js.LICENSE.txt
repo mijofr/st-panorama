@@ -1,20 +1,18 @@
 /*!
- * uevent (v2.2.0)
- * @copyright 2015-2022 Damien "Mistic" Sorel <contact@git.strangeplanet.fr>
- * @licence MIT
+ * PhotoSphereViewer 5.7.2
+ * @copyright 2014-2015 Jérémy Heleine
+ * @copyright 2024 Damien "Mistic" Sorel
+ * @licence MIT (https://opensource.org/licenses/MIT)
  */
 
 /*!
-* Photo Sphere Viewer 4.8.1
-* @copyright 2014-2015 Jérémy Heleine
-* @copyright 2015-2022 Damien "Mistic" Sorel
-* @licence MIT (https://opensource.org/licenses/MIT)
-*/
-
-/*! npm.im/supports-webp 2.0.1 */
+ * PhotoSphereViewer.AutorotatePlugin 5.7.2
+ * @copyright 2024 Damien "Mistic" Sorel
+ * @licence MIT (https://opensource.org/licenses/MIT)
+ */
 
 /**
  * @license
- * Copyright 2010-2022 Three.js Authors
+ * Copyright 2010-2023 Three.js Authors
  * SPDX-License-Identifier: MIT
  */
