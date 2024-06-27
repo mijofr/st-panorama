@@ -10,15 +10,23 @@
     #page-wrap {
         #bar {
             flex: 1 10 25vw;
+            flex: 1 10 25dvw;
+
             min-width: 30vh;
+            min-width: 30dvh;
+
             max-width: 80vh;
+            max-width: 80dvh;
+
             @media (max-height: 900px) {
-                flex-basis: 35;
+                flex-basis: 35vh;
+                flex-basis: 35dvh;
             }
 
         }
         #main {
             flex: 1 1 130vh;
+            flex: 1 1 130dvh;
         }
     }
 }
@@ -29,11 +37,14 @@
         #bar {
             flex: 4 3 auto;
             min-height: 30vh;
+            min-height: 30dvh;
             max-height: 50vh;
+            max-height: 50dvh;
             
         }
         #main {
             flex: 1 1 80vw;
+            flex: 1 1 80dvw
         }
     }
 }
@@ -46,11 +57,22 @@ html {
             font-size: 12px;
         }
         @media (max-width: 440px) {
-            font-size: 12px;
+            font-size: 11px;
         }
         @media (max-width: 400px) {
             font-size: 10px;
         }
+        @media (max-width: 380px) {
+            font-size: 9px;
+        }
+        @media (max-width: 350px) {
+            font-size: 9px;
+        }
+        @media (max-width: 330px) {
+            font-size: 8px;
+        }
+
+
     }
 
     @media (orientation: landscape) {
@@ -63,6 +85,13 @@ html {
         @media (max-height: 450px) {
             font-size: 10px;
         }
+        @media (max-height: 400px) {
+            font-size: 9px;
+        }
+        @media (max-height: 350px) {
+            font-size: 8px;
+        }
+
     }
 
 }

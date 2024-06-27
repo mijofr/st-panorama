@@ -24,7 +24,9 @@ html body {
 
 body {
     width: 100vw;
+    width: 100dvw;
     height: 100vh;
+    height: 100dvh;
     background-color: transpBg(grey);
     font-family: Antonio;
     padding: $pageOuterBorder;
@@ -303,6 +305,7 @@ body {
             border-radius: $innerBorderRadius;
             background-size: cover;
             color: $btnColor;
+            font-size: 2dvmin;
             font-size: 2vmin;
             font-weight: 400;
             p {
@@ -468,9 +471,16 @@ button.red {
 
 #ghlink {
     position: absolute;
+    right:1dvmin;
     right:1vmin;
+
+    top:1dvmin;
     top:1vmin;
+
+    height:2dvmin;
     height:2vmin;
+    
+    width:2dvmin;
     width:2vmin;
     background-image: url("./../images/GitHub-Mark-64px.png");
     background-size: contain;
