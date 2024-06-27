@@ -23,12 +23,15 @@ const ORIGIN = new Vector3();
 
 const CylinderHeight: number = CONSTANTS.SPHERE_RADIUS;
 
+const CYLHEIGHT = 18.5;
+
+
 /**
  * Adapter for cylindricals
  */
 export class CylindricalAdapter extends AbstractAdapter<CylindricalPanorama, Texture[], CylindricalPanoData> {
     static override readonly id = 'cylindrical';
-    static override readonly VERSION = "5.7.2"; // PKG_VERSION;
+    static override readonly VERSION = "5.7.4"; // PKG_VERSION;
     static override readonly supportsDownload = false;
 
     private readonly config: CylindricalAdapterConfig;
@@ -76,9 +79,6 @@ export class CylindricalAdapter extends AbstractAdapter<CylindricalPanorama, Tex
         textureX = (textureX + 0.5) % 1;
 
         let yaw: number = textureX * Math.PI * 2;
-
-
-        const CYLHEIGHT = 18.5;
 
         
         let pitch: number = 0;
@@ -135,7 +135,6 @@ export class CylindricalAdapter extends AbstractAdapter<CylindricalPanorama, Tex
     private pitchToTextureY(pitch: number, data: CylindricalPanoData): number {
         let textureY: number = CONSTANTS.SPHERE_RADIUS * Math.tan(pitch)
 
-        const CYLHEIGHT = 18.5;
         textureY = 0.5 - (textureY / CYLHEIGHT);
 
         textureY *= data.fullHeight;
@@ -208,7 +207,7 @@ export class CylindricalAdapter extends AbstractAdapter<CylindricalPanorama, Tex
 
         this.cylindricalPano = textureData.panoData;
     
-        mesh.scale.set(1,18.5,1);
+        mesh.scale.set(1,CYLHEIGHT,1);
         
 
         const { texture, panoData } = textureData;
@@ -216,6 +215,8 @@ export class CylindricalAdapter extends AbstractAdapter<CylindricalPanorama, Tex
         texture[0].minFilter = THREE.NearestFilter;
 
         console.log("tex", texture[0]);
+        console.log("textureData", textureData)
+        console.log(Math.atan((CYLHEIGHT * 0.5)/CONSTANTS.SPHERE_RADIUS))
 
         mesh.material[0].map = texture[0];
         mesh.material[0].color = null;            
